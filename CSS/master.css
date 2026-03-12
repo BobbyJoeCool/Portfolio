@@ -1,0 +1,192 @@
+/*
+Master Style Sheet
+This handles the base style of all pages.
+*/
+
+:root {
+  /* Backgrounds */
+  --bg-primary: #0f172a;
+  --bg-secondary: #111827;
+
+  /* Primary Accent (Deep) */
+  --accent-purple: #4d1182;
+  --accent-hover: ##6d368f;
+
+  /* Lighter Accent Variants */
+  --accent-light: #8b5cf6;
+  --accent-soft: #a78bfa;
+  --accent-glow: #c4b5fd;
+
+  /* Complementary Cool Accent */
+  --accent-blue: #3502b5;
+  --accent-blue-soft: #4202e3;
+
+  /* Silver Accents */
+  --silver-accent: #b8b8b8;
+  --silver-dark-accent: #636363;
+
+  /* Text */
+  --text-primary: #f1f5f9;
+  --text-secondary: #cbd5e1;
+  --text-muted: #94a3b8;
+
+  /* Borders */
+  --border-subtle: #334155;
+  --border-accent: #8b5cf6;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-secondary);
+  font-family:
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+  line-height: 1.6;
+  letter-spacing: 0.3px;
+}
+
+header {
+  background-color: var(--accent-purple);
+  padding: 16px 20px;
+
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+}
+
+nav {
+  width: 99%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav a {
+  color: var(--text-primary);
+  text-decoration: none;
+  margin-left: 16px;
+  padding: 8px 14px;
+  border: 2px solid transparent;
+  border-radius: 6px;
+  font-weight: 500;
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease,
+    color 0.2s ease;
+}
+
+nav a:hover {
+  background-color: var(--accent-hover);
+}
+
+nav a.active {
+  background-color: var(--text-secondary);
+  color: var(--bg-primary);
+  border-color: var(--text-secondary);
+}
+
+footer {
+  background-color: var(--bg-primary);
+  border-top: 1px solid var(--border-subtle);
+  padding: 40px 20px;
+  text-align: center;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+footer p {
+  margin: 0 auto 16px auto;
+}
+
+h1 {
+  font-size: 2.8rem;
+  color: var(--text-primary);
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+h2 {
+  font-size: 2rem;
+  color: var(--text-primary);
+  margin-bottom: 16px;
+  border-left: 4px solid var(--accent-purple);
+  padding-left: 12px;
+  text-align: center;
+}
+
+h3 {
+  font-size: 1.5rem;
+  color: var(--text-primary);
+  margin-bottom: 12px;
+}
+
+h4 {
+  font-size: 1.2rem;
+  color: var(--text-primary);
+  margin-bottom: 10px;
+}
+
+p {
+  margin-bottom: 16px;
+  max-width: 70ch;
+}
+
+a {
+  color: var(--accent-cyan);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: var(--accent-glow);
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  margin-top: 1rem;
+
+  background-color: var(--accent-cyan);
+  color: var(--accent-purple);
+  text-decoration: none;
+  border-radius: 8px;
+
+  box-shadow: 0 6px 0 rgba(0, 0, 0, 0.35);
+
+  transition:
+    background-color 0.3s ease,
+    transform 0.1s ease,
+    box-shadow 0.1s ease;
+}
+
+.btn:hover {
+  background-color: var(--accent-cyan-soft);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 0 rgba(0, 0, 0, 0.4);
+  color: var(--accent-hover);
+}
+
+.btn:active {
+  transform: translateY(4px);
+  box-shadow: 0 2px 0 rgba(0, 0, 0, 0.35);
+}
+
+ul {
+  list-style-type: disc;
+  padding-left: 2rem;
+  margin-bottom: 1rem;
+}

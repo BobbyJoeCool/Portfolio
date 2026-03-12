@@ -1,0 +1,71 @@
+.language-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    height: auto;
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: 2rem;
+
+    color: var(--bg-primary);
+    background-color: var(--accent-purple);
+    border-radius: 50px;
+    border: 6px solid var(--silver-dark-accent);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        background-color 0.25s ease;
+}
+
+.language-card h2 {
+    font-size: 3em;
+}
+
+.language-card h3 {
+    font-size: 2em;
+}
+
+.repo-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    border-radius: 20px;
+    text-decoration: none;
+    margin-bottom: 2rem;
+
+    color: var(--text-primary);
+    background-color: var(--bg-secondary);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        background-color 0.25 ease;
+}
+
+.repo-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.5);
+    color: white;
+    background-color: var(--accent-blue);
+    text-decoration: none;
+}
+
+.repo-card h4 {
+    font-size: 1.5em;
+}
+
+.repo-card h5 {
+    font-size: 1.25em;
+}
+
+.pages {
+    background-color: var(--accent-blue)
+}
+
+.pages:hover {
+    background-color: var(--accent-blue-soft)
+}
