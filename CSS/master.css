@@ -10,7 +10,7 @@ This handles the base style of all pages.
 
   /* Primary Accent (Deep) */
   --accent-purple: #4d1182;
-  --accent-hover: ##6d368f;
+  --accent-hover: #6d368f;
 
   /* Lighter Accent Variants */
   --accent-light: #8b5cf6;
