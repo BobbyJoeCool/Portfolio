@@ -57,12 +57,11 @@
 }
 
 .tech-card-box {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, 100px);
+  display: flex;
+  flex-wrap: wrap;
   gap: 1rem;
 
   justify-content: center;
-  max-width: 564px;
 }
 
 .tech-card {
