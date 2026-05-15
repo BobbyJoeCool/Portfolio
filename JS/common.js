@@ -1,7 +1,7 @@
 const navLinks = [
 	{ href: "index.html", label: "Home" },
 	{ href: "about.html", label: "About" },
-	{ href: "#", label: "Work" },
+	{ href: "work.html", label: "Work" },
 	{ href: "education.html", label: "Education" },
 	{ href: "projects.html", label: "Projects" },
 	{ href: "#", label: "Community" },

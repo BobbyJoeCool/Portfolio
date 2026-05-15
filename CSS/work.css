@@ -1,4 +1,4 @@
-.language-card {
+.job {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -20,15 +20,21 @@
 		background-color 0.25s ease;
 }
 
-.language-card h2 {
+.job h2 {
 	font-size: 3em;
 }
 
-.language-card h3 {
+.job h3 {
 	font-size: 2em;
 }
 
-.repo-card {
+.job img {
+	max-width: 100px;
+	height: auto;
+	padding-bottom: 20px;
+}
+
+.job-subcat {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -46,51 +52,6 @@
 		background-color 0.25 ease;
 }
 
-.language-card img {
-	max-width: 100px;
-	height: auto;
-	padding-bottom: 20px;
-}
-
-#HTML-CSS-TechStack img {
-	max-width: 70px;
-	height: auto;
-	padding-bottom: 20px;
-}
-
-.repo-card:hover {
-	transform: translateY(-8px);
-	box-shadow: 0 12px 25px rgba(0, 0, 0, 0.5);
-	color: white;
-	background-color: var(--accent-blue);
-	text-decoration: none;
-}
-
-.repo-card h4 {
-	font-size: 1.5em;
-}
-
-.repo-card h5 {
-	font-size: 1.25em;
-}
-
-.pages {
-	background-color: var(--accent-blue);
-}
-
-.pages:hover {
-	background-color: var(--accent-blue-soft);
-}
-
-@media (max-width: 600px) {
-	.language-card {
-		width: 100%;
-		overflow: hidden;
-		border-radius: 0;
-	}
-
-	.repo-card {
-		padding: 10px;
-		border-radius: 10px;
-	}
+#kt-img {
+	max-width: 300px;
 }
