@@ -4,7 +4,6 @@ const navLinks = [
 	{ href: "work.html", label: "Work" },
 	{ href: "education.html", label: "Education" },
 	{ href: "projects.html", label: "Projects" },
-	{ href: "#", label: "Community" },
 	{ href: "#", label: "Contact" },
 ];
 

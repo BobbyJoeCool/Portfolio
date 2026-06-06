@@ -21,6 +21,10 @@ This handles the base style of all pages.
 	--accent-blue: #3502b5;
 	--accent-blue-soft: #4202e3;
 
+	/* Cyan Accents */
+	--accent-cyan: #06b6d4;
+	--accent-cyan-soft: #22d3ee;
+
 	/* Silver Accents */
 	--silver-accent: #b8b8b8;
 	--silver-dark-accent: #636363;
@@ -56,6 +60,10 @@ body {
 	letter-spacing: 0.3px;
 	margin: 0 auto;
 	max-width: 900px;
+}
+
+main {
+	padding: 0 1.25rem;
 }
 
 header {
@@ -127,7 +135,6 @@ h2 {
 	margin-bottom: 16px;
 	border-left: 4px solid var(--accent-purple);
 	padding-left: 12px;
-	text-align: center;
 }
 
 h3 {
@@ -193,23 +200,30 @@ ul {
 	margin-bottom: 1rem;
 }
 
+@media (max-width: 768px) {
+	nav a {
+		padding: 6px 10px;
+		font-size: 0.9rem;
+	}
+}
+
 @media (max-width: 600px) {
 	header {
 		padding: 6px 10px;
 	}
 
 	nav {
-		flex-direction: column;
+		flex-wrap: wrap;
+		justify-content: center;
 		gap: 4px;
 		width: 100%;
 	}
 
 	nav a {
 		margin-left: 0;
-		width: 100%;
 		text-align: center;
-		padding: 6px 10px;
-		font-size: 0.9rem;
+		padding: 5px 10px;
+		font-size: 0.85rem;
 	}
 
 	h1 {
@@ -220,7 +234,11 @@ ul {
 		font-size: 1.5rem;
 	}
 
-	body {
-		padding: 0 12px;
+	h3 {
+		font-size: 1.25rem;
+	}
+
+	main {
+		padding: 0 0.75rem;
 	}
 }
