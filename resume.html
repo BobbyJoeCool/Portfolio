@@ -14,26 +14,8 @@
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
 	</head>
 	<body>
-		<div
-			class="print-btn"
-			style="position: fixed; top: 12px; right: 16px; z-index: 999"
-		>
-			<button
-				onclick="window.print()"
-				style="
-					background: #007acc;
-					color: white;
-					border: none;
-					padding: 6px 14px;
-					border-radius: 4px;
-					font-family: &quot;Inter&quot;, sans-serif;
-					font-size: 11px;
-					cursor: pointer;
-					box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
-				"
-			>
-				Print / Save PDF
-			</button>
+		<div class="print-btn">
+			<button type="button" onclick="window.print()">Print / Save PDF</button>
 		</div>
 		<div class="vscode-window">
 			<!-- Title Bar -->
@@ -69,22 +51,22 @@
 					<div class="tree-item">
 						<span class="file-dot dot-md"></span>README.md
 					</div>
-					<div class="tree-folder" style="padding-left: 16px">
+					<div class="tree-folder sub">
 						<span class="arrow">v</span> projects
 					</div>
-					<div class="tree-item" style="padding-left: 30px">
+					<div class="tree-item sub">
 						<span class="file-dot dot-ts"></span>dice-roller.ts
 					</div>
-					<div class="tree-item" style="padding-left: 30px">
+					<div class="tree-item sub">
 						<span class="file-dot dot-ts"></span>tldr-reader.jsx
 					</div>
-					<div class="tree-item" style="padding-left: 30px">
+					<div class="tree-item sub">
 						<span class="file-dot dot-ts"></span>dnd-tracker.tsx
 					</div>
-					<div class="tree-folder" style="padding-left: 16px">
+					<div class="tree-folder sub">
 						<span class="arrow">v</span> education
 					</div>
-					<div class="tree-item" style="padding-left: 30px">
+					<div class="tree-item sub">
 						<span class="file-dot dot-md"></span>bellevue-univ.md
 					</div>
 				</div>
@@ -206,9 +188,10 @@
 												<span class="skill-tag">Java</span>
 												<span class="skill-tag">JavaScript</span>
 												<span class="skill-tag">TypeScript</span>
+												<span class="skill-tag">React</span>
 												<span class="skill-tag">HTML</span>
 												<span class="skill-tag">CSS</span>
-												<span class="skill-tag">PHP</span>
+												<span class="skill-tag">JSP</span>
 												<span class="skill-tag">C++</span>
 												<span class="skill-tag">SQL</span>
 											</div>
@@ -221,6 +204,8 @@
 												<span class="skill-tag yellow">VS Code</span>
 												<span class="skill-tag yellow">Excel</span>
 												<span class="skill-tag yellow">Tkinter</span>
+												<span class="skill-tag yellow">Node.js</span>
+												<span class="skill-tag yellow">Azure</span>
 											</div>
 										</div>
 										<div class="skill-group">
@@ -228,19 +213,22 @@
 											<div class="skill-tags">
 												<span class="skill-tag purple">MySQL</span>
 												<span class="skill-tag purple">SQLite</span>
+												<span class="skill-tag purple">Prisma</span>
+												<span class="skill-tag purple">Cosmos DB</span>
+												<span class="skill-tag purple">Azure SQL</span>
 											</div>
 										</div>
 										<div class="skill-group">
 											<div class="skill-group-name">Learning</div>
 											<div class="skill-tags">
-												<span class="skill-tag green">React</span>
-												<span class="skill-tag green">Node.js</span>
 												<span class="skill-tag green">C#</span>
-												<span class="skill-tag green">Azure</span>
 												<span class="skill-tag green">AWS</span>
+												<span class="skill-tag green">Go</span>
+												<span class="skill-tag green">Ruby</span>
+												<span class="skill-tag green">PHP</span>
 											</div>
 										</div>
-										<div class="block-label" style="margin-top: 4px">// }</div>
+										<div class="block-label mt-4">// }</div>
 									</div>
 
 									<!-- Education -->
@@ -252,22 +240,8 @@
 										<div class="edu-meta">
 											GPA: 4.0 · Dean's List: Jun 2024 - Present
 										</div>
-										<div
-											class="skill-tags"
-											style="margin-top: 6px; align-items: center"
-										>
-											<span
-												style="
-													font-size: 9.5px;
-													text-transform: uppercase;
-													letter-spacing: 0.08em;
-													color: #858585;
-													font-family: &quot;Inter&quot;, sans-serif;
-													margin-right: 3px;
-													white-space: nowrap;
-												"
-												>Coursework:</span
-											>
+										<div class="skill-tags coursework-tags">
+											<span class="coursework-label">Coursework:</span>
 											<span class="skill-tag">Python</span>
 											<span class="skill-tag">Java</span>
 											<span class="skill-tag">SQL</span>
@@ -290,8 +264,7 @@
 													<span class="section-fn">warehouseWorker</span
 													><span class="section-plain">()</span>
 													<span
-														class="section-muted"
-														style="font-size: 9.5px; font-weight: 400"
+														class="section-muted job-fn-comment"
 														>// Inventory Control &amp; QA</span
 													>
 												</div>
@@ -336,8 +309,7 @@
 													<span class="section-fn">storeManager</span
 													><span class="section-plain">()</span>
 													<span
-														class="section-muted"
-														style="font-size: 9.5px; font-weight: 400"
+														class="section-muted job-fn-comment"
 														>// Final position after 11 yrs</span
 													>
 												</div>
@@ -374,7 +346,7 @@
 										</ul>
 									</div>
 
-									<div class="block-label" style="margin-top: 2px">// }</div>
+									<div class="block-label mt-2">// }</div>
 								</div>
 							</div>
 							<!-- /two-col -->
@@ -404,15 +376,16 @@
 									</div>
 
 									<div class="project-card">
-										<div class="project-name" style="color: var(--accent-cyan)">
+										<div class="project-name project-name--cyan">
 											TLDR Reader
 										</div>
-										<div class="project-stack">React · JavaScript · Vite</div>
+										<div class="project-stack">React · TypeScript · Vite · Azure</div>
 										<div class="project-desc">
-											Mobile-friendly web app for reading and saving TLDR
-											newsletter articles. Browse daily issues by section, star
-											articles into a persistent reading list — no account or
-											server required.
+											Personal web app for reading, flagging, and saving TLDR
+											newsletter articles. Covers This Week, Last Week, a
+											full date-range archive, Reading List, and Saved Articles.
+											Deployed to Azure Static Web Apps with Microsoft
+											authentication and Azure Cosmos DB for per-user state.
 										</div>
 										<div class="project-links">
 											<a
@@ -432,10 +405,7 @@
 									</div>
 
 									<div class="project-card">
-										<div
-											class="project-name"
-											style="color: var(--accent-purple)"
-										>
+										<div class="project-name project-name--purple">
 											D&amp;D Character Tracker
 											<span class="wip-badge">WIP</span>
 										</div>
@@ -455,7 +425,7 @@
 										</div>
 									</div>
 								</div>
-								<div class="block-label" style="margin-top: 5px">// ]</div>
+								<div class="block-label mt-5">// ]</div>
 							</div>
 						</div>
 						<!-- /code-body -->

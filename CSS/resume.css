@@ -640,6 +640,10 @@ body {
 	.coursework-label {
 		color: #666666;
 	}
+	.project-name--cyan,
+	.project-name--purple {
+		color: #795e00;
+	}
 	.divider {
 		border-color: #cccccc;
 	}
@@ -742,6 +746,63 @@ body {
 	text-align: center;
 	line-height: 1.4;
 }
+
+/* Print button */
+.print-btn {
+	position: fixed;
+	top: 12px;
+	right: 16px;
+	z-index: 999;
+}
+.print-btn button {
+	background: #007acc;
+	color: white;
+	border: none;
+	padding: 6px 14px;
+	border-radius: 4px;
+	font-family: var(--font-ui);
+	font-size: 11px;
+	cursor: pointer;
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+}
+
+/* Sidebar sub-level indentation */
+.tree-folder.sub {
+	padding-left: 16px;
+}
+.tree-item.sub {
+	padding-left: 30px;
+}
+
+/* Block-label top margin variants */
+.block-label.mt-2 { margin-top: 2px; }
+.block-label.mt-4 { margin-top: 4px; }
+.block-label.mt-5 { margin-top: 5px; }
+
+/* Coursework tags row */
+.coursework-tags {
+	margin-top: 6px;
+	align-items: center;
+}
+.coursework-label {
+	font-size: 9.5px;
+	text-transform: uppercase;
+	letter-spacing: 0.08em;
+	color: var(--fg-muted);
+	font-family: var(--font-ui);
+	margin-right: 3px;
+	white-space: nowrap;
+}
+
+/* Job function annotation comment */
+.job-fn-comment {
+	font-size: 9.5px;
+	font-weight: 400;
+}
+
+/* Project name color variants */
+.project-name--cyan { color: var(--accent-cyan); }
+.project-name--purple { color: var(--accent-purple); }
 
 /* Mobile */
 @media (max-width: 700px) {

@@ -175,18 +175,20 @@
 					>
 						<h4>TLDR Reader</h4>
 						<p>
-							A mobile-friendly web app for reading and saving articles from the
-							TLDR newsletter. Issues are browsed by day and grouped by section,
-							with a persistent starred reading list stored in localStorage.
-							Features JSON import, auto-purge of issues older than 10 days, and
-							no server or account required.
+							A personal web app for reading, flagging, and permanently saving
+							articles from the TLDR newsletter. Issues are browsed by day across
+							five sections — This Week, Last Week, Archive, Reading List, and
+							Saved Articles. Deployed to Azure Static Web Apps with Microsoft
+							authentication and Azure Cosmos DB for per-user state. Article
+							content is scraped daily via an automated ingestion pipeline.
 						</p>
 						<h5>Highlights</h5>
 						<ul>
-							<li>Browse daily TLDR issues grouped by section</li>
-							<li>Star articles into a persistent saved reading list</li>
-							<li>Import issues via JSON file upload or paste</li>
-							<li>Auto-purge: issues older than 10 days cleared weekly</li>
+							<li>Browse This Week and Last Week by day and newsletter edition</li>
+							<li>Archive calendar: browse any past date with available articles</li>
+							<li>Flag articles to a Reading List; star to permanently save them</li>
+							<li>Microsoft (Azure AD) authentication with per-user cloud state</li>
+							<li>Automated daily ingestion pipeline via scheduled scraper</li>
 						</ul>
 					</a>
 
@@ -198,6 +200,26 @@
 					>
 						<h4>Azure Static Page Host for TLDR Reader</h4>
 					</a>
+
+					<div class="repo-card">
+						<h4>PalletIQ <span class="wip-badge">WIP</span></h4>
+						<p>
+							A full-stack warehouse operations app covering Pull, Put, Pallet
+							and Location ID lookups, and a visual Empty Locations map. Built
+							from 20 years of warehouse floor experience with a four-tier role
+							hierarchy, field-level permission gating, and a UI designed for
+							hands-free scanning: numeric-first input, no blocking pop-ups,
+							and every pallet and location ID a tappable link.
+						</p>
+						<h5>Core Functions</h5>
+						<ul>
+							<li>Pull — all pull types driven by label scan with two-path verification</li>
+							<li>Put — directed put-away with zone logic and manual put with safety checks</li>
+							<li>Pallet ID and Location ID detail screens, reachable from any reference</li>
+							<li>Empty Locations — aisle summary and visual zone-by-zone map</li>
+							<li>Reservation locking with server-side timeout cleanup</li>
+						</ul>
+					</div>
 
 					<a
 						href="https://github.com/BobbyJoeCool/CheatSheets"

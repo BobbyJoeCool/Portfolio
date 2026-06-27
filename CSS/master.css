@@ -37,6 +37,23 @@ This handles the base style of all pages.
 	/* Borders */
 	--border-subtle: #334155;
 	--border-accent: #8b5cf6;
+
+	/* Yellow Accent */
+	--accent-yellow: #dcdcaa;
+}
+
+.wip-badge {
+	display: inline-block;
+	font-size: 0.6rem;
+	padding: 1px 5px;
+	background: rgba(220, 220, 170, 0.12);
+	border: 1px solid rgba(220, 220, 170, 0.3);
+	color: var(--accent-yellow);
+	border-radius: 3px;
+	margin-left: 6px;
+	vertical-align: middle;
+	font-weight: 400;
+	letter-spacing: 0.05em;
 }
 
 *,
