@@ -67,6 +67,14 @@ Landing page for GitHub Professional/Academic Portfolio
 						<p>Java</p>
 					</div>
 
+					<div class="tech-card jsp">
+						<img
+							src="Assets/icons/Language-Icons/JSP.png"
+							alt="JSP Logo"
+						/>
+						<p>JSP</p>
+					</div>
+
 					<div class="tech-card sql">
 						<img src="Assets/icons/Language-Icons/SQL.png" alt="SQL Logo" />
 						<p>SQL</p>
@@ -80,6 +88,14 @@ Landing page for GitHub Professional/Academic Portfolio
 					<div class="tech-card css3">
 						<img src="Assets/icons/Language-Icons/CSS3.png" alt="CSS3 Logo" />
 						<p>CSS3</p>
+					</div>
+
+					<div class="tech-card php">
+						<img
+							src="Assets/icons/Language-Icons/PHP.png"
+							alt="PHP Logo"
+						/>
+						<p>PHP</p>
 					</div>
 
 					<div class="tech-card javascript">
@@ -235,24 +251,6 @@ Landing page for GitHub Professional/Academic Portfolio
 							<p>Ruby</p>
 						</div>
 					</div>
-					<div class="tech-card-box">
-						<div class="tech-card jsp">
-							<img
-								src="Assets/icons/Language-Icons/JSP.png"
-								alt="JSP Logo"
-							/>
-							<p>JSP</p>
-						</div>
-					</div>
-					<div class="tech-card-box">
-						<div class="tech-card php">
-							<img
-								src="Assets/icons/Language-Icons/PHP.png"
-								alt="PHP Logo"
-							/>
-							<p>PHP</p>
-						</div>
-					</div>
 				</div>
 			</section>
 
@@ -269,81 +267,53 @@ Landing page for GitHub Professional/Academic Portfolio
 					structured problem-solving, and scalable code design.
 				</p>
 				<p>
-					Coursework has covered Python, Java, SQL, HTML and CSS, and started
-					with JavaScript. Upcoming courses delve further into Java and
-					JavaScript, and more advanced topics like DevOps and ServerSide
-					Scripting.
+					Coursework has covered Python, Java, SQL, HTML, CSS, JavaScript, and
+					PHP, along with secure software development, DevOps, server-side
+					development with Jakarta EE, and a team-based capstone that took the
+					Moffat Bay Marina booking site from requirements to a live
+					deployment.
 				</p>
 			</section>
 
-			<!-- PROJECTS SECTION -->
+			<!-- FEATURED PROJECTS SECTION -->
 			<section id="projects">
 				<h2>Featured Projects</h2>
 
 				<article class="project">
 					<div class="project-text">
-						<h3>Work Job Tracker</h3>
-						<h3 class="subheader">Side Project</h3>
+						<h3>Moffat Bay Marina</h3>
+						<h3 class="subheader">CSD 460 Capstone Team Project</h3>
 						<p>
-							A Python/MySQL program designed to track the jobs I work in my
-							current warehouse. This project was designed to showcase building
-							a program with Python using tkinter as a UI, MySQL database, to
-							allow a user to enter data, and then view reports based on that
-							data. This program also uses a logger to create an external log of
-							events.
+							A customer-facing booking website for a fictional marina on
+							Joviedsa Island in Washington's San Juan Islands, built as a
+							team capstone project. Visitors can browse the marina, register
+							an account, sign in, and reserve one of 72 slips across three
+							docks. Built with Jakarta EE, JSP, and MySQL using Agile/Scrum
+							methodology with multi-environment deployment, and deployed as a
+							live demo on Azure App Service with Azure Database for MySQL.
 						</p>
 						<h4>Technologies Used</h4>
-						<p>Python, MySQL, Git</p>
+						<p>Java, Jakarta EE, JSP, JSTL, MySQL, Maven, Apache Tomcat, Azure App Service, Git</p>
 					</div>
 					<div class="project-links">
 						<p>
 							<a
-								href="https://github.com/BobbyJoeCool/Python-Projects/tree/main/Work_Job_Tracker_2.0"
+								href="https://moffatbay-blueteam-ac9638.azurewebsites.net/"
+								target="_blank"
+								rel="noopener noreferrer"
+								class="btn"
+							>
+								View Live Site
+							</a>
+						</p>
+						<p>
+							<a
+								href="https://github.com/BobbyJoeCool/csd460-blueteam"
 								target="_blank"
 								rel="noopener noreferrer"
 								class="btn"
 							>
 								View Repository
-							</a>
-						</p>
-					</div>
-				</article>
-
-				<article class="project">
-					<div class="project-text">
-						<h3>TLDR Reader</h3>
-						<h3 class="subheader">Side Project</h3>
-						<p>
-							A personal web app for reading, flagging, and saving articles from
-							the TLDR newsletter. Browse current and past issues by day and
-							newsletter edition — including a full date-range archive — flag
-							articles to a Reading List, and permanently star articles to Saved
-							Articles. Built with React and Vite, deployed to Azure Static Web
-							Apps with Microsoft authentication, an Azure Functions API, and
-							Azure Cosmos DB for per-user state.
-						</p>
-						<h4>Technologies Used</h4>
-						<p>React, TypeScript, Vite, Node.js, Azure Static Web Apps, Azure Functions, Azure Cosmos DB, Playwright</p>
-					</div>
-					<div class="project-links">
-						<p>
-							<a
-								href="https://github.com/BobbyJoeCool/TLDR-Reader"
-								target="_blank"
-								rel="noopener noreferrer"
-								class="btn"
-							>
-								View Repository
-							</a>
-						</p>
-						<p>
-							<a
-								href="https://happy-bush-0f619981e.7.azurestaticapps.net"
-								target="_blank"
-								rel="noopener noreferrer"
-								class="btn"
-							>
-								View App
 							</a>
 						</p>
 					</div>
@@ -357,13 +327,52 @@ Landing page for GitHub Professional/Academic Portfolio
 							A full-stack warehouse operations app covering the operational
 							middle layer that most WMS projects skip: Pull, Put, Pallet and
 							Location ID lookups, and a visual Empty Locations map. Built from
-							8 years of warehouse experience and designed around how the floor
+							20 years of warehouse experience and designed around how the floor
 							actually works — no blocking pop-ups, every pallet and location ID
 							a tappable link, numeric-first input for hands-free scanning, and a
 							four-tier role hierarchy with field-level permission gating.
 						</p>
 						<h4>Technologies Used</h4>
 						<p>React, TypeScript, React Router, Vite, TailwindCSS, Node.js, Azure Static Web Apps, Azure Functions, Azure SQL, Prisma, Docker, Playwright</p>
+					</div>
+				</article>
+
+				<article class="project">
+					<div class="project-text">
+						<h3>Family Passport Map <span class="wip-badge">WIP</span></h3>
+						<h3 class="subheader">Side Project</h3>
+						<p>
+							A family-friendly web app for tracking which places you and your
+							family have visited — starting with the 50 US states, with
+							countries and a world map planned. Features an interactive
+							clickable map, per-person tracking with custom colors and profile
+							pictures, a side-by-side compare view, and an installable PWA
+							that works on phone, tablet, and desktop.
+						</p>
+						<h4>Technologies Used</h4>
+						<p>React, TypeScript, Vite, TailwindCSS, Node.js, Express, SQLite, Prisma, Azure App Service</p>
+					</div>
+					<div class="project-links">
+						<p>
+							<a
+								href="https://family-passport-map.azurewebsites.net/"
+								target="_blank"
+								rel="noopener noreferrer"
+								class="btn"
+							>
+								View Live Site
+							</a>
+						</p>
+						<p>
+							<a
+								href="https://github.com/BobbyJoeCool/FamilyPassportMap"
+								target="_blank"
+								rel="noopener noreferrer"
+								class="btn"
+							>
+								View Repository
+							</a>
+						</p>
 					</div>
 				</article>
 
@@ -403,62 +412,6 @@ Landing page for GitHub Professional/Academic Portfolio
 								class="btn"
 							>
 								View DatabaseApp Repository
-							</a>
-						</p>
-					</div>
-				</article>
-
-				<article class="project">
-					<div class="project-text">
-						<h3>CheatSheets</h3>
-						<h3 class="subheader">Side Project</h3>
-						<p>
-							A curated library of single-page technical reference sheets
-							covering programming languages, CS concepts, and developer tools.
-							Each sheet fits on an 8.5" × 11" page and includes both a dark
-							mode default and a print-optimized light mode. Currently 100+
-							sheets spanning HTML, CSS, SQL, RegEx, Markdown, Mermaid, and
-							foundational CS concepts.
-						</p>
-						<h4>Technologies Used</h4>
-						<p>HTML, CSS, JavaScript, Prism.js, Git</p>
-					</div>
-					<div class="project-links">
-						<p>
-							<a
-								href="https://github.com/BobbyJoeCool/CheatSheets"
-								target="_blank"
-								rel="noopener noreferrer"
-								class="btn"
-							>
-								View Repository
-							</a>
-						</p>
-					</div>
-				</article>
-
-				<article class="project">
-					<div class="project-text">
-						<h3>Foundry VTT Module: Damage Dice Roller</h3>
-						<h3 class="subheader">Side Project</h3>
-						<p>
-							This project was designed to help with being a Dungeon master in
-							Foundry VTT. It adds the functionality to quickly generate
-							multiple damage types in a single roll, and output the result to
-							the chat log and the app window.
-						</p>
-						<h4>Technologies Used</h4>
-						<p>HTML, CSS, JavaScript, FoundryVTT API, Git, GitHub Pages</p>
-					</div>
-					<div class="project-links">
-						<p>
-							<a
-								href="https://github.com/BobbyJoeCool/HTML-Projects/tree/main/FoundryVTTModule/damage-dice-roller"
-								target="_blank"
-								rel="noopener noreferrer"
-								class="btn"
-							>
-								View Repository
 							</a>
 						</p>
 					</div>
