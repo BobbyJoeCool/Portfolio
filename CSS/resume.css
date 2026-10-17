@@ -675,6 +675,11 @@ body {
 		border-color: #d4b800;
 		color: #6b4f00;
 	}
+	.wip-badge.done-badge {
+		background: #eaf5e4;
+		border-color: #4f8a3c;
+		color: #2f6b20;
+	}
 
 	/* Tighter vertical spacing for single-page fit */
 	.section {
@@ -753,6 +758,27 @@ body {
 	top: 12px;
 	right: 16px;
 	z-index: 999;
+	display: flex;
+	gap: 8px;
+	align-items: center;
+}
+.print-btn .switch-link {
+	background: #3c3c3c;
+	color: #ffffff;
+	padding: 6px 14px;
+	border-radius: 4px;
+	font-family: var(--font-ui);
+	font-size: 11px;
+	text-decoration: none;
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+}
+.print-btn .switch-link:hover {
+	background: #505050;
+}
+.wip-badge.done-badge {
+	background: rgba(106, 153, 85, 0.15);
+	border-color: rgba(106, 153, 85, 0.45);
+	color: #89d185;
 }
 .print-btn button {
 	background: #007acc;
@@ -834,5 +860,28 @@ body {
 	}
 	.projects-grid {
 		grid-template-columns: 1fr;
+	}
+}
+
+/* Print overrides that must come after the screen-only toolbar rules */
+@media print {
+	.print-btn {
+		display: none !important;
+	}
+	body {
+		min-height: 0;
+	}
+	.job-bullets li {
+		line-height: 1.35;
+	}
+	.project-desc {
+		line-height: 1.25;
+	}
+	.summary-block {
+		line-height: 1.4;
+	}
+	.editor {
+		padding-top: 0.12in;
+		padding-bottom: 0.05in;
 	}
 }

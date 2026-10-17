@@ -166,7 +166,15 @@
 	}
 }
 
+.resume-buttons {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 12px;
+	margin-top: 8px;
+}
+
 .btn {
+	display: inline-block;
 	background-color: var(--silver-accent);
 	color: var(--accent-purple);
 	padding: 10px 18px;

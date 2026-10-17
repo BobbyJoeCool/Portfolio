@@ -84,6 +84,27 @@
 	background-color: var(--accent-blue-soft);
 }
 
+.diploma {
+	max-width: 720px;
+	margin: 2rem auto;
+	text-align: center;
+}
+
+.diploma img {
+	width: 100%;
+	height: auto;
+	background-color: #fff;
+	border: 6px solid var(--silver-dark-accent);
+	border-radius: 12px;
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.diploma figcaption {
+	margin-top: 0.75rem;
+	color: var(--text-muted);
+	font-style: italic;
+}
+
 @media (max-width: 700px) {
 	.language-card {
 		width: 100%;
