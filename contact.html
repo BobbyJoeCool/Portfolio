@@ -1,0 +1,75 @@
+<!--
+    Contact Page
+-->
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<title>Robert Breutzmann | Contact</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="CSS/master.css" />
+		<link rel="stylesheet" href="CSS/contact.css" />
+	</head>
+
+	<body>
+		<div id="site-header"></div>
+
+		<main>
+			<h1>Get in Touch</h1>
+			<p class="contact-intro">
+				Have a question, an opportunity, or just want to say hello? Send a
+				message below or reach out on any of the platforms listed.
+			</p>
+
+			<div class="contact-layout">
+				<section class="contact-form-section">
+					<h2>Send a Message</h2>
+					<form id="contact-form" class="contact-form" novalidate>
+						<label for="contact-name">Name</label>
+						<input
+							type="text"
+							id="contact-name"
+							name="name"
+							autocomplete="name"
+							required
+						/>
+
+						<label for="contact-email">Email</label>
+						<input
+							type="email"
+							id="contact-email"
+							name="email"
+							autocomplete="email"
+							required
+						/>
+
+						<label for="contact-subject">Subject</label>
+						<input type="text" id="contact-subject" name="subject" required />
+
+						<label for="contact-message">Message</label>
+						<textarea
+							id="contact-message"
+							name="message"
+							rows="7"
+							required
+						></textarea>
+
+						<p id="contact-status" class="contact-status" role="status"></p>
+
+						<button type="submit" class="btn">Send Message</button>
+					</form>
+				</section>
+
+				<section class="contact-links-section">
+					<h2>Connect</h2>
+					<ul id="contact-links" class="contact-links"></ul>
+				</section>
+			</div>
+		</main>
+
+		<div id="site-footer"></div>
+		<script src="JS/common.js"></script>
+		<script src="JS/contact.js"></script>
+	</body>
+</html>

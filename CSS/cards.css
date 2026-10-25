@@ -1,0 +1,152 @@
+/* project and course card CSS, shared by projects.html and education.html (base card styles come from education.css) */
+
+.project-card h2 {
+	border-left: none;
+	padding-left: 0;
+	text-align: center;
+	margin-bottom: 8px;
+}
+
+.tech-stack {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 14px;
+	margin-bottom: 1rem;
+}
+
+.project-card .tech-stack img {
+	width: 52px;
+	height: 52px;
+	max-width: none;
+	padding: 0;
+	object-fit: contain;
+}
+
+/* Devicon SVGs have no backdrop, so give them the same dark badge as the PNG icons */
+.project-card .tech-stack img[src$=".svg"] {
+	padding: 9px;
+	border-radius: 50%;
+	background-color: var(--bg-primary);
+	border: 2px solid var(--accent-cyan);
+}
+
+.project-status {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	gap: 8px 12px;
+	max-width: none;
+	margin-bottom: 1.5rem;
+	color: var(--text-secondary);
+	text-align: center;
+}
+
+.status-badge {
+	display: inline-block;
+	padding: 2px 10px;
+	border-radius: 999px;
+	border: 1px solid;
+	font-size: 0.8rem;
+	font-weight: 600;
+	letter-spacing: 0.05em;
+	text-transform: uppercase;
+}
+
+.status-badge.live {
+	color: #4ade80;
+	border-color: rgba(74, 222, 128, 0.5);
+	background: rgba(74, 222, 128, 0.12);
+}
+
+.status-badge.active {
+	color: var(--accent-cyan-soft);
+	border-color: rgba(34, 211, 238, 0.5);
+	background: rgba(34, 211, 238, 0.12);
+}
+
+.status-badge.released {
+	color: var(--accent-glow);
+	border-color: rgba(196, 181, 253, 0.5);
+	background: rgba(196, 181, 253, 0.12);
+}
+
+.status-badge.paused {
+	color: var(--accent-yellow);
+	border-color: rgba(220, 220, 170, 0.4);
+	background: rgba(220, 220, 170, 0.1);
+}
+
+.status-badge.archived {
+	color: var(--silver-accent);
+	border-color: rgba(184, 184, 184, 0.4);
+	background: rgba(184, 184, 184, 0.1);
+}
+
+.status-badge.term {
+	color: var(--text-primary);
+	border-color: var(--accent-soft);
+	background: rgba(139, 92, 246, 0.25);
+}
+
+.coursework-intro {
+	margin-top: 3rem;
+}
+
+.repo-link {
+	margin-top: 0.5rem;
+	font-weight: 600;
+	color: var(--accent-cyan-soft);
+}
+
+.repo-card:hover .repo-link {
+	color: var(--text-primary);
+}
+
+/* Not a link (private repo), so no hover lift */
+.private-repo:hover {
+	transform: none;
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+	background-color: var(--bg-secondary);
+}
+
+/* footer icons (matches index.css) */
+
+footer img {
+	width: 28px;
+	height: 28px;
+	margin: 0 8px;
+	opacity: 0.85;
+	transition:
+		opacity 0.2s ease,
+		transform 0.2s ease;
+}
+
+footer img:hover {
+	opacity: 1;
+	transform: translateY(-2px);
+}
+
+@media (max-width: 700px) {
+	.project-card .tech-stack img {
+		width: 40px;
+		height: 40px;
+	}
+
+	.tech-stack {
+		gap: 10px;
+	}
+}
+
+/* Course titles are long, so they get a smaller heading than project names */
+.course-card h2 {
+	font-size: 2.1em;
+	line-height: 1.25;
+}
+
+@media (max-width: 700px) {
+	.course-card h2 {
+		font-size: 1.5em;
+	}
+}

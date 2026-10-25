@@ -11,6 +11,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="CSS/master.css">
     <link rel="stylesheet" href="CSS/education.css">
+    <link rel="stylesheet" href="CSS/cards.css">
 </head>
 
 <body>
@@ -47,164 +48,72 @@
             </figure>
         </section>
 
+        <section class="coursework-intro">
+            <h1>Coursework</h1>
+            <p>
+                Each course at Bellevue University has its own repository of assignments and projects, listed here with the most recent courses first.
+            </p>
+        </section>
+
         <section id="github-repositories">
-            <div class="language-card python">
-                <h2>Python</h2>
-                <img src="Assets/icons/Language-Icons/Python.png" alt="Python Logo" />
-                    <a href="https://github.com/BobbyJoeCool/CSD-205" target="_blank" rel="noopener noreferrer" class="repo-card">
-                        <h4>CSD 205 - Python for Programmers</h4>
-                        <p>
-                            This introductory class to Python focused on basic coding syntax and fundamental structure.
-                        </p>
-                        <h5>Topics Covered</h5>
-                        <ul>
-                            <li>Basic Syntax</li>
-                            <li>Conditional Statements</li>
-                            <li>Control Flow</li>
-                            <li>Methods and Functions</li>
-                            <li>OOP - Classes and Objects</li>
-                            <li>Exception Handling</li>
-                            <li>tkinter and GUIs</li>
-                        </ul>
-                    </a>
-                    <a href="https://github.com/BobbyJoeCool/CSD-325" target="_blank" rel="noopener noreferrer" class="repo-card">
-                        <h4>CSD 325 - Advanced Python</h4>
-                        <p>
-                            This course focused more on coding skills that might be used in a developer environment.
-                        </p>
-                        <h5>Topics Covered</h5>
-                        <ul>
-                            <li>Debugging</li>
-                            <li>Pseudocode & Flowcharts - Analyzing existing code to Pseudocode</li>
-                            <li>Modifying Existing Programs</li>
-                            <li>Documentation</li>
-                            <li>Version Control</li>
-                            <li>Logging</li>
-                        </ul>
-                    </a>
-            </div>
-
-            <div class="language-card sql">
-                <h2>SQL - Structured Query Language</h2>
-                <img src="Assets/icons/Language-Icons/SQL.png" alt="SQL Logo" />
-                <a href="https://github.com/BobbyJoeCool/CSD-310" target="_blank" rel="noopener noreferrer" class="repo-card">
-                    <h4>CSD 310 - Database Development and Management</h4>
-                    <p>
-                        This class focused on SQL coding databases using MySQL and Python.
-                    </p>
-                    <h5>Included Topics</h5>
-                    <ul>
-                        <li>Database Normalization</li>
-                        <li>Relational vs Non Relational Databases</li>
-                        <li>JSON and other Text based Databases</li>
-                        <li>SQL Syntax</li>
-                        <li>SQL Tables</li>
-                        <li>SQL Queries</li>
-                        <li>SQL Advanced Queries</li>
-                        <li>SQL Validation and Access Controls</li>
-                    </ul>
-                </a>
-
-                <a href="https://github.com/BobbyJoeCool/CSD310-BlueTeam" target="_blank" rel="noopener noreferrer" class="repo-card">
-                    <h4>CSD 310 - Blue Team Group Project</h4>
-                    <p>
-                        Team-based group project implementing a pilot database solution for the Bacchus Winery case study. Developed ERDs, business rules, Python scripts for table creation and data population, and advanced reporting queries.
-                    </p>
-                </a>
-            </div>
-
-            <div class="language-card java">
-                <h2>Java</h2>
-                <img src="Assets/icons/Language-Icons/Java.png" alt="Java Logo" />
-                <a href="https://github.com/BobbyJoeCool/CSD-402" target="_blank" rel="noopener noreferrer" class="repo-card">
-                    <h4>CSD 402 - Java for Programmers</h4>
-                    <p>
-                        This class focuses on the basics of Java, including the basic syntax and basic program structure.
-                    </p>
-                    <h5>Included Topics</h5>
-                    <ul>
-                        <li>Basic Syntax</li>
-                        <li>Selection</li>
-                        <li>Strings</li>
-                        <li>Loops</li>
-                        <li>Methods</li>
-                        <li>Arrays</li>
-                        <li>Object-Oriented Programming (Objects and Classes)</li>
-                        <li>Inhereitance and Polymorphism</li>
-                        <li>Exceptions</li>
-                        <li>JavaFX Basics (GUIs)</li>
-                    </ul>
-                </a>
-
-                <a href="https://github.com/BobbyJoeCool/CSD-420" target="_blank" rel="noopener noreferrer" class="repo-card">
-                    <h4>CSD 420 - Advanced Java Programming</h4>
-                    <p>
-                        This class focused on the more advanced aspects of coding in Java.
-                    </p>
-                    <h5>Included Topics</h5>
-                    <ul>
-                        <li>Event-Driven Programming</li>
-                        <li>Binary I/O</li>
-                        <li>Recursion</li>
-                        <li>Generics</li>
-                        <li>Collections (Lists, Stacks, Queues, Sets, Maps)</li>
-                        <li>More JavaFX</li>
-                        <li>Multithreading</li>
-                        <li>Java Database Control</li>
-                        <li>JSON</li>
-                    </ul>
-                </a>
-            </div>
-
-            <div class="language-card html-css-js">
-                <h2>Web Development</h2>
-                <div id="HTML-CSS-TechStack">
-                    <img src="Assets/icons/Language-Icons/HTML5.png" alt="HTML Logo" />
-                    <img src="Assets/icons/Language-Icons/CSS3.png" alt="CSS Logo" />
-                    <img src="Assets/icons/Language-Icons/JavaScript.png" alt="JavaScript Logo" />
+            <!-- CSD 460 -->
+            <article class="language-card project-card course-card">
+                <div class="tech-stack">
+                    <img src="Assets/icons/Language-Icons/Java.png" alt="Java" title="Java" />
+                    <img src="Assets/icons/Language-Icons/JSP.png" alt="JSP" title="JSP" />
+                    <img src="Assets/icons/Tech-Icons/MySQL.png" alt="MySQL" title="MySQL" />
+                    <img src="Assets/icons/Tech-Icons/Azure.png" alt="Azure" title="Azure App Service" />
                 </div>
-                <a href="https://github.com/BobbyJoeCool/CSD-340" target="_blank" rel="noopener noreferrer" class="repo-card">
-                    <h4>CSD 340 - Web Development with HTML and CSS</h4>
+                <h2>CSD 460 - Capstone in Software Development</h2>
+                <p class="project-status">
+                    <span class="status-badge term">Aug – Oct 2026</span>
+                    Final course · Team project
+                </p>
+                <a href="https://github.com/BobbyJoeCool/CSD-460" target="_blank" rel="noopener noreferrer" class="repo-card">
+                    <h4>Course Repository</h4>
                     <p>
-                        This class focuses on building web Pages with HTML and CSS.
-                        It also has a short introduction to JavaScript.
+                        The final capstone course employing all previously developed skills in a real-world, team-based Java project. The course builds the Moffat Bay Lodge &amp; Marina booking system using separate development environments to promote software through development, QA, and production.
                     </p>
                     <h5>Topics Covered</h5>
                     <ul>
-                        <li>HTML Structure</li>
-                        <li>HTML Syntax</li>
-                        <li>CSS Syntax</li>
-                        <li>Design Process</li>
-                        <li>Atomic Design</li>
-                        <li>Responsive Design</li>
+                        <li>Client and server-side development with Jakarta EE</li>
+                        <li>Database development and integration</li>
+                        <li>Agile/Scrum team-based development</li>
+                        <li>Requirements gathering and prototyping</li>
+                        <li>QA testing and peer review</li>
+                        <li>Multi-environment deployment (Dev, QA, Production)</li>
                     </ul>
+                    <span class="repo-link">View on GitHub →</span>
                 </a>
 
-                <a href="https://bobbyjoecool.github.io/CSD-340/" target="_blank" rel="noopener noreferrer" class="repo-card pages">
-                    <h4>GitHub Pages for CSD 340</h4>
-                </a>
-
-                <a href="https://github.com/BobbyJoeCool/CSD-430" target="_blank" rel="noopener noreferrer" class="repo-card">
-                    <h4>CSD 430 - Server-Side Development</h4>
+                <a href="https://github.com/BobbyJoeCool/csd460-blueteam" target="_blank" rel="noopener noreferrer" class="repo-card">
+                    <h4>Blue Team Repository</h4>
                     <p>
-                        This course covers server-side web development with Jakarta EE, building a multi-module CRUD application using JSP, JavaBeans, and JDBC against a MySQL database.
+                        The shared team repository for the Moffat Bay Marina capstone project. Contains the collaborative codebase, scrum documents, and the full marina website built as a team.
                     </p>
-                    <h5>Topics Covered</h5>
-                    <ul>
-                        <li>JSP Scriptlets and dynamic HTML pages</li>
-                        <li>JavaBeans and data encapsulation</li>
-                        <li>Full CRUD (Create, Read, Update, Delete) with JDBC and MySQL</li>
-                        <li>Form handling and input security</li>
-                        <li>Custom tags and Apache Maven</li>
-                    </ul>
+                    <span class="repo-link">View on GitHub →</span>
                 </a>
-            </div>
 
-            <div class="language-card php">
-                <h2>PHP</h2>
-                <img src="Assets/icons/Language-Icons/PHP.png" alt="PHP Logo" />
+                <a href="https://moffatbay-blueteam-ac9638.azurewebsites.net/" target="_blank" rel="noopener noreferrer" class="repo-card pages">
+                    <h4>Live Demo: Moffat Bay Lodge &amp; Marina (Azure)</h4>
+                    <p>
+                        The deployed capstone site, hosted on Azure App Service with Azure Database for MySQL. The first visit after the site has been idle can take up to a minute to load.
+                    </p>
+                </a>
+            </article>
+
+            <!-- CSD 440 -->
+            <article class="language-card project-card course-card">
+                <div class="tech-stack">
+                    <img src="Assets/icons/Language-Icons/PHP.png" alt="PHP" title="PHP" />
+                    <img src="Assets/icons/Tech-Icons/MySQL.png" alt="MySQL" title="MySQL" />
+                </div>
+                <h2>CSD 440 - Server-Side Scripting</h2>
+                <p class="project-status">
+                    <span class="status-badge term">Aug – Oct 2026</span>
+                    PHP
+                </p>
                 <a href="https://github.com/BobbyJoeCool/CSD-440" target="_blank" rel="noopener noreferrer" class="repo-card">
-                    <h4>CSD 440 - Server-Side Scripting</h4>
                     <p>
                         This course examines the PHP server-side scripting language, covering cookies and sessions, objects and methods, collections, data types, and security coding techniques. Students are also introduced to Linux command line methods.
                     </p>
@@ -219,73 +128,51 @@
                         <li>JSON handling</li>
                         <li>Apache Web Server (XAMPP)</li>
                     </ul>
+                    <span class="repo-link">View on GitHub →</span>
                 </a>
-            </div>
+            </article>
 
-            <div class="language-card capstone">
-                <h2>Capstone</h2>
-                <div id="Capstone-TechStack">
-                    <img src="Assets/icons/Language-Icons/Java.png" alt="Java Logo" />
-                    <img src="Assets/icons/Language-Icons/JSP.png" alt="JSP Logo" />
-                    <img src="Assets/icons/Tech-Icons/MySQL.png" alt="MySQL Logo" />
+            <!-- CSD 430 -->
+            <article class="language-card project-card course-card">
+                <div class="tech-stack">
+                    <img src="Assets/icons/Language-Icons/Java.png" alt="Java" title="Java" />
+                    <img src="Assets/icons/Language-Icons/JSP.png" alt="JSP" title="JSP" />
+                    <img src="Assets/icons/Tech-Icons/MySQL.png" alt="MySQL" title="MySQL" />
                 </div>
-                <a href="https://github.com/BobbyJoeCool/CSD-460" target="_blank" rel="noopener noreferrer" class="repo-card">
-                    <h4>CSD 460 - Capstone in Software Development</h4>
+                <h2>CSD 430 - Server-Side Development</h2>
+                <p class="project-status">
+                    <span class="status-badge term">May – Aug 2026</span>
+                    Jakarta EE
+                </p>
+                <a href="https://github.com/BobbyJoeCool/CSD-430" target="_blank" rel="noopener noreferrer" class="repo-card">
                     <p>
-                        The final capstone course employing all previously developed skills in a real-world, team-based Java project. The course builds the Moffat Bay Lodge &amp; Marina booking system using separate development environments to promote software through development, QA, and production.
+                        This course covers server-side web development with Jakarta EE, building a multi-module CRUD application using JSP, JavaBeans, and JDBC against a MySQL database.
                     </p>
                     <h5>Topics Covered</h5>
                     <ul>
-                        <li>Client and server-side development with Jakarta EE</li>
-                        <li>Database development and integration</li>
-                        <li>Agile/Scrum team-based development</li>
-                        <li>Requirements gathering and prototyping</li>
-                        <li>QA testing and peer review</li>
-                        <li>Multi-environment deployment (Dev, QA, Production)</li>
+                        <li>JSP Scriptlets and dynamic HTML pages</li>
+                        <li>JavaBeans and data encapsulation</li>
+                        <li>Full CRUD (Create, Read, Update, Delete) with JDBC and MySQL</li>
+                        <li>Form handling and input security</li>
+                        <li>Custom tags and Apache Maven</li>
                     </ul>
+                    <span class="repo-link">View on GitHub →</span>
                 </a>
+            </article>
 
-                <a href="https://github.com/BobbyJoeCool/csd460-blueteam" target="_blank" rel="noopener noreferrer" class="repo-card">
-                    <h4>CSD 460 - Blue Team Repository</h4>
-                    <p>
-                        The shared team repository for the Moffat Bay Marina capstone project. Contains the collaborative codebase, scrum documents, and the full marina website built as a team.
-                    </p>
-                </a>
-
-                <a href="https://moffatbay-blueteam-ac9638.azurewebsites.net/" target="_blank" rel="noopener noreferrer" class="repo-card pages">
-                    <h4>Live Demo: Moffat Bay Lodge &amp; Marina (Azure)</h4>
-                    <p>
-                        The deployed capstone site, hosted on Azure App Service with Azure Database for MySQL. The first visit after the site has been idle can take up to a minute to load.
-                    </p>
-                </a>
-            </div>
-
-            <div class="language-card non-Language Related Software Development">
-                <h2>Non-Language Related Software Development Courses</h2>
-                <a href="https://github.com/BobbyJoeCool/CSD-370" target="_blank" rel="noopener noreferrer" class="repo-card">
-                    <h4>CSD 370 - Secure Software Development</h4>
-                    <p>
-                        This class focuses on the fundamentals of developing secure software.
-                    </p>
-                    <h5>Topics Covered</h5>
-                    <ul>
-                        <li>Secure Design Principles</li>
-                        <li>Security and COmpliance Requirements</li>
-                        <li>Use/Abuse Cases</li>
-                        <li>Software Architecture/Design</li>
-                        <li>Secure Coding Practices</li>
-                        <li>Analyzing Code for Security Risks (SAST, DAST, IAST, RASP)</li>
-                        <li>Implementing Security Controls</li>
-                        <li>Security Test Cases</li>
-                        <li>Security Testing Plan</li>
-                        <li>Software Testing and Acceptance</li>
-                        <li>Configuration and Version Control</li>
-                        <li>Software Deployment Operations and Supply Chain Risk</li>
-                    </ul>
-                </a>
-
+            <!-- CSD 380 -->
+            <article class="language-card project-card course-card">
+                <div class="tech-stack">
+                    <img src="Assets/icons/Tech-Icons/Git.svg" alt="Git" title="Git" />
+                    <img src="Assets/icons/Tech-Icons/GitHub.png" alt="GitHub" title="GitHub" />
+                    <img src="Assets/icons/Tech-Icons/GitLab.svg" alt="GitLab" title="GitLab" />
+                </div>
+                <h2>CSD 380 - DevOps</h2>
+                <p class="project-status">
+                    <span class="status-badge term">May – Aug 2026</span>
+                    DevOps practices
+                </p>
                 <a href="https://github.com/BobbyJoeCool/CSD-380" target="_blank" rel="noopener noreferrer" class="repo-card">
-                    <h4>CSD 380 - DevOps</h4>
                     <p>
                         This course covers DevOps principles, tools, and practices with an emphasis on collaboration, automation, and continuous delivery as applied to real-world software development workflows.
                     </p>
@@ -298,8 +185,232 @@
                         <li>Telemetry, monitoring, and anomaly detection</li>
                         <li>DevOps security controls</li>
                     </ul>
+                    <span class="repo-link">View on GitHub →</span>
                 </a>
-            </div>
+            </article>
+
+            <!-- CSD 420 -->
+            <article class="language-card project-card course-card">
+                <div class="tech-stack">
+                    <img src="Assets/icons/Language-Icons/Java.png" alt="Java" title="Java" />
+                </div>
+                <h2>CSD 420 - Advanced Java Programming</h2>
+                <p class="project-status">
+                    <span class="status-badge term">Mar – May 2026</span>
+                    Java
+                </p>
+                <a href="https://github.com/BobbyJoeCool/CSD-420" target="_blank" rel="noopener noreferrer" class="repo-card">
+                    <p>
+                        This class focused on the more advanced aspects of coding in Java.
+                    </p>
+                    <h5>Topics Covered</h5>
+                    <ul>
+                        <li>Event-Driven Programming</li>
+                        <li>Binary I/O</li>
+                        <li>Recursion</li>
+                        <li>Generics</li>
+                        <li>Collections (Lists, Stacks, Queues, Sets, Maps)</li>
+                        <li>More JavaFX</li>
+                        <li>Multithreading</li>
+                        <li>Java Database Control</li>
+                        <li>JSON</li>
+                    </ul>
+                    <span class="repo-link">View on GitHub →</span>
+                </a>
+            </article>
+
+            <!-- CSD 370 -->
+            <article class="language-card project-card course-card">
+                <div class="tech-stack">
+                    <img src="Assets/icons/Tech-Icons/Git.svg" alt="Git" title="Git" />
+                </div>
+                <h2>CSD 370 - Secure Software Development</h2>
+                <p class="project-status">
+                    <span class="status-badge term">Mar – May 2026</span>
+                    Software security
+                </p>
+                <a href="https://github.com/BobbyJoeCool/CSD-370" target="_blank" rel="noopener noreferrer" class="repo-card">
+                    <p>
+                        This class focuses on the fundamentals of developing secure software.
+                    </p>
+                    <h5>Topics Covered</h5>
+                    <ul>
+                        <li>Secure Design Principles</li>
+                        <li>Security and Compliance Requirements</li>
+                        <li>Use/Abuse Cases</li>
+                        <li>Software Architecture/Design</li>
+                        <li>Secure Coding Practices</li>
+                        <li>Analyzing Code for Security Risks (SAST, DAST, IAST, RASP)</li>
+                        <li>Implementing Security Controls</li>
+                        <li>Security Test Cases</li>
+                        <li>Security Testing Plan</li>
+                        <li>Software Testing and Acceptance</li>
+                        <li>Configuration and Version Control</li>
+                        <li>Software Deployment Operations and Supply Chain Risk</li>
+                    </ul>
+                    <span class="repo-link">View on GitHub →</span>
+                </a>
+            </article>
+
+            <!-- CSD 402 -->
+            <article class="language-card project-card course-card">
+                <div class="tech-stack">
+                    <img src="Assets/icons/Language-Icons/Java.png" alt="Java" title="Java" />
+                </div>
+                <h2>CSD 402 - Java for Programmers</h2>
+                <p class="project-status">
+                    <span class="status-badge term">Jan – Mar 2026</span>
+                    Java
+                </p>
+                <a href="https://github.com/BobbyJoeCool/CSD-402" target="_blank" rel="noopener noreferrer" class="repo-card">
+                    <p>
+                        This class focuses on the basics of Java, including the basic syntax and basic program structure.
+                    </p>
+                    <h5>Topics Covered</h5>
+                    <ul>
+                        <li>Basic Syntax</li>
+                        <li>Selection</li>
+                        <li>Strings</li>
+                        <li>Loops</li>
+                        <li>Methods</li>
+                        <li>Arrays</li>
+                        <li>Object-Oriented Programming (Objects and Classes)</li>
+                        <li>Inheritance and Polymorphism</li>
+                        <li>Exceptions</li>
+                        <li>JavaFX Basics (GUIs)</li>
+                    </ul>
+                    <span class="repo-link">View on GitHub →</span>
+                </a>
+            </article>
+
+            <!-- CSD 340 -->
+            <article class="language-card project-card course-card">
+                <div class="tech-stack">
+                    <img src="Assets/icons/Language-Icons/HTML5.png" alt="HTML" title="HTML" />
+                    <img src="Assets/icons/Language-Icons/CSS3.png" alt="CSS" title="CSS" />
+                    <img src="Assets/icons/Language-Icons/JavaScript.png" alt="JavaScript" title="JavaScript" />
+                </div>
+                <h2>CSD 340 - Web Development with HTML and CSS</h2>
+                <p class="project-status">
+                    <span class="status-badge term">Jan – Mar 2026</span>
+                    Web development
+                </p>
+                <a href="https://github.com/BobbyJoeCool/CSD-340" target="_blank" rel="noopener noreferrer" class="repo-card">
+                    <p>
+                        This class focuses on building web Pages with HTML and CSS.
+                        It also has a short introduction to JavaScript.
+                    </p>
+                    <h5>Topics Covered</h5>
+                    <ul>
+                        <li>HTML Structure</li>
+                        <li>HTML Syntax</li>
+                        <li>CSS Syntax</li>
+                        <li>Design Process</li>
+                        <li>Atomic Design</li>
+                        <li>Responsive Design</li>
+                    </ul>
+                    <span class="repo-link">View on GitHub →</span>
+                </a>
+
+                <a href="https://bobbyjoecool.github.io/CSD-340/" target="_blank" rel="noopener noreferrer" class="repo-card pages">
+                    <h4>Live Site on GitHub Pages</h4>
+                </a>
+            </article>
+
+            <!-- CSD 325 -->
+            <article class="language-card project-card course-card">
+                <div class="tech-stack">
+                    <img src="Assets/icons/Language-Icons/Python.png" alt="Python" title="Python" />
+                </div>
+                <h2>CSD 325 - Advanced Python</h2>
+                <p class="project-status">
+                    <span class="status-badge term">Oct – Dec 2025</span>
+                    Python
+                </p>
+                <a href="https://github.com/BobbyJoeCool/CSD-325" target="_blank" rel="noopener noreferrer" class="repo-card">
+                    <p>
+                        This course focused more on coding skills that might be used in a developer environment.
+                    </p>
+                    <h5>Topics Covered</h5>
+                    <ul>
+                        <li>Debugging</li>
+                        <li>Pseudocode &amp; Flowcharts - Analyzing existing code to Pseudocode</li>
+                        <li>Modifying Existing Programs</li>
+                        <li>Documentation</li>
+                        <li>Version Control</li>
+                        <li>Logging</li>
+                    </ul>
+                    <span class="repo-link">View on GitHub →</span>
+                </a>
+            </article>
+
+            <!-- CSD 310 -->
+            <article class="language-card project-card course-card">
+                <div class="tech-stack">
+                    <img src="Assets/icons/Language-Icons/SQL.png" alt="SQL" title="SQL" />
+                    <img src="Assets/icons/Tech-Icons/MySQL.png" alt="MySQL" title="MySQL" />
+                    <img src="Assets/icons/Language-Icons/Python.png" alt="Python" title="Python" />
+                </div>
+                <h2>CSD 310 - Database Development and Use</h2>
+                <p class="project-status">
+                    <span class="status-badge term">Oct – Dec 2025</span>
+                    SQL · Team project
+                </p>
+                <a href="https://github.com/BobbyJoeCool/CSD-310" target="_blank" rel="noopener noreferrer" class="repo-card">
+                    <h4>Course Repository</h4>
+                    <p>
+                        This class focused on SQL coding databases using MySQL and Python.
+                    </p>
+                    <h5>Topics Covered</h5>
+                    <ul>
+                        <li>Database Normalization</li>
+                        <li>Relational vs Non Relational Databases</li>
+                        <li>JSON and other Text based Databases</li>
+                        <li>SQL Syntax</li>
+                        <li>SQL Tables</li>
+                        <li>SQL Queries</li>
+                        <li>SQL Advanced Queries</li>
+                        <li>SQL Validation and Access Controls</li>
+                    </ul>
+                    <span class="repo-link">View on GitHub →</span>
+                </a>
+
+                <a href="https://github.com/BobbyJoeCool/CSD310-BlueTeam" target="_blank" rel="noopener noreferrer" class="repo-card">
+                    <h4>Blue Team Group Project</h4>
+                    <p>
+                        Team-based group project implementing a pilot database solution for the Bacchus Winery case study. Developed ERDs, business rules, Python scripts for table creation and data population, and advanced reporting queries.
+                    </p>
+                    <span class="repo-link">View on GitHub →</span>
+                </a>
+            </article>
+
+            <!-- CSD 205 -->
+            <article class="language-card project-card course-card">
+                <div class="tech-stack">
+                    <img src="Assets/icons/Language-Icons/Python.png" alt="Python" title="Python" />
+                </div>
+                <h2>CSD 205 - Python for Programmers</h2>
+                <p class="project-status">
+                    <span class="status-badge term">Aug – Oct 2025</span>
+                    Python
+                </p>
+                <a href="https://github.com/BobbyJoeCool/CSD-205" target="_blank" rel="noopener noreferrer" class="repo-card">
+                    <p>
+                        This introductory class to Python focused on basic coding syntax and fundamental structure.
+                    </p>
+                    <h5>Topics Covered</h5>
+                    <ul>
+                        <li>Basic Syntax</li>
+                        <li>Conditional Statements</li>
+                        <li>Control Flow</li>
+                        <li>Methods and Functions</li>
+                        <li>OOP - Classes and Objects</li>
+                        <li>Exception Handling</li>
+                        <li>tkinter and GUIs</li>
+                    </ul>
+                    <span class="repo-link">View on GitHub →</span>
+                </a>
+            </article>
         </section>
 
     </main>

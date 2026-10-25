@@ -10,6 +10,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="stylesheet" href="CSS/master.css" />
 		<link rel="stylesheet" href="CSS/education.css" />
+		<link rel="stylesheet" href="CSS/cards.css" />
 	</head>
 
 	<body>
@@ -20,284 +21,83 @@
 				<h1>Personal Projects</h1>
 				<p>
 					These are projects I have worked on outside of coursework to practice
-					and build on my skills.
+					and build on my skills, ordered from most to least complex.
 				</p>
 			</section>
 			<section id="github-repositories">
-				<div class="language-card python">
-					<h2>Python</h2>
-					<img src="Assets/icons/Language-Icons/Python.png" alt="Python Logo" />
-					<a
-						href="https://github.com/BobbyJoeCool/Legacy_Python_Projects"
-						target="_blank"
-						rel="noopener noreferrer"
-						class="repo-card"
-					>
-						<h4>Older Python Project</h4>
-						<p>
-							Many of these projects were done or worked on during the Python
-							for Programmers Course. They tend to be very rough and in some
-							cases unfinished, as I moved on from simpler programs to try to do
-							more advanced or ambitious project.
-						</p>
-						<h5>Included Projects</h5>
-						<ul>
-							<li>
-								Tkinter and GUI tests - (from the book from the Python course)
-							</li>
-							<li>
-								Inventory Management System - An attempt to mimic the IMS we use
-								at Target
-							</li>
-							<li>
-								FileSorter - A program to practice manipulating files on the
-								hard drive.
-							</li>
-							<li>BlackJack - The game BlackJack</li>
-							<li>
-								Monkey Math Calculator - Made for my kids (monkey math is number
-								concatenation)
-							</li>
-						</ul>
-					</a>
-					<a
-						href="https://github.com/BobbyJoeCool/Python-Projects"
-						target="_blank"
-						rel="noopener noreferrer"
-						class="repo-card"
-					>
-						<h4>Python Projects</h4>
-						<p>
-							This is some more advanced projects I have worked on and am
-							continuing to work on in my spare time as practice for Python and
-							SQL. This repo employs some automatic formatting tools (Ruff and
-							Black) that ensure the code written is up to formatting standards
-							before submitting. I also have been working on the Readme and
-							Version Logs to map out planned improvements and version
-							improvements for these projects.
-						</p>
-						<h5>Included Projects</h5>
-						<ul>
-							<li>
-								Work Job Tracker - designed to track and report what jobs I'm
-								assigned at work
-							</li>
-						</ul>
-					</a>
-				</div>
-
-				<div class="language-card java">
-					<h2>Java</h2>
-					<img src="Assets/icons/Language-Icons/Java.png" alt="Java Logo" />
-					<a
-						href="https://github.com/BobbyJoeCool/Java-Projects"
-						target="_blank"
-						rel="noopener noreferrer"
-						class="repo-card"
-					>
-						<h4>Java Projects</h4>
-						<p>
-							This repo has many Java Projects that I worked on outside of
-							School. Many of these projects are "extra exercises" taken out of
-							the book
-						</p>
-					</a>
-
+				<!-- PalletIQ -->
+				<article class="language-card project-card">
+					<div class="tech-stack">
+						<img src="Assets/icons/Language-Icons/TypeScript.png" alt="TypeScript" title="TypeScript" />
+						<img src="Assets/icons/Language-Icons/React.png" alt="React" title="React" />
+						<img src="Assets/icons/Tech-Icons/Vite.svg" alt="Vite" title="Vite" />
+						<img src="Assets/icons/Tech-Icons/Tailwind.svg" alt="Tailwind CSS" title="Tailwind CSS" />
+						<img src="Assets/icons/Language-Icons/NodeJS.png" alt="Node.js" title="Node.js / Express" />
+						<img src="Assets/icons/Tech-Icons/Prisma.png" alt="Prisma" title="Prisma" />
+						<img src="Assets/icons/Tech-Icons/MySQL.png" alt="MySQL" title="MySQL" />
+						<img src="Assets/icons/Tech-Icons/Playwright.svg" alt="Playwright" title="Playwright" />
 					</div>
-
-				<div class="language-card HTML">
-					<h2>Web Development</h2>
-					<div id="HTML-CSS-TechStack">
-						<img src="Assets/icons/Language-Icons/HTML5.png" alt="HTML Logo" />
-						<img src="Assets/icons/Language-Icons/CSS3.png" alt="CSS Logo" />
-						<img
-							src="Assets/icons/Language-Icons/JavaScript.png"
-							alt="JavaScript Logo"
-						/>
-						<img src="Assets/icons/Language-Icons/React.png" alt="React Logo" />
-					</div>
-					<a
-						href="https://github.com/BobbyJoeCool/HTML-Projects"
-						target="_blank"
-						rel="noopener noreferrer"
-						class="repo-card"
-					>
-						<h4>HTML Projects</h4>
-						<p>
-							This serves as a place to put HTML projects to practice with HTML,
-							CSS, and JavaScript.
-						</p>
-						<h5>Included Projects</h5>
-						<ul>
-							<li>Online Rendering of my Book</li>
-							<li>Cribbage Scoring App</li>
-							<li>Fallout Terminal Hacking Helper App</li>
-						</ul>
-					</a>
-
-					<a
-						href="https://bobbyjoecool.github.io/HTML-Projects"
-						target="_blank"
-						rel="noopener noreferrer"
-						class="repo-card pages"
-					>
-						<h4>GitHub Pages for HTML Projects</h4>
-					</a>
-
-					<a
-						href="https://github.com/BobbyJoeCool/TLDR-Reader"
-						target="_blank"
-						rel="noopener noreferrer"
-						class="repo-card"
-					>
-						<h4>TLDR Reader</h4>
-						<p>
-							A personal web app for reading, flagging, and permanently saving
-							articles from the TLDR newsletter. Issues are browsed by day across
-							five sections — This Week, Last Week, Archive, Reading List, and
-							Saved Articles. Deployed to Azure Static Web Apps with Microsoft
-							authentication and Azure Cosmos DB for per-user state. Article
-							content is scraped daily via an automated ingestion pipeline.
-						</p>
-						<h5>Highlights</h5>
-						<ul>
-							<li>Browse This Week and Last Week by day and newsletter edition</li>
-							<li>Archive calendar: browse any past date with available articles</li>
-							<li>Flag articles to a Reading List; star to permanently save them</li>
-							<li>Microsoft (Azure AD) authentication with per-user cloud state</li>
-							<li>Automated daily ingestion pipeline via scheduled scraper</li>
-						</ul>
-					</a>
-
-					<a
-						href="https://happy-bush-0f619981e.7.azurestaticapps.net"
-						target="_blank"
-						rel="noopener noreferrer"
-						class="repo-card pages"
-					>
-						<h4>Azure Static Page Host for TLDR Reader</h4>
-					</a>
-
+					<h2>PalletIQ</h2>
+					<p class="project-status">
+						<span class="status-badge active">Active Development</span>
+						Floor app v1.9.0 · API v1.2.6 · Manager desktop app scaffolded
+					</p>
 					<a
 						href="https://github.com/BobbyJoeCool/PalletIQ"
 						target="_blank"
 						rel="noopener noreferrer"
 						class="repo-card"
 					>
-						<h4>PalletIQ <span class="wip-badge">WIP</span></h4>
 						<p>
-							A full-stack warehouse operations app covering Pull, Put, Pallet
-							and Location ID lookups, and a visual Empty Locations map. Built
-							from 20 years of warehouse floor experience with a four-tier role
-							hierarchy, field-level permission gating, and a UI designed for
-							hands-free scanning: numeric-first input, no blocking pop-ups,
-							and every pallet and location ID a tappable link.
-						</p>
-						<h5>Core Functions</h5>
-						<ul>
-							<li>Pull — all pull types driven by label scan with two-path verification</li>
-							<li>Put — directed put-away with zone logic and manual put with safety checks</li>
-							<li>Pallet ID and Location ID detail screens, reachable from any reference</li>
-							<li>Empty Locations — aisle summary and visual zone-by-zone map</li>
-							<li>Reservation locking with server-side timeout cleanup</li>
-						</ul>
-					</a>
-
-					<a
-						href="https://github.com/BobbyJoeCool/CheatSheets"
-						target="_blank"
-						rel="noopener noreferrer"
-						class="repo-card"
-					>
-						<h4>CheatSheets</h4>
-						<p>
-							A curated library of single-page technical reference sheets for
-							programming languages, CS concepts, and developer tools. Each
-							sheet is formatted to fit on an 8.5" × 11" page with a dark mode
-							default and a print-optimized light mode. A print aggregator page
-							uses fetch() and DOMParser to inject multiple sheets and generate
-							PDFs directly in the browser.
-						</p>
-						<h5>Reference Guides (1,496 sheets across 29 collections)</h5>
-						<ul>
-							<li>
-								<strong>Concepts &amp; Tools:</strong> Concepts (104), Agentic
-								Coding (73), Bitwise (8), RegEx (9), Playwright (67)
-							</li>
-							<li>
-								<strong>Command Line Interface:</strong> Git (36), zsh (27), Bash
-								(27), PowerShell (40)
-							</li>
-							<li><strong>Python:</strong> Python (96), Tkinter (62)</li>
-							<li><strong>Java:</strong> Java (134), JSP (32)</li>
-							<li>
-								<strong>JavaScript / TypeScript:</strong> JavaScript &amp;
-								TypeScript (131), React (98), Node.js (68), Next.js (58)
-							</li>
-							<li>
-								<strong>Web Design:</strong> HTML (56), CSS (77), CSS Systems (46),
-								PHP (133)
-							</li>
-							<li><strong>SQL &amp; Tools:</strong> SQL (22), Prisma (32)</li>
-							<li>
-								<strong>Markup &amp; Notation:</strong> Markdown (22), Mermaid
-								(12), JSON (8), XML (10), YAML (8)
-							</li>
-						</ul>
-					</a>
-				</div>
-
-				<div class="language-card typescript">
-					<h2>TypeScript &amp; React Native</h2>
-					<div id="TS-RN-TechStack">
-						<img
-							src="Assets/icons/Language-Icons/TypeScript.png"
-							alt="TypeScript Logo"
-						/>
-						<img
-							src="Assets/icons/Language-Icons/React.png"
-							alt="React Native Logo"
-						/>
-					</div>
-					<a
-						href="https://github.com/BobbyJoeCool/DragonLedger_Heroes"
-						target="_blank"
-						rel="noopener noreferrer"
-						class="repo-card"
-					>
-						<h4>DragonLedger: Heroes</h4>
-						<p>
-							A D&amp;D 5e 2024 character sheet and DM companion app for iOS and
-							Android, built with React Native (Expo) and TypeScript. Designed
-							engine-first — all game logic is implemented as pure TypeScript
-							functions with full Jest test coverage before any UI is written.
-							Features a full SQLite schema for character persistence, a
-							RevenueCat-managed entitlement system (Free / Adventurer / Pro
-							tiers), and an event-sourced state architecture designed for
-							future local WiFi and cloud multiplayer sync via Supabase.
+							A full-stack warehouse inventory and pallet-tracking system built
+							from 20 years of warehouse floor and retail management experience.
+							It tracks inventory by location rather than by item, with a
+							four-tier role hierarchy, field-level permission gating, and a
+							tablet UI designed for hands-free scanning: numeric-first input,
+							no blocking pop-ups, and every pallet and location ID a tappable
+							link. Organized as a monorepo with a shared TypeScript types
+							package, an Express + Prisma API on MySQL, the React floor app,
+							and a manager-facing Electron desktop app in progress.
 						</p>
 						<h5>Highlights</h5>
 						<ul>
-							<li>
-								HP, ability scores, movement, inventory, spell slots, and combat
-								action economy engines
-							</li>
-							<li>DM mode with encounter builder and initiative tracking</li>
-							<li>RevenueCat in-app purchase integration</li>
-							<li>Local WiFi and cloud multiplayer sync (in development)</li>
+							<li>Pull and Put (directed and manual) driven by label scans with independent verification paths</li>
+							<li>Pallet ID and Location ID detail screens, reachable from any reference in the app</li>
+							<li>Empty Locations aisle summary and visual zone-by-zone staging map</li>
+							<li>v1.9.0 milestone: Individual Rate of Productivity (IRP), Pull Request Query, and Container ID Inquiry with a per-record audit trail</li>
+							<li>Badge + PIN login issuing signed JWTs, reservation locking, and Playwright end-to-end tests</li>
 						</ul>
+						<span class="repo-link">View on GitHub →</span>
 					</a>
+				</article>
 
+				<!-- DragonLedger -->
+				<article class="language-card project-card">
+					<div class="tech-stack">
+						<img src="Assets/icons/Language-Icons/TypeScript.png" alt="TypeScript" title="TypeScript" />
+						<img src="Assets/icons/Language-Icons/React.png" alt="React and React Native" title="React / React Native" />
+						<img src="Assets/icons/Tech-Icons/Vite.svg" alt="Vite" title="Vite" />
+						<img src="Assets/icons/Tech-Icons/Tailwind.svg" alt="Tailwind CSS" title="Tailwind CSS" />
+						<img src="Assets/icons/Language-Icons/NodeJS.png" alt="Node.js" title="Node.js / Express" />
+						<img src="Assets/icons/Tech-Icons/Prisma.png" alt="Prisma" title="Prisma" />
+						<img src="Assets/icons/Tech-Icons/SQLite.png" alt="SQLite" title="SQLite" />
+						<img src="Assets/icons/Tech-Icons/Electron.svg" alt="Electron" title="Electron" />
+					</div>
+					<h2>DragonLedger</h2>
+					<p class="project-status">
+						<span class="status-badge active">Active Development</span>
+						DatabaseApp v2.0.0 · Heroes in early development
+					</p>
 					<a
 						href="https://github.com/BobbyJoeCool/DragonLedger_DatabaseApp"
 						target="_blank"
 						rel="noopener noreferrer"
 						class="repo-card"
 					>
-						<h4>DragonLedger: DatabaseApp <span class="wip-badge">WIP</span></h4>
+						<h4>DatabaseApp</h4>
 						<p>
-							A companion content manager for DragonLedger that stores, searches,
-							and edits D&amp;D 5e content: spells, classes, races, backgrounds,
+							A desktop content manager that stores, searches, and edits D&amp;D
+							5e and 5.5e content: spells, classes, races, backgrounds,
 							conditions, items, monsters, and feats. Content is bulk-imported
 							from the Open5e API or a compendium XML file, uploaded as JSON, or
 							entered by hand, with each import kept under its own named source
@@ -306,36 +106,69 @@
 						</p>
 						<h5>Highlights</h5>
 						<ul>
-							<li>Browse and filter 8 content types by source and type-specific attributes</li>
+							<li>Browse and filter 8 content types by source, edition, and type-specific attributes</li>
+							<li>Every entry flagged as 5e or 5.5e, with an edition toggle on Browse (v2.0.0)</li>
 							<li>Open5e import with live progress tracking over server-sent events</li>
 							<li>Additive-only compendium import that never overwrites edited entries</li>
-							<li>Homebrew copies and in-place corrections without touching the original</li>
-							<li>Shared Zod validation between client and server</li>
+							<li>Homebrew copies and in-place corrections, with shared Zod validation between client and server</li>
 						</ul>
+						<span class="repo-link">View on GitHub →</span>
 					</a>
 
+					<div class="repo-card private-repo">
+						<h4>Heroes <span class="wip-badge">PRIVATE REPO</span></h4>
+						<p>
+							A D&amp;D 5e 2024 character sheet and DM companion app for iOS and
+							Android, built with React Native (Expo) and TypeScript. It is
+							designed engine-first: game rules for ability scores, HP, combat,
+							conditions, spells, inventory, and encounters are written as pure
+							TypeScript modules before the UI, backed by an SQLite schema for
+							character persistence. Heroes will use DatabaseApp's content and
+							eventually replace it as the day-to-day app.
+						</p>
+					</div>
+				</article>
+
+				<!-- Family Passport Map -->
+				<article class="language-card project-card">
+					<div class="tech-stack">
+						<img src="Assets/icons/Language-Icons/TypeScript.png" alt="TypeScript" title="TypeScript" />
+						<img src="Assets/icons/Language-Icons/React.png" alt="React" title="React" />
+						<img src="Assets/icons/Tech-Icons/Vite.svg" alt="Vite" title="Vite" />
+						<img src="Assets/icons/Tech-Icons/Tailwind.svg" alt="Tailwind CSS" title="Tailwind CSS" />
+						<img src="Assets/icons/Language-Icons/NodeJS.png" alt="Node.js" title="Node.js / Express" />
+						<img src="Assets/icons/Tech-Icons/Prisma.png" alt="Prisma" title="Prisma" />
+						<img src="Assets/icons/Tech-Icons/SQLite.png" alt="SQLite" title="SQLite" />
+						<img src="Assets/icons/Tech-Icons/Azure.png" alt="Azure" title="Azure App Service" />
+					</div>
+					<h2>Family Passport Map</h2>
+					<p class="project-status">
+						<span class="status-badge live">Live</span>
+						v2.3.0 · Microsoft sign-in and private accounts
+					</p>
 					<a
 						href="https://github.com/BobbyJoeCool/FamilyPassportMap"
 						target="_blank"
 						rel="noopener noreferrer"
 						class="repo-card"
 					>
-						<h4>Family Passport Map <span class="wip-badge">WIP</span></h4>
 						<p>
 							A family-friendly web app for tracking which places you and your
-							family have visited. Features an interactive US map where you click
-							states to mark them visited, per-person tracking with custom colors
-							and profile pictures, a side-by-side compare view, and a list view
-							showing who has been where. Installable as a PWA for phone, tablet,
-							and desktop.
+							family have visited: all 50 US states, plus 195 countries on a
+							world map you explore one continent at a time. Each family member
+							gets their own color and profile picture, and their visits are
+							tracked independently. Installable as a PWA for phone, tablet, and
+							desktop.
 						</p>
 						<h5>Highlights</h5>
 						<ul>
-							<li>Interactive clickable US state map with per-person colors</li>
+							<li>Interactive US and world maps: click a state or country to mark it visited</li>
 							<li>Compare view for side-by-side family member maps</li>
-							<li>List view with profile-picture icons per visited state</li>
-							<li>Installable PWA with responsive design</li>
+							<li>List view with profile-picture icons and "n/50 states" and "n/195 countries" counters</li>
+							<li>Microsoft sign-in with private, per-account People (up to 10 per account)</li>
+							<li>Next up: Link and Join, so families can share and manage People together</li>
 						</ul>
+						<span class="repo-link">View on GitHub →</span>
 					</a>
 
 					<a
@@ -344,20 +177,152 @@
 						rel="noopener noreferrer"
 						class="repo-card pages"
 					>
-						<h4>Azure App Service Host for Family Passport Map</h4>
+						<h4>Live Site on Azure App Service</h4>
+					</a>
+				</article>
+
+				<!-- TLDR Reader -->
+				<article class="language-card project-card">
+					<div class="tech-stack">
+						<img src="Assets/icons/Language-Icons/JavaScript.png" alt="JavaScript" title="JavaScript" />
+						<img src="Assets/icons/Language-Icons/React.png" alt="React" title="React" />
+						<img src="Assets/icons/Tech-Icons/Vite.svg" alt="Vite" title="Vite" />
+						<img src="Assets/icons/Language-Icons/NodeJS.png" alt="Node.js" title="Node.js" />
+						<img src="Assets/icons/Tech-Icons/Azure.png" alt="Azure" title="Azure Static Web Apps / Functions" />
+						<img src="Assets/icons/Tech-Icons/CosmosDB.png" alt="Azure Cosmos DB" title="Azure Cosmos DB" />
+						<img src="Assets/icons/Tech-Icons/GitHubActions.svg" alt="GitHub Actions" title="GitHub Actions" />
+					</div>
+					<h2>TLDR Reader</h2>
+					<p class="project-status">
+						<span class="status-badge live">Live</span>
+						v2.1.0 · New articles ingested daily
+					</p>
+					<a
+						href="https://github.com/BobbyJoeCool/TLDR-Reader"
+						target="_blank"
+						rel="noopener noreferrer"
+						class="repo-card"
+					>
+						<p>
+							A personal web app for reading, flagging, and permanently saving
+							articles from the TLDR newsletter, built for daily use on mobile
+							and desktop. Article content is scraped from all 14 TLDR editions
+							by a deterministic Node.js pipeline and published as static JSON,
+							while per-user state lives in Azure Cosmos DB behind Microsoft
+							sign-in.
+						</p>
+						<h5>Highlights</h5>
+						<ul>
+							<li>Browse This Week and Last Week by day and newsletter edition</li>
+							<li>Archive calendar: browse any past date with available articles</li>
+							<li>Flag articles to a Reading List; star to permanently save them</li>
+							<li>Microsoft (Azure AD) authentication with per-user cloud state</li>
+							<li>Planned: edition and date filters and keyword search for Saved Articles</li>
+						</ul>
+						<span class="repo-link">View on GitHub →</span>
 					</a>
 
+					<a
+						href="https://happy-bush-0f619981e.7.azurestaticapps.net"
+						target="_blank"
+						rel="noopener noreferrer"
+						class="repo-card pages"
+					>
+						<h4>Live Site on Azure Static Web Apps</h4>
+					</a>
+				</article>
+
+				<!-- CheatSheets -->
+				<article class="language-card project-card">
+					<div class="tech-stack">
+						<img src="Assets/icons/Language-Icons/HTML5.png" alt="HTML" title="HTML" />
+						<img src="Assets/icons/Language-Icons/CSS3.png" alt="CSS" title="CSS" />
+						<img src="Assets/icons/Language-Icons/JavaScript.png" alt="JavaScript" title="JavaScript" />
+					</div>
+					<h2>CheatSheets</h2>
+					<p class="project-status">
+						<span class="status-badge active">Active</span>
+						2,571 sheets across 40 collections
+					</p>
+					<a
+						href="https://github.com/BobbyJoeCool/CheatSheets"
+						target="_blank"
+						rel="noopener noreferrer"
+						class="repo-card"
+					>
+						<p>
+							A curated library of single-page technical reference sheets for
+							programming languages, CS concepts, and developer tools. Each
+							sheet is formatted to fit on an 8.5" × 11" page with a dark mode
+							default and a print-optimized light mode. A print aggregator page
+							uses fetch() and DOMParser to inject multiple sheets and generate
+							PDFs directly in the browser.
+						</p>
+						<h5>Reference Guides</h5>
+						<ul>
+							<li>
+								<strong>Concepts &amp; Tools:</strong> Concepts (104), Agentic
+								Coding (73), Bitwise (23), RegEx (25), Playwright (67), Gradle
+								(27)
+							</li>
+							<li>
+								<strong>Command Line Interface:</strong> Git (36), zsh (27), Bash
+								(27), PowerShell (42)
+							</li>
+							<li>
+								<strong>Python:</strong> Python (98), Tkinter (62), Django (70)
+							</li>
+							<li>
+								<strong>Java:</strong> Java (136), JSP (34), Spring (69)
+							</li>
+							<li><strong>C Family:</strong> C (98), C++ (125), C# (130)</li>
+							<li><strong>Languages:</strong> Go (112), Ruby (115)</li>
+							<li>
+								<strong>JavaScript / TypeScript:</strong> JavaScript &amp;
+								TypeScript (133), React (98), React Native (72)
+							</li>
+							<li>
+								<strong>Web Design:</strong> HTML (56), CSS (77), CSS Systems (48),
+								PHP (133)
+							</li>
+							<li>
+								<strong>Server &amp; Full-Stack:</strong> Node.js (70), Vite (39),
+								Next.js (60)
+							</li>
+							<li><strong>SQL &amp; Tools:</strong> SQL (82), Prisma (34)</li>
+							<li>
+								<strong>Markup &amp; Notation:</strong> Markdown (22), Mermaid
+								(46), JSON (15), XML (16), YAML (14)
+							</li>
+							<li>
+								<strong>DevOps &amp; Containers:</strong> Docker (31), Kubernetes
+								(25)
+							</li>
+						</ul>
+						<span class="repo-link">View on GitHub →</span>
+					</a>
+				</article>
+
+				<!-- Animated Spells -->
+				<article class="language-card project-card">
+					<div class="tech-stack">
+						<img src="Assets/icons/Language-Icons/JavaScript.png" alt="JavaScript" title="JavaScript" />
+					</div>
+					<h2>Animated Spells</h2>
+					<p class="project-status">
+						<span class="status-badge released">Released</span>
+						v1.0.0 · Foundry VTT module
+					</p>
 					<a
 						href="https://github.com/BobbyJoeCool/AnimatedSpells"
 						target="_blank"
 						rel="noopener noreferrer"
 						class="repo-card"
 					>
-						<h4>Animated Spells — Foundry VTT Module</h4>
 						<p>
 							A Foundry VTT module that automatically plays visual animations
 							when spells from the official D&amp;D 5.5e content packs are cast.
-							Intercepts spell rolls and plays matching JB2A animations —
+							It intercepts spell rolls and plays matching JB2A animations:
 							projectiles fly from caster to target, area-of-effect templates
 							fill with animated effects, and self-targeted buffs pulse on the
 							caster's token. No manual macro setup required.
@@ -366,12 +331,156 @@
 						<ul>
 							<li>Automatic spell-to-animation mapping via compendium UUIDs</li>
 							<li>Supports projectile, template, self, and emanation delivery</li>
-							<li>Compatible with multiple official D&amp;D content packs</li>
-							<li>Built on Sequencer and JB2A animation APIs</li>
+							<li>Covers five official content packs, each activating only when installed</li>
+							<li>Built on the Sequencer and JB2A animation APIs</li>
 						</ul>
+						<span class="repo-link">View on GitHub →</span>
 					</a>
-				</div>
+				</article>
 
+				<!-- Python Projects -->
+				<article class="language-card project-card">
+					<div class="tech-stack">
+						<img src="Assets/icons/Language-Icons/Python.png" alt="Python" title="Python" />
+						<img src="Assets/icons/Language-Icons/SQL.png" alt="SQL" title="SQL" />
+						<img src="Assets/icons/Tech-Icons/MySQL.png" alt="MySQL" title="MySQL" />
+					</div>
+					<h2>Python Projects</h2>
+					<p class="project-status">
+						<span class="status-badge paused">Last Updated Mar 2026</span>
+						Work Job Tracker 2.0
+					</p>
+					<a
+						href="https://github.com/BobbyJoeCool/Python-Projects"
+						target="_blank"
+						rel="noopener noreferrer"
+						class="repo-card"
+					>
+						<p>
+							More advanced Python projects for practicing Python and SQL. The
+							repo uses pre-commit formatting tools (Ruff and Black) so code
+							meets formatting standards before it is committed, along with
+							READMEs, version logs, and refactoring outlines that map out
+							planned improvements.
+						</p>
+						<h5>Included Projects</h5>
+						<ul>
+							<li>
+								Work Job Tracker 2.0 - a Tkinter app backed by MySQL that logs
+								hours worked per job function and reports percent time per
+								function, days since a function was last worked, and shift
+								summaries
+							</li>
+						</ul>
+						<span class="repo-link">View on GitHub →</span>
+					</a>
+				</article>
+
+				<!-- HTML Projects -->
+				<article class="language-card project-card">
+					<div class="tech-stack">
+						<img src="Assets/icons/Language-Icons/HTML5.png" alt="HTML" title="HTML" />
+						<img src="Assets/icons/Language-Icons/CSS3.png" alt="CSS" title="CSS" />
+						<img src="Assets/icons/Language-Icons/JavaScript.png" alt="JavaScript" title="JavaScript" />
+					</div>
+					<h2>HTML Projects</h2>
+					<p class="project-status">
+						<span class="status-badge paused">Last Updated Mar 2026</span>
+						v1.1 on GitHub Pages
+					</p>
+					<a
+						href="https://github.com/BobbyJoeCool/HTML-Projects"
+						target="_blank"
+						rel="noopener noreferrer"
+						class="repo-card"
+					>
+						<p>
+							A place for smaller projects to practice HTML, CSS, and JavaScript,
+							published together as a GitHub Pages site.
+						</p>
+						<h5>Included Projects</h5>
+						<ul>
+							<li>Online rendering of my book</li>
+							<li>Cribbage Scoring App</li>
+							<li>Fallout Terminal Hacking Helper App</li>
+						</ul>
+						<span class="repo-link">View on GitHub →</span>
+					</a>
+
+					<a
+						href="https://bobbyjoecool.github.io/HTML-Projects"
+						target="_blank"
+						rel="noopener noreferrer"
+						class="repo-card pages"
+					>
+						<h4>Live Site on GitHub Pages</h4>
+					</a>
+				</article>
+
+				<!-- Java Projects -->
+				<article class="language-card project-card">
+					<div class="tech-stack">
+						<img src="Assets/icons/Language-Icons/Java.png" alt="Java" title="Java" />
+					</div>
+					<h2>Java Projects</h2>
+					<p class="project-status">
+						<span class="status-badge paused">Last Updated Mar 2026</span>
+						Blackjack v1.0
+					</p>
+					<a
+						href="https://github.com/BobbyJoeCool/Java-Projects"
+						target="_blank"
+						rel="noopener noreferrer"
+						class="repo-card"
+					>
+						<p>
+							Java projects worked on outside of school, including "extra
+							exercises" taken from the course textbook.
+						</p>
+						<h5>Included Projects</h5>
+						<ul>
+							<li>Blackjack v1.0 - a console Blackjack game, documented with Javadocs</li>
+							<li>Book Exercises - extra practice problems from the textbook</li>
+							<li>Minesweeper - project outline and design diagram</li>
+						</ul>
+						<span class="repo-link">View on GitHub →</span>
+					</a>
+				</article>
+
+				<!-- Legacy Python Projects -->
+				<article class="language-card project-card">
+					<div class="tech-stack">
+						<img src="Assets/icons/Language-Icons/Python.png" alt="Python" title="Python" />
+					</div>
+					<h2>Legacy Python Projects</h2>
+					<p class="project-status">
+						<span class="status-badge archived">Archived</span>
+						Early work from Python for Programmers
+					</p>
+					<a
+						href="https://github.com/BobbyJoeCool/Legacy_Python_Projects"
+						target="_blank"
+						rel="noopener noreferrer"
+						class="repo-card"
+					>
+						<p>
+							Many of these projects were done or worked on during the Python
+							for Programmers course. They tend to be very rough and in some
+							cases unfinished, as I moved on from simpler programs to try more
+							advanced or ambitious projects.
+						</p>
+						<h5>Included Projects</h5>
+						<ul>
+							<li>Tkinter and GUI tests (from the Python course book)</li>
+							<li>Database programming exercises (from the Python course book)</li>
+							<li>Inventory Management System - an attempt to mimic the IMS we use at Target</li>
+							<li>FileSorter - practice manipulating files on the hard drive</li>
+							<li>BlackJack - the game Blackjack</li>
+							<li>Monkey Math Calculator - made for my kids (monkey math is number concatenation)</li>
+						</ul>
+						<span class="repo-link">View on GitHub →</span>
+					</a>
+				</article>
 			</section>
 		</main>
 
