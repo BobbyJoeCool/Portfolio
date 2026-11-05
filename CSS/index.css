@@ -215,6 +215,28 @@
 	margin-top: 15px;
 }
 
+/* Technology icons, matching the Projects page cards */
+.project .tech-stack {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 10px;
+	margin: 10px 0 12px;
+}
+
+.project .tech-stack img {
+	width: 44px;
+	height: 44px;
+	object-fit: contain;
+}
+
+/* Devicon SVGs have no backdrop, so give them the same dark badge as the PNG icons */
+.project .tech-stack img[src$=".svg"] {
+	padding: 8px;
+	border-radius: 50%;
+	background-color: var(--bg-primary);
+	border: 2px solid var(--accent-cyan);
+}
+
 /* FOOTER ICONS */
 
 footer img {

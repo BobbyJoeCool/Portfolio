@@ -56,6 +56,27 @@ This handles the base style of all pages.
 	letter-spacing: 0.05em;
 }
 
+.wip-badge.done-badge {
+	background: rgba(106, 153, 85, 0.15);
+	border-color: rgba(106, 153, 85, 0.45);
+	color: #89d185;
+}
+
+/* Live and still being improved */
+.wip-badge.live-badge {
+	background: rgba(34, 211, 238, 0.12);
+	border-color: rgba(34, 211, 238, 0.45);
+	color: var(--accent-cyan-soft);
+}
+
+.version-tag {
+	font-size: 0.7rem;
+	font-weight: 400;
+	color: var(--text-muted);
+	vertical-align: middle;
+	margin-left: 4px;
+}
+
 *,
 *::before,
 *::after {

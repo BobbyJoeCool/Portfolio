@@ -129,6 +129,93 @@
 					</div>
 				</article>
 
+				<!-- ScribeIQ -->
+				<article class="language-card project-card">
+					<div class="tech-stack">
+						<img src="Assets/icons/Language-Icons/Python.png" alt="Python" title="Python" />
+						<img src="Assets/icons/Language-Icons/FastAPI.png" alt="FastAPI" title="FastAPI" />
+						<img src="Assets/icons/Language-Icons/Swift.png" alt="Swift" title="Swift / ScreenCaptureKit" />
+						<img src="Assets/icons/Language-Icons/TypeScript.png" alt="TypeScript" title="TypeScript" />
+						<img src="Assets/icons/Language-Icons/React.png" alt="React" title="React" />
+						<img src="Assets/icons/Tech-Icons/Vite.svg" alt="Vite" title="Vite / Vitest" />
+					</div>
+					<h2>ScribeIQ</h2>
+					<p class="project-status">
+						<span class="status-badge complete">Complete</span>
+						Runs entirely on-device · macOS on Apple Silicon
+					</p>
+					<a
+						href="https://github.com/BobbyJoeCool/ScribeIQ"
+						target="_blank"
+						rel="noopener noreferrer"
+						class="repo-card"
+					>
+						<p>
+							A private, on-device call recorder and transcriber for macOS.
+							Record a call from Zoom, Teams, a browser, or any other app and get
+							a speaker-labeled transcript with no cloud services, no
+							subscriptions, and no audio leaving the machine. Instead of
+							recording one mixed stream and guessing who said what, a native
+							Swift helper records the microphone and the call as two separate,
+							synced tracks, so it always knows which words are yours. A React +
+							TypeScript interface in a native window talks to a local FastAPI
+							server that owns the recording state machine.
+						</p>
+						<h5>Highlights</h5>
+						<ul>
+							<li>Captures the mic and one chosen app's audio with Apple's ScreenCaptureKit, with no virtual audio devices</li>
+							<li>MLX Whisper large-v3 transcription, Metal-accelerated on Apple Silicon</li>
+							<li>pyannote speaker identification on group calls; click a name to rename that speaker everywhere</li>
+							<li>Live timer, level meters, and job progress pushed over a WebSocket</li>
+							<li>Pause and resume with markers in the transcript, plus a History of every saved transcript</li>
+						</ul>
+						<span class="repo-link">View on GitHub →</span>
+					</a>
+				</article>
+
+				<!-- Voicewright -->
+				<article class="language-card project-card">
+					<div class="tech-stack">
+						<img src="Assets/icons/Language-Icons/Python.png" alt="Python" title="Python" />
+						<img src="Assets/icons/Language-Icons/FastAPI.png" alt="FastAPI" title="FastAPI" />
+						<img src="Assets/icons/Language-Icons/JavaScript.png" alt="JavaScript" title="JavaScript" />
+						<img src="Assets/icons/Language-Icons/HTML5.png" alt="HTML" title="HTML" />
+						<img src="Assets/icons/Language-Icons/CSS3.png" alt="CSS" title="CSS" />
+					</div>
+					<h2>Voicewright</h2>
+					<p class="project-status">
+						<span class="status-badge active">Active Development</span>
+						v1 · Voices complete · Sound library next
+					</p>
+					<a
+						href="https://github.com/BobbyJoeCool/Voicewright"
+						target="_blank"
+						rel="noopener noreferrer"
+						class="repo-card"
+					>
+						<p>
+							A local text-to-speech app that designs custom AI voices from a
+							text description, then turns a tagged script into a finished audio
+							file mixing emotions and sound effects, for example
+							<code>[angry] I hate you! {explosion}</code>. Everything runs on
+							the Mac with free, open-source models; the only network use is
+							searching Freesound to fill the local sound library. A FastAPI
+							backend runs model jobs in the background and serves a local web
+							page.
+						</p>
+						<h5>Highlights</h5>
+						<ul>
+							<li>Voice design with Qwen3-TTS VoiceDesign: a neutral clip plus one preset per emotion</li>
+							<li>Speech and voice cloning with Chatterbox on MLX</li>
+							<li>Review drafts take by take: regenerate, retune exaggeration and cfg, or roll back to an earlier take</li>
+							<li>Edit saved Voices through pending takes that are accepted or rejected</li>
+							<li>Audio and video conversion to standard WAV through ffmpeg; tests run against faked engines</li>
+							<li>Next up: Freesound sound library, then tagged Scripts and saved Outputs</li>
+						</ul>
+						<span class="repo-link">View on GitHub →</span>
+					</a>
+				</article>
+
 				<!-- Family Passport Map -->
 				<article class="language-card project-card">
 					<div class="tech-stack">
@@ -242,7 +329,7 @@
 					<h2>CheatSheets</h2>
 					<p class="project-status">
 						<span class="status-badge active">Active</span>
-						2,571 sheets across 40 collections
+						3,188 sheets across 53 collections
 					</p>
 					<a
 						href="https://github.com/BobbyJoeCool/CheatSheets"
@@ -260,44 +347,19 @@
 						</p>
 						<h5>Reference Guides</h5>
 						<ul>
-							<li>
-								<strong>Concepts &amp; Tools:</strong> Concepts (104), Agentic
-								Coding (73), Bitwise (23), RegEx (25), Playwright (67), Gradle
-								(27)
-							</li>
-							<li>
-								<strong>Command Line Interface:</strong> Git (36), zsh (27), Bash
-								(27), PowerShell (42)
-							</li>
-							<li>
-								<strong>Python:</strong> Python (98), Tkinter (62), Django (70)
-							</li>
-							<li>
-								<strong>Java:</strong> Java (136), JSP (34), Spring (69)
-							</li>
+							<li><strong>Concepts &amp; Tools:</strong> Concepts (104), Agentic Coding (73), Bitwise (23), RegEx (25), Gradle (27), VS Code (29)</li>
+							<li><strong>Testing:</strong> Software Testing (40), Playwright (67), pytest (25), Jest &amp; Vitest (27), JUnit (25)</li>
+							<li><strong>Command Line Interface:</strong> Git (36), zsh (27), Bash (27), PowerShell (42)</li>
+							<li><strong>Python:</strong> Python (93), Tkinter (62), Django (70)</li>
+							<li><strong>Java:</strong> Java (136), Maven (24), JSP (34), Spring (69), Swing (62)</li>
 							<li><strong>C Family:</strong> C (98), C++ (125), C# (130)</li>
-							<li><strong>Languages:</strong> Go (112), Ruby (115)</li>
-							<li>
-								<strong>JavaScript / TypeScript:</strong> JavaScript &amp;
-								TypeScript (133), React (98), React Native (72)
-							</li>
-							<li>
-								<strong>Web Design:</strong> HTML (56), CSS (77), CSS Systems (48),
-								PHP (133)
-							</li>
-							<li>
-								<strong>Server &amp; Full-Stack:</strong> Node.js (70), Vite (39),
-								Next.js (60)
-							</li>
+							<li><strong>Languages:</strong> Go (112), Ruby (115), Ruby on Rails (78), Swift (108), SwiftUI (59)</li>
+							<li><strong>JavaScript / TypeScript:</strong> JavaScript &amp; TypeScript (133), React (98), React Native (72)</li>
+							<li><strong>Web Design:</strong> HTML (56), CSS (77), CSS Systems (48), PHP (133)</li>
+							<li><strong>Server &amp; Full-Stack:</strong> HTTP &amp; REST APIs (30), Node.js (70), Vite (39), Next.js (60)</li>
 							<li><strong>SQL &amp; Tools:</strong> SQL (82), Prisma (34)</li>
-							<li>
-								<strong>Markup &amp; Notation:</strong> Markdown (22), Mermaid
-								(46), JSON (15), XML (16), YAML (14)
-							</li>
-							<li>
-								<strong>DevOps &amp; Containers:</strong> Docker (31), Kubernetes
-								(25)
-							</li>
+							<li><strong>Markup &amp; Notation:</strong> Config Formats (22), Markdown (22), Mermaid (46), JSON (15), XML (16), YAML (14)</li>
+							<li><strong>DevOps &amp; Containers:</strong> GitHub (93), Docker (31), Kubernetes (25)</li>
 						</ul>
 						<span class="repo-link">View on GitHub →</span>
 					</a>

@@ -60,6 +60,12 @@
 	background: rgba(74, 222, 128, 0.12);
 }
 
+.status-badge.complete {
+	color: #4ade80;
+	border-color: rgba(74, 222, 128, 0.5);
+	background: rgba(74, 222, 128, 0.12);
+}
+
 .status-badge.active {
 	color: var(--accent-cyan-soft);
 	border-color: rgba(34, 211, 238, 0.5);
