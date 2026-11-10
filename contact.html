@@ -12,7 +12,7 @@
 		<link rel="stylesheet" href="CSS/contact.css" />
 	</head>
 
-	<body>
+	<body class="bg-network">
 		<div id="site-header"></div>
 
 		<main>
@@ -54,6 +54,16 @@
 							rows="7"
 							required
 						></textarea>
+
+						<!-- Spam trap: hidden from people, bots tick it and get dropped -->
+						<input
+							type="checkbox"
+							name="botcheck"
+							class="contact-honeypot"
+							tabindex="-1"
+							autocomplete="off"
+							aria-hidden="true"
+						/>
 
 						<p id="contact-status" class="contact-status" role="status"></p>
 

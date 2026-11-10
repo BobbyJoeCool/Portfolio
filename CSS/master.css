@@ -8,18 +8,18 @@ This handles the base style of all pages.
 	--bg-primary: #0f172a;
 	--bg-secondary: #111827;
 
-	/* Primary Accent (Deep) */
-	--accent-purple: #4d1182;
-	--accent-hover: #6d368f;
+	/* Primary Accent (deep blue: header, cards, borders) */
+	--accent-deep: #142e60;
+	--accent-hover: #234a8f;
 
 	/* Lighter Accent Variants */
-	--accent-light: #8b5cf6;
-	--accent-soft: #a78bfa;
-	--accent-glow: #c4b5fd;
+	--accent-light: #3b82f6;
+	--accent-soft: #60a5fa;
+	--accent-glow: #93c5fd;
 
-	/* Complementary Cool Accent */
-	--accent-blue: #3502b5;
-	--accent-blue-soft: #4202e3;
+	/* Bright blue: live-site link cards */
+	--accent-blue: #1d4ed8;
+	--accent-blue-soft: #2563eb;
 
 	/* Cyan Accents */
 	--accent-cyan: #06b6d4;
@@ -36,10 +36,16 @@ This handles the base style of all pages.
 
 	/* Borders */
 	--border-subtle: #334155;
-	--border-accent: #8b5cf6;
+	--border-accent: #3b82f6;
 
 	/* Yellow Accent */
 	--accent-yellow: #dcdcaa;
+	--page-max: 1080px;
+
+	/* Two-up card rows: cards shrink to --card-min, then drop to one per row */
+	--card-gap: 2rem;
+	--card-min: 440px;
+	--cards-wide-max: 1400px;
 }
 
 .wip-badge {
@@ -96,16 +102,18 @@ body {
 		sans-serif;
 	line-height: 1.6;
 	letter-spacing: 0.3px;
-	margin: 0 auto;
-	max-width: 900px;
+	margin: 0;
 }
 
+/* Header and footer span the full screen; page content is capped at --page-max */
 main {
+	max-width: var(--page-max);
+	margin: 0 auto;
 	padding: 0 1.25rem;
 }
 
 header {
-	background-color: var(--accent-purple);
+	background-color: var(--accent-deep);
 	padding: 16px 20px;
 
 	position: sticky;
@@ -117,6 +125,7 @@ header {
 
 nav {
 	width: 99%;
+	max-width: var(--page-max);
 	margin: 0 auto;
 	display: flex;
 	justify-content: space-between;
@@ -171,7 +180,7 @@ h2 {
 	font-size: 2rem;
 	color: var(--text-primary);
 	margin-bottom: 16px;
-	border-left: 4px solid var(--accent-purple);
+	border-left: 4px solid var(--accent-deep);
 	padding-left: 12px;
 }
 
@@ -208,7 +217,7 @@ a:hover {
 	margin-top: 1rem;
 
 	background-color: var(--accent-cyan);
-	color: var(--accent-purple);
+	color: var(--accent-deep);
 	text-decoration: none;
 	border-radius: 8px;
 
@@ -278,5 +287,160 @@ ul {
 
 	main {
 		padding: 0 0.75rem;
+	}
+}
+
+/*
+Two-up card rows (Projects, Education, Home featured projects).
+Below the switch width each card's basis becomes huge, so every card takes its
+own row; above it, cards are half width and a lone last card stays half width,
+centered. No media query needed: it reacts to the container's own width.
+*/
+.card-row {
+	--card-switch: calc(var(--card-min) * 2 + var(--card-gap));
+	--card-half: calc(50% - var(--card-gap) / 2);
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: stretch;
+	gap: var(--card-gap);
+}
+
+.card-row > * {
+	flex: 1 1 max(var(--card-half), calc((var(--card-switch) - 100%) * 999));
+	max-width: max(var(--card-half), calc((var(--card-switch) - 100%) * 999));
+	min-width: 0;
+}
+
+/*
+PAGE BACKGROUNDS
+A fixed layer behind the content on themed pages: space (Home), code
+(Projects), chalkboard (Education), darkroom (About), blueprint (Work),
+and network (Contact). Kept faint so text
+over it stays readable. The SVG tiles live in Assets/backgrounds/.
+*/
+
+body[class*="bg-"]::before,
+body[class*="bg-"]::after {
+	content: "";
+	position: fixed;
+	inset: 0;
+	z-index: -1;
+	pointer-events: none;
+}
+
+/* Home: starfield with blue and cyan nebulae; the large stars twinkle */
+body.bg-space::before {
+	background:
+		radial-gradient(ellipse 60% 45% at 85% 10%, rgba(59, 130, 246, 0.22), transparent 70%),
+		radial-gradient(ellipse 50% 40% at 10% 85%, rgba(6, 182, 212, 0.16), transparent 70%),
+		radial-gradient(ellipse 40% 30% at 30% 30%, rgba(20, 46, 96, 0.25), transparent 70%),
+		url("../Assets/backgrounds/stars-small.svg") 0 0 / 600px 600px,
+		radial-gradient(ellipse at 50% 0%, #131a3a 0%, var(--bg-primary) 70%);
+}
+
+body.bg-space::after {
+	background: url("../Assets/backgrounds/stars-large.svg") 120px 80px / 900px 900px;
+	animation: twinkle 6s ease-in-out infinite alternate;
+}
+
+@keyframes twinkle {
+	from {
+		opacity: 0.35;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+/* Projects: editor grid with faint code fragments and a soft glow */
+body.bg-code::before {
+	background:
+		radial-gradient(ellipse 55% 40% at 90% 5%, rgba(6, 182, 212, 0.12), transparent 70%),
+		radial-gradient(ellipse 50% 40% at 5% 95%, rgba(59, 130, 246, 0.16), transparent 70%),
+		url("../Assets/backgrounds/code-fragments.svg") 0 0 / 900px 700px,
+		linear-gradient(rgba(148, 163, 184, 0.045) 1px, transparent 1px) 0 0 / 32px 32px,
+		linear-gradient(90deg, rgba(148, 163, 184, 0.045) 1px, transparent 1px) 0 0 / 32px 32px,
+		var(--bg-primary);
+}
+
+/* Education: chalkboard-green tint over graph paper, with formulas and doodles */
+body.bg-edu::before {
+	background:
+		url("../Assets/backgrounds/edu-doodles.svg") 0 0 / 1000px 760px,
+		linear-gradient(rgba(148, 163, 184, 0.07) 1px, transparent 1px) 0 0 / 120px 120px,
+		linear-gradient(90deg, rgba(148, 163, 184, 0.07) 1px, transparent 1px) 0 0 / 120px 120px,
+		linear-gradient(rgba(148, 163, 184, 0.035) 1px, transparent 1px) 0 0 / 24px 24px,
+		linear-gradient(90deg, rgba(148, 163, 184, 0.035) 1px, transparent 1px) 0 0 / 24px 24px,
+		radial-gradient(ellipse at 50% 30%, #13243a 0%, #0d1a24 55%, var(--bg-primary) 100%);
+}
+
+/* About: darkroom, red safelight glow, aperture sketches, film strips on both edges */
+body.bg-darkroom::before {
+	background:
+		radial-gradient(ellipse 45% 35% at 50% 0%, rgba(220, 38, 38, 0.2), transparent 70%),
+		radial-gradient(ellipse 40% 40% at 100% 100%, rgba(234, 88, 12, 0.1), transparent 70%),
+		url("../Assets/backgrounds/darkroom.svg") 0 0 / 900px 700px,
+		radial-gradient(ellipse at 50% 20%, #1c1016 0%, #120b12 60%, #0c0a10 100%);
+}
+
+body.bg-darkroom::after {
+	background:
+		url("../Assets/backgrounds/film-strip.svg") left 0 top 0 / 64px 96px repeat-y,
+		url("../Assets/backgrounds/film-strip.svg") right 0 top 48px / 64px 96px repeat-y;
+	opacity: 0.55;
+}
+
+/* Work: engineering blueprint, grid with technical drawings */
+body.bg-blueprint::before {
+	background:
+		url("../Assets/backgrounds/blueprint.svg") 0 0 / 1000px 760px,
+		linear-gradient(rgba(186, 230, 253, 0.1) 1px, transparent 1px) 0 0 / 100px 100px,
+		linear-gradient(90deg, rgba(186, 230, 253, 0.1) 1px, transparent 1px) 0 0 / 100px 100px,
+		linear-gradient(rgba(186, 230, 253, 0.04) 1px, transparent 1px) 0 0 / 20px 20px,
+		linear-gradient(90deg, rgba(186, 230, 253, 0.04) 1px, transparent 1px) 0 0 / 20px 20px,
+		radial-gradient(ellipse at 50% 30%, #0f2a52 0%, #0b1f3d 55%, #0a1730 100%);
+}
+
+/* Contact: network of linked nodes with signal rings pulsing from the top */
+body.bg-network::before {
+	background:
+		radial-gradient(ellipse 50% 40% at 15% 10%, rgba(6, 182, 212, 0.14), transparent 70%),
+		radial-gradient(ellipse 50% 40% at 90% 90%, rgba(59, 130, 246, 0.18), transparent 70%),
+		url("../Assets/backgrounds/network.svg") 0 0 / 800px 800px,
+		var(--bg-primary);
+}
+
+body.bg-network::after {
+	background: repeating-radial-gradient(
+		circle at 85% 12%,
+		rgba(34, 211, 238, 0.07) 0 2px,
+		transparent 2px 70px
+	);
+	-webkit-mask-image: radial-gradient(circle at 85% 12%, #000 0, transparent 60%);
+	mask-image: radial-gradient(circle at 85% 12%, #000 0, transparent 60%);
+	animation: signal 5s ease-in-out infinite alternate;
+}
+
+@keyframes signal {
+	from {
+		opacity: 0.4;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+/* Film strips would sit under the text on narrow screens */
+@media (max-width: 900px) {
+	body.bg-darkroom::after {
+		display: none;
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	body.bg-space::after,
+	body.bg-network::after {
+		animation: none;
 	}
 }

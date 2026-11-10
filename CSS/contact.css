@@ -116,7 +116,7 @@ main {
 }
 
 .contact-link:hover {
-	background-color: var(--accent-purple);
+	background-color: var(--accent-deep);
 	border-color: var(--accent-light);
 	color: var(--text-primary);
 	transform: translateX(4px);
@@ -153,4 +153,13 @@ footer img:hover {
 	.contact-links-section {
 		padding: 1.25rem 1rem;
 	}
+}
+
+.contact-honeypot {
+	display: none;
+}
+
+.contact-form .btn:disabled {
+	opacity: 0.6;
+	cursor: wait;
 }

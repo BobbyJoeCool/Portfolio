@@ -12,7 +12,7 @@ Landing page for GitHub Professional/Academic Portfolio
 		<link rel="stylesheet" href="CSS/index.css" />
 	</head>
 
-	<body>
+	<body class="bg-space">
 		<div id="site-header"></div>
 
 		<main>
@@ -37,30 +37,42 @@ Landing page for GitHub Professional/Academic Portfolio
 						control and quality assurance, and a recent Summa Cum Laude graduate
 						of Bellevue University's Software Development program.
 					</p>
-					<div class="resume-buttons">
-						<a
-							href="resume-professional.html"
-							target="_blank"
-							rel="noopener noreferrer"
-							class="btn"
-						>
-							Resume
-						</a>
-						<a
-							href="resume.html"
-							target="_blank"
-							rel="noopener noreferrer"
-							class="btn"
-						>
-							Resume (Developer Edition)
-						</a>
-					</div>
 				</div>
 
 				<div class="hero-image">
 					<img src="Assets/Images/profile.jpg" alt="Profile picture of Bob" />
 				</div>
 			</section>
+
+			<!-- Resume links, centered under the hero -->
+			<div class="resume-buttons">
+				<a
+					href="resume-professional.html"
+					target="_blank"
+					rel="noopener noreferrer"
+					class="resume-btn resume-btn-pro"
+				>
+					<svg class="resume-btn-icon" viewBox="0 0 24 24" aria-hidden="true">
+						<path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+						<path d="M14 2v6h6M8 13h8M8 17h5" />
+					</svg>
+					<span>Resume</span>
+				</a>
+				<a
+					href="resume.html"
+					target="_blank"
+					rel="noopener noreferrer"
+					class="resume-btn resume-btn-dev"
+					aria-label="Resume (Developer Edition)"
+				>
+					<span class="term-dots" aria-hidden="true"><i></i><i></i><i></i></span>
+					<code aria-hidden="true"
+						><span class="term-prompt">~$</span> open
+						<span class="term-file">resume.dev</span><span class="term-cursor"></span
+					></code>
+				</a>
+			</div>
+
 
 			<section class="known-technologies">
 				<h3>Fluent Languages</h3>
@@ -280,7 +292,7 @@ Landing page for GitHub Professional/Academic Portfolio
 			</section>
 
 			<!-- FEATURED PROJECTS SECTION -->
-			<section id="projects">
+			<section id="projects" class="card-row">
 				<h2>Featured Projects</h2>
 
 				<article class="project">
@@ -308,6 +320,20 @@ Landing page for GitHub Professional/Academic Portfolio
 							Java, Jakarta EE, JSP, JSTL, MySQL, Maven, Apache Tomcat, Azure
 							App Service, Git
 						</p>
+					</div>
+					<div class="project-gallery" aria-label="Moffat Bay Marina screenshots">
+						<button type="button" class="gallery-thumb" data-full="Assets/projects/moffat-bay/home.webp" data-caption="Moffat Bay Marina: Home page with the Book a Slip call to action">
+							<img src="Assets/projects/moffat-bay/home-thumb.webp" alt="Home page with the Book a Slip call to action" loading="lazy" />
+						</button>
+						<button type="button" class="gallery-thumb" data-full="Assets/projects/moffat-bay/about.webp" data-caption="Moffat Bay Marina: About page for the marina">
+							<img src="Assets/projects/moffat-bay/about-thumb.webp" alt="About page for the marina" loading="lazy" />
+						</button>
+						<button type="button" class="gallery-thumb" data-full="Assets/projects/moffat-bay/register.webp" data-caption="Moffat Bay Marina: Account registration form with live password rules">
+							<img src="Assets/projects/moffat-bay/register-thumb.webp" alt="Account registration form with live password rules" loading="lazy" />
+						</button>
+						<button type="button" class="gallery-thumb" data-full="Assets/projects/moffat-bay/reservation.webp" data-caption="Moffat Bay Marina: Reserve Your Slip page, prompting the visitor to sign in">
+							<img src="Assets/projects/moffat-bay/reservation-thumb.webp" alt="Reserve Your Slip page, prompting the visitor to sign in" loading="lazy" />
+						</button>
 					</div>
 					<div class="project-links">
 						<p>
@@ -362,6 +388,20 @@ Landing page for GitHub Professional/Academic Portfolio
 							Swift, ScreenCaptureKit, MLX Whisper, pyannote.audio, pywebview
 						</p>
 					</div>
+					<div class="project-gallery" aria-label="ScribeIQ screenshots">
+						<button type="button" class="gallery-thumb" data-full="Assets/projects/scribeiq/recording.webp" data-caption="ScribeIQ: Recording a call with live level meters for You and Them">
+							<img src="Assets/projects/scribeiq/recording-thumb.webp" alt="Recording a call with live level meters for You and Them" loading="lazy" />
+						</button>
+						<button type="button" class="gallery-thumb" data-full="Assets/projects/scribeiq/transcript.webp" data-caption="ScribeIQ: Speaker-labeled transcript with timestamps and export options">
+							<img src="Assets/projects/scribeiq/transcript-thumb.webp" alt="Speaker-labeled transcript with timestamps and export options" loading="lazy" />
+						</button>
+						<button type="button" class="gallery-thumb" data-full="Assets/projects/scribeiq/history.webp" data-caption="ScribeIQ: History of past recordings and transcripts">
+							<img src="Assets/projects/scribeiq/history-thumb.webp" alt="History of past recordings and transcripts" loading="lazy" />
+						</button>
+						<button type="button" class="gallery-thumb" data-full="Assets/projects/scribeiq/file-tab.webp" data-caption="ScribeIQ: Transcribing an existing audio file">
+							<img src="Assets/projects/scribeiq/file-tab-thumb.webp" alt="Transcribing an existing audio file" loading="lazy" />
+						</button>
+					</div>
 					<div class="project-links">
 						<p>
 							<a
@@ -407,6 +447,20 @@ Landing page for GitHub Professional/Academic Portfolio
 							Static Web Apps, Azure Functions, Azure SQL, Prisma, Docker,
 							Playwright
 						</p>
+					</div>
+					<div class="project-gallery" aria-label="PalletIQ screenshots">
+						<button type="button" class="gallery-thumb" data-full="Assets/projects/palletiq/home.webp" data-caption="PalletIQ: Home screen with function tiles grouped by area">
+							<img src="Assets/projects/palletiq/home-thumb.webp" alt="Home screen with function tiles grouped by area" loading="lazy" />
+						</button>
+						<button type="button" class="gallery-thumb" data-full="Assets/projects/palletiq/pallet.webp" data-caption="PalletIQ: Pallet ID detail screen">
+							<img src="Assets/projects/palletiq/pallet-thumb.webp" alt="Pallet ID detail screen" loading="lazy" />
+						</button>
+						<button type="button" class="gallery-thumb" data-full="Assets/projects/palletiq/empty-zone.webp" data-caption="PalletIQ: Empty Locations by Zone staging map">
+							<img src="Assets/projects/palletiq/empty-zone-thumb.webp" alt="Empty Locations by Zone staging map" loading="lazy" />
+						</button>
+						<button type="button" class="gallery-thumb" data-full="Assets/projects/palletiq/report-individual.webp" data-caption="PalletIQ: Individual Rate of Productivity report">
+							<img src="Assets/projects/palletiq/report-individual-thumb.webp" alt="Individual Rate of Productivity report" loading="lazy" />
+						</button>
 					</div>
 					<div class="project-links">
 						<p>
@@ -456,6 +510,20 @@ Landing page for GitHub Professional/Academic Portfolio
 							Prisma, Azure App Service
 						</p>
 					</div>
+					<div class="project-gallery" aria-label="Family Passport Map screenshots">
+						<button type="button" class="gallery-thumb" data-full="Assets/projects/family-passport-map/us-map.webp" data-caption="Family Passport Map: US map with visited states colored by family member">
+							<img src="Assets/projects/family-passport-map/us-map-thumb.webp" alt="US map with visited states colored by family member" loading="lazy" />
+						</button>
+						<button type="button" class="gallery-thumb" data-full="Assets/projects/family-passport-map/world-map.webp" data-caption="Family Passport Map: World map, explored one continent at a time">
+							<img src="Assets/projects/family-passport-map/world-map-thumb.webp" alt="World map, explored one continent at a time" loading="lazy" />
+						</button>
+						<button type="button" class="gallery-thumb" data-full="Assets/projects/family-passport-map/us-compare.webp" data-caption="Family Passport Map: Compare view with family members' maps side by side">
+							<img src="Assets/projects/family-passport-map/us-compare-thumb.webp" alt="Compare view with family members' maps side by side" loading="lazy" />
+						</button>
+						<button type="button" class="gallery-thumb" data-full="Assets/projects/family-passport-map/mobile.webp" data-caption="Family Passport Map: Installed as a PWA on a phone">
+							<img src="Assets/projects/family-passport-map/mobile-thumb.webp" alt="Installed as a PWA on a phone" loading="lazy" />
+						</button>
+					</div>
 					<div class="project-links">
 						<p>
 							<a
@@ -483,6 +551,18 @@ Landing page for GitHub Professional/Academic Portfolio
 		</main>
 
 		<div id="site-footer"></div>
+
+		<!-- Screenshot viewer, opened from the featured project thumbnails -->
+		<dialog id="lightbox" class="lightbox" aria-label="Screenshot viewer">
+			<button type="button" class="lightbox-close" aria-label="Close">&times;</button>
+			<button type="button" class="lightbox-nav prev" aria-label="Previous screenshot">&#8249;</button>
+			<figure>
+				<img alt="" />
+				<figcaption></figcaption>
+			</figure>
+			<button type="button" class="lightbox-nav next" aria-label="Next screenshot">&#8250;</button>
+		</dialog>
 		<script src="JS/common.js"></script>
+		<script src="JS/gallery.js"></script>
 	</body>
 </html>

@@ -13,7 +13,7 @@
 		<link rel="stylesheet" href="CSS/cards.css" />
 	</head>
 
-	<body>
+	<body class="bg-code">
 		<div id="site-header"></div>
 
 		<main>
@@ -24,7 +24,7 @@
 					and build on my skills, ordered from most to least complex.
 				</p>
 			</section>
-			<section id="github-repositories">
+			<section id="github-repositories" class="card-row">
 				<!-- PalletIQ -->
 				<article class="language-card project-card">
 					<div class="tech-stack">
@@ -213,6 +213,57 @@
 							<li>Next up: Freesound sound library, then tagged Scripts and saved Outputs</li>
 						</ul>
 						<span class="repo-link">View on GitHub →</span>
+					</a>
+				</article>
+
+				<!-- FitIQ -->
+				<article class="language-card project-card">
+					<div class="tech-stack">
+						<img src="Assets/icons/Language-Icons/TypeScript.png" alt="TypeScript" title="TypeScript" />
+						<img src="Assets/icons/Language-Icons/React.png" alt="React" title="React" />
+						<img src="Assets/icons/Tech-Icons/Vite.svg" alt="Vite" title="Vite" />
+						<img src="Assets/icons/Language-Icons/SQL.png" alt="Postgres" title="Supabase (Auth + Postgres)" />
+						<img src="Assets/icons/Tech-Icons/Playwright.svg" alt="Playwright" title="Playwright" />
+						<img src="Assets/icons/Tech-Icons/GitHubActions.svg" alt="GitHub Actions" title="GitHub Actions" />
+					</div>
+					<h2>FitIQ</h2>
+					<p class="project-status">
+						<span class="status-badge wip">WIP</span>
+						Pre-v1 · Demo account live
+					</p>
+					<a
+						href="https://github.com/BobbyJoeCool/FitIQ"
+						target="_blank"
+						rel="noopener noreferrer"
+						class="repo-card"
+					>
+						<p>
+							A private workout and progress tracker for a household of 2 to 4
+							people. Plan routines, log every set on your phone as you go, and
+							track weight, body measurements, and lifts over time. It is an
+							installable PWA that costs $0 a month to run: React and Vite on
+							GitHub Pages, talking straight to Supabase Auth and Postgres, with
+							privacy enforced in the database through Row Level Security on
+							every table.
+						</p>
+						<h5>Highlights</h5>
+						<ul>
+							<li>876-exercise library from Free Exercise DB, searchable by muscle, equipment, and difficulty</li>
+							<li>Reusable plans with target sets, reps, hold time, and rest</li>
+							<li>One-handed set logging with "last time" prefill, rest and hold timers, and per-set saves</li>
+							<li>Workout history, personal records, and weight and measurement charts</li>
+							<li>Two-account RLS test on every table, plus Playwright E2E tests in CI against a local Supabase stack</li>
+						</ul>
+						<span class="repo-link">View on GitHub →</span>
+					</a>
+
+					<a
+						href="https://fitiq.bobbyjoecool.dev"
+						target="_blank"
+						rel="noopener noreferrer"
+						class="repo-card pages"
+					>
+						<h4>Live Demo on GitHub Pages</h4>
 					</a>
 				</article>
 

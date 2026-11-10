@@ -9,7 +9,7 @@ const navLinks = [
 
 const footerLinks = [
 	{
-		href: "mailto:rbreutzmann@my365.bellevue.edu",
+		href: "mailto:bob@bobbyjoecool.dev",
 		img: "Assets/icons/Email.png",
 		alt: "Email",
 	},

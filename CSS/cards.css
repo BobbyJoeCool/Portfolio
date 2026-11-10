@@ -72,10 +72,16 @@
 	background: rgba(34, 211, 238, 0.12);
 }
 
+.status-badge.wip {
+	color: #fb923c;
+	border-color: rgba(251, 146, 60, 0.5);
+	background: rgba(251, 146, 60, 0.12);
+}
+
 .status-badge.released {
 	color: var(--accent-glow);
-	border-color: rgba(196, 181, 253, 0.5);
-	background: rgba(196, 181, 253, 0.12);
+	border-color: rgba(147, 197, 253, 0.5);
+	background: rgba(147, 197, 253, 0.12);
 }
 
 .status-badge.paused {
@@ -93,7 +99,7 @@
 .status-badge.term {
 	color: var(--text-primary);
 	border-color: var(--accent-soft);
-	background: rgba(139, 92, 246, 0.25);
+	background: rgba(59, 130, 246, 0.25);
 }
 
 .coursework-intro {
@@ -155,4 +161,26 @@ footer img:hover {
 	.course-card h2 {
 		font-size: 1.5em;
 	}
+}
+
+/* Card grid on Projects and Education: wider than the page text, capped at --cards-wide-max */
+#github-repositories {
+	--grid-w: min(var(--cards-wide-max), calc(100vw - 2.5rem));
+	width: var(--grid-w);
+	margin-left: calc(50% - var(--grid-w) / 2);
+}
+
+#github-repositories .language-card {
+	width: 100%;
+	margin: 0;
+	justify-content: flex-start;
+}
+
+#github-repositories .project-card h2 {
+	font-size: 2.2em;
+	line-height: 1.2;
+}
+
+#github-repositories .course-card h2 {
+	font-size: 1.6em;
 }
