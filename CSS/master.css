@@ -46,6 +46,17 @@ This handles the base style of all pages.
 	--card-gap: 2rem;
 	--card-min: 440px;
 	--cards-wide-max: 1400px;
+
+	/* Card look shared by every page (matches the home About and Featured Project cards) */
+	--card-accent-strip: linear-gradient(90deg, var(--accent-light), var(--accent-deep) 50%, var(--accent-cyan));
+	--card-border-gradient: linear-gradient(135deg, var(--accent-light), var(--accent-deep) 45%, var(--accent-cyan));
+	--card-glow-bg:
+		radial-gradient(circle at 100% 0%, rgba(6, 182, 212, 0.14), transparent 45%),
+		radial-gradient(circle at 0% 100%, rgba(59, 130, 246, 0.18), transparent 50%),
+		linear-gradient(160deg, #0f1f45 0%, var(--bg-secondary) 60%);
+	--card-shadow: 0 8px 24px rgba(0, 0, 0, 0.35), inset 0 1px 0 rgba(255, 255, 255, 0.04);
+	--card-shadow-hover: 0 14px 32px rgba(0, 0, 0, 0.45), 0 0 28px rgba(59, 130, 246, 0.25);
+	--title-gradient: linear-gradient(90deg, var(--accent-glow), var(--accent-cyan-soft));
 }
 
 .wip-badge {

@@ -1,50 +1,92 @@
+/* Big card on Projects and Education: gradient border, soft glows, accent strip on top */
 .language-card {
+	position: relative;
+	overflow: hidden;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	padding: 2rem;
+	padding: 2.5rem 2rem 2rem;
 	height: auto;
 	width: 90%;
 	margin: 0 auto;
 	margin-bottom: 2rem;
 
 	color: var(--text-primary);
-	background-color: var(--accent-deep);
-	border-radius: 50px;
-	border: 6px solid var(--silver-dark-accent);
-	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+	border: 2px solid transparent;
+	border-radius: 28px;
+	background:
+		radial-gradient(circle at 100% 0%, rgba(6, 182, 212, 0.14), transparent 45%) padding-box,
+		radial-gradient(circle at 0% 100%, rgba(59, 130, 246, 0.18), transparent 50%) padding-box,
+		linear-gradient(160deg, #0f1f45 0%, var(--bg-secondary) 60%) padding-box,
+		var(--card-border-gradient) border-box;
+	box-shadow: var(--card-shadow);
 	transition:
 		transform 0.25s ease,
-		box-shadow 0.25s ease,
-		background-color 0.25s ease;
+		box-shadow 0.25s ease;
+}
+
+.language-card::before {
+	content: "";
+	position: absolute;
+	inset: 0 0 auto 0;
+	height: 5px;
+	background: var(--card-accent-strip);
+}
+
+.language-card:hover {
+	transform: translateY(-3px);
+	box-shadow: var(--card-shadow-hover);
 }
 
 .language-card h2 {
 	font-size: 3em;
+	background: var(--title-gradient);
+	-webkit-background-clip: text;
+	background-clip: text;
+	color: transparent;
 }
 
 .language-card h3 {
 	font-size: 2em;
 }
 
+/* Inner link cards: dark glass panel with a left accent bar that lights up on hover */
 .repo-card {
+	position: relative;
 	display: flex;
 	flex-direction: column;
 	align-items: flex-start;
-	padding: 2rem;
-	border-radius: 20px;
+	padding: 2rem 2rem 2rem 2.25rem;
+	border-radius: 18px;
 	text-decoration: none;
-	margin-bottom: 2rem;
+	margin-bottom: 1.5rem;
 	width: 100%;
+	overflow: hidden;
 
 	color: var(--text-primary);
-	background-color: var(--bg-secondary);
-	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+	background: linear-gradient(160deg, rgba(17, 24, 39, 0.95), rgba(15, 23, 42, 0.85));
+	border: 1px solid rgba(59, 130, 246, 0.25);
+	box-shadow: 0 4px 14px rgba(0, 0, 0, 0.35);
 	transition:
 		transform 0.25s ease,
 		box-shadow 0.25s ease,
+		border-color 0.25s ease,
 		background-color 0.25s ease;
+}
+
+.repo-card:last-child {
+	margin-bottom: 0;
+}
+
+.repo-card::before {
+	content: "";
+	position: absolute;
+	inset: 0 auto 0 0;
+	width: 4px;
+	background: linear-gradient(180deg, var(--accent-light), var(--accent-cyan));
+	opacity: 0.55;
+	transition: opacity 0.25s ease, width 0.25s ease;
 }
 
 .language-card img {
@@ -60,12 +102,23 @@
 	padding-bottom: 20px;
 }
 
-.repo-card:hover {
-	transform: translateY(-8px);
-	box-shadow: 0 12px 25px rgba(0, 0, 0, 0.5);
-	color: white;
-	background-color: var(--accent-blue);
+.repo-card:hover,
+.repo-card:focus-visible {
+	transform: translateY(-6px);
+	color: var(--text-primary);
+	border-color: rgba(34, 211, 238, 0.6);
+	background: linear-gradient(160deg, #13295a, #0f1f45);
+	box-shadow:
+		0 12px 28px rgba(0, 0, 0, 0.5),
+		0 0 24px rgba(6, 182, 212, 0.22);
 	text-decoration: none;
+	outline: none;
+}
+
+.repo-card:hover::before,
+.repo-card:focus-visible::before {
+	opacity: 1;
+	width: 6px;
 }
 
 .repo-card h4 {
@@ -73,15 +126,203 @@
 }
 
 .repo-card h5 {
-	font-size: 1.25em;
+	font-size: 1.1em;
+	text-transform: uppercase;
+	letter-spacing: 0.08em;
+	color: var(--accent-cyan-soft);
 }
 
+.repo-card li::marker {
+	color: var(--accent-soft);
+}
+
+/* Live site cards: brighter blue panel */
 .pages {
-	background-color: var(--accent-blue);
+	background: linear-gradient(135deg, var(--accent-blue), #1e3a8a);
+	border-color: rgba(147, 197, 253, 0.45);
 }
 
-.pages:hover {
-	background-color: var(--accent-blue-soft);
+.pages::before {
+	background: var(--accent-cyan-soft);
+	opacity: 1;
+}
+
+.pages:hover,
+.pages:focus-visible {
+	background: linear-gradient(135deg, var(--accent-blue-soft), var(--accent-blue));
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.language-card,
+	.language-card:hover,
+	.repo-card,
+	.repo-card:hover {
+		transition: none;
+		transform: none;
+	}
+}
+
+/* SCHOOL CARDS: high school and college side by side */
+
+.school-row {
+	display: grid;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	gap: var(--card-gap);
+	margin: 1rem 0 2.5rem;
+}
+
+.school-card {
+	position: relative;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	padding: 2.25rem 1.75rem 1.75rem;
+	border: 2px solid transparent;
+	border-radius: 24px;
+	background:
+		radial-gradient(circle at 100% 0%, rgba(6, 182, 212, 0.14), transparent 45%) padding-box,
+		radial-gradient(circle at 0% 100%, rgba(59, 130, 246, 0.18), transparent 50%) padding-box,
+		linear-gradient(160deg, #0f1f45 0%, var(--bg-secondary) 60%) padding-box,
+		var(--card-border-gradient) border-box;
+	box-shadow: var(--card-shadow);
+	transition:
+		transform 0.25s ease,
+		box-shadow 0.25s ease;
+}
+
+.school-card::before {
+	content: "";
+	position: absolute;
+	inset: 0 0 auto 0;
+	height: 5px;
+	background: var(--card-accent-strip);
+}
+
+.school-card:hover {
+	transform: translateY(-4px);
+	box-shadow: var(--card-shadow-hover);
+}
+
+.school-level {
+	margin: 0 0 0.5rem;
+	padding: 2px 12px;
+	border-radius: 999px;
+	border: 1px solid rgba(34, 211, 238, 0.45);
+	background: rgba(34, 211, 238, 0.1);
+	color: var(--accent-cyan-soft);
+	font-size: 0.75rem;
+	font-weight: 600;
+	letter-spacing: 0.12em;
+	text-transform: uppercase;
+}
+
+.school-card h2 {
+	border-left: none;
+	padding-left: 0;
+	margin-bottom: 0.25rem;
+	font-size: 1.9rem;
+	line-height: 1.2;
+}
+
+.school-card h2 a {
+	background: var(--title-gradient);
+	-webkit-background-clip: text;
+	background-clip: text;
+	color: transparent;
+}
+
+.school-card h2 a:hover {
+	text-decoration: underline;
+	text-decoration-color: var(--accent-cyan-soft);
+}
+
+.school-card h3 {
+	font-size: 1.15rem;
+	font-weight: 500;
+	color: var(--text-secondary);
+	margin-bottom: 0.25rem;
+}
+
+.school-date {
+	color: var(--text-muted);
+	font-size: 0.95rem;
+	margin-bottom: 1.25rem;
+}
+
+.school-card h4 {
+	font-size: 0.8rem;
+	font-weight: 600;
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+	color: var(--text-muted);
+	margin-bottom: 0.6rem;
+}
+
+/* Honors as small pill badges */
+.honor-badges {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 8px;
+}
+
+.honor-badge {
+	display: inline-flex;
+	align-items: center;
+	padding: 3px 11px;
+	border-radius: 999px;
+	border: 1px solid rgba(147, 197, 253, 0.45);
+	background: rgba(59, 130, 246, 0.14);
+	color: var(--accent-glow);
+	font-size: 0.8rem;
+	font-weight: 600;
+	line-height: 1.5;
+	white-space: nowrap;
+}
+
+/* Latin honors get gold */
+.honor-badge.gold {
+	color: #fcd34d;
+	border-color: rgba(252, 211, 77, 0.55);
+	background: rgba(252, 211, 77, 0.12);
+}
+
+/* Dean's List terms get green */
+.honor-badge.deans {
+	color: #86efac;
+	border-color: rgba(134, 239, 172, 0.45);
+	background: rgba(74, 222, 128, 0.1);
+}
+
+.honor-badge.gold::before {
+	content: "★";
+	margin-right: 5px;
+	font-size: 0.75rem;
+}
+
+@media (max-width: 760px) {
+	.school-row {
+		grid-template-columns: 1fr;
+	}
+}
+
+@media (max-width: 420px) {
+	.honor-badge {
+		white-space: normal;
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.school-card,
+	.school-card:hover {
+		transition: none;
+		transform: none;
+	}
 }
 
 .diploma {

@@ -1,56 +1,122 @@
+/* Job card: gradient border, soft glows, accent strip on top (matches the home page cards) */
 .job {
+	position: relative;
+	overflow: hidden;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	padding: 2rem;
+	padding: 2.75rem 2rem 2rem;
 	height: auto;
 	width: 80%;
 	margin: 0 auto;
-	margin-bottom: 2rem;
+	margin-bottom: 2.5rem;
 
 	color: var(--text-primary);
-	background-color: var(--accent-deep);
-	border-radius: 50px;
-	border: 6px solid var(--silver-dark-accent);
-	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+	border: 2px solid transparent;
+	border-radius: 28px;
+	background:
+		radial-gradient(circle at 100% 0%, rgba(6, 182, 212, 0.14), transparent 45%) padding-box,
+		radial-gradient(circle at 0% 100%, rgba(59, 130, 246, 0.18), transparent 50%) padding-box,
+		linear-gradient(160deg, #0f1f45 0%, var(--bg-secondary) 60%) padding-box,
+		var(--card-border-gradient) border-box;
+	box-shadow: var(--card-shadow);
 	transition:
 		transform 0.25s ease,
-		box-shadow 0.25s ease,
-		background-color 0.25s ease;
+		box-shadow 0.25s ease;
+}
+
+.job::before {
+	content: "";
+	position: absolute;
+	inset: 0 0 auto 0;
+	height: 5px;
+	background: var(--card-accent-strip);
+}
+
+.job:hover {
+	box-shadow: var(--card-shadow-hover);
 }
 
 .job h2 {
 	font-size: 3em;
+	text-align: center;
+	border-left: none;
+	padding-left: 0;
+	background: var(--title-gradient);
+	-webkit-background-clip: text;
+	background-clip: text;
+	color: transparent;
 }
 
 .job h3 {
-	font-size: 2em;
+	font-size: 1.1em;
+	text-transform: uppercase;
+	letter-spacing: 0.08em;
+	color: var(--accent-cyan-soft);
 }
 
-.job img {
+/* Logos sit on a light disc so dark marks stay visible */
+.job > img {
 	max-width: 100px;
 	height: auto;
-	padding-bottom: 20px;
+	margin-bottom: 1.5rem;
+	padding: 12px;
+	border-radius: 18px;
+	background: rgba(241, 245, 249, 0.95);
+	box-shadow: 0 6px 18px rgba(0, 0, 0, 0.4), 0 0 0 3px rgba(59, 130, 246, 0.35);
 }
 
 .job-subcat {
+	position: relative;
 	display: flex;
 	flex-direction: column;
 	align-items: flex-start;
-	padding: 2rem;
-	border-radius: 20px;
+	padding: 2rem 2rem 2rem 2.25rem;
+	border-radius: 18px;
 	text-decoration: none;
-	margin-bottom: 2rem;
+	margin-bottom: 1.5rem;
 	width: 100%;
+	overflow: hidden;
 
 	color: var(--text-primary);
-	background-color: var(--bg-secondary);
-	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+	background: linear-gradient(160deg, rgba(17, 24, 39, 0.95), rgba(15, 23, 42, 0.85));
+	border: 1px solid rgba(59, 130, 246, 0.25);
+	box-shadow: 0 4px 14px rgba(0, 0, 0, 0.35);
 	transition:
-		transform 0.25s ease,
-		box-shadow 0.25s ease,
-		background-color 0.25s ease;
+		border-color 0.25s ease,
+		box-shadow 0.25s ease;
+}
+
+.job-subcat:last-child {
+	margin-bottom: 0;
+}
+
+.job-subcat::before {
+	content: "";
+	position: absolute;
+	inset: 0 auto 0 0;
+	width: 4px;
+	background: linear-gradient(180deg, var(--accent-light), var(--accent-cyan));
+	opacity: 0.55;
+	transition: opacity 0.25s ease;
+}
+
+.job-subcat:hover {
+	border-color: rgba(34, 211, 238, 0.45);
+	box-shadow: 0 8px 22px rgba(0, 0, 0, 0.45), 0 0 18px rgba(6, 182, 212, 0.15);
+}
+
+.job-subcat:hover::before {
+	opacity: 1;
+}
+
+.job-subcat li::marker {
+	color: var(--accent-soft);
+}
+
+.job-subcat em {
+	color: var(--accent-glow);
 }
 
 #kt-img {
@@ -69,7 +135,7 @@
 	}
 
 	.job h3 {
-		font-size: 1.5em;
+		font-size: 1em;
 	}
 
 	.job-subcat {

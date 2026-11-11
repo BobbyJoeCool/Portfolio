@@ -24,7 +24,7 @@
 }
 
 /* Devicon SVGs have no backdrop, so give them the same dark badge as the PNG icons */
-.project-card .tech-stack img[src$=".svg"] {
+.project-card .tech-stack img[src$=".svg"]:not(.icon-badged) {
 	padding: 9px;
 	border-radius: 50%;
 	background-color: var(--bg-primary);
@@ -116,11 +116,42 @@
 	color: var(--text-primary);
 }
 
-/* Not a link (private repo), so no hover lift */
+/* Not a link (private repo or no repo), so no hover lift; a dashed edge marks it as unlinked */
+.private-repo {
+	border-style: dashed;
+}
+
 .private-repo:hover {
 	transform: none;
-	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-	background-color: var(--bg-secondary);
+	border-color: rgba(59, 130, 246, 0.25);
+	background: linear-gradient(160deg, rgba(17, 24, 39, 0.95), rgba(15, 23, 42, 0.85));
+	box-shadow: 0 4px 14px rgba(0, 0, 0, 0.35);
+}
+
+.private-repo:hover::before {
+	opacity: 0.55;
+	width: 4px;
+}
+
+/* Tech icons pop a little when their card is hovered */
+.project-card .tech-stack img {
+	transition: transform 0.25s ease, filter 0.25s ease;
+}
+
+.project-card:hover .tech-stack img {
+	filter: drop-shadow(0 0 8px rgba(34, 211, 238, 0.35));
+}
+
+.project-card .tech-stack img:hover {
+	transform: translateY(-4px) scale(1.08);
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.project-card .tech-stack img,
+	.project-card .tech-stack img:hover {
+		transition: none;
+		transform: none;
+	}
 }
 
 /* footer icons (matches index.css) */
