@@ -142,7 +142,7 @@
 					<h2>ScribeIQ</h2>
 					<p class="project-status">
 						<span class="status-badge complete">Complete</span>
-						Runs entirely on-device · macOS on Apple Silicon
+						v1.0.1 · Runs entirely on-device · macOS on Apple Silicon
 					</p>
 					<a
 						href="https://github.com/BobbyJoeCool/ScribeIQ"
@@ -185,7 +185,7 @@
 					<h2>Voicewright</h2>
 					<p class="project-status">
 						<span class="status-badge active">Active Development</span>
-						v1 · Voices complete · Sound library next
+						v1.0.0 · Runs locally on a Mac · Still improving
 					</p>
 					<a
 						href="https://github.com/BobbyJoeCool/Voicewright"
@@ -207,10 +207,11 @@
 						<ul>
 							<li>Voice design with Qwen3-TTS VoiceDesign: a neutral clip plus one preset per emotion</li>
 							<li>Speech and voice cloning with Chatterbox on MLX</li>
-							<li>Review drafts take by take: regenerate, retune exaggeration and cfg, or roll back to an earlier take</li>
-							<li>Edit saved Voices through pending takes that are accepted or rejected</li>
-							<li>Audio and video conversion to standard WAV through ffmpeg; tests run against faked engines</li>
-							<li>Next up: Freesound sound library, then tagged Scripts and saved Outputs</li>
+							<li>Review and edit Voices take by take: regenerate, retune exaggeration and cfg, or roll back to an earlier take</li>
+							<li>Sound library: search Freesound, preview, and add sounds with their credit and license</li>
+							<li>Script editor with tag highlighting and a check that reports every problem at once, then renders one WAV with even volume</li>
+							<li>Saved Outputs keep a record of the Script, Voice, values, and every sound's credit</li>
+							<li>Real-model smoke test runs offline; QA pass checked all 61 user stories</li>
 						</ul>
 						<span class="repo-link">View on GitHub →</span>
 					</a>
@@ -228,8 +229,8 @@
 					</div>
 					<h2>FitIQ</h2>
 					<p class="project-status">
-						<span class="status-badge wip">WIP</span>
-						Pre-v1 · Demo account live
+						<span class="status-badge live">Live</span>
+						v1.5.5 · Demo account live
 					</p>
 					<a
 						href="https://github.com/BobbyJoeCool/FitIQ"
@@ -249,8 +250,8 @@
 						<h5>Highlights</h5>
 						<ul>
 							<li>876-exercise library from Free Exercise DB, searchable by muscle, equipment, and difficulty</li>
-							<li>Reusable plans with target sets, reps, hold time, and rest</li>
-							<li>One-handed set logging with "last time" prefill, rest and hold timers, and per-set saves</li>
+							<li>Reusable plans with target sets, reps, hold time, and rest, shareable and importable as plan files</li>
+							<li>One-handed set logging with "last time" prefill, rest and hold timers with sound and voice cues, and per-set saves</li>
 							<li>Workout history, personal records, and weight and measurement charts</li>
 							<li>Two-account RLS test on every table, plus Playwright E2E tests in CI against a local Supabase stack</li>
 						</ul>
@@ -410,7 +411,7 @@
 					<h2>CheatSheets</h2>
 					<p class="project-status">
 						<span class="status-badge active">Active</span>
-						3,188 sheets across 53 collections
+						3,979 sheets across 69 collections
 					</p>
 					<a
 						href="https://github.com/BobbyJoeCool/CheatSheets"
@@ -430,19 +431,31 @@
 						<ul>
 							<li><strong>Concepts &amp; Tools:</strong> Concepts (104), Agentic Coding (73), Bitwise (23), RegEx (25), Gradle (27), VS Code (29)</li>
 							<li><strong>Testing:</strong> Software Testing (40), Playwright (67), pytest (25), Jest &amp; Vitest (27), JUnit (25)</li>
-							<li><strong>Command Line Interface:</strong> Git (36), zsh (27), Bash (27), PowerShell (42)</li>
-							<li><strong>Python:</strong> Python (93), Tkinter (62), Django (70)</li>
-							<li><strong>Java:</strong> Java (136), Maven (24), JSP (34), Spring (69), Swing (62)</li>
+							<li><strong>Command Line Interface:</strong> Git (36), zsh (27), Bash (27), PowerShell (42), Ubuntu (49)</li>
+							<li><strong>Python:</strong> Python (93), Tkinter (62), Django (70), FastAPI &amp; Flask (60)</li>
+							<li><strong>Java:</strong> Java (136), Maven (24), IntelliJ IDEA (32), Jakarta EE (40), JSP (34), Spring (69), Swing (62), Kotlin (95)</li>
 							<li><strong>C Family:</strong> C (98), C++ (125), C# (130)</li>
-							<li><strong>Languages:</strong> Go (112), Ruby (115), Ruby on Rails (78), Swift (108), SwiftUI (59)</li>
+							<li><strong>Languages:</strong> Go (112), Ruby (115), Ruby on Rails (78), Swift (108), SwiftUI (59), Rust (107)</li>
+							<li><strong>Mainframe:</strong> COBOL (64), JCL &amp; z/OS (32)</li>
 							<li><strong>JavaScript / TypeScript:</strong> JavaScript &amp; TypeScript (133), React (98), React Native (72)</li>
 							<li><strong>Web Design:</strong> HTML (56), CSS (77), CSS Systems (48), PHP (133)</li>
 							<li><strong>Server &amp; Full-Stack:</strong> HTTP &amp; REST APIs (30), Node.js (70), Vite (39), Next.js (60)</li>
-							<li><strong>SQL &amp; Tools:</strong> SQL (82), Prisma (34)</li>
+							<li><strong>Databases:</strong> SQL (82), NoSQL (61), Prisma (34)</li>
 							<li><strong>Markup &amp; Notation:</strong> Config Formats (22), Markdown (22), Mermaid (46), JSON (15), XML (16), YAML (14)</li>
+							<li><strong>Cloud Services:</strong> Cloud Foundations (26), AWS (42), Azure (42), Google Cloud (42)</li>
 							<li><strong>DevOps &amp; Containers:</strong> GitHub (93), Docker (31), Kubernetes (25)</li>
+							<li><strong>Office Tools:</strong> Microsoft 365 (39), Google Workspace (32), Apple iWork &amp; Mail (28)</li>
 						</ul>
 						<span class="repo-link">View on GitHub →</span>
+					</a>
+
+					<a
+						href="https://cheatsheets.bobbyjoecool.dev"
+						target="_blank"
+						rel="noopener noreferrer"
+						class="repo-card pages"
+					>
+						<h4>Live Site on GitHub Pages</h4>
 					</a>
 				</article>
 
@@ -453,8 +466,8 @@
 					</div>
 					<h2>Animated Spells</h2>
 					<p class="project-status">
-						<span class="status-badge released">Released</span>
-						v1.0.0 · Foundry VTT module
+						<span class="status-badge wip">WIP</span>
+						v0.1.0 · Foundry VTT module
 					</p>
 					<a
 						href="https://github.com/BobbyJoeCool/AnimatedSpells"
@@ -629,5 +642,6 @@
 
 		<div id="site-footer"></div>
 		<script src="JS/common.js"></script>
+		<script src="JS/masonry.js"></script>
 	</body>
 </html>

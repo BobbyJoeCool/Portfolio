@@ -207,6 +207,30 @@ footer img:hover {
 	justify-content: flex-start;
 }
 
+/* Masonry (JS/masonry.js adds the class): two columns once each can be --card-min wide,
+   one below that. Cards keep their own height; the script sets each card's row span. */
+#github-repositories.masonry {
+	display: grid;
+	grid-template-columns: repeat(
+		auto-fill,
+		minmax(max(var(--card-min), calc(50% - var(--card-gap) / 2)), 1fr)
+	);
+	grid-auto-rows: 1px;
+	column-gap: var(--card-gap);
+	row-gap: 0;
+	align-items: start;
+}
+
+#github-repositories.masonry > * {
+	max-width: none;
+}
+
+@media (max-width: 700px) {
+	#github-repositories.masonry {
+		grid-template-columns: minmax(0, 1fr);
+	}
+}
+
 #github-repositories .project-card h2 {
 	font-size: 2.2em;
 	line-height: 1.2;

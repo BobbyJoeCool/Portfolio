@@ -8,9 +8,10 @@
 	align-items: center;
 	padding: 2.75rem 2rem 2rem;
 	height: auto;
-	width: 80%;
-	margin: 0 auto;
-	margin-bottom: 2.5rem;
+	/* Wider than the page text so the two columns have room, like the Projects grid */
+	--job-w: min(1200px, calc(100vw - 2.5rem));
+	width: var(--job-w);
+	margin: 0 0 2.5rem calc(50% - var(--job-w) / 2);
 
 	color: var(--text-primary);
 	border: 2px solid transparent;
@@ -123,9 +124,167 @@
 	max-width: 300px;
 }
 
+/* Header block under the logo: title, then pill badges for dates, place, and teams */
+.job-meta {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 0.75rem;
+	margin-bottom: 2rem;
+	text-align: center;
+}
+
+.job-title {
+	margin: 0;
+	max-width: none;
+	font-size: 1.5rem;
+	font-weight: 600;
+	color: var(--text-primary);
+}
+
+.meta-badges,
+.skill-badges {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 8px;
+}
+
+.meta-badges {
+	justify-content: center;
+}
+
+.meta-badge,
+.team-badge,
+.skill-badge {
+	display: inline-flex;
+	align-items: center;
+	gap: 8px;
+	padding: 4px 12px;
+	border-radius: 999px;
+	border: 1px solid rgba(147, 197, 253, 0.45);
+	background: rgba(59, 130, 246, 0.14);
+	color: var(--accent-glow);
+	font-size: 0.85rem;
+	font-weight: 600;
+	line-height: 1.5;
+}
+
+.meta-badge span {
+	color: var(--text-muted);
+	font-size: 0.7rem;
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+}
+
+.meta-badge.current {
+	color: #4ade80;
+	border-color: rgba(74, 222, 128, 0.5);
+	background: rgba(74, 222, 128, 0.12);
+}
+
+.team-badge,
+.skill-badge.cert {
+	color: var(--accent-cyan-soft);
+	border-color: rgba(34, 211, 238, 0.5);
+	background: rgba(34, 211, 238, 0.12);
+}
+
+.team-badge.safety,
+.skill-badge.safety {
+	color: #fca5a5;
+	border-color: rgba(248, 113, 113, 0.5);
+	background: rgba(248, 113, 113, 0.12);
+}
+
+.skill-badge {
+	font-size: 0.8rem;
+	padding: 3px 11px;
+}
+
+/* Promotions as steps joined by arrows */
+.career-path {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	gap: 6px 4px;
+}
+
+.career-path li {
+	padding: 4px 12px;
+	border-radius: 999px;
+	border: 1px solid rgba(34, 211, 238, 0.5);
+	background: rgba(34, 211, 238, 0.12);
+	color: var(--accent-cyan-soft);
+	font-size: 0.85rem;
+	font-weight: 600;
+}
+
+.career-path li + li::before {
+	content: "→";
+	margin: 0 8px 0 -4px;
+	color: var(--text-muted);
+}
+
+.career-path li:last-child {
+	color: #fcd34d;
+	border-color: rgba(252, 211, 77, 0.55);
+	background: rgba(252, 211, 77, 0.12);
+}
+
+/* Skills and the write-up side by side; they stack on narrow screens */
+.job-columns {
+	display: grid;
+	grid-template-columns: minmax(0, 2fr) minmax(0, 3fr);
+	gap: 1.5rem;
+	width: 100%;
+	align-items: start;
+}
+
+.job-columns .job-subcat {
+	margin-bottom: 0;
+}
+
+.job-subcat h3 {
+	margin-bottom: 0.5rem;
+}
+
+.job-subcat h4 {
+	margin: 1.25rem 0 0.6rem;
+	font-size: 0.8rem;
+	font-weight: 600;
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+	color: var(--text-muted);
+}
+
+.job-story h4 {
+	font-size: 1rem;
+	letter-spacing: 0.04em;
+	text-transform: none;
+	color: var(--accent-glow);
+	border-left: none;
+	padding-left: 0;
+}
+
+.job-story p {
+	margin-top: 0;
+}
+
+@media (max-width: 900px) {
+	.job-columns {
+		grid-template-columns: minmax(0, 1fr);
+	}
+}
+
 @media (max-width: 700px) {
 	.job {
-		width: 100%;
 		border-radius: 20px;
 		padding: 1.5rem 1rem;
 	}
