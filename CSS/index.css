@@ -573,6 +573,21 @@ footer img:hover {
 	gap: 10px;
 }
 
+/* Optional heading for a row of screenshots (e.g. PalletIQ's tablet vs desktop) */
+.gallery-label {
+	grid-column: 1 / -1;
+	margin: 6px 0 -2px;
+	font-size: 0.85rem;
+	font-weight: 600;
+	letter-spacing: 0.04em;
+	text-transform: uppercase;
+	color: var(--text-secondary, var(--text-primary));
+}
+
+.gallery-label:first-child {
+	margin-top: 0;
+}
+
 .gallery-thumb {
 	display: block;
 	padding: 0;

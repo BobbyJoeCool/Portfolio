@@ -35,12 +35,13 @@
 						<img src="Assets/icons/Language-Icons/NodeJS.png" alt="Node.js" title="Node.js / Express" />
 						<img src="Assets/icons/Tech-Icons/Prisma.png" alt="Prisma" title="Prisma" />
 						<img src="Assets/icons/Tech-Icons/MySQL.png" alt="MySQL" title="MySQL" />
+						<img src="Assets/icons/Tech-Icons/Electron.svg" alt="Electron" title="Electron" />
 						<img src="Assets/icons/Tech-Icons/Playwright.svg" alt="Playwright" title="Playwright" />
 					</div>
 					<h2>PalletIQ</h2>
 					<p class="project-status">
 						<span class="status-badge active">Active Development</span>
-						Floor app v1.9.0 · API v1.2.6 · Manager desktop app scaffolded
+						Floor app v1.11.1 · API v1.4.0 · Manager desktop app v1.0.0
 					</p>
 					<a
 						href="https://github.com/BobbyJoeCool/PalletIQ"
@@ -55,17 +56,19 @@
 							four-tier role hierarchy, field-level permission gating, and a
 							tablet UI designed for hands-free scanning: numeric-first input,
 							no blocking pop-ups, and every pallet and location ID a tappable
-							link. Organized as a monorepo with a shared TypeScript types
-							package, an Express + Prisma API on MySQL, the React floor app,
-							and a manager-facing Electron desktop app in progress.
+							link. Organized as a monorepo with a shared TypeScript package for
+							types and pure domain rules, an Express + Prisma API on MySQL, the
+							React floor app, and a manager-facing Electron desktop app.
 						</p>
 						<h5>Highlights</h5>
 						<ul>
 							<li>Pull and Put (directed and manual) driven by label scans with independent verification paths</li>
 							<li>Pallet ID and Location ID detail screens, reachable from any reference in the app</li>
 							<li>Empty Locations aisle summary and visual zone-by-zone staging map</li>
-							<li>v1.9.0 milestone: Individual Rate of Productivity (IRP), Pull Request Query, and Container ID Inquiry with a per-record audit trail</li>
-							<li>Badge + PIN login issuing signed JWTs, reservation locking, and Playwright end-to-end tests</li>
+							<li>Individual Rate of Productivity (IRP), Pull Request Query, and Container ID Inquiry with a per-record audit trail</li>
+							<li>v1.10–1.11: architecture refactors into deep modules (reservation lifecycle, container lifecycle, location acceptance policy), a Printer table, and a rewritten e2e suite</li>
+							<li>Desktop app v1.0.0: Job/Function Assignment roster timeline with staffing forecast, Team Prod Summary, Location Setup, Prod Goal / Ramping / Daily Plan, a three-pane Audit Tool, and the Embedded Floor App</li>
+							<li>Badge + PIN login on the floor and password login on desktop, signed JWTs, reservation locking, and Playwright end-to-end tests for both apps (desktop tests drive the built Electron app)</li>
 						</ul>
 						<span class="repo-link">View on GitHub →</span>
 					</a>
@@ -268,6 +271,44 @@
 					</a>
 				</article>
 
+				<!-- ForkIQ -->
+				<article class="language-card project-card">
+					<div class="tech-stack">
+						<img src="Assets/icons/Language-Icons/TypeScript.png" alt="TypeScript" title="TypeScript" />
+						<img src="Assets/icons/Language-Icons/React.png" alt="React" title="React" />
+						<img src="Assets/icons/Tech-Icons/Vite.svg" alt="Vite" title="Vite / Vitest" />
+						<img src="Assets/icons/Tech-Icons/Azure.png" alt="Azure" title="Azure Static Web Apps / Functions" />
+						<img src="Assets/icons/Language-Icons/SQL.png" alt="Postgres" title="Neon Postgres" />
+						<img src="Assets/icons/Tech-Icons/GitHubActions.svg" alt="GitHub Actions" title="GitHub Actions" />
+					</div>
+					<h2>ForkIQ</h2>
+					<p class="project-status">
+						<span class="status-badge wip">Early Development</span>
+						Foundation built · Working toward v1
+					</p>
+					<div class="repo-card private-repo">
+						<h4>Nutrition Tracker <span class="wip-badge">PRIVATE REPO</span></h4>
+						<p>
+							A personal nutrition and supplement tracker, the food-side
+							companion to FitIQ. Log meals from a USDA FoodData Central search
+							or an Open Food Facts barcode scan with the phone's camera, track
+							water, and record vitamin and medication doses against a daily
+							regimen, all on one Day screen with calorie, macro, and water
+							goals. Designed to cost $0 a month on Azure Static Web Apps and
+							Neon Postgres, with passkey login and a separate public demo that
+							can never reach the real data.
+						</p>
+						<h5>So Far</h5>
+						<ul>
+							<li>npm workspaces monorepo: a pure TypeScript core, an Azure Functions API, and a React + Vite web app</li>
+							<li>Database migrations tested on PGlite, with a migrate script that refuses edited migrations and rolls back cleanly</li>
+							<li>Lint and build guards that keep the web app from importing the core past its contract</li>
+							<li>Typecheck, lint, test, and build on every pull request in GitHub Actions</li>
+							<li>Domain glossary and ADRs written before the features</li>
+						</ul>
+					</div>
+				</article>
+
 				<!-- Family Passport Map -->
 				<article class="language-card project-card">
 					<div class="tech-stack">
@@ -411,7 +452,7 @@
 					<h2>CheatSheets</h2>
 					<p class="project-status">
 						<span class="status-badge active">Active</span>
-						3,979 sheets across 69 collections
+						4,036 sheets across 70 collections
 					</p>
 					<a
 						href="https://github.com/BobbyJoeCool/CheatSheets"
@@ -439,7 +480,7 @@
 							<li><strong>Mainframe:</strong> COBOL (64), JCL &amp; z/OS (32)</li>
 							<li><strong>JavaScript / TypeScript:</strong> JavaScript &amp; TypeScript (133), React (98), React Native (72)</li>
 							<li><strong>Web Design:</strong> HTML (56), CSS (77), CSS Systems (48), PHP (133)</li>
-							<li><strong>Server &amp; Full-Stack:</strong> HTTP &amp; REST APIs (30), Node.js (70), Vite (39), Next.js (60)</li>
+							<li><strong>Server &amp; Full-Stack:</strong> HTTP &amp; REST APIs (30), Node.js (70), Express (57), Vite (39), Next.js (60)</li>
 							<li><strong>Databases:</strong> SQL (82), NoSQL (61), Prisma (34)</li>
 							<li><strong>Markup &amp; Notation:</strong> Config Formats (22), Markdown (22), Mermaid (46), JSON (15), XML (16), YAML (14)</li>
 							<li><strong>Cloud Services:</strong> Cloud Foundations (26), AWS (42), Azure (42), Google Cloud (42)</li>
