@@ -104,8 +104,8 @@ async function sendMessage(form, fields) {
 			"Thanks! Your message was sent. I'll get back to you soon.";
 		status.className = "contact-status success";
 	} catch {
-		const fallback = documenthttp://127.0.0.1:5500/index.html.createElement("a");
-			fallback.href = `mailto:${contactEmail}`;
+		const fallback = document.createElement("a");
+		fallback.href = `mailto:${contactEmail}`;
 		fallback.textContent = contactEmail;
 		status.replaceChildren(
 			"Sorry, the message couldn't be sent. Please try again, or email me at ",
