@@ -239,3 +239,10 @@ footer img:hover {
 #github-repositories .course-card h2 {
 	font-size: 1.6em;
 }
+
+/* Screenshot gallery inside a project card (base styles in gallery.css): cards are
+   about half the page wide, so two thumbnails per row keeps them readable */
+.project-card .project-gallery {
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	margin-top: 1rem;
+}
