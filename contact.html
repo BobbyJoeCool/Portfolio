@@ -1,25 +1,42 @@
-<!--
-    Contact Page
--->
-
 <!doctype html>
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
-		<title>Robert Breutzmann | Contact</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Robert Breutzmann | Contact</title>
+		<meta
+			name="description"
+			content="Contact Robert Breutzmann: email bob@bobbyjoecool.dev, GitHub, LinkedIn, or send a message from this page."
+		/>
+		<link rel="canonical" href="https://bobbyjoecool.dev/contact.html" />
+		<meta property="og:type" content="website" />
+		<meta property="og:title" content="Robert Breutzmann | Contact" />
+		<meta property="og:description" content="Email, GitHub, LinkedIn, or a message form." />
+		<meta property="og:url" content="https://bobbyjoecool.dev/contact.html" />
+		<meta property="og:image" content="https://bobbyjoecool.dev/Assets/Images/profile.jpg" />
 		<link rel="stylesheet" href="CSS/master.css" />
 		<link rel="stylesheet" href="CSS/contact.css" />
 	</head>
 
-	<body class="bg-network">
-		<div id="site-header"></div>
+<body class="bg-network">
+		<a class="skip-link" href="#main">Skip to content</a>
+		<header>
+			<nav aria-label="Main">
+				<a href="index.html">Home</a>
+				<a href="projects.html">Projects</a>
+				<a href="skills.html">Skills</a>
+				<a href="experience.html">Experience</a>
+				<a href="education.html">Education</a>
+				<a href="about.html">About</a>
+				<a href="contact.html" aria-current="page">Contact</a>
+			</nav>
+		</header>
 
-		<main>
+		<main id="main">
 			<h1>Get in Touch</h1>
 			<p class="contact-intro">
-				Have a question, an opportunity, or just want to say hello? Send a
-				message below or reach out on any of the platforms listed.
+				Hiring for an entry-level developer role, or have a question about a
+				project? Email me directly or use the form.
 			</p>
 
 			<div class="contact-layout">
@@ -72,14 +89,58 @@
 				</section>
 
 				<section class="contact-links-section">
-					<h2>Connect</h2>
-					<ul id="contact-links" class="contact-links"></ul>
+					<h2>Reach me directly</h2>
+					<p class="contact-email">
+						<a href="mailto:bob@bobbyjoecool.dev">bob@bobbyjoecool.dev</a>
+					</p>
+					<ul class="contact-links">
+						<li>
+							<a href="mailto:bob@bobbyjoecool.dev" class="contact-link">
+								<img src="Assets/icons/Email.png" alt="" width="28" height="28" />
+								<span>Email</span>
+							</a>
+						</li>
+						<li>
+							<a href="https://github.com/BobbyJoeCool" class="contact-link" target="_blank" rel="noopener noreferrer">
+								<img src="Assets/icons/GitHub.png" alt="" width="28" height="28" />
+								<span>GitHub</span>
+							</a>
+						</li>
+						<li>
+							<a href="https://bobbyjoecool.dev/linkedin/" class="contact-link" target="_blank" rel="noopener noreferrer">
+								<img src="Assets/icons/LinkedIn.png" alt="" width="28" height="28" />
+								<span>LinkedIn</span>
+							</a>
+						</li>
+					</ul>
 				</section>
 			</div>
+			<section class="contact-socials" aria-labelledby="socials-heading">
+				<h2 id="socials-heading">Elsewhere</h2>
+				<p>Personal accounts, if you'd like to say hi:</p>
+				<ul>
+					<li><a href="https://www.facebook.com/bobslenscraft" target="_blank" rel="noopener noreferrer"><img src="Assets/icons/Facebook.png" alt="" width="20" height="20" loading="lazy" />Facebook</a></li>
+					<li><a href="https://www.instagram.com/robertbreutzmann/" target="_blank" rel="noopener noreferrer"><img src="Assets/icons/Instagram.png" alt="" width="20" height="20" loading="lazy" />Instagram</a></li>
+					<li><a href="https://www.threads.com/@robertbreutzmann" target="_blank" rel="noopener noreferrer"><img src="Assets/icons/Threads.png" alt="" width="20" height="20" loading="lazy" />Threads</a></li>
+					<li><a href="https://bsky.app/profile/bobbyjoecool.bsky.social" target="_blank" rel="noopener noreferrer"><img src="Assets/icons/BlueSky.png" alt="" width="20" height="20" loading="lazy" />Bluesky</a></li>
+					<li><a href="https://discord.com/users/BobyJoeCool" target="_blank" rel="noopener noreferrer"><img src="Assets/icons/Discord.png" alt="" width="20" height="20" loading="lazy" />Discord</a></li>
+				</ul>
+			</section>
 		</main>
 
-		<div id="site-footer"></div>
-		<script src="JS/common.js"></script>
+		<footer>
+			<p>© 2026 Robert Breutzmann</p>
+			<p>
+				<a href="mailto:bob@bobbyjoecool.dev"><img src="Assets/icons/Email.png" alt="Email" width="28" height="28" loading="lazy" /></a>
+				<a href="https://github.com/BobbyJoeCool" target="_blank" rel="noopener noreferrer"><img src="Assets/icons/GitHub.png" alt="GitHub" width="28" height="28" loading="lazy" /></a>
+				<a href="https://bobbyjoecool.dev/linkedin/" target="_blank" rel="noopener noreferrer"><img src="Assets/icons/LinkedIn.png" alt="LinkedIn" width="28" height="28" loading="lazy" /></a>
+				<a href="https://www.facebook.com/bobslenscraft" target="_blank" rel="noopener noreferrer"><img src="Assets/icons/Facebook.png" alt="Facebook" width="28" height="28" loading="lazy" /></a>
+				<a href="https://www.instagram.com/robertbreutzmann/" target="_blank" rel="noopener noreferrer"><img src="Assets/icons/Instagram.png" alt="Instagram" width="28" height="28" loading="lazy" /></a>
+				<a href="https://www.threads.com/@robertbreutzmann" target="_blank" rel="noopener noreferrer"><img src="Assets/icons/Threads.png" alt="Threads" width="28" height="28" loading="lazy" /></a>
+				<a href="https://bsky.app/profile/bobbyjoecool.bsky.social" target="_blank" rel="noopener noreferrer"><img src="Assets/icons/BlueSky.png" alt="Bluesky" width="28" height="28" loading="lazy" /></a>
+				<a href="https://discord.com/users/BobyJoeCool" target="_blank" rel="noopener noreferrer"><img src="Assets/icons/Discord.png" alt="Discord" width="28" height="28" loading="lazy" /></a>
+			</p>
+		</footer>
 		<script src="JS/contact.js"></script>
 	</body>
 </html>

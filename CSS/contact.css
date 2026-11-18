@@ -194,3 +194,52 @@ footer img:hover {
 	opacity: 0.6;
 	cursor: wait;
 }
+
+.contact-email {
+	margin-bottom: 1rem;
+	font-size: 1.15rem;
+	font-weight: 600;
+	word-break: break-all;
+}
+
+/* Small personal-socials list under the main contact options */
+.contact-socials {
+	margin: 2.5rem auto 3rem;
+	text-align: center;
+}
+
+.contact-socials h2 {
+	display: inline-block;
+	border-left: none;
+	padding-left: 0;
+	font-size: 1.25rem;
+	margin-bottom: 0.25rem;
+}
+
+.contact-socials p {
+	margin: 0 auto 0.75rem;
+	color: var(--text-muted);
+	font-size: 0.9rem;
+}
+
+.contact-socials ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 8px 20px;
+}
+
+.contact-socials a {
+	display: inline-flex;
+	align-items: center;
+	gap: 6px;
+	font-size: 0.95rem;
+}
+
+.contact-socials img {
+	width: 20px;
+	height: 20px;
+}

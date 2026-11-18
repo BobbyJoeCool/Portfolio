@@ -1,5 +1,4 @@
-// Contact page: builds the connect list from the shared footer links and
-// sends the form through Web3Forms (https://web3forms.com), which emails it to
+// Contact page: sends the form through Web3Forms (https://web3forms.com), which emails it to
 // contactEmail. The site has no backend, so until an access key is set the form
 // falls back to opening the visitor's email app with a pre-filled message.
 
@@ -8,24 +7,6 @@ const contactEmail = "bob@bobbyjoecool.dev";
 // Web3Forms access key for contactEmail. It is safe to publish: it can only
 // send mail to the address it was created for.
 const web3formsAccessKey = "a0973ea6-b38b-4d66-8774-ce532dfa9dc0";
-
-function renderContactLinks() {
-	const list = document.getElementById("contact-links");
-	if (!list) return;
-
-	list.innerHTML = footerLinks
-		.map((link) => {
-			const external = link.href.startsWith("http");
-			return `
-        <li>
-          <a href="${link.href}" class="contact-link" ${external ? 'target="_blank" rel="noopener noreferrer"' : ""}>
-            <img src="${link.img}" alt="" />
-            <span>${link.alt}</span>
-          </a>
-        </li>`;
-		})
-		.join("");
-}
 
 function handleContactSubmit(event) {
 	event.preventDefault();
@@ -119,7 +100,6 @@ async function sendMessage(form, fields) {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-	renderContactLinks();
 	document
 		.getElementById("contact-form")
 		?.addEventListener("submit", handleContactSubmit);

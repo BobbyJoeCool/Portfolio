@@ -161,7 +161,7 @@ nav a:hover {
 	background-color: var(--accent-hover);
 }
 
-nav a.active {
+nav a[aria-current="page"] {
 	background-color: var(--text-secondary);
 	color: var(--bg-primary);
 	border-color: var(--text-secondary);
@@ -178,6 +178,50 @@ footer {
 
 footer p {
 	margin: 0 auto 16px auto;
+}
+
+footer img {
+	width: 28px;
+	height: 28px;
+	margin: 0 8px;
+	opacity: 0.85;
+	transition:
+		opacity 0.2s ease,
+		transform 0.2s ease;
+}
+
+footer a:hover img,
+footer a:focus-visible img {
+	opacity: 1;
+	transform: translateY(-2px);
+}
+
+/* Skip link: hidden until a keyboard user tabs to it */
+.skip-link {
+	position: absolute;
+	left: 12px;
+	top: -100px;
+	z-index: 2000;
+	padding: 8px 14px;
+	border-radius: 6px;
+	background: var(--text-primary);
+	color: var(--bg-primary);
+	font-weight: 600;
+}
+
+.skip-link:focus {
+	top: 12px;
+	color: var(--bg-primary);
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+:focus-visible {
+	outline: 2px solid var(--accent-cyan-soft);
+	outline-offset: 2px;
 }
 
 h1 {
@@ -454,4 +498,259 @@ body.bg-network::after {
 	body.bg-network::after {
 		animation: none;
 	}
+}
+
+/*
+STATUS LABELS
+One set everywhere: Live, Stable, Active development, Prototype, Archived.
+*/
+.status-badge {
+	display: inline-block;
+	padding: 2px 10px;
+	border-radius: 999px;
+	border: 1px solid;
+	font-size: 0.8rem;
+	font-weight: 600;
+	letter-spacing: 0.05em;
+	text-transform: uppercase;
+}
+
+.status-badge.live {
+	color: #4ade80;
+	border-color: rgba(74, 222, 128, 0.5);
+	background: rgba(74, 222, 128, 0.12);
+}
+
+.status-badge.active {
+	color: var(--accent-cyan-soft);
+	border-color: rgba(34, 211, 238, 0.5);
+	background: rgba(34, 211, 238, 0.12);
+}
+
+.status-badge.prototype {
+	color: #fb923c;
+	border-color: rgba(251, 146, 60, 0.5);
+	background: rgba(251, 146, 60, 0.12);
+}
+
+.status-badge.archived {
+	color: var(--silver-accent);
+	border-color: rgba(184, 184, 184, 0.4);
+	background: rgba(184, 184, 184, 0.1);
+}
+
+
+.status-badge.stable {
+	color: var(--accent-glow);
+	border-color: rgba(147, 197, 253, 0.5);
+	background: rgba(147, 197, 253, 0.12);
+}
+
+
+/*
+EXPANDABLE CARDS (Projects, Experience, Education)
+A <details> card: the summary is the compact view, the body is the full write-up.
+*/
+.expand-card {
+	position: relative;
+	overflow: hidden;
+	border: 1px solid rgba(59, 130, 246, 0.35);
+	border-radius: 18px;
+	background: var(--card-glow-bg);
+	box-shadow: var(--card-shadow);
+	color: var(--text-primary);
+	transition:
+		border-color 0.25s ease,
+		box-shadow 0.25s ease;
+}
+
+.expand-card::before {
+	content: "";
+	position: absolute;
+	inset: 0 0 auto 0;
+	height: 4px;
+	background: var(--card-accent-strip);
+}
+
+.expand-card:hover,
+.expand-card[open] {
+	border-color: rgba(34, 211, 238, 0.55);
+	box-shadow: var(--card-shadow-hover);
+}
+
+.expand-card > summary {
+	list-style: none;
+	cursor: pointer;
+	padding: 1.5rem 3.5rem 1.25rem 1.5rem;
+	position: relative;
+}
+
+.expand-card > summary::-webkit-details-marker {
+	display: none;
+}
+
+/* Plus/minus toggle in the corner */
+.expand-card > summary::after {
+	content: "+";
+	position: absolute;
+	top: 1.25rem;
+	right: 1.25rem;
+	width: 30px;
+	height: 30px;
+	display: grid;
+	place-items: center;
+	border-radius: 50%;
+	border: 1px solid rgba(34, 211, 238, 0.5);
+	color: var(--accent-cyan-soft);
+	font-size: 1.2rem;
+	line-height: 1;
+}
+
+.expand-card[open] > summary::after {
+	content: "\2212";
+}
+
+.expand-card > summary h3,
+.expand-card > summary h2 {
+	margin: 0 0 0.35rem;
+	font-size: 1.4rem;
+	border-left: none;
+	padding-left: 0;
+	background: var(--title-gradient);
+	-webkit-background-clip: text;
+	background-clip: text;
+	color: transparent;
+}
+
+.expand-card > summary p {
+	margin: 0.5rem 0 0;
+	color: var(--text-secondary);
+}
+
+.expand-card .summary-meta {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 6px 10px;
+	margin: 0;
+	color: var(--text-muted);
+	font-size: 0.9rem;
+	max-width: none;
+}
+
+.expand-card .badge-row {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 8px;
+	margin-top: 0.75rem;
+}
+
+.expand-card .badge-row img {
+	width: 32px;
+	height: 32px;
+	object-fit: contain;
+}
+
+.expand-card .badge-row img[src$=".svg"] {
+	padding: 5px;
+	border-radius: 50%;
+	background-color: var(--bg-primary);
+	border: 1px solid var(--accent-cyan);
+}
+
+.expand-body {
+	padding: 0 1.5rem 1.5rem;
+	color: var(--text-secondary);
+}
+
+.expand-body h4 {
+	margin: 1.1rem 0 0.4rem;
+	font-size: 0.8rem;
+	font-weight: 600;
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+	color: var(--accent-cyan-soft);
+}
+
+.expand-body ul {
+	padding-left: 1.25rem;
+}
+
+.expand-body .card-links {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 10px 18px;
+	margin-top: 1rem;
+	font-weight: 600;
+}
+
+.expand-body .project-gallery {
+	margin-top: 1rem;
+	grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+@media (max-width: 600px) {
+	.expand-card > summary {
+		padding: 1.25rem 3.25rem 1rem 1rem;
+	}
+
+	.expand-body {
+		padding: 0 1rem 1rem;
+	}
+
+	.expand-body .project-gallery {
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+	}
+}
+
+/* Section heading for grouped lists (Projects page groups, Skills groups) */
+.group-heading {
+	margin: 3rem 0 0.5rem;
+}
+
+.group-intro {
+	margin-bottom: 1.25rem;
+	color: var(--text-muted);
+}
+
+/* Plain list of expandable cards */
+.expand-list {
+	display: grid;
+	gap: 1rem;
+	margin-bottom: 1rem;
+}
+
+@media (min-width: 900px) {
+	.expand-list.two-up {
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+		align-items: start;
+	}
+}
+
+/* Demo logins and boundary notes on project cards */
+.demo-login,
+.boundary-note {
+	width: 100%;
+	max-width: none;
+	padding: 8px 12px;
+	border-radius: 10px;
+	border: 1px dashed rgba(34, 211, 238, 0.5);
+	background: rgba(34, 211, 238, 0.08);
+	color: var(--text-primary);
+	font-size: 0.95rem;
+}
+
+.demo-login code {
+	font-family: "SF Mono", Menlo, Consolas, monospace;
+	color: var(--accent-cyan-soft);
+}
+
+.status-key {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 8px;
+	max-width: none;
+	color: var(--text-muted);
+	font-size: 0.9rem;
 }

@@ -36,10 +36,12 @@
 		box-shadow 0.2s ease;
 }
 
-.gallery-thumb img {
+.project-gallery .gallery-thumb img {
 	display: block;
 	width: 100%;
+	max-width: none;
 	height: 100%;
+	padding: 0;
 	object-fit: cover;
 	object-position: top center;
 	transition: transform 0.3s ease;
@@ -53,8 +55,8 @@
 	outline: none;
 }
 
-.gallery-thumb:hover img,
-.gallery-thumb:focus-visible img {
+.project-gallery .gallery-thumb:hover img,
+.project-gallery .gallery-thumb:focus-visible img {
 	transform: scale(1.08);
 }
 

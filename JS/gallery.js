@@ -55,3 +55,21 @@
 		image.removeAttribute("src");
 	});
 })();
+
+// Silent demo videos: each <figure class="demo-video" data-src="..."> stays
+// hidden until its video file actually loads, so a slot with no file yet
+// shows nothing.
+document.querySelectorAll(".demo-video[data-src]").forEach((figure) => {
+	const video = document.createElement("video");
+	video.muted = true;
+	video.loop = true;
+	video.playsInline = true;
+	video.controls = true;
+	video.preload = "metadata";
+	video.setAttribute("aria-label", figure.querySelector("figcaption")?.textContent || "Demo video");
+	video.addEventListener("loadedmetadata", () => {
+		figure.hidden = false;
+	});
+	video.src = figure.dataset.src;
+	figure.prepend(video);
+});

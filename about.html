@@ -1,125 +1,132 @@
-<!--
-    About Me Page
--->
-
 <!doctype html>
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
-		<title>Robert Breutzmann | About</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Robert Breutzmann | About</title>
+		<meta
+			name="description"
+			content="About Robert Breutzmann: how I got into software, how I work (including how I use and check AI coding tools), and coaching and emergency response."
+		/>
+		<link rel="canonical" href="https://bobbyjoecool.dev/about.html" />
+		<meta property="og:type" content="profile" />
+		<meta property="og:title" content="Robert Breutzmann | About" />
+		<meta
+			property="og:description"
+			content="How I got into software, how I work, and what I do outside of code."
+		/>
+		<meta property="og:url" content="https://bobbyjoecool.dev/about.html" />
+		<meta property="og:image" content="https://bobbyjoecool.dev/Assets/Images/profile.jpg" />
 		<link rel="stylesheet" href="CSS/master.css" />
 		<link rel="stylesheet" href="CSS/about.css" />
 	</head>
 
 	<body class="bg-darkroom">
-		<div id="site-header"></div>
+		<a class="skip-link" href="#main">Skip to content</a>
+		<header>
+			<nav aria-label="Main">
+				<a href="index.html">Home</a>
+				<a href="projects.html">Projects</a>
+				<a href="skills.html">Skills</a>
+				<a href="experience.html">Experience</a>
+				<a href="education.html">Education</a>
+				<a href="about.html" aria-current="page">About</a>
+				<a href="contact.html">Contact</a>
+			</nav>
+		</header>
 
-		<main>
-			<article>
-				<h1>Quick Bio</h1>
-				<div class="about-section intro">
-					<img
-						src="Assets/Images/Headshot.png"
-						alt="Headshot"
-						class="about-section-img"
-					/>
+		<main id="main">
+			<h1>About Me</h1>
 
-					<div class="about-section-text">
-						<p>
-							Robert Breutzmann is a creative developer, passionate about
-							building digital programs and full stack solutions. In his current
-							job, he works to improve quality control by parsing through
-							reporting mechanisms to filter out noise and highlight pertinent
-							information, making it easier to spot relevant data. In his
-							community, he is active as a youth coach for both Flag Football
-							and Baseball, volunteers to help at Basketball events and to help
-							the local Parks and Recreation Department with building projects
-							as well as local events, such as the annual Easter Carnival, and
-							backend support with creating spreadsheets and data tracking
-							devices.
-						</p>
-					</div>
+			<section class="about-section intro" aria-labelledby="path-heading">
+				<img
+					src="Assets/Images/headshot.webp"
+					alt="Robert Breutzmann"
+					class="about-section-img"
+					width="250"
+					height="250"
+				/>
+				<div class="about-section-text">
+					<h2 id="path-heading">How I got into software</h2>
+					<p>
+						For about 20 years I've been the person who builds the spreadsheet.
+						At Kwik Star I wrote the bookkeeping guide the company adopted. At a
+						Target distribution center I joined the new inventory control team
+						and wrote the SQL behind a lookup tool we now use hundreds of times
+						a day.
+					</p>
+					<p>
+						That work was the part of every job I liked most, so I went back to
+						school for it. I finished a B.S. in Software Development at Bellevue
+						University in October 2026, Summa Cum Laude with a 4.0. Now I want
+						to do it full time: find the problem people keep working around,
+						build the tool, and make sure it holds up.
+					</p>
 				</div>
-			</article>
+			</section>
 
 			<hr />
 
-			<article>
-				<div class="about-section sports-coach">
-					<img
-						src="Assets/Images/FootballTeam.png"
-						alt="Football Team"
-						class="about-section-img"
-					/>
-
-					<div class="about-section-text">
-						<p>
-							In his community, he spends time coaching his son's Flag Football
-							team and Baseball Team. Coaching for youth sports not only allows
-							him to import his knowledge of Football and Baseball to a new
-							generation of players, but allows the teaching of valuable life
-							skills such as teamwork, conflict resolution, the value of hard
-							word, and how to win and lose gracefully to youth in the
-							community. It also serves as a constructive use of energy for
-							youth, giving them something to look forward to and strive to
-							achieve goals, both personal and team goals. What gives him the
-							most joy is when players go out of their way to lift up and help
-							their teammates.
-						</p>
-						<p>
-							Coaching Youth Sports requires being able redirect negative
-							behaviors, reshape losses as learning opportunities, keep a
-							positive attitude, and shape "boring" learning drills as fun
-							activities.
-						</p>
-					</div>
+			<section class="about-section how-i-work" aria-labelledby="work-heading">
+				<div class="about-section-text">
+					<h2 id="work-heading">How I work</h2>
+					<p>
+						I start with the design: a short spec, the domain terms, and the
+						decisions that matter, written down before the code (you'll find
+						glossaries, ADRs and build plans in my repos). Then I break the work
+						into GitHub issues and build it one issue at a time.
+					</p>
+					<p>
+						I use AI coding assistants, mainly Claude Code, for a lot of the
+						typing. I decide what gets built and how it's structured, and I
+						check generated code the way I'd check anyone's: I read the diff,
+						run the app, and lean on tests where a mistake would hurt, like the
+						Row Level Security isolation tests in FitIQ and the Playwright
+						suites in PalletIQ. If I can't explain a piece of code, it doesn't
+						ship.
+					</p>
 				</div>
-			</article>
+			</section>
 
 			<hr />
 
-			<article>
-				<div class="about-section ERT">
-					<img
-						src="Assets/Images/ERT.png"
-						alt="ERT Image"
-						class="about-section-img"
-					/>
-
-					<div class="about-section-text">
-						<p>
-							At Target Distribution, Robert has been on the Emergency Response
-							Team (ERT) for over 7 years. Aside from being trained by the
-							American Red Cross in First Aid, CPR, and AED use, this team is
-							overseen by an on-site Registered Nurse and is trained and ready
-							to provide aid in a variety of situations that could arise inside
-							a warehouse with many moving parts and Powered Industrial Trucks
-							(PIT). Primarily, ERT evaluates and assesses whether ot not
-							advanced care is required, including activating the Code Green
-							Emergency Response System, calling all ERT members immediately to
-							the scene and having security shut down production and call for an
-							ambulance. Secondary tasks involve informing team members of good
-							practices such as proper hydration, laying clothing (so layers can
-							be removed when warm), and preventative steps for other typical
-							warehouse related injuries and sickness.
-						</p>
-						<p>
-							Members of ERT require discretion as they are required to abide by
-							HIPPA, keeping any information give by patients confidential, even
-							from managers. They also need to be able to stay calm in high
-							pressure situations and keep patients calm by not showing
-							nervousness or worry while treating potentially life threatening
-							injuries. They must also follow directions and document any
-							encounter to the ERT leader (the on-site nurse) for evaluation and
-							follow up and take suggestions for improvement in stride.
-						</p>
-					</div>
+			<section class="about-section community" aria-labelledby="community-heading">
+				<img
+					src="Assets/Images/ert.webp"
+					alt="Emergency Response Team emblem"
+					class="about-section-img"
+					width="250"
+					height="250"
+					loading="lazy"
+				/>
+				<div class="about-section-text">
+					<h2 id="community-heading">Outside of code</h2>
+					<p>
+						I coach my son's youth flag football and baseball teams, help at
+						local basketball events, and build spreadsheets and tracking tools
+						for our Parks and Recreation department. At work I've been on the
+						Emergency Response Team for over seven years: Red Cross certified in
+						first aid, CPR and AED, trained weekly by our on-site nurse, and
+						bound by workplace confidentiality for anything a patient tells us.
+						Both teach the same thing: stay calm, explain clearly, and help the
+						person in front of you.
+					</p>
 				</div>
-			</article>
+			</section>
 		</main>
 
-		<div id="site-footer"></div>
-		<script src="JS/common.js"></script>
+		<footer>
+			<p>© 2026 Robert Breutzmann</p>
+			<p>
+				<a href="mailto:bob@bobbyjoecool.dev"><img src="Assets/icons/Email.png" alt="Email" width="28" height="28" loading="lazy" /></a>
+				<a href="https://github.com/BobbyJoeCool" target="_blank" rel="noopener noreferrer"><img src="Assets/icons/GitHub.png" alt="GitHub" width="28" height="28" loading="lazy" /></a>
+				<a href="https://bobbyjoecool.dev/linkedin/" target="_blank" rel="noopener noreferrer"><img src="Assets/icons/LinkedIn.png" alt="LinkedIn" width="28" height="28" loading="lazy" /></a>
+				<a href="https://www.facebook.com/bobslenscraft" target="_blank" rel="noopener noreferrer"><img src="Assets/icons/Facebook.png" alt="Facebook" width="28" height="28" loading="lazy" /></a>
+				<a href="https://www.instagram.com/robertbreutzmann/" target="_blank" rel="noopener noreferrer"><img src="Assets/icons/Instagram.png" alt="Instagram" width="28" height="28" loading="lazy" /></a>
+				<a href="https://www.threads.com/@robertbreutzmann" target="_blank" rel="noopener noreferrer"><img src="Assets/icons/Threads.png" alt="Threads" width="28" height="28" loading="lazy" /></a>
+				<a href="https://bsky.app/profile/bobbyjoecool.bsky.social" target="_blank" rel="noopener noreferrer"><img src="Assets/icons/BlueSky.png" alt="Bluesky" width="28" height="28" loading="lazy" /></a>
+				<a href="https://discord.com/users/BobyJoeCool" target="_blank" rel="noopener noreferrer"><img src="Assets/icons/Discord.png" alt="Discord" width="28" height="28" loading="lazy" /></a>
+			</p>
+		</footer>
 	</body>
 </html>

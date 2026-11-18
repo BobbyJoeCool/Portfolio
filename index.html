@@ -1,604 +1,435 @@
-<!--
-Landing page for GitHub Professional/Academic Portfolio
--->
-
 <!doctype html>
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
-		<title>Robert Breutzmann | Software Developer Portfolio</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Robert Breutzmann | Software Developer</title>
+		<meta
+			name="description"
+			content="Robert Breutzmann, software developer (React, TypeScript, SQL). Projects: FitIQ, PalletIQ, ScribeIQ, Moffat Bay Marina and Family Passport Map."
+		/>
+		<link rel="canonical" href="https://bobbyjoecool.dev/" />
+		<meta property="og:type" content="website" />
+		<meta property="og:title" content="Robert Breutzmann | Software Developer" />
+		<meta
+			property="og:description"
+			content="I build and test full-stack apps with React, TypeScript and SQL. Flagship projects: FitIQ, PalletIQ and ScribeIQ."
+		/>
+		<meta property="og:url" content="https://bobbyjoecool.dev/" />
+		<meta property="og:image" content="https://bobbyjoecool.dev/Assets/Images/profile.jpg" />
 		<link rel="stylesheet" href="CSS/master.css" />
 		<link rel="stylesheet" href="CSS/index.css" />
 		<link rel="stylesheet" href="CSS/gallery.css" />
 	</head>
 
 	<body class="bg-space">
-		<div id="site-header"></div>
+		<a class="skip-link" href="#main">Skip to content</a>
+		<header>
+			<nav aria-label="Main">
+				<a href="index.html" aria-current="page">Home</a>
+				<a href="projects.html">Projects</a>
+				<a href="skills.html">Skills</a>
+				<a href="experience.html">Experience</a>
+				<a href="education.html">Education</a>
+				<a href="about.html">About</a>
+				<a href="contact.html">Contact</a>
+			</nav>
+		</header>
 
-		<main>
-			<!-- HERO SECTION -->
-			<section class="hero">
+		<main id="main">
+			<!-- HERO -->
+			<section class="hero" aria-labelledby="hero-name">
 				<div class="hero-text">
-					<h1>Robert Breutzmann</h1>
-					<h3>
-						Software Developer | B.S. Software Development, Bellevue University
-					</h3>
+					<h1 id="hero-name">Robert Breutzmann</h1>
+					<p class="hero-tagline">Software Developer · React · TypeScript · SQL</p>
 					<p>
-						I build structured, maintainable software with a focus on
-						object-oriented design, database integration, and full-stack web
-						development.
+						I build full-stack web and desktop apps with React, TypeScript and
+						SQL, and I test them: database isolation tests, Playwright
+						end-to-end suites, and CI on every change. My flagship projects are
+						<a href="#fitiq">FitIQ</a>, a live workout tracker on Supabase and
+						Postgres; <a href="#palletiq">PalletIQ</a>, a warehouse inventory
+						system with a tablet app and an Electron manager app; and
+						<a href="#scribeiq">ScribeIQ</a>, an on-device call transcriber for
+						macOS.
 					</p>
-					<p>
-						Academic projects and independent work demonstrate practical
-						implementation, clean architecture, and disciplined version control.
+					<p class="hero-support">
+						B.S. in Software Development, Summa Cum Laude, Bellevue University
+						(2026). Before that, ~20 years across retail and warehouse
+						operations, where I build the SQL and Excel tools my team uses every
+						day.
 					</p>
-					<p>
-						Currently working in warehouse operations with a focus on inventory
-						control and quality assurance, and a recent Summa Cum Laude graduate
-						of Bellevue University's Software Development program.
+					<div class="cta-row">
+						<a href="projects.html" class="cta-btn cta-primary">View Projects</a>
+						<a
+							href="Assets/Robert-Breutzmann-Resume.pdf"
+							class="cta-btn cta-primary"
+							download
+						>
+							<svg class="cta-icon" viewBox="0 0 24 24" aria-hidden="true">
+								<path d="M12 3v12m0 0-5-5m5 5 5-5M5 21h14" />
+							</svg>
+							Download Resume (PDF)
+						</a>
+						<a
+							href="https://bobbyjoecool.dev/linkedin/"
+							class="cta-btn cta-secondary"
+							target="_blank"
+							rel="noopener noreferrer"
+							>LinkedIn</a
+						>
+						<a href="contact.html" class="cta-btn cta-secondary">Contact</a>
+					</div>
+					<p class="cta-note">
+						Prefer a web page? Read the
+						<a href="resume-professional.html">resume online</a> or the
+						<a href="resume.html">terminal-style resume</a>.
 					</p>
 				</div>
 
 				<div class="hero-image">
-					<img src="Assets/Images/profile.jpg" alt="Profile picture of Bob" />
+					<img
+						src="Assets/Images/profile.webp"
+						alt="Robert Breutzmann"
+						width="260"
+						height="260"
+						fetchpriority="high"
+					/>
 				</div>
 			</section>
 
-			<!-- Resume links, centered under the hero -->
-			<div class="resume-buttons">
-				<a
-					href="resume-professional.html"
-					target="_blank"
-					rel="noopener noreferrer"
-					class="resume-btn resume-btn-pro"
-				>
-					<svg class="resume-btn-icon" viewBox="0 0 24 24" aria-hidden="true">
-						<path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
-						<path d="M14 2v6h6M8 13h8M8 17h5" />
-					</svg>
-					<span>Resume</span>
-				</a>
-				<a
-					href="resume.html"
-					target="_blank"
-					rel="noopener noreferrer"
-					class="resume-btn resume-btn-dev"
-					aria-label="Resume (Developer Edition)"
-				>
-					<span class="term-dots" aria-hidden="true"><i></i><i></i><i></i></span>
-					<code aria-hidden="true"
-						><span class="term-prompt">~$</span> open
-						<span class="term-file">resume.dev</span><span class="term-cursor"></span
-					></code>
-				</a>
-			</div>
+			<!-- FEATURED PROJECTS -->
+			<section id="projects" class="card-row" aria-labelledby="featured-heading">
+				<h2 id="featured-heading">Featured Projects</h2>
 
-
-			<section class="known-technologies">
-				<h3>Fluent Languages</h3>
-
-				<div class="tech-card-box">
-					<div class="tech-card python">
-						<img
-							src="Assets/icons/Language-Icons/Python.png"
-							alt="Python Logo"
-						/>
-						<p>Python</p>
-					</div>
-
-					<div class="tech-card java">
-						<img src="Assets/icons/Language-Icons/Java.png" alt="Java Logo" />
-						<p>Java</p>
-					</div>
-
-					<div class="tech-card jsp">
-						<img src="Assets/icons/Language-Icons/JSP.png" alt="JSP Logo" />
-						<p>JSP</p>
-					</div>
-
-					<div class="tech-card sql">
-						<img src="Assets/icons/Language-Icons/SQL.png" alt="SQL Logo" />
-						<p>SQL</p>
-					</div>
-
-					<div class="tech-card html5">
-						<img src="Assets/icons/Language-Icons/HTML5.png" alt="HTML5 Logo" />
-						<p>HTML5</p>
-					</div>
-
-					<div class="tech-card css3">
-						<img src="Assets/icons/Language-Icons/CSS3.png" alt="CSS3 Logo" />
-						<p>CSS3</p>
-					</div>
-
-					<div class="tech-card php">
-						<img src="Assets/icons/Language-Icons/PHP.png" alt="PHP Logo" />
-						<p>PHP</p>
-					</div>
-
-					<div class="tech-card javascript">
-						<img
-							src="Assets/icons/Language-Icons/JavaScript.png"
-							alt="Javascript Logo"
-						/>
-						<p>JavaScript</p>
-					</div>
-
-					<div class="tech-card typescript">
-						<img
-							src="Assets/icons/Language-Icons/TypeScript.png"
-							alt="TypeScript Logo"
-						/>
-						<p>TypeScript</p>
-					</div>
-
-					<div class="tech-card React">
-						<img src="Assets/icons/Language-Icons/React.png" alt="React Logo" />
-						<p>React</p>
-					</div>
-
-					<div class="tech-card mermaid">
-						<img
-							src="Assets/icons/Language-Icons/Mermaid.png"
-							alt="Mermaid Logo"
-						/>
-						<p>Mermaid</p>
-					</div>
-
-					<div class="tech-card markdown">
-						<img
-							src="Assets/icons/Language-Icons/Markdown.png"
-							alt="Markdown Logo"
-						/>
-						<p>Markdown</p>
-					</div>
-				</div>
-
-				<h3>Semi-Fluent Languages</h3>
-				<div class="tech-card-box">
-					<div class="tech-card c">
-						<img src="Assets/icons/Language-Icons/C.png" alt="C Logo" />
-						<p>C</p>
-					</div>
-
-					<div class="tech-card cpp">
-						<img src="Assets/icons/Language-Icons/C++.png" alt="C++ Logo" />
-						<p>C++</p>
-					</div>
-
-					<div class="tech-card cs">
-						<img src="Assets/icons/Language-Icons/CS.png" alt="C# Logo" />
-						<p>C#</p>
-					</div>
-				</div>
-
-				<h3>Used Technologies</h3>
-				<div class="tech-card-box">
-					<div class="tech-card github">
-						<img src="Assets/icons/Tech-Icons/GitHub.png" alt="GitHub Logo" />
-						<p>GitHub</p>
-					</div>
-
-					<div class="tech-card azure">
-						<img src="Assets/icons/Tech-Icons/Azure.png" alt="Azure Logo" />
-						<p>Azure</p>
-					</div>
-
-					<div class="tech-card mysql">
-						<img src="Assets/icons/Tech-Icons/MySQL.png" alt="MySQL Logo" />
-						<p>MySQL</p>
-					</div>
-
-					<div class="tech-card sqlite">
-						<img src="Assets/icons/Tech-Icons/SQLite.png" alt="SQLite Logo" />
-						<p>SQLite</p>
-					</div>
-
-					<div class="tech-card postman">
-						<img src="Assets/icons/Tech-Icons/Postman.png" alt="Postman Logo" />
-						<p>Postman</p>
-					</div>
-
-					<div class="tech-card restAPI">
-						<img
-							src="Assets/icons/Tech-Icons/RestAPI.png"
-							alt="REST API Logo"
-						/>
-						<p>Rest API</p>
-					</div>
-
-					<div class="tech-card bash">
-						<img src="Assets/icons/Language-Icons/Bash.png" alt="Bash Logo" />
-						<p>Bash</p>
-					</div>
-
-					<div class="tech-card Node">
-						<img
-							src="Assets/icons/Language-Icons/NodeJS.png"
-							alt="NodeJS Logo"
-						/>
-						<p>Node.js</p>
-					</div>
-
-					<div class="tech-card prisma">
-						<img src="Assets/icons/Tech-Icons/Prisma.png" alt="Prisma Logo" />
-						<p>Prisma</p>
-					</div>
-
-					<div class="tech-card cosmos">
-						<img
-							src="Assets/icons/Tech-Icons/CosmosDB.png"
-							alt="Cosmos DB Logo"
-						/>
-						<p>Cosmos DB</p>
-					</div>
-
-					<div class="tech-card docker">
-						<img src="Assets/icons/Tech-Icons/Docker.png" alt="Docker Logo" />
-						<p>Docker</p>
-					</div>
-
-					<div class="tech-card fastapi">
-						<img
-							src="Assets/icons/Language-Icons/FastAPI.png"
-							alt="FastAPI Logo"
-						/>
-						<p>FastAPI</p>
-					</div>
-
-					<div class="tech-card ubuntu">
-						<img src="Assets/icons/Tech-Icons/Ubuntu.svg" alt="Ubuntu Logo" />
-						<p>Ubuntu Server</p>
-					</div>
-
-					<div class="tech-card tailscale">
-						<img
-							src="Assets/icons/Tech-Icons/Tailscale.svg"
-							alt="Tailscale Logo"
-						/>
-						<p>Tailscale</p>
-					</div>
-
-					<div class="tech-card cloudflare">
-						<img
-							src="Assets/icons/Tech-Icons/Cloudflare.svg"
-							alt="Cloudflare Logo"
-						/>
-						<p>Cloudflare</p>
-					</div>
-
-					<div class="tech-card aikido">
-						<img src="Assets/icons/Tech-Icons/Aikido.svg" alt="Aikido Security Logo" />
-						<p>Aikido</p>
-					</div>
-				</div>
-
-				<h3>In-Process Learning</h3>
-				<div class="learning-card-box">
-					<div class="tech-card-box">
-						<div class="tech-card go">
-							<img src="Assets/icons/Language-Icons/Go.png" alt="Go Logo" />
-							<p>Go</p>
-						</div>
-					</div>
-					<div class="tech-card-box">
-						<div class="tech-card ruby">
-							<img src="Assets/icons/Language-Icons/Ruby.png" alt="Ruby Logo" />
-							<p>Ruby</p>
-						</div>
-					</div>
-					<div class="tech-card-box">
-						<div class="tech-card swift">
-							<img src="Assets/icons/Language-Icons/Swift.png" alt="Swift Logo" />
-							<p>Swift</p>
-						</div>
-					</div>
-				</div>
-			</section>
-
-			<!-- ABOUT SECTION -->
-			<section class="home-card" id="about">
-				<h2>About Me</h2>
-				<p>
-					I Just finished my Bachelors Degree in Software Development and am
-					ready and eager to get into the field! I have a passion for SQL and
-					front-end work, but I also have a knack for seeing where the
-					connectors are and how they work.
-				</p>
-				<p>
-					My coursework and side projects focus on real-world implementation,
-					structured problem-solving, and scalable code design.
-				</p>
-				<p>
-					Coursework has covered Python, Java, SQL, HTML, CSS, JavaScript, and
-					PHP, along with secure software development, DevOps, server-side
-					development with Jakarta EE, and a team-based capstone that took the
-					Moffat Bay Marina booking site from requirements to a live deployment.
-				</p>
-			</section>
-
-			<!-- FEATURED PROJECTS SECTION -->
-			<section id="projects" class="card-row">
-				<h2>Featured Projects</h2>
-
-				<article class="project">
+				<article class="project" id="fitiq">
 					<div class="project-text">
-						<h3>Moffat Bay Marina <span class="wip-badge done-badge">Complete</span></h3>
-						<h3 class="subheader">CSD 460 Capstone Team Project</h3>
-						<p>
-							A customer-facing booking website for a fictional marina on
-							Joviedsa Island in Washington's San Juan Islands, built as a team
-							capstone project. Visitors can browse the marina, register an
-							account, sign in, and reserve one of 72 slips across three docks.
-							Built with Jakarta EE, JSP, and MySQL using Agile/Scrum
-							methodology with multi-environment deployment, and deployed as a
-							live demo on Azure App Service with Azure Database for MySQL.
+						<h3>FitIQ</h3>
+						<p class="project-meta">
+							<span class="status-badge live">Live</span> v1.5.5 · Side project
 						</p>
-						<h4>Technologies Used</h4>
-						<div class="tech-stack">
-							<img src="Assets/icons/Language-Icons/Java.png" alt="Java" title="Java / Jakarta EE" />
-							<img src="Assets/icons/Language-Icons/JSP.png" alt="JSP" title="JSP / JSTL" />
-							<img src="Assets/icons/Tech-Icons/MySQL.png" alt="MySQL" title="MySQL" />
-							<img src="Assets/icons/Tech-Icons/Azure.png" alt="Azure" title="Azure App Service" />
-							<img src="Assets/icons/Tech-Icons/Git.svg" alt="Git" title="Git" />
+						<p>
+							A workout and progress tracker for a small household, installable
+							as a PWA. The React app talks straight to Supabase and Postgres
+							with no custom backend, so privacy lives in the database: Row
+							Level Security on every table, plus ownership triggers that stop a
+							row from pointing at someone else's data.
+						</p>
+						<p class="verified">
+							<strong>How it's verified:</strong> a two-account isolation test
+							(188 checks) and Playwright end-to-end tests in GitHub Actions
+							against a local Supabase stack.
+						</p>
+						<p class="demo-login">
+							Demo login: <code>demo@bobbyjoecool.dev</code> /
+							<code>try-fitiq-demo</code>
+						</p>
+						<div class="tech-stack" aria-label="Stack">
+							<img src="Assets/icons/Language-Icons/TypeScript.png" alt="TypeScript" title="TypeScript" width="44" height="44" loading="lazy" />
+							<img src="Assets/icons/Language-Icons/React.png" alt="React" title="React" width="44" height="44" loading="lazy" />
+							<img src="Assets/icons/Tech-Icons/Vite.svg" alt="Vite" title="Vite" width="44" height="44" loading="lazy" />
+							<img src="Assets/icons/Language-Icons/SQL.png" alt="PostgreSQL (Supabase)" title="Supabase (Auth + PostgreSQL)" width="44" height="44" loading="lazy" />
+							<img src="Assets/icons/Tech-Icons/Playwright.svg" alt="Playwright" title="Playwright" width="44" height="44" loading="lazy" />
+							<img src="Assets/icons/Tech-Icons/GitHubActions.svg" alt="GitHub Actions" title="GitHub Actions" width="44" height="44" loading="lazy" />
 						</div>
-						<p>
-							Java, Jakarta EE, JSP, JSTL, MySQL, Maven, Apache Tomcat, Azure
-							App Service, Git
-						</p>
 					</div>
-					<div class="project-gallery" aria-label="Moffat Bay Marina screenshots">
-						<button type="button" class="gallery-thumb" data-full="Assets/projects/moffat-bay/home.webp" data-caption="Moffat Bay Marina: Home page with the Book a Slip call to action">
-							<img src="Assets/projects/moffat-bay/home-thumb.webp" alt="Home page with the Book a Slip call to action" loading="lazy" />
+					<div class="project-gallery" aria-label="FitIQ screenshots">
+						<button type="button" class="gallery-thumb" data-full="Assets/projects/fitiq/demo.webp" data-caption="FitIQ: Demo: choosing Leg Day, logging two sets with the rest timer, moving to the next exercise, and opening Progress">
+							<img src="Assets/projects/fitiq/demo-thumb.webp" alt="Animated demo of logging a workout" width="480" height="300" loading="lazy" />
 						</button>
-						<button type="button" class="gallery-thumb" data-full="Assets/projects/moffat-bay/about.webp" data-caption="Moffat Bay Marina: About page for the marina">
-							<img src="Assets/projects/moffat-bay/about-thumb.webp" alt="About page for the marina" loading="lazy" />
+						<button type="button" class="gallery-thumb" data-full="Assets/projects/fitiq/dashboard.webp" data-caption="FitIQ: Dashboard with the next workout, this week, and latest weight">
+							<img src="Assets/projects/fitiq/dashboard-thumb.webp" alt="Dashboard with the next workout, this week, and latest weight" width="480" height="300" loading="lazy" />
 						</button>
-						<button type="button" class="gallery-thumb" data-full="Assets/projects/moffat-bay/register.webp" data-caption="Moffat Bay Marina: Account registration form with live password rules">
-							<img src="Assets/projects/moffat-bay/register-thumb.webp" alt="Account registration form with live password rules" loading="lazy" />
+						<button type="button" class="gallery-thumb" data-full="Assets/projects/fitiq/workout.webp" data-caption="FitIQ: Logging a set: Barbell Squat with last time, set 2 of 3, and the rest timer">
+							<img src="Assets/projects/fitiq/workout-thumb.webp" alt="Barbell Squat set logging with the rest timer" width="480" height="300" loading="lazy" />
 						</button>
-						<button type="button" class="gallery-thumb" data-full="Assets/projects/moffat-bay/reservation.webp" data-caption="Moffat Bay Marina: Reserve Your Slip page, prompting the visitor to sign in">
-							<img src="Assets/projects/moffat-bay/reservation-thumb.webp" alt="Reserve Your Slip page, prompting the visitor to sign in" loading="lazy" />
+						<button type="button" class="gallery-thumb" data-full="Assets/projects/fitiq/progress.webp" data-caption="FitIQ: Weight over time chart for 90 days">
+							<img src="Assets/projects/fitiq/progress-thumb.webp" alt="Weight over time chart" width="480" height="300" loading="lazy" />
 						</button>
 					</div>
 					<div class="project-links">
-						<p>
-							<a
-								href="https://moffatbay-blueteam-ac9638.azurewebsites.net/"
-								target="_blank"
-								rel="noopener noreferrer"
-								class="btn"
-							>
-								View Live Site
-							</a>
-						</p>
-						<p>
-							<a
-								href="https://github.com/BobbyJoeCool/csd460-blueteam"
-								target="_blank"
-								rel="noopener noreferrer"
-								class="btn"
-							>
-								View Repository
-							</a>
-						</p>
+						<a href="https://fitiq.bobbyjoecool.dev" target="_blank" rel="noopener noreferrer" class="btn">Try the FitIQ demo</a>
+						<a href="https://github.com/BobbyJoeCool/FitIQ" target="_blank" rel="noopener noreferrer" class="btn">FitIQ source</a>
 					</div>
 				</article>
 
-				<article class="project">
+				<article class="project" id="palletiq">
 					<div class="project-text">
-						<h3>ScribeIQ <span class="wip-badge done-badge">Complete</span> <span class="version-tag">v1.0.1</span></h3>
-						<h3 class="subheader">Side Project</h3>
-						<p>
-							A private, on-device call recorder and transcriber for macOS.
-							Record a call from Zoom, Teams, a browser, or any other app and
-							get a speaker-labeled transcript with no cloud services and no
-							audio leaving the machine. A native Swift helper records the
-							microphone and the call as two separate, synced tracks, so it
-							always knows which words are yours; Whisper transcribes each track
-							on Apple Silicon, and pyannote separates speakers on group calls.
-							A React interface talks to a local FastAPI server over REST and a
-							WebSocket for live level meters, timers, and job progress.
+						<h3>PalletIQ</h3>
+						<p class="project-meta">
+							<span class="status-badge active">Active development</span>
+							Floor app v1.11.1 · Manager app v1.0.0
 						</p>
-						<h4>Technologies Used</h4>
-						<div class="tech-stack">
-							<img src="Assets/icons/Language-Icons/Python.png" alt="Python" title="Python" />
-							<img src="Assets/icons/Language-Icons/FastAPI.png" alt="FastAPI" title="FastAPI" />
-							<img src="Assets/icons/Language-Icons/Swift.png" alt="Swift" title="Swift / ScreenCaptureKit" />
-							<img src="Assets/icons/Language-Icons/TypeScript.png" alt="TypeScript" title="TypeScript" />
-							<img src="Assets/icons/Language-Icons/React.png" alt="React" title="React" />
-							<img src="Assets/icons/Tech-Icons/Vite.svg" alt="Vite" title="Vite / Vitest" />
+						<p>
+							An independent warehouse inventory system, informed by ~9 years in
+							inventory control at a Target distribution center and built on
+							synthetic data. A React tablet floor app and an Electron manager
+							app share one Express + Prisma + MySQL API and one package of
+							TypeScript types, so a data-shape change is a compile error
+							everywhere it's used.
+						</p>
+						<p class="verified">
+							<strong>How it's verified:</strong> Playwright end-to-end suites
+							for both apps; the desktop tests drive the built Electron app.
+						</p>
+						<p class="card-note">
+							It runs locally on my Mac, so there's no live demo. The
+							screenshots show both apps.
+						</p>
+						<div class="tech-stack" aria-label="Stack">
+							<img src="Assets/icons/Language-Icons/TypeScript.png" alt="TypeScript" title="TypeScript" width="44" height="44" loading="lazy" />
+							<img src="Assets/icons/Language-Icons/React.png" alt="React" title="React" width="44" height="44" loading="lazy" />
+							<img src="Assets/icons/Tech-Icons/Electron.svg" alt="Electron" title="Electron" width="44" height="44" loading="lazy" />
+							<img src="Assets/icons/Language-Icons/NodeJS.png" alt="Node.js and Express" title="Node.js / Express" width="44" height="44" loading="lazy" />
+							<img src="Assets/icons/Tech-Icons/Prisma.png" alt="Prisma" title="Prisma" width="44" height="44" loading="lazy" />
+							<img src="Assets/icons/Tech-Icons/MySQL.png" alt="MySQL" title="MySQL" width="44" height="44" loading="lazy" />
+							<img src="Assets/icons/Tech-Icons/Playwright.svg" alt="Playwright" title="Playwright" width="44" height="44" loading="lazy" />
 						</div>
-						<p>
-							Python, FastAPI, WebSockets, React, TypeScript, Vite, Vitest,
-							Swift, ScreenCaptureKit, MLX Whisper, pyannote.audio, pywebview
+					</div>
+					<div class="project-gallery" aria-label="PalletIQ screenshots">
+						<button type="button" class="gallery-thumb" data-full="Assets/projects/palletiq/home.webp" data-caption="PalletIQ floor app: Home screen with function tiles grouped by area">
+							<img src="Assets/projects/palletiq/home-thumb.webp" alt="Floor app home screen with function tiles" width="480" height="300" loading="lazy" />
+						</button>
+						<button type="button" class="gallery-thumb" data-full="Assets/projects/palletiq/empty-zone.webp" data-caption="PalletIQ floor app: Empty Locations by Zone staging map">
+							<img src="Assets/projects/palletiq/empty-zone-thumb.webp" alt="Empty Locations by Zone staging map" width="480" height="300" loading="lazy" />
+						</button>
+						<button type="button" class="gallery-thumb" data-full="Assets/projects/palletiq/desktop-job-assignment.webp" data-caption="PalletIQ manager app: Job/Function Assignment, the shift roster as a timeline with staffing vs plan">
+							<img src="Assets/projects/palletiq/desktop-job-assignment-thumb.webp" alt="Job/Function Assignment shift roster timeline" width="480" height="300" loading="lazy" />
+						</button>
+						<button type="button" class="gallery-thumb" data-full="Assets/projects/palletiq/desktop-audit-tool.webp" data-caption="PalletIQ manager app: Audit Tool, three records side by side linked by cross-reference chips">
+							<img src="Assets/projects/palletiq/desktop-audit-tool-thumb.webp" alt="Audit Tool with three records side by side" width="480" height="300" loading="lazy" />
+						</button>
+					</div>
+					<div class="project-links">
+						<a href="https://github.com/BobbyJoeCool/PalletIQ" target="_blank" rel="noopener noreferrer" class="btn">PalletIQ source</a>
+						<a href="projects.html#palletiq" class="btn">PalletIQ case study</a>
+					</div>
+				</article>
+
+				<article class="project" id="scribeiq">
+					<div class="project-text">
+						<h3>ScribeIQ</h3>
+						<p class="project-meta">
+							<span class="status-badge stable">Stable</span> v1.0.1 · macOS on
+							Apple Silicon
 						</p>
+						<p>
+							An on-device call recorder and transcriber. It records the
+							microphone and the call as two synced tracks, so my side of the
+							conversation is labeled without guessing, and the FastAPI server
+							owns the recording state machine. It integrates a small Swift
+							helper built on Apple's ScreenCaptureKit; Whisper transcribes on
+							the Mac after recording.
+						</p>
+						<p class="verified">
+							<strong>How it's verified:</strong> Python tests for track
+							merging, the state machine, the recorder protocol and every API
+							endpoint, plus Vitest tests for the UI.
+						</p>
+						<div class="tech-stack" aria-label="Stack">
+							<img src="Assets/icons/Language-Icons/Python.png" alt="Python" title="Python" width="44" height="44" loading="lazy" />
+							<img src="Assets/icons/Language-Icons/FastAPI.png" alt="FastAPI" title="FastAPI" width="44" height="44" loading="lazy" />
+							<img src="Assets/icons/Language-Icons/TypeScript.png" alt="TypeScript" title="TypeScript" width="44" height="44" loading="lazy" />
+							<img src="Assets/icons/Language-Icons/React.png" alt="React" title="React" width="44" height="44" loading="lazy" />
+							<img src="Assets/icons/Tech-Icons/Vite.svg" alt="Vite and Vitest" title="Vite / Vitest" width="44" height="44" loading="lazy" />
+						</div>
 					</div>
 					<div class="project-gallery" aria-label="ScribeIQ screenshots">
 						<button type="button" class="gallery-thumb" data-full="Assets/projects/scribeiq/recording.webp" data-caption="ScribeIQ: Recording a call with live level meters for You and Them">
-							<img src="Assets/projects/scribeiq/recording-thumb.webp" alt="Recording a call with live level meters for You and Them" loading="lazy" />
+							<img src="Assets/projects/scribeiq/recording-thumb.webp" alt="Recording a call with live level meters for You and Them" width="480" height="300" loading="lazy" />
 						</button>
 						<button type="button" class="gallery-thumb" data-full="Assets/projects/scribeiq/transcript.webp" data-caption="ScribeIQ: Speaker-labeled transcript with timestamps and export options">
-							<img src="Assets/projects/scribeiq/transcript-thumb.webp" alt="Speaker-labeled transcript with timestamps and export options" loading="lazy" />
+							<img src="Assets/projects/scribeiq/transcript-thumb.webp" alt="Speaker-labeled transcript with timestamps and export options" width="480" height="300" loading="lazy" />
 						</button>
 						<button type="button" class="gallery-thumb" data-full="Assets/projects/scribeiq/history.webp" data-caption="ScribeIQ: History of past recordings and transcripts">
-							<img src="Assets/projects/scribeiq/history-thumb.webp" alt="History of past recordings and transcripts" loading="lazy" />
+							<img src="Assets/projects/scribeiq/history-thumb.webp" alt="History of past recordings and transcripts" width="480" height="300" loading="lazy" />
 						</button>
 						<button type="button" class="gallery-thumb" data-full="Assets/projects/scribeiq/file-tab.webp" data-caption="ScribeIQ: Transcribing an existing audio file">
-							<img src="Assets/projects/scribeiq/file-tab-thumb.webp" alt="Transcribing an existing audio file" loading="lazy" />
+							<img src="Assets/projects/scribeiq/file-tab-thumb.webp" alt="Transcribing an existing audio file" width="480" height="300" loading="lazy" />
 						</button>
 					</div>
 					<div class="project-links">
-						<p>
-							<a
-								href="https://github.com/BobbyJoeCool/ScribeIQ"
-								target="_blank"
-								rel="noopener noreferrer"
-								class="btn"
-							>
-								View Repository
-							</a>
-						</p>
+						<a href="https://github.com/BobbyJoeCool/ScribeIQ" target="_blank" rel="noopener noreferrer" class="btn">ScribeIQ source</a>
+						<a href="projects.html#scribeiq" class="btn">ScribeIQ case study</a>
 					</div>
 				</article>
 
-				<article class="project">
+				<article class="project" id="moffat-bay">
 					<div class="project-text">
-						<h3>PalletIQ <span class="wip-badge">WIP</span> <span class="version-tag">v1.11.1</span></h3>
-						<h3 class="subheader">Side Project</h3>
-						<p>
-							A full-stack warehouse operations system covering the operational
-							middle layer that most WMS projects skip: Pull, Put, Pallet and
-							Location ID lookups, and a visual Empty Locations map. Built from
-							20 years of warehouse experience and designed around how the floor
-							actually works — no blocking pop-ups, every pallet and location ID
-							a tappable link, numeric-first input for hands-free scanning, and
-							a four-tier role hierarchy with field-level permission gating.
+						<h3>Moffat Bay Marina</h3>
+						<p class="project-meta">
+							<span class="status-badge live">Live</span> Team capstone · I was
+							team lead
 						</p>
 						<p>
-							The new Manager desktop app (Electron, v1.0.0) adds the
-							office-side screens: a shift roster timeline for Job/Function
-							Assignment, live Team Prod Summary against plan, Location Setup on
-							the aisle grid, production goals and daily plans, a three-pane
-							Audit Tool, and the floor app embedded in a window.
+							A marina slip-booking site built by a team of four in Jakarta EE,
+							JSP and MySQL. As team lead I set up page contracts and role
+							rotation. I built the Registration, Book a Slip and My Fleet pages
+							and the Login and Edit User Info / Register a Boat back ends, owned
+							database management after our shared initial design, and deployed
+							the site to Azure App Service with Azure Database for MySQL.
 						</p>
-						<h4>Technologies Used</h4>
-						<div class="tech-stack">
-							<img src="Assets/icons/Language-Icons/TypeScript.png" alt="TypeScript" title="TypeScript" />
-							<img src="Assets/icons/Language-Icons/React.png" alt="React" title="React / React Router" />
-							<img src="Assets/icons/Tech-Icons/Vite.svg" alt="Vite" title="Vite" />
-							<img src="Assets/icons/Tech-Icons/Tailwind.svg" alt="Tailwind CSS" title="Tailwind CSS" />
-							<img src="Assets/icons/Language-Icons/NodeJS.png" alt="Node.js" title="Node.js / Express" />
-							<img src="Assets/icons/Tech-Icons/Prisma.png" alt="Prisma" title="Prisma" />
-							<img src="Assets/icons/Tech-Icons/MySQL.png" alt="MySQL" title="MySQL" />
-							<img src="Assets/icons/Tech-Icons/Electron.svg" alt="Electron" title="Electron" />
-							<img src="Assets/icons/Tech-Icons/Playwright.svg" alt="Playwright" title="Playwright" />
+						<p class="card-note">
+							The Azure instance sleeps when idle, so the first visit can take
+							up to a minute to load.
+						</p>
+						<div class="tech-stack" aria-label="Stack">
+							<img src="Assets/icons/Language-Icons/Java.png" alt="Java and Jakarta EE" title="Java / Jakarta EE" width="44" height="44" loading="lazy" />
+							<img src="Assets/icons/Language-Icons/JSP.png" alt="JSP and JSTL" title="JSP / JSTL" width="44" height="44" loading="lazy" />
+							<img src="Assets/icons/Tech-Icons/MySQL.png" alt="MySQL" title="MySQL" width="44" height="44" loading="lazy" />
+							<img src="Assets/icons/Tech-Icons/Azure.png" alt="Azure App Service" title="Azure App Service" width="44" height="44" loading="lazy" />
 						</div>
-						<p>
-							React, TypeScript, React Router, Vite, TailwindCSS, Node.js,
-							Express, Prisma, MySQL, Electron, Playwright
-						</p>
 					</div>
-					<div class="project-gallery" aria-label="PalletIQ screenshots">
-						<p class="gallery-label">Floor App (tablet)</p>
-						<button type="button" class="gallery-thumb" data-full="Assets/projects/palletiq/home.webp" data-caption="PalletIQ: Home screen with function tiles grouped by area">
-							<img src="Assets/projects/palletiq/home-thumb.webp" alt="Home screen with function tiles grouped by area" loading="lazy" />
+					<div class="project-gallery" aria-label="Moffat Bay Marina screenshots">
+						<button type="button" class="gallery-thumb" data-full="Assets/projects/moffat-bay/home.webp" data-caption="Moffat Bay Marina: Home page with the Book a Slip call to action">
+							<img src="Assets/projects/moffat-bay/home-thumb.webp" alt="Home page with the Book a Slip call to action" width="480" height="300" loading="lazy" />
 						</button>
-						<button type="button" class="gallery-thumb" data-full="Assets/projects/palletiq/pallet.webp" data-caption="PalletIQ: Pallet ID detail screen">
-							<img src="Assets/projects/palletiq/pallet-thumb.webp" alt="Pallet ID detail screen" loading="lazy" />
+						<button type="button" class="gallery-thumb" data-full="Assets/projects/moffat-bay/register.webp" data-caption="Moffat Bay Marina: Account registration form with live password rules">
+							<img src="Assets/projects/moffat-bay/register-thumb.webp" alt="Account registration form with live password rules" width="480" height="300" loading="lazy" />
 						</button>
-						<button type="button" class="gallery-thumb" data-full="Assets/projects/palletiq/empty-zone.webp" data-caption="PalletIQ: Empty Locations by Zone staging map">
-							<img src="Assets/projects/palletiq/empty-zone-thumb.webp" alt="Empty Locations by Zone staging map" loading="lazy" />
+						<button type="button" class="gallery-thumb" data-full="Assets/projects/moffat-bay/reservation.webp" data-caption="Moffat Bay Marina: Reserve Your Slip page, prompting the visitor to sign in">
+							<img src="Assets/projects/moffat-bay/reservation-thumb.webp" alt="Reserve Your Slip page, prompting the visitor to sign in" width="480" height="300" loading="lazy" />
 						</button>
-						<button type="button" class="gallery-thumb" data-full="Assets/projects/palletiq/report-individual.webp" data-caption="PalletIQ: Individual Rate of Productivity report">
-							<img src="Assets/projects/palletiq/report-individual-thumb.webp" alt="Individual Rate of Productivity report" loading="lazy" />
-						</button>
-						<p class="gallery-label">Manager Desktop App</p>
-						<button type="button" class="gallery-thumb" data-full="Assets/projects/palletiq/desktop-job-assignment.webp" data-caption="PalletIQ Desktop: Job/Function Assignment, the shift roster as a timeline with staffing vs plan">
-							<img src="Assets/projects/palletiq/desktop-job-assignment-thumb.webp" alt="Job/Function Assignment shift roster timeline" loading="lazy" />
-						</button>
-						<button type="button" class="gallery-thumb" data-full="Assets/projects/palletiq/desktop-team-prod.webp" data-caption="PalletIQ Desktop: Team Prod Summary, live production against plan by function, with Carton Air expanded to per-worker rates">
-							<img src="Assets/projects/palletiq/desktop-team-prod-thumb.webp" alt="Team Prod Summary with Carton Air expanded to per-worker rates" loading="lazy" />
-						</button>
-						<button type="button" class="gallery-thumb" data-full="Assets/projects/palletiq/desktop-location-setup.webp" data-caption="PalletIQ Desktop: Location Setup, zone cells edited on the aisle grid">
-							<img src="Assets/projects/palletiq/desktop-location-setup-thumb.webp" alt="Location Setup aisle grid" loading="lazy" />
-						</button>
-						<button type="button" class="gallery-thumb" data-full="Assets/projects/palletiq/desktop-audit-tool.webp" data-caption="PalletIQ Desktop: Audit Tool, three records side by side linked by cross-reference chips">
-							<img src="Assets/projects/palletiq/desktop-audit-tool-thumb.webp" alt="Audit Tool with three records side by side" loading="lazy" />
+						<button type="button" class="gallery-thumb" data-full="Assets/projects/moffat-bay/about.webp" data-caption="Moffat Bay Marina: About page for the marina">
+							<img src="Assets/projects/moffat-bay/about-thumb.webp" alt="About page for the marina" width="480" height="300" loading="lazy" />
 						</button>
 					</div>
 					<div class="project-links">
-						<p>
-							<a
-								href="https://github.com/BobbyJoeCool/PalletIQ"
-								target="_blank"
-								rel="noopener noreferrer"
-								class="btn"
-							>
-								View Repository
-							</a>
-						</p>
+						<a href="https://moffatbay-blueteam-ac9638.azurewebsites.net/" target="_blank" rel="noopener noreferrer" class="btn">Visit Moffat Bay Marina</a>
+						<a href="https://github.com/BobbyJoeCool/csd460-blueteam" target="_blank" rel="noopener noreferrer" class="btn">Moffat Bay team repo</a>
 					</div>
 				</article>
 
-				<article class="project">
+				<article class="project" id="family-passport-map">
 					<div class="project-text">
-						<h3>Family Passport Map <span class="wip-badge live-badge">LIVE · IMPROVING</span> <span class="version-tag">v2.3.0</span></h3>
-						<h3 class="subheader">Side Project</h3>
-						<p>
-							A family-friendly web app for tracking which places you and your
-							family have visited: all 50 US states on an interactive US map, and
-							195 countries on a world map you explore one continent at a time.
-							Each family member gets their own color and profile picture, with
-							visits tracked independently, "n/50 states" and "n/195 countries"
-							counters, a side-by-side Compare view, and a List view showing who
-							has been where. Microsoft sign-in keeps each account's People and
-							photos private. Installable as a PWA on phone, tablet, and desktop.
+						<h3>Family Passport Map</h3>
+						<p class="project-meta">
+							<span class="status-badge live">Live</span> v2.3.0 · Side project
 						</p>
 						<p>
-							Live on Azure App Service. Next up: Link and Join, so families can
-							share and manage People together.
+							Tracks which US states and countries each family member has
+							visited, with a color per person, a side-by-side Compare view, and
+							PWA install. React and Express with Prisma and SQLite on Azure App
+							Service; Microsoft sign-in keeps each account's people and photos
+							private.
 						</p>
-						<h4>Technologies Used</h4>
-						<div class="tech-stack">
-							<img src="Assets/icons/Language-Icons/TypeScript.png" alt="TypeScript" title="TypeScript" />
-							<img src="Assets/icons/Language-Icons/React.png" alt="React" title="React" />
-							<img src="Assets/icons/Tech-Icons/Vite.svg" alt="Vite" title="Vite" />
-							<img src="Assets/icons/Tech-Icons/Tailwind.svg" alt="Tailwind CSS" title="Tailwind CSS" />
-							<img src="Assets/icons/Language-Icons/NodeJS.png" alt="Node.js" title="Node.js / Express" />
-							<img src="Assets/icons/Tech-Icons/Prisma.png" alt="Prisma" title="Prisma" />
-							<img src="Assets/icons/Tech-Icons/SQLite.png" alt="SQLite" title="SQLite" />
-							<img src="Assets/icons/Tech-Icons/Azure.png" alt="Azure" title="Azure App Service" />
+						<p class="demo-login">
+							Sign-in required (Microsoft account). A demo account is coming;
+							the screenshots show the app.
+						</p>
+						<div class="tech-stack" aria-label="Stack">
+							<img src="Assets/icons/Language-Icons/TypeScript.png" alt="TypeScript" title="TypeScript" width="44" height="44" loading="lazy" />
+							<img src="Assets/icons/Language-Icons/React.png" alt="React" title="React" width="44" height="44" loading="lazy" />
+							<img src="Assets/icons/Language-Icons/NodeJS.png" alt="Node.js and Express" title="Node.js / Express" width="44" height="44" loading="lazy" />
+							<img src="Assets/icons/Tech-Icons/Prisma.png" alt="Prisma" title="Prisma" width="44" height="44" loading="lazy" />
+							<img src="Assets/icons/Tech-Icons/SQLite.png" alt="SQLite" title="SQLite" width="44" height="44" loading="lazy" />
+							<img src="Assets/icons/Tech-Icons/Azure.png" alt="Azure App Service" title="Azure App Service" width="44" height="44" loading="lazy" />
 						</div>
-						<p>
-							React, TypeScript, Vite, TailwindCSS, Node.js, Express, SQLite,
-							Prisma, Azure App Service
-						</p>
 					</div>
 					<div class="project-gallery" aria-label="Family Passport Map screenshots">
 						<button type="button" class="gallery-thumb" data-full="Assets/projects/family-passport-map/us-map.webp" data-caption="Family Passport Map: US map with visited states colored by family member">
-							<img src="Assets/projects/family-passport-map/us-map-thumb.webp" alt="US map with visited states colored by family member" loading="lazy" />
+							<img src="Assets/projects/family-passport-map/us-map-thumb.webp" alt="US map with visited states colored by family member" width="480" height="300" loading="lazy" />
 						</button>
 						<button type="button" class="gallery-thumb" data-full="Assets/projects/family-passport-map/world-map.webp" data-caption="Family Passport Map: World map, explored one continent at a time">
-							<img src="Assets/projects/family-passport-map/world-map-thumb.webp" alt="World map, explored one continent at a time" loading="lazy" />
+							<img src="Assets/projects/family-passport-map/world-map-thumb.webp" alt="World map, explored one continent at a time" width="480" height="300" loading="lazy" />
 						</button>
 						<button type="button" class="gallery-thumb" data-full="Assets/projects/family-passport-map/us-compare.webp" data-caption="Family Passport Map: Compare view with family members' maps side by side">
-							<img src="Assets/projects/family-passport-map/us-compare-thumb.webp" alt="Compare view with family members' maps side by side" loading="lazy" />
+							<img src="Assets/projects/family-passport-map/us-compare-thumb.webp" alt="Compare view with family members' maps side by side" width="480" height="300" loading="lazy" />
 						</button>
 						<button type="button" class="gallery-thumb" data-full="Assets/projects/family-passport-map/mobile.webp" data-caption="Family Passport Map: Installed as a PWA on a phone">
-							<img src="Assets/projects/family-passport-map/mobile-thumb.webp" alt="Installed as a PWA on a phone" loading="lazy" />
+							<img src="Assets/projects/family-passport-map/mobile-thumb.webp" alt="Installed as a PWA on a phone" width="480" height="300" loading="lazy" />
 						</button>
 					</div>
 					<div class="project-links">
-						<p>
-							<a
-								href="https://family-passport-map.azurewebsites.net/"
-								target="_blank"
-								rel="noopener noreferrer"
-								class="btn"
-							>
-								View Live Site
-							</a>
-						</p>
-						<p>
-							<a
-								href="https://github.com/BobbyJoeCool/FamilyPassportMap"
-								target="_blank"
-								rel="noopener noreferrer"
-								class="btn"
-							>
-								View Repository
-							</a>
-						</p>
+						<a href="https://family-passport-map.azurewebsites.net/" target="_blank" rel="noopener noreferrer" class="btn">Visit Family Passport Map</a>
+						<a href="https://github.com/BobbyJoeCool/FamilyPassportMap" target="_blank" rel="noopener noreferrer" class="btn">Family Passport Map source</a>
 					</div>
 				</article>
+
+				<p class="more-projects">
+					<a href="projects.html">See all projects, grouped by type →</a>
+				</p>
+			</section>
+
+			<!-- CORE STACK -->
+			<section class="home-card core-stack" aria-labelledby="stack-heading">
+				<h2 id="stack-heading">Core Stack</h2>
+				<dl class="stack-list">
+					<div>
+						<dt>Languages</dt>
+						<dd>TypeScript, JavaScript, Python, Java, SQL</dd>
+					</div>
+					<div>
+						<dt>Frontend</dt>
+						<dd>React, Vite, Tailwind CSS, Electron</dd>
+					</div>
+					<div>
+						<dt>Backend</dt>
+						<dd>Node.js + Express, FastAPI, Jakarta EE, REST, WebSockets</dd>
+					</div>
+					<div>
+						<dt>Data</dt>
+						<dd>MySQL, PostgreSQL (Supabase), SQLite, Prisma</dd>
+					</div>
+					<div>
+						<dt>Testing &amp; DevOps</dt>
+						<dd>Playwright, Vitest, GitHub Actions, Git, Azure</dd>
+					</div>
+				</dl>
+				<p><a href="skills.html">All skills, grouped by function →</a></p>
+			</section>
+
+			<!-- BACKGROUND -->
+			<section class="home-card" id="background" aria-labelledby="background-heading">
+				<h2 id="background-heading">Background</h2>
+				<p>
+					I spent ~20 years across retail and warehouse operations before
+					software. At Kwik Star I worked my way from Co-Worker to Store Leader
+					and wrote a bookkeeping guide the company adopted company-wide. At a
+					Target distribution center I work in inventory control, where I wrote
+					the SQL behind a lookup tool my team uses hundreds of times a day.
+				</p>
+				<p>
+					I finished my B.S. in Software Development at Bellevue University in
+					October 2026, Summa Cum Laude with a 4.0 GPA.
+				</p>
+				<p class="inline-links">
+					<a href="experience.html">Experience</a>
+					<a href="education.html">Education</a>
+					<a href="about.html">About me</a>
+				</p>
+			</section>
+
+			<!-- CONTACT -->
+			<section class="home-card" id="contact" aria-labelledby="contact-heading">
+				<h2 id="contact-heading">Contact</h2>
+				<p>
+					I'm looking for an entry-level software developer role. The fastest
+					way to reach me is email.
+				</p>
+				<ul class="contact-quick">
+					<li>Email: <a href="mailto:bob@bobbyjoecool.dev">bob@bobbyjoecool.dev</a></li>
+					<li>GitHub: <a href="https://github.com/BobbyJoeCool" target="_blank" rel="noopener noreferrer">github.com/BobbyJoeCool</a></li>
+					<li>LinkedIn: <a href="https://bobbyjoecool.dev/linkedin/" target="_blank" rel="noopener noreferrer">bobbyjoecool.dev/linkedin</a></li>
+				</ul>
+				<p><a href="contact.html">Or send a message from the contact page →</a></p>
 			</section>
 		</main>
 
-		<div id="site-footer"></div>
+		<footer>
+			<p>© 2026 Robert Breutzmann</p>
+			<p>
+				<a href="mailto:bob@bobbyjoecool.dev"><img src="Assets/icons/Email.png" alt="Email" width="28" height="28" loading="lazy" /></a>
+				<a href="https://github.com/BobbyJoeCool" target="_blank" rel="noopener noreferrer"><img src="Assets/icons/GitHub.png" alt="GitHub" width="28" height="28" loading="lazy" /></a>
+				<a href="https://bobbyjoecool.dev/linkedin/" target="_blank" rel="noopener noreferrer"><img src="Assets/icons/LinkedIn.png" alt="LinkedIn" width="28" height="28" loading="lazy" /></a>
+				<a href="https://www.facebook.com/bobslenscraft" target="_blank" rel="noopener noreferrer"><img src="Assets/icons/Facebook.png" alt="Facebook" width="28" height="28" loading="lazy" /></a>
+				<a href="https://www.instagram.com/robertbreutzmann/" target="_blank" rel="noopener noreferrer"><img src="Assets/icons/Instagram.png" alt="Instagram" width="28" height="28" loading="lazy" /></a>
+				<a href="https://www.threads.com/@robertbreutzmann" target="_blank" rel="noopener noreferrer"><img src="Assets/icons/Threads.png" alt="Threads" width="28" height="28" loading="lazy" /></a>
+				<a href="https://bsky.app/profile/bobbyjoecool.bsky.social" target="_blank" rel="noopener noreferrer"><img src="Assets/icons/BlueSky.png" alt="Bluesky" width="28" height="28" loading="lazy" /></a>
+				<a href="https://discord.com/users/BobyJoeCool" target="_blank" rel="noopener noreferrer"><img src="Assets/icons/Discord.png" alt="Discord" width="28" height="28" loading="lazy" /></a>
+			</p>
+		</footer>
 
-		<!-- Screenshot viewer, opened from the featured project thumbnails -->
+		<!-- Screenshot viewer, opened from the project thumbnails -->
 		<dialog id="lightbox" class="lightbox" aria-label="Screenshot viewer">
 			<button type="button" class="lightbox-close" aria-label="Close">&times;</button>
 			<button type="button" class="lightbox-nav prev" aria-label="Previous screenshot">&#8249;</button>
@@ -608,7 +439,6 @@ Landing page for GitHub Professional/Academic Portfolio
 			</figure>
 			<button type="button" class="lightbox-nav next" aria-label="Next screenshot">&#8250;</button>
 		</dialog>
-		<script src="JS/common.js"></script>
 		<script src="JS/gallery.js"></script>
 	</body>
 </html>

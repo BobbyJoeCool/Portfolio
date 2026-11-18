@@ -1,6 +1,7 @@
 /* project and course card CSS, shared by projects.html and education.html (base card styles come from education.css) */
 
-.project-card h2 {
+.project-card h2,
+.project-card > h3 {
 	border-left: none;
 	padding-left: 0;
 	text-align: center;
@@ -41,59 +42,6 @@
 	margin-bottom: 1.5rem;
 	color: var(--text-secondary);
 	text-align: center;
-}
-
-.status-badge {
-	display: inline-block;
-	padding: 2px 10px;
-	border-radius: 999px;
-	border: 1px solid;
-	font-size: 0.8rem;
-	font-weight: 600;
-	letter-spacing: 0.05em;
-	text-transform: uppercase;
-}
-
-.status-badge.live {
-	color: #4ade80;
-	border-color: rgba(74, 222, 128, 0.5);
-	background: rgba(74, 222, 128, 0.12);
-}
-
-.status-badge.complete {
-	color: #4ade80;
-	border-color: rgba(74, 222, 128, 0.5);
-	background: rgba(74, 222, 128, 0.12);
-}
-
-.status-badge.active {
-	color: var(--accent-cyan-soft);
-	border-color: rgba(34, 211, 238, 0.5);
-	background: rgba(34, 211, 238, 0.12);
-}
-
-.status-badge.wip {
-	color: #fb923c;
-	border-color: rgba(251, 146, 60, 0.5);
-	background: rgba(251, 146, 60, 0.12);
-}
-
-.status-badge.released {
-	color: var(--accent-glow);
-	border-color: rgba(147, 197, 253, 0.5);
-	background: rgba(147, 197, 253, 0.12);
-}
-
-.status-badge.paused {
-	color: var(--accent-yellow);
-	border-color: rgba(220, 220, 170, 0.4);
-	background: rgba(220, 220, 170, 0.1);
-}
-
-.status-badge.archived {
-	color: var(--silver-accent);
-	border-color: rgba(184, 184, 184, 0.4);
-	background: rgba(184, 184, 184, 0.1);
 }
 
 .status-badge.term {
@@ -154,23 +102,6 @@
 	}
 }
 
-/* footer icons (matches index.css) */
-
-footer img {
-	width: 28px;
-	height: 28px;
-	margin: 0 8px;
-	opacity: 0.85;
-	transition:
-		opacity 0.2s ease,
-		transform 0.2s ease;
-}
-
-footer img:hover {
-	opacity: 1;
-	transform: translateY(-2px);
-}
-
 @media (max-width: 700px) {
 	.project-card .tech-stack img {
 		width: 40px;
@@ -195,13 +126,13 @@ footer img:hover {
 }
 
 /* Card grid on Projects and Education: wider than the page text, capped at --cards-wide-max */
-#github-repositories {
+.card-grid {
 	--grid-w: min(var(--cards-wide-max), calc(100vw - 2.5rem));
 	width: var(--grid-w);
 	margin-left: calc(50% - var(--grid-w) / 2);
 }
 
-#github-repositories .language-card {
+.card-grid .language-card {
 	width: 100%;
 	margin: 0;
 	justify-content: flex-start;
@@ -209,7 +140,7 @@ footer img:hover {
 
 /* Masonry (JS/masonry.js adds the class): two columns once each can be --card-min wide,
    one below that. Cards keep their own height; the script sets each card's row span. */
-#github-repositories.masonry {
+.card-grid.masonry {
 	display: grid;
 	grid-template-columns: repeat(
 		auto-fill,
@@ -221,22 +152,27 @@ footer img:hover {
 	align-items: start;
 }
 
-#github-repositories.masonry > * {
+.card-grid.masonry > * {
 	max-width: none;
 }
 
 @media (max-width: 700px) {
-	#github-repositories.masonry {
+	.card-grid.masonry {
 		grid-template-columns: minmax(0, 1fr);
 	}
 }
 
-#github-repositories .project-card h2 {
+.card-grid .project-card h2,
+.card-grid .project-card > h3 {
 	font-size: 2.2em;
 	line-height: 1.2;
+	background: var(--title-gradient);
+	-webkit-background-clip: text;
+	background-clip: text;
+	color: transparent;
 }
 
-#github-repositories .course-card h2 {
+.card-grid .course-card h2 {
 	font-size: 1.6em;
 }
 
@@ -245,4 +181,80 @@ footer img:hover {
 .project-card .project-gallery {
 	grid-template-columns: repeat(2, minmax(0, 1fr));
 	margin-top: 1rem;
+}
+
+/* Featured case-study cards: Problem / My role / What I built / Stack / Verified / Limitation */
+.case-study {
+	width: 100%;
+	color: var(--text-secondary);
+}
+
+.case-study h4 {
+	margin: 1.1rem 0 0.35rem;
+	font-size: 0.8rem;
+	font-weight: 600;
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+	color: var(--accent-cyan-soft);
+}
+
+.case-study h4:first-child {
+	margin-top: 0;
+}
+
+.case-study p,
+.case-study ul {
+	margin-bottom: 0.5rem;
+	max-width: none;
+}
+
+.case-study ul {
+	padding-left: 1.25rem;
+}
+
+.case-study strong {
+	color: var(--text-primary);
+}
+
+.project-card .card-links {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 12px;
+	width: 100%;
+	margin-top: 1rem;
+}
+
+.project-card .card-links .repo-card {
+	flex: 1 1 200px;
+	width: auto;
+	margin: 0;
+	padding: 0.9rem 1.25rem;
+}
+
+.project-card .card-links h5 {
+	margin: 0;
+}
+
+/* Silent demo video slot: JS/gallery.js shows it once the file exists */
+.demo-video {
+	width: 100%;
+	margin: 0 0 1.25rem;
+}
+
+.demo-video video {
+	display: block;
+	width: 100%;
+	border-radius: 12px;
+	border: 1px solid rgba(59, 130, 246, 0.45);
+}
+
+.demo-video figcaption {
+	margin-top: 0.4rem;
+	font-size: 0.85rem;
+	color: var(--text-muted);
+	text-align: center;
+}
+
+.project-card .project-gallery {
+	width: 100%;
 }

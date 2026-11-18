@@ -885,3 +885,17 @@ body {
 		padding-bottom: 0.05in;
 	}
 }
+
+/* Project bullets reuse the job bullet style */
+.project-desc .job-bullets {
+	margin: 0;
+}
+
+.more-line {
+	margin-top: 6px;
+}
+
+.more-line a {
+	color: inherit;
+	text-decoration: underline;
+}

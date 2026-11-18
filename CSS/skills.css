@@ -1,0 +1,126 @@
+/* Skills page: logo tiles grouped by function (moved from index.css) */
+
+.known-technologies {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	gap: 2rem;
+}
+
+.tech-card-box {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 1rem;
+	justify-content: center;
+}
+
+/* Small skill tiles: gradient border and glow, lift and light up on hover */
+.tech-card {
+	position: relative;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: flex-start;
+	padding: 1rem 0.5rem 0.75rem;
+	border: 1px solid transparent;
+	border-radius: 18px;
+	text-decoration: none;
+	width: 108px;
+
+	color: var(--text-primary);
+	background:
+		radial-gradient(circle at 50% 0%, rgba(59, 130, 246, 0.3), transparent 65%) padding-box,
+		linear-gradient(170deg, #17336b 0%, var(--accent-deep) 55%, #0f1f45 100%) padding-box,
+		linear-gradient(160deg, rgba(147, 197, 253, 0.55), rgba(20, 46, 96, 0.6) 50%, rgba(6, 182, 212, 0.55)) border-box;
+	box-shadow: 0 6px 16px rgba(0, 0, 0, 0.35);
+	transition:
+		transform 0.25s ease,
+		box-shadow 0.25s ease;
+}
+
+.tech-card img {
+	max-width: 72px;
+	width: 72px;
+	height: 72px;
+	object-fit: contain;
+	transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.tech-card p {
+	margin: 0.5rem 0 0;
+	font-size: 0.85rem;
+	font-weight: 600;
+	line-height: 1.25;
+	text-align: center;
+}
+
+.tech-card:hover {
+	transform: translateY(-5px);
+	box-shadow:
+		0 12px 24px rgba(0, 0, 0, 0.45),
+		0 0 20px rgba(6, 182, 212, 0.3);
+}
+
+.tech-card:hover img {
+	transform: scale(1.08) rotate(-3deg);
+	filter: drop-shadow(0 0 10px rgba(34, 211, 238, 0.45));
+}
+
+
+@media (prefers-reduced-motion: reduce) {
+	.tech-card,
+	.tech-card:hover,
+	.tech-card img,
+	.tech-card:hover img {
+		transition: none;
+		transform: none;
+	}
+}
+
+
+.skills-intro {
+	margin: 0 auto 1rem;
+	text-align: center;
+	color: var(--text-muted);
+}
+
+.skill-group {
+	margin: 2.5rem 0;
+}
+
+.skill-group h2 {
+	margin-bottom: 0.25rem;
+}
+
+.used-in {
+	margin-bottom: 1rem;
+	color: var(--text-muted);
+	font-size: 0.95rem;
+}
+
+.skill-group .tech-card-box {
+	justify-content: flex-start;
+}
+
+/* Text tile for tools with no logo in Assets/icons */
+.tech-mono {
+	display: grid;
+	place-items: center;
+	width: 72px;
+	height: 72px;
+	border-radius: 50%;
+	background: var(--bg-primary);
+	border: 2px solid var(--accent-cyan);
+	color: var(--accent-cyan-soft);
+	font-family: "SF Mono", Menlo, Consolas, monospace;
+	font-weight: 700;
+	font-size: 1.1rem;
+}
+
+@media (max-width: 600px) {
+	.skill-group .tech-card-box {
+		justify-content: center;
+	}
+}

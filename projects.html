@@ -1,13 +1,22 @@
-<!--
-    Page with GitHub Projects
--->
-
 <!doctype html>
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
-		<title>Robert Breutzmann | Projects</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Robert Breutzmann | Projects</title>
+		<meta
+			name="description"
+			content="Projects by Robert Breutzmann: FitIQ, PalletIQ, ScribeIQ, Moffat Bay Marina and Family Passport Map, plus more apps, experiments, academic work and resources."
+		/>
+		<link rel="canonical" href="https://bobbyjoecool.dev/projects.html" />
+		<meta property="og:type" content="website" />
+		<meta property="og:title" content="Robert Breutzmann | Projects" />
+		<meta
+			property="og:description"
+			content="Case studies for FitIQ, PalletIQ, ScribeIQ, Moffat Bay Marina and Family Passport Map: the problem, my role, what I built, and how it's verified."
+		/>
+		<meta property="og:url" content="https://bobbyjoecool.dev/projects.html" />
+		<meta property="og:image" content="https://bobbyjoecool.dev/Assets/Images/profile.jpg" />
 		<link rel="stylesheet" href="CSS/master.css" />
 		<link rel="stylesheet" href="CSS/education.css" />
 		<link rel="stylesheet" href="CSS/cards.css" />
@@ -15,876 +24,879 @@
 	</head>
 
 	<body class="bg-code">
-		<div id="site-header"></div>
+		<a class="skip-link" href="#main">Skip to content</a>
+		<header>
+			<nav aria-label="Main">
+				<a href="index.html">Home</a>
+				<a href="projects.html" aria-current="page">Projects</a>
+				<a href="skills.html">Skills</a>
+				<a href="experience.html">Experience</a>
+				<a href="education.html">Education</a>
+				<a href="about.html">About</a>
+				<a href="contact.html">Contact</a>
+			</nav>
+		</header>
 
-		<main>
+		<main id="main">
 			<section id="projects-intro">
-				<h1>Personal Projects</h1>
+				<h1>Projects</h1>
 				<p>
-					These are projects I have worked on outside of coursework to practice
-					and build on my skills, ordered from most to least complex.
+					Featured projects first, each written up the same way: the problem,
+					my role, what I built, how it's verified, and one honest limitation.
+					Everything else is below in smaller cards; open one for the full
+					write-up.
+				</p>
+				<p class="status-key">
+					Status labels:
+					<span class="status-badge live">Live</span>
+					<span class="status-badge stable">Stable</span>
+					<span class="status-badge active">Active development</span>
+					<span class="status-badge prototype">Prototype</span>
+					<span class="status-badge archived">Archived</span>
 				</p>
 			</section>
-			<section id="github-repositories" class="card-row">
-				<!-- PalletIQ -->
-				<article class="language-card project-card">
-					<div class="tech-stack">
-						<img src="Assets/icons/Language-Icons/TypeScript.png" alt="TypeScript" title="TypeScript" />
-						<img src="Assets/icons/Language-Icons/React.png" alt="React" title="React" />
-						<img src="Assets/icons/Tech-Icons/Vite.svg" alt="Vite" title="Vite" />
-						<img src="Assets/icons/Tech-Icons/Tailwind.svg" alt="Tailwind CSS" title="Tailwind CSS" />
-						<img src="Assets/icons/Language-Icons/NodeJS.png" alt="Node.js" title="Node.js / Express" />
-						<img src="Assets/icons/Tech-Icons/Prisma.png" alt="Prisma" title="Prisma" />
-						<img src="Assets/icons/Tech-Icons/MySQL.png" alt="MySQL" title="MySQL" />
-						<img src="Assets/icons/Tech-Icons/Electron.svg" alt="Electron" title="Electron" />
-						<img src="Assets/icons/Tech-Icons/Playwright.svg" alt="Playwright" title="Playwright" />
-					</div>
-					<h2>PalletIQ</h2>
-					<p class="project-status">
-						<span class="status-badge active">Active Development</span>
-						Floor app v1.11.1 · API v1.4.0 · Manager desktop app v1.0.0
-					</p>
-					<a
-						href="https://github.com/BobbyJoeCool/PalletIQ"
-						target="_blank"
-						rel="noopener noreferrer"
-						class="repo-card"
-					>
-						<p>
-							A full-stack warehouse inventory and pallet-tracking system built
-							from 20 years of warehouse floor and retail management experience.
-							It tracks inventory by location rather than by item, with a
-							four-tier role hierarchy, field-level permission gating, and a
-							tablet UI designed for hands-free scanning: numeric-first input,
-							no blocking pop-ups, and every pallet and location ID a tappable
-							link. Organized as a monorepo with a shared TypeScript package for
-							types and pure domain rules, an Express + Prisma API on MySQL, the
-							React floor app, and a manager-facing Electron desktop app.
-						</p>
-						<h5>Highlights</h5>
-						<ul>
-							<li>Pull and Put (directed and manual) driven by label scans with independent verification paths</li>
-							<li>Pallet ID and Location ID detail screens, reachable from any reference in the app</li>
-							<li>Empty Locations aisle summary and visual zone-by-zone staging map</li>
-							<li>Individual Rate of Productivity (IRP), Pull Request Query, and Container ID Inquiry with a per-record audit trail</li>
-							<li>v1.10–1.11: architecture refactors into deep modules (reservation lifecycle, container lifecycle, location acceptance policy), a Printer table, and a rewritten e2e suite</li>
-							<li>Desktop app v1.0.0: Job/Function Assignment roster timeline with staffing forecast, Team Prod Summary, Location Setup, Prod Goal / Ramping / Daily Plan, a three-pane Audit Tool, and the Embedded Floor App</li>
-							<li>Badge + PIN login on the floor and password login on desktop, signed JWTs, reservation locking, and Playwright end-to-end tests for both apps (desktop tests drive the built Electron app)</li>
-						</ul>
-						<span class="repo-link">View on GitHub →</span>
-					</a>
 
-					<div class="project-gallery" aria-label="PalletIQ screenshots">
-						<p class="gallery-label">Floor App (tablet)</p>
-						<button type="button" class="gallery-thumb" data-full="Assets/projects/palletiq/home.webp" data-caption="PalletIQ: Home screen with function tiles grouped by area">
-							<img src="Assets/projects/palletiq/home-thumb.webp" alt="Home screen with function tiles grouped by area" loading="lazy" />
+			<!-- ===================== FEATURED ===================== -->
+			<h2 class="group-heading" id="featured">Featured</h2>
+			<section class="card-grid masonry-grid" aria-labelledby="featured">
+				<!-- FitIQ -->
+				<article class="language-card project-card" id="fitiq">
+					<div class="tech-stack" aria-hidden="true">
+						<img src="Assets/icons/Language-Icons/TypeScript.png" alt="" title="TypeScript" width="52" height="52" loading="lazy" />
+						<img src="Assets/icons/Language-Icons/React.png" alt="" title="React" width="52" height="52" loading="lazy" />
+						<img src="Assets/icons/Tech-Icons/Vite.svg" alt="" title="Vite" width="52" height="52" loading="lazy" />
+						<img src="Assets/icons/Language-Icons/SQL.png" alt="" title="Supabase (Auth + PostgreSQL)" width="52" height="52" loading="lazy" />
+						<img src="Assets/icons/Tech-Icons/Playwright.svg" alt="" title="Playwright" width="52" height="52" loading="lazy" />
+						<img src="Assets/icons/Tech-Icons/GitHubActions.svg" alt="" title="GitHub Actions" width="52" height="52" loading="lazy" />
+					</div>
+					<h3>FitIQ</h3>
+					<p class="project-status">
+						<span class="status-badge live">Live</span>
+						v1.5.5 · Solo project
+					</p>
+					<div class="case-study">
+						<h4>Problem</h4>
+						<p>
+							My household wanted one place to plan workouts, log sets on a
+							phone mid-workout, and track progress, with each person's data
+							private and no hosting bill.
+						</p>
+						<h4>My role</h4>
+						<p>Solo: design, build, tests and deployment.</p>
+						<h4>What I built</h4>
+						<ul>
+							<li>An installable PWA in React and TypeScript on GitHub Pages. The browser talks straight to Supabase Auth and Postgres; there's no custom backend.</li>
+							<li>Privacy enforced in the database: Row Level Security on every table, plus ownership triggers so no row can point at another person's data.</li>
+							<li>An 876-exercise library, reusable plans, and one-handed set logging that saves each set the moment it's completed, so a sleeping phone loses nothing.</li>
+							<li>History, personal records, weight and measurement charts, and a public demo account that reseeds every week.</li>
+						</ul>
+						<h4>Stack</h4>
+						<p>React, TypeScript, Vite, Supabase (Auth + PostgreSQL), Playwright, GitHub Actions, GitHub Pages</p>
+						<h4>How it's verified</h4>
+						<p>
+							A two-account RLS test checks every table, including cross-parent
+							cases (188 checks). Playwright end-to-end tests of the main flows
+							run in GitHub Actions against a local Supabase stack.
+						</p>
+						<h4>Limitation</h4>
+						<p>
+							With no backend of my own, any rule beyond "this row is yours" has
+							to live in Postgres policies and triggers. It runs within the free
+							tiers of my current deployment, which caps how far it can grow.
+						</p>
+					</div>
+					<p class="demo-login">
+						Demo login: <code>demo@bobbyjoecool.dev</code> / <code>try-fitiq-demo</code>
+					</p>
+					<div class="card-links">
+						<a href="https://fitiq.bobbyjoecool.dev" target="_blank" rel="noopener noreferrer" class="repo-card pages"><h5>Try the FitIQ demo</h5></a>
+						<a href="https://github.com/BobbyJoeCool/FitIQ" target="_blank" rel="noopener noreferrer" class="repo-card"><h5>FitIQ source</h5></a>
+						<a href="https://github.com/BobbyJoeCool/FitIQ/blob/main/docs/architecture.md" target="_blank" rel="noopener noreferrer" class="repo-card"><h5>FitIQ architecture notes</h5></a>
+					</div>
+					<div class="project-gallery" aria-label="FitIQ screenshots">
+						<button type="button" class="gallery-thumb" data-full="Assets/projects/fitiq/demo.webp" data-caption="FitIQ: Demo: choosing Leg Day, logging two sets with the rest timer, moving to the next exercise, and opening Progress">
+							<img src="Assets/projects/fitiq/demo-thumb.webp" alt="Animated demo of logging a workout" width="520" height="325" loading="lazy" />
 						</button>
-						<button type="button" class="gallery-thumb" data-full="Assets/projects/palletiq/pallet.webp" data-caption="PalletIQ: Pallet ID Info: every field of a pallet, with tappable links">
-							<img src="Assets/projects/palletiq/pallet-thumb.webp" alt="Pallet ID detail screen" loading="lazy" />
+						<button type="button" class="gallery-thumb" data-full="Assets/projects/fitiq/dashboard.webp" data-caption="FitIQ: Dashboard with the next workout, this week, and latest weight">
+							<img src="Assets/projects/fitiq/dashboard-thumb.webp" alt="Dashboard with the next workout, this week, and latest weight" width="520" height="325" loading="lazy" />
 						</button>
-						<button type="button" class="gallery-thumb" data-full="Assets/projects/palletiq/location.webp" data-caption="PalletIQ: Location ID Info: what's stored at a location">
-							<img src="Assets/projects/palletiq/location-thumb.webp" alt="Location ID detail screen" loading="lazy" />
+						<button type="button" class="gallery-thumb" data-full="Assets/projects/fitiq/workout.webp" data-caption="FitIQ: Logging a set: Barbell Squat with last time, set 2 of 3, and the rest timer">
+							<img src="Assets/projects/fitiq/workout-thumb.webp" alt="Barbell Squat set logging with the rest timer" width="520" height="325" loading="lazy" />
 						</button>
-						<button type="button" class="gallery-thumb" data-full="Assets/projects/palletiq/empty-zone.webp" data-caption="PalletIQ: Empty Locations by Zone: a visual aisle map for staging">
-							<img src="Assets/projects/palletiq/empty-zone-thumb.webp" alt="Empty Locations by Zone staging map" loading="lazy" />
+						<button type="button" class="gallery-thumb" data-full="Assets/projects/fitiq/progress.webp" data-caption="FitIQ: Weight over time chart for 90 days">
+							<img src="Assets/projects/fitiq/progress-thumb.webp" alt="Weight over time chart" width="520" height="325" loading="lazy" />
 						</button>
-						<button type="button" class="gallery-thumb" data-full="Assets/projects/palletiq/empty-aisle.webp" data-caption="PalletIQ: Empty Locations by Aisle: open slots by storage code and size">
-							<img src="Assets/projects/palletiq/empty-aisle-thumb.webp" alt="Empty Locations by Aisle summary" loading="lazy" />
+						<button type="button" class="gallery-thumb" data-full="Assets/projects/fitiq/library.webp" data-caption="FitIQ: Exercise library filtered to barbell quadriceps exercises">
+							<img src="Assets/projects/fitiq/library-thumb.webp" alt="Exercise library with filters" width="520" height="325" loading="lazy" />
 						</button>
-						<button type="button" class="gallery-thumb" data-full="Assets/projects/palletiq/pull.webp" data-caption="PalletIQ: Pallet ID Pull: on-screen numpad, scan-first input">
-							<img src="Assets/projects/palletiq/pull-thumb.webp" alt="Pallet ID Pull with on-screen numpad" loading="lazy" />
-						</button>
-						<button type="button" class="gallery-thumb" data-full="Assets/projects/palletiq/report-individual.webp" data-caption="PalletIQ: Individual Rate of Productivity report against goal">
-							<img src="Assets/projects/palletiq/report-individual-thumb.webp" alt="Individual Rate of Productivity report" loading="lazy" />
-						</button>
-						<button type="button" class="gallery-thumb" data-full="Assets/projects/palletiq/login.webp" data-caption="PalletIQ: Login: badge scan or zNumber + PIN">
-							<img src="Assets/projects/palletiq/login-thumb.webp" alt="Floor app login screen" loading="lazy" />
-						</button>
-						<p class="gallery-label">Manager Desktop App</p>
-						<button type="button" class="gallery-thumb" data-full="Assets/projects/palletiq/desktop-job-assignment.webp" data-caption="PalletIQ Desktop: Job/Function Assignment, the shift roster as a timeline with staffing vs plan">
-							<img src="Assets/projects/palletiq/desktop-job-assignment-thumb.webp" alt="Job/Function Assignment shift roster timeline" loading="lazy" />
-						</button>
-						<button type="button" class="gallery-thumb" data-full="Assets/projects/palletiq/desktop-team-prod.webp" data-caption="PalletIQ Desktop: Team Prod Summary, live production against plan by function, with Carton Air expanded to per-worker rates">
-							<img src="Assets/projects/palletiq/desktop-team-prod-thumb.webp" alt="Team Prod Summary with Carton Air expanded to per-worker rates" loading="lazy" />
-						</button>
-						<button type="button" class="gallery-thumb" data-full="Assets/projects/palletiq/desktop-prod-plan.webp" data-caption="PalletIQ Desktop: Prod Goal / Ramping / Daily Plan: targets with the Daily Drop and staffing for reference">
-							<img src="Assets/projects/palletiq/desktop-prod-plan-thumb.webp" alt="Prod Goal, Ramping, and Daily Plan screen" loading="lazy" />
-						</button>
-						<button type="button" class="gallery-thumb" data-full="Assets/projects/palletiq/desktop-location-setup.webp" data-caption="PalletIQ Desktop: Location Setup, zone cells edited on the aisle grid">
-							<img src="Assets/projects/palletiq/desktop-location-setup-thumb.webp" alt="Location Setup aisle grid" loading="lazy" />
-						</button>
-						<button type="button" class="gallery-thumb" data-full="Assets/projects/palletiq/desktop-location-setup-contraction.webp" data-caption="PalletIQ Desktop: Location Setup: contraction presets (here, all top locations)">
-							<img src="Assets/projects/palletiq/desktop-location-setup-contraction-thumb.webp" alt="Location Setup contraction presets" loading="lazy" />
-						</button>
-						<button type="button" class="gallery-thumb" data-full="Assets/projects/palletiq/desktop-location-setup-new-aisle.webp" data-caption="PalletIQ Desktop: New aisle: zones, levels per side, and a live preview">
-							<img src="Assets/projects/palletiq/desktop-location-setup-new-aisle-thumb.webp" alt="New aisle form with live preview" loading="lazy" />
-						</button>
-						<button type="button" class="gallery-thumb" data-full="Assets/projects/palletiq/desktop-audit-tool.webp" data-caption="PalletIQ Desktop: Audit Tool, three records side by side linked by cross-reference chips">
-							<img src="Assets/projects/palletiq/desktop-audit-tool-thumb.webp" alt="Audit Tool with three records side by side" loading="lazy" />
-						</button>
-						<button type="button" class="gallery-thumb" data-full="Assets/projects/palletiq/desktop-floor-app.webp" data-caption="PalletIQ Desktop: Embedded Floor App: the tablet app in a window, signed in from the desktop session">
-							<img src="Assets/projects/palletiq/desktop-floor-app-thumb.webp" alt="Embedded Floor App window" loading="lazy" />
-						</button>
-						<button type="button" class="gallery-thumb" data-full="Assets/projects/palletiq/desktop-home.webp" data-caption="PalletIQ Desktop: Desktop home screen">
-							<img src="Assets/projects/palletiq/desktop-home-thumb.webp" alt="Desktop app home screen" loading="lazy" />
-						</button>
-						<button type="button" class="gallery-thumb" data-full="Assets/projects/palletiq/desktop-login.webp" data-caption="PalletIQ Desktop: Sign-in: zNumber and password">
-							<img src="Assets/projects/palletiq/desktop-login-thumb.webp" alt="Desktop app sign-in screen" loading="lazy" />
+						<button type="button" class="gallery-thumb" data-full="Assets/projects/fitiq/plan.webp" data-caption="FitIQ: Plan builder: Leg Day with targets and rest">
+							<img src="Assets/projects/fitiq/plan-thumb.webp" alt="Leg Day plan with targets and rest" width="520" height="325" loading="lazy" />
 						</button>
 					</div>
 				</article>
 
-				<!-- DragonLedger -->
-				<article class="language-card project-card">
-					<div class="tech-stack">
-						<img src="Assets/icons/Language-Icons/TypeScript.png" alt="TypeScript" title="TypeScript" />
-						<img src="Assets/icons/Language-Icons/React.png" alt="React and React Native" title="React / React Native" />
-						<img src="Assets/icons/Tech-Icons/Vite.svg" alt="Vite" title="Vite" />
-						<img src="Assets/icons/Tech-Icons/Tailwind.svg" alt="Tailwind CSS" title="Tailwind CSS" />
-						<img src="Assets/icons/Language-Icons/NodeJS.png" alt="Node.js" title="Node.js / Express" />
-						<img src="Assets/icons/Tech-Icons/Prisma.png" alt="Prisma" title="Prisma" />
-						<img src="Assets/icons/Tech-Icons/SQLite.png" alt="SQLite" title="SQLite" />
-						<img src="Assets/icons/Tech-Icons/Electron.svg" alt="Electron" title="Electron" />
+				<!-- PalletIQ -->
+				<article class="language-card project-card" id="palletiq">
+					<div class="tech-stack" aria-hidden="true">
+						<img src="Assets/icons/Language-Icons/TypeScript.png" alt="" title="TypeScript" width="52" height="52" loading="lazy" />
+						<img src="Assets/icons/Language-Icons/React.png" alt="" title="React" width="52" height="52" loading="lazy" />
+						<img src="Assets/icons/Tech-Icons/Electron.svg" alt="" title="Electron" width="52" height="52" loading="lazy" />
+						<img src="Assets/icons/Language-Icons/NodeJS.png" alt="" title="Node.js / Express" width="52" height="52" loading="lazy" />
+						<img src="Assets/icons/Tech-Icons/Prisma.png" alt="" title="Prisma" width="52" height="52" loading="lazy" />
+						<img src="Assets/icons/Tech-Icons/MySQL.png" alt="" title="MySQL" width="52" height="52" loading="lazy" />
+						<img src="Assets/icons/Tech-Icons/Playwright.svg" alt="" title="Playwright" width="52" height="52" loading="lazy" />
 					</div>
-					<h2>DragonLedger</h2>
+					<h3>PalletIQ</h3>
 					<p class="project-status">
-						<span class="status-badge active">Active Development</span>
-						DatabaseApp v2.0.0 · Heroes in early development
+						<span class="status-badge active">Active development</span>
+						Floor app v1.11.1 · API v1.4.0 · Manager app v1.0.0 · Solo project
 					</p>
-					<a
-						href="https://github.com/BobbyJoeCool/DragonLedger_DatabaseApp"
-						target="_blank"
-						rel="noopener noreferrer"
-						class="repo-card"
-					>
-						<h4>DatabaseApp</h4>
+					<figure class="demo-video" data-src="Assets/projects/palletiq/demo.mp4" hidden>
+						<figcaption>Floor app demo (22 s, silent): badge login, a pallet lookup, the empty-locations zone map, and an item lookup. Synthetic data.</figcaption>
+					</figure>
+					<div class="case-study">
+						<h4>Problem</h4>
 						<p>
-							A desktop content manager that stores, searches, and edits D&amp;D
-							5e and 5.5e content: spells, classes, races, backgrounds,
-							conditions, items, monsters, and feats. Content is bulk-imported
-							from the Open5e API or a compendium XML file, uploaded as JSON, or
-							entered by hand, with each import kept under its own named source
-							that can be refreshed independently. Built with React, Express,
-							Prisma, and SQLite, and packaged as an Electron desktop app.
+							Warehouse software is often built for a desk, not for someone with
+							a scanner on the floor. PalletIQ is an independent inventory system
+							designed around how the floor works, informed by ~9 years in
+							inventory control at a Target distribution center. It uses
+							synthetic data only.
 						</p>
-						<h5>Highlights</h5>
+						<h4>My role</h4>
+						<p>Solo: design, data model, all three apps, and tests.</p>
+						<h4>What I built</h4>
 						<ul>
-							<li>Browse and filter 8 content types by source, edition, and type-specific attributes</li>
-							<li>Every entry flagged as 5e or 5.5e, with an edition toggle on Browse (v2.0.0)</li>
-							<li>Open5e import with live progress tracking over server-sent events</li>
-							<li>Additive-only compendium import that never overwrites edited entries</li>
-							<li>Homebrew copies and in-place corrections, with shared Zod validation between client and server</li>
+							<li><strong>Floor app</strong> (React, tablet): badge + PIN login, directed and manual Pull and Put driven by label scans, Pallet ID and Location ID screens reachable from any reference, an Empty Locations aisle summary and zone map, and productivity reports.</li>
+							<li><strong>Manager app</strong> (Electron): password login, Audit Tool, Location Setup, Job/Function Assignment, Prod Goal / Daily Plan, Team Prod Summary, and the floor app embedded in a window.</li>
+							<li><strong>Shared API</strong> (Express + Prisma on MySQL): signed JWTs, reservation locking so two people can't claim the same location, and a four-tier role hierarchy with field-level permissions.</li>
+							<li><strong>Shared TypeScript package</strong> for types and pure domain rules, so a data-shape change is a compile error in every app.</li>
 						</ul>
-						<span class="repo-link">View on GitHub →</span>
-					</a>
-
-					<div class="project-gallery" aria-label="DragonLedger screenshots">
-						<button type="button" class="gallery-thumb" data-full="Assets/projects/dragonledger/browse-monsters.webp" data-caption="DragonLedger: Browse: Monsters list with filters, edition toggle, and multi-select actions">
-							<img src="Assets/projects/dragonledger/browse-monsters-thumb.webp" alt="Monsters list with filters and edition toggle" loading="lazy" />
-						</button>
-						<button type="button" class="gallery-thumb" data-full="Assets/projects/dragonledger/monster.webp" data-caption="DragonLedger: Monster stat block (Parchment theme): Adult Red Dragon">
-							<img src="Assets/projects/dragonledger/monster-thumb.webp" alt="Adult Red Dragon stat block" loading="lazy" />
-						</button>
-						<button type="button" class="gallery-thumb" data-full="Assets/projects/dragonledger/monster-dark.webp" data-caption="DragonLedger: The same stat block in dark mode">
-							<img src="Assets/projects/dragonledger/monster-dark-thumb.webp" alt="Adult Red Dragon stat block in dark mode" loading="lazy" />
-						</button>
-						<button type="button" class="gallery-thumb" data-full="Assets/projects/dragonledger/spell.webp" data-caption="DragonLedger: Spell detail with scaling: Fireball">
-							<img src="Assets/projects/dragonledger/spell-thumb.webp" alt="Fireball spell detail" loading="lazy" />
-						</button>
-						<button type="button" class="gallery-thumb" data-full="Assets/projects/dragonledger/class.webp" data-caption="DragonLedger: Class detail with features: Wizard">
-							<img src="Assets/projects/dragonledger/class-thumb.webp" alt="Wizard class detail" loading="lazy" />
-						</button>
-						<button type="button" class="gallery-thumb" data-full="Assets/projects/dragonledger/create.webp" data-caption="DragonLedger: Create hub: hand-built forms per content type">
-							<img src="Assets/projects/dragonledger/create-thumb.webp" alt="Create a new spell form" loading="lazy" />
-						</button>
-						<button type="button" class="gallery-thumb" data-full="Assets/projects/dragonledger/edit.webp" data-caption="DragonLedger: Editing an existing entry">
-							<img src="Assets/projects/dragonledger/edit-thumb.webp" alt="Edit monster form" loading="lazy" />
-						</button>
-						<button type="button" class="gallery-thumb" data-full="Assets/projects/dragonledger/sources.webp" data-caption="DragonLedger: Source management">
-							<img src="Assets/projects/dragonledger/sources-thumb.webp" alt="Sources screen" loading="lazy" />
-						</button>
-						<button type="button" class="gallery-thumb" data-full="Assets/projects/dragonledger/import.webp" data-caption="DragonLedger: Import wizard: Open5e, Compendium XML, or JSON">
-							<img src="Assets/projects/dragonledger/import-thumb.webp" alt="Import screen" loading="lazy" />
-						</button>
-					</div>
-
-					<div class="repo-card private-repo">
-						<h4>Heroes <span class="wip-badge">PRIVATE REPO</span></h4>
+						<h4>Stack</h4>
+						<p>React, TypeScript, React Router, Vite, Tailwind CSS, Electron, Node.js, Express, Prisma, MySQL, Playwright</p>
+						<h4>How it's verified</h4>
 						<p>
-							A D&amp;D 5e 2024 character sheet and DM companion app for iOS and
-							Android, built with React Native (Expo) and TypeScript. It is
-							designed engine-first: game rules for ability scores, HP, combat,
-							conditions, spells, inventory, and encounters are written as pure
-							TypeScript modules before the UI, backed by an SQLite schema for
-							character persistence. Heroes will use DatabaseApp's content and
-							eventually replace it as the day-to-day app.
+							Playwright end-to-end suites for both apps; the desktop tests
+							drive the built Electron app.
 						</p>
+						<h4>Limitation</h4>
+						<p>
+							It runs locally on my Mac and isn't hosted, so there's no live
+							demo. Two manager screens, DPCI Setup and Hung Pallet Resolution,
+							aren't built yet. It started on Azure SQL; I moved it to MySQL.
+						</p>
+					</div>
+					<div class="card-links">
+						<a href="https://github.com/BobbyJoeCool/PalletIQ" target="_blank" rel="noopener noreferrer" class="repo-card"><h5>PalletIQ source</h5></a>
+					</div>
+					<div class="project-gallery" aria-label="PalletIQ screenshots">
+						<p class="gallery-label">Floor app (tablet)</p>
+						<button type="button" class="gallery-thumb" data-full="Assets/projects/palletiq/home.webp" data-caption="PalletIQ: Home screen with function tiles grouped by area">
+							<img src="Assets/projects/palletiq/home-thumb.webp" alt="Home screen with function tiles grouped by area" width="520" height="325" loading="lazy" />
+						</button>
+						<button type="button" class="gallery-thumb" data-full="Assets/projects/palletiq/pallet.webp" data-caption="PalletIQ: Pallet ID Info: every field of a pallet, with tappable links">
+							<img src="Assets/projects/palletiq/pallet-thumb.webp" alt="Pallet ID detail screen" width="520" height="325" loading="lazy" />
+						</button>
+						<button type="button" class="gallery-thumb" data-full="Assets/projects/palletiq/location.webp" data-caption="PalletIQ: Location ID Info: what's stored at a location">
+							<img src="Assets/projects/palletiq/location-thumb.webp" alt="Location ID detail screen" width="520" height="325" loading="lazy" />
+						</button>
+						<button type="button" class="gallery-thumb" data-full="Assets/projects/palletiq/empty-zone.webp" data-caption="PalletIQ: Empty Locations by Zone: a visual aisle map for staging">
+							<img src="Assets/projects/palletiq/empty-zone-thumb.webp" alt="Empty Locations by Zone staging map" width="520" height="325" loading="lazy" />
+						</button>
+						<button type="button" class="gallery-thumb" data-full="Assets/projects/palletiq/empty-aisle.webp" data-caption="PalletIQ: Empty Locations by Aisle: open slots by storage code and size">
+							<img src="Assets/projects/palletiq/empty-aisle-thumb.webp" alt="Empty Locations by Aisle summary" width="520" height="325" loading="lazy" />
+						</button>
+						<button type="button" class="gallery-thumb" data-full="Assets/projects/palletiq/pull.webp" data-caption="PalletIQ: Pallet ID Pull: on-screen numpad, scan-first input">
+							<img src="Assets/projects/palletiq/pull-thumb.webp" alt="Pallet ID Pull with on-screen numpad" width="520" height="325" loading="lazy" />
+						</button>
+						<button type="button" class="gallery-thumb" data-full="Assets/projects/palletiq/report-individual.webp" data-caption="PalletIQ: Individual Rate of Productivity report against goal">
+							<img src="Assets/projects/palletiq/report-individual-thumb.webp" alt="Individual Rate of Productivity report" width="520" height="325" loading="lazy" />
+						</button>
+						<button type="button" class="gallery-thumb" data-full="Assets/projects/palletiq/login.webp" data-caption="PalletIQ: Login: badge scan or zNumber + PIN">
+							<img src="Assets/projects/palletiq/login-thumb.webp" alt="Floor app login screen" width="520" height="325" loading="lazy" />
+						</button>
+						<p class="gallery-label">Manager app (desktop)</p>
+						<button type="button" class="gallery-thumb" data-full="Assets/projects/palletiq/desktop-job-assignment.webp" data-caption="PalletIQ Desktop: Job/Function Assignment, the shift roster as a timeline with staffing vs plan">
+							<img src="Assets/projects/palletiq/desktop-job-assignment-thumb.webp" alt="Job/Function Assignment shift roster timeline" width="520" height="325" loading="lazy" />
+						</button>
+						<button type="button" class="gallery-thumb" data-full="Assets/projects/palletiq/desktop-team-prod.webp" data-caption="PalletIQ Desktop: Team Prod Summary, live production against plan by function, with Carton Air expanded to per-worker rates">
+							<img src="Assets/projects/palletiq/desktop-team-prod-thumb.webp" alt="Team Prod Summary with Carton Air expanded to per-worker rates" width="520" height="325" loading="lazy" />
+						</button>
+						<button type="button" class="gallery-thumb" data-full="Assets/projects/palletiq/desktop-prod-plan.webp" data-caption="PalletIQ Desktop: Prod Goal / Ramping / Daily Plan: targets with the Daily Drop and staffing for reference">
+							<img src="Assets/projects/palletiq/desktop-prod-plan-thumb.webp" alt="Prod Goal, Ramping, and Daily Plan screen" width="520" height="325" loading="lazy" />
+						</button>
+						<button type="button" class="gallery-thumb" data-full="Assets/projects/palletiq/desktop-location-setup.webp" data-caption="PalletIQ Desktop: Location Setup, zone cells edited on the aisle grid">
+							<img src="Assets/projects/palletiq/desktop-location-setup-thumb.webp" alt="Location Setup aisle grid" width="520" height="325" loading="lazy" />
+						</button>
+						<button type="button" class="gallery-thumb" data-full="Assets/projects/palletiq/desktop-location-setup-contraction.webp" data-caption="PalletIQ Desktop: Location Setup: contraction presets (here, all top locations)">
+							<img src="Assets/projects/palletiq/desktop-location-setup-contraction-thumb.webp" alt="Location Setup contraction presets" width="520" height="325" loading="lazy" />
+						</button>
+						<button type="button" class="gallery-thumb" data-full="Assets/projects/palletiq/desktop-location-setup-new-aisle.webp" data-caption="PalletIQ Desktop: New aisle: zones, levels per side, and a live preview">
+							<img src="Assets/projects/palletiq/desktop-location-setup-new-aisle-thumb.webp" alt="New aisle form with live preview" width="520" height="325" loading="lazy" />
+						</button>
+						<button type="button" class="gallery-thumb" data-full="Assets/projects/palletiq/desktop-audit-tool.webp" data-caption="PalletIQ Desktop: Audit Tool, three records side by side linked by cross-reference chips">
+							<img src="Assets/projects/palletiq/desktop-audit-tool-thumb.webp" alt="Audit Tool with three records side by side" width="520" height="325" loading="lazy" />
+						</button>
+						<button type="button" class="gallery-thumb" data-full="Assets/projects/palletiq/desktop-floor-app.webp" data-caption="PalletIQ Desktop: Embedded Floor App: the tablet app in a window, signed in from the desktop session">
+							<img src="Assets/projects/palletiq/desktop-floor-app-thumb.webp" alt="Embedded Floor App window" width="520" height="325" loading="lazy" />
+						</button>
+						<button type="button" class="gallery-thumb" data-full="Assets/projects/palletiq/desktop-home.webp" data-caption="PalletIQ Desktop: Desktop home screen">
+							<img src="Assets/projects/palletiq/desktop-home-thumb.webp" alt="Desktop app home screen" width="520" height="325" loading="lazy" />
+						</button>
+						<button type="button" class="gallery-thumb" data-full="Assets/projects/palletiq/desktop-login.webp" data-caption="PalletIQ Desktop: Sign-in: zNumber and password">
+							<img src="Assets/projects/palletiq/desktop-login-thumb.webp" alt="Desktop app sign-in screen" width="520" height="325" loading="lazy" />
+						</button>
 					</div>
 				</article>
 
 				<!-- ScribeIQ -->
-				<article class="language-card project-card">
-					<div class="tech-stack">
-						<img src="Assets/icons/Language-Icons/Python.png" alt="Python" title="Python" />
-						<img src="Assets/icons/Language-Icons/FastAPI.png" alt="FastAPI" title="FastAPI" />
-						<img src="Assets/icons/Language-Icons/Swift.png" alt="Swift" title="Swift / ScreenCaptureKit" />
-						<img src="Assets/icons/Language-Icons/TypeScript.png" alt="TypeScript" title="TypeScript" />
-						<img src="Assets/icons/Language-Icons/React.png" alt="React" title="React" />
-						<img src="Assets/icons/Tech-Icons/Vite.svg" alt="Vite" title="Vite / Vitest" />
+				<article class="language-card project-card" id="scribeiq">
+					<div class="tech-stack" aria-hidden="true">
+						<img src="Assets/icons/Language-Icons/Python.png" alt="" title="Python" width="52" height="52" loading="lazy" />
+						<img src="Assets/icons/Language-Icons/FastAPI.png" alt="" title="FastAPI" width="52" height="52" loading="lazy" />
+						<img src="Assets/icons/Language-Icons/TypeScript.png" alt="" title="TypeScript" width="52" height="52" loading="lazy" />
+						<img src="Assets/icons/Language-Icons/React.png" alt="" title="React" width="52" height="52" loading="lazy" />
+						<img src="Assets/icons/Tech-Icons/Vite.svg" alt="" title="Vite / Vitest" width="52" height="52" loading="lazy" />
 					</div>
-					<h2>ScribeIQ</h2>
+					<h3>ScribeIQ</h3>
 					<p class="project-status">
-						<span class="status-badge complete">Complete</span>
-						v1.0.1 · Runs entirely on-device · macOS on Apple Silicon
+						<span class="status-badge stable">Stable</span>
+						v1.0.1 · macOS on Apple Silicon · Solo project
 					</p>
-					<a
-						href="https://github.com/BobbyJoeCool/ScribeIQ"
-						target="_blank"
-						rel="noopener noreferrer"
-						class="repo-card"
-					>
+					<figure class="demo-video" data-src="Assets/projects/scribeiq/demo.mp4" hidden>
+						<figcaption>Demo: recording a call and opening the speaker-labeled transcript (silent).</figcaption>
+					</figure>
+					<div class="case-study">
+						<h4>Problem</h4>
 						<p>
-							A private, on-device call recorder and transcriber for macOS.
-							Record a call from Zoom, Teams, a browser, or any other app and get
-							a speaker-labeled transcript with no cloud services, no
-							subscriptions, and no audio leaving the machine. Instead of
-							recording one mixed stream and guessing who said what, a native
-							Swift helper records the microphone and the call as two separate,
-							synced tracks, so it always knows which words are yours. A React +
-							TypeScript interface in a native window talks to a local FastAPI
-							server that owns the recording state machine.
+							I wanted call transcripts that show who said what, without sending
+							the audio to a cloud service.
 						</p>
-						<h5>Highlights</h5>
+						<h4>My role</h4>
+						<p>Solo: architecture, Python back end, React UI, and integrating the Swift recorder helper.</p>
+						<h4>What I built, and the decisions behind it</h4>
 						<ul>
-							<li>Captures the mic and one chosen app's audio with Apple's ScreenCaptureKit, with no virtual audio devices</li>
-							<li>MLX Whisper large-v3 transcription, Metal-accelerated on Apple Silicon</li>
-							<li>pyannote speaker identification on group calls; click a name to rename that speaker everywhere</li>
-							<li>Live timer, level meters, and job progress pushed over a WebSocket</li>
-							<li>Pause and resume with markers in the transcript, plus a History of every saved transcript</li>
+							<li><strong>Two tracks, not one mix.</strong> A small Swift helper on Apple's ScreenCaptureKit records the mic and one chosen app's audio on a shared clock. My lines are labeled by which track they came from, so speaker detection only runs on the other side of group calls.</li>
+							<li><strong>The server owns the recording state.</strong> FastAPI runs the state machine and supervises the helper over stdin/stdout. The UI's buttons follow the server, and if the app crashes the helper sees its input close, saves and exits.</li>
+							<li><strong>Local inference.</strong> MLX Whisper transcribes each track on the Mac after recording; pyannote splits the other side into speakers, and a speaker can be renamed everywhere with one click.</li>
+							<li><strong>Local-only server.</strong> It listens on 127.0.0.1 and checks the Host and Origin headers, so another web page can't start or stop a recording.</li>
 						</ul>
-						<span class="repo-link">View on GitHub →</span>
-					</a>
-
+						<h4>Stack</h4>
+						<p>Python, FastAPI, WebSockets, React, TypeScript, Vite, Vitest, MLX Whisper, pyannote.audio, pywebview; integrates a Swift + ScreenCaptureKit helper</p>
+						<h4>How it's verified</h4>
+						<p>
+							Python tests cover track merging, the recording state machine, the
+							recorder protocol and every API endpoint, using a fake recorder
+							and stubbed transcription. The UI has Vitest + Testing Library
+							tests.
+						</p>
+						<h4>Limitation</h4>
+						<p>
+							macOS 15+ on Apple Silicon only, so most visitors can't install it.
+							Transcription runs after the call, not live, and labels on the
+							other side can slip when people talk over each other. Recording
+							laws vary; let people know before you record.
+						</p>
+					</div>
+					<div class="card-links">
+						<a href="https://github.com/BobbyJoeCool/ScribeIQ" target="_blank" rel="noopener noreferrer" class="repo-card"><h5>ScribeIQ source</h5></a>
+					</div>
 					<div class="project-gallery" aria-label="ScribeIQ screenshots">
 						<button type="button" class="gallery-thumb" data-full="Assets/projects/scribeiq/recording.webp" data-caption="ScribeIQ: Recording a call with live level meters for You and Them">
-							<img src="Assets/projects/scribeiq/recording-thumb.webp" alt="Recording a call with live level meters for You and Them" loading="lazy" />
+							<img src="Assets/projects/scribeiq/recording-thumb.webp" alt="Recording a call with live level meters for You and Them" width="520" height="325" loading="lazy" />
 						</button>
 						<button type="button" class="gallery-thumb" data-full="Assets/projects/scribeiq/transcript.webp" data-caption="ScribeIQ: Speaker-labeled transcript with timestamps and export options">
-							<img src="Assets/projects/scribeiq/transcript-thumb.webp" alt="Speaker-labeled transcript with timestamps and export options" loading="lazy" />
+							<img src="Assets/projects/scribeiq/transcript-thumb.webp" alt="Speaker-labeled transcript with timestamps and export options" width="520" height="325" loading="lazy" />
 						</button>
 						<button type="button" class="gallery-thumb" data-full="Assets/projects/scribeiq/record-idle.webp" data-caption="ScribeIQ: The Record tab before starting, with the app picker and session settings">
-							<img src="Assets/projects/scribeiq/record-idle-thumb.webp" alt="Record tab with the app picker and session settings" loading="lazy" />
+							<img src="Assets/projects/scribeiq/record-idle-thumb.webp" alt="Record tab with the app picker and session settings" width="520" height="325" loading="lazy" />
 						</button>
 						<button type="button" class="gallery-thumb" data-full="Assets/projects/scribeiq/history.webp" data-caption="ScribeIQ: History of past recordings and transcripts">
-							<img src="Assets/projects/scribeiq/history-thumb.webp" alt="History of past recordings and transcripts" loading="lazy" />
+							<img src="Assets/projects/scribeiq/history-thumb.webp" alt="History of past recordings and transcripts" width="520" height="325" loading="lazy" />
 						</button>
 						<button type="button" class="gallery-thumb" data-full="Assets/projects/scribeiq/file-tab.webp" data-caption="ScribeIQ: Transcribing an existing audio file">
-							<img src="Assets/projects/scribeiq/file-tab-thumb.webp" alt="Transcribing an existing audio file" loading="lazy" />
+							<img src="Assets/projects/scribeiq/file-tab-thumb.webp" alt="Transcribing an existing audio file" width="520" height="325" loading="lazy" />
 						</button>
 					</div>
 				</article>
 
-				<!-- Voicewright -->
-				<article class="language-card project-card">
-					<div class="tech-stack">
-						<img src="Assets/icons/Language-Icons/Python.png" alt="Python" title="Python" />
-						<img src="Assets/icons/Language-Icons/FastAPI.png" alt="FastAPI" title="FastAPI" />
-						<img src="Assets/icons/Language-Icons/JavaScript.png" alt="JavaScript" title="JavaScript" />
-						<img src="Assets/icons/Language-Icons/HTML5.png" alt="HTML" title="HTML" />
-						<img src="Assets/icons/Language-Icons/CSS3.png" alt="CSS" title="CSS" />
+				<!-- Moffat Bay Marina -->
+				<article class="language-card project-card" id="moffat-bay">
+					<div class="tech-stack" aria-hidden="true">
+						<img src="Assets/icons/Language-Icons/Java.png" alt="" title="Java / Jakarta EE" width="52" height="52" loading="lazy" />
+						<img src="Assets/icons/Language-Icons/JSP.png" alt="" title="JSP / JSTL" width="52" height="52" loading="lazy" />
+						<img src="Assets/icons/Tech-Icons/MySQL.png" alt="" title="MySQL" width="52" height="52" loading="lazy" />
+						<img src="Assets/icons/Tech-Icons/Azure.png" alt="" title="Azure App Service" width="52" height="52" loading="lazy" />
 					</div>
-					<h2>Voicewright</h2>
-					<p class="project-status">
-						<span class="status-badge active">Active Development</span>
-						v1.0.0 · Runs locally on a Mac · Still improving
-					</p>
-					<a
-						href="https://github.com/BobbyJoeCool/Voicewright"
-						target="_blank"
-						rel="noopener noreferrer"
-						class="repo-card"
-					>
-						<p>
-							A local text-to-speech app that designs custom AI voices from a
-							text description, then turns a tagged script into a finished audio
-							file mixing emotions and sound effects, for example
-							<code>[angry] I hate you! {explosion}</code>. Everything runs on
-							the Mac with free, open-source models; the only network use is
-							searching Freesound to fill the local sound library. A FastAPI
-							backend runs model jobs in the background and serves a local web
-							page.
-						</p>
-						<h5>Highlights</h5>
-						<ul>
-							<li>Voice design with Qwen3-TTS VoiceDesign: a neutral clip plus one preset per emotion</li>
-							<li>Speech and voice cloning with Chatterbox on MLX</li>
-							<li>Review and edit Voices take by take: regenerate, retune exaggeration and cfg, or roll back to an earlier take</li>
-							<li>Sound library: search Freesound, preview, and add sounds with their credit and license</li>
-							<li>Script editor with tag highlighting and a check that reports every problem at once, then renders one WAV with even volume</li>
-							<li>Saved Outputs keep a record of the Script, Voice, values, and every sound's credit</li>
-							<li>Real-model smoke test runs offline; QA pass checked all 61 user stories</li>
-						</ul>
-						<span class="repo-link">View on GitHub →</span>
-					</a>
-
-					<div class="project-gallery" aria-label="Voicewright screenshots">
-						<button type="button" class="gallery-thumb" data-full="Assets/projects/voicewright/scripts-area.webp" data-caption="Voicewright: The Scripts area: a tagged Script with an emotion change and a sound, and the finished Output playing">
-							<img src="Assets/projects/voicewright/scripts-area-thumb.webp" alt="Scripts area with a tagged script and the finished output playing" loading="lazy" />
-						</button>
-					</div>
-				</article>
-
-				<!-- FitIQ -->
-				<article class="language-card project-card">
-					<div class="tech-stack">
-						<img src="Assets/icons/Language-Icons/TypeScript.png" alt="TypeScript" title="TypeScript" />
-						<img src="Assets/icons/Language-Icons/React.png" alt="React" title="React" />
-						<img src="Assets/icons/Tech-Icons/Vite.svg" alt="Vite" title="Vite" />
-						<img src="Assets/icons/Language-Icons/SQL.png" alt="Postgres" title="Supabase (Auth + Postgres)" />
-						<img src="Assets/icons/Tech-Icons/Playwright.svg" alt="Playwright" title="Playwright" />
-						<img src="Assets/icons/Tech-Icons/GitHubActions.svg" alt="GitHub Actions" title="GitHub Actions" />
-					</div>
-					<h2>FitIQ</h2>
+					<h3>Moffat Bay Marina</h3>
 					<p class="project-status">
 						<span class="status-badge live">Live</span>
-						v1.5.5 · Demo account live
+						Team capstone (CSD 460) · Team lead
 					</p>
-					<a
-						href="https://github.com/BobbyJoeCool/FitIQ"
-						target="_blank"
-						rel="noopener noreferrer"
-						class="repo-card"
-					>
+					<div class="case-study">
+						<h4>Problem</h4>
 						<p>
-							A private workout and progress tracker for a household of 2 to 4
-							people. Plan routines, log every set on your phone as you go, and
-							track weight, body measurements, and lifts over time. It is an
-							installable PWA that costs $0 a month to run: React and Vite on
-							GitHub Pages, talking straight to Supabase Auth and Postgres, with
-							privacy enforced in the database through Row Level Security on
-							every table.
+							The capstone brief: a booking site for a fictional marina on
+							Joviedsa Island where visitors register, sign in, and reserve one
+							of 72 slips across three docks.
 						</p>
-						<h5>Highlights</h5>
+						<h4>My role</h4>
+						<p>Team lead on a team of four.</p>
+						<h4>What I built</h4>
 						<ul>
-							<li>876-exercise library from Free Exercise DB, searchable by muscle, equipment, and difficulty</li>
-							<li>Reusable plans with target sets, reps, hold time, and rest, shareable and importable as plan files</li>
-							<li>One-handed set logging with "last time" prefill, rest and hold timers with sound and voice cues, and per-set saves</li>
-							<li>Workout history, personal records, and weight and measurement charts</li>
-							<li>Two-account RLS test on every table, plus Playwright E2E tests in CI against a local Supabase stack</li>
+							<li><strong>Process:</strong> set up page contracts and role rotation so four people could build pages in parallel.</li>
+							<li><strong>Front end:</strong> Registration, Reservation (Book a Slip), and My Fleet.</li>
+							<li><strong>Back end:</strong> Login, and Edit User Info / Register a Boat.</li>
+							<li><strong>Database:</strong> we designed the first version together; after that I owned all database management, including keeping the ERD current.</li>
+							<li><strong>Deployment:</strong> Azure App Service with Azure Database for MySQL.</li>
 						</ul>
-						<span class="repo-link">View on GitHub →</span>
-					</a>
-
-					<a
-						href="https://fitiq.bobbyjoecool.dev"
-						target="_blank"
-						rel="noopener noreferrer"
-						class="repo-card pages"
-					>
-						<h4>Live Demo on GitHub Pages</h4>
-					</a>
-
-					<div class="project-gallery" aria-label="FitIQ screenshots">
-						<button type="button" class="gallery-thumb" data-full="Assets/projects/fitiq/demo.webp" data-caption="FitIQ: Demo: choosing Leg Day, logging two sets with the rest timer, moving to the next exercise, and opening Progress">
-							<img src="Assets/projects/fitiq/demo-thumb.webp" alt="Animated demo of logging a workout" loading="lazy" />
-						</button>
-						<button type="button" class="gallery-thumb" data-full="Assets/projects/fitiq/dashboard.webp" data-caption="FitIQ: Dashboard with the next workout, this week, and latest weight">
-							<img src="Assets/projects/fitiq/dashboard-thumb.webp" alt="Dashboard with the next workout, this week, and latest weight" loading="lazy" />
-						</button>
-						<button type="button" class="gallery-thumb" data-full="Assets/projects/fitiq/workout.webp" data-caption="FitIQ: Logging a set: Barbell Squat with last time, set 2 of 3, and the rest timer">
-							<img src="Assets/projects/fitiq/workout-thumb.webp" alt="Barbell Squat set logging with the rest timer" loading="lazy" />
-						</button>
-						<button type="button" class="gallery-thumb" data-full="Assets/projects/fitiq/progress.webp" data-caption="FitIQ: Weight over time chart for 90 days">
-							<img src="Assets/projects/fitiq/progress-thumb.webp" alt="Weight over time chart" loading="lazy" />
-						</button>
-						<button type="button" class="gallery-thumb" data-full="Assets/projects/fitiq/library.webp" data-caption="FitIQ: Exercise library filtered to barbell quadriceps exercises">
-							<img src="Assets/projects/fitiq/library-thumb.webp" alt="Exercise library with filters" loading="lazy" />
-						</button>
-						<button type="button" class="gallery-thumb" data-full="Assets/projects/fitiq/plan.webp" data-caption="FitIQ: Plan builder: Leg Day with targets and rest">
-							<img src="Assets/projects/fitiq/plan-thumb.webp" alt="Leg Day plan with targets and rest" loading="lazy" />
-						</button>
-					</div>
-				</article>
-
-				<!-- ForkIQ -->
-				<article class="language-card project-card">
-					<div class="tech-stack">
-						<img src="Assets/icons/Language-Icons/TypeScript.png" alt="TypeScript" title="TypeScript" />
-						<img src="Assets/icons/Language-Icons/React.png" alt="React" title="React" />
-						<img src="Assets/icons/Tech-Icons/Vite.svg" alt="Vite" title="Vite / Vitest" />
-						<img src="Assets/icons/Tech-Icons/Azure.png" alt="Azure" title="Azure Static Web Apps / Functions" />
-						<img src="Assets/icons/Language-Icons/SQL.png" alt="Postgres" title="Neon Postgres" />
-						<img src="Assets/icons/Tech-Icons/GitHubActions.svg" alt="GitHub Actions" title="GitHub Actions" />
-					</div>
-					<h2>ForkIQ</h2>
-					<p class="project-status">
-						<span class="status-badge wip">Early Development</span>
-						Foundation built · Working toward v1
-					</p>
-					<div class="repo-card private-repo">
-						<h4>Nutrition Tracker <span class="wip-badge">PRIVATE REPO</span></h4>
+						<h4>Stack</h4>
+						<p>Java, Jakarta EE, JSP, JSTL, MySQL, Maven, Apache Tomcat, Azure App Service</p>
+						<h4>How it's verified</h4>
 						<p>
-							A personal nutrition and supplement tracker, the food-side
-							companion to FitIQ. Log meals from a USDA FoodData Central search
-							or an Open Food Facts barcode scan with the phone's camera, track
-							water, and record vitamin and medication doses against a daily
-							regimen, all on one Day screen with calorie, macro, and water
-							goals. Designed to cost $0 a month on Azure Static Web Apps and
-							Neon Postgres, with passkey login and a separate public demo that
-							can never reach the real data.
+							JUnit tests for the shared validation rules run on every Maven
+							build, and each page has a written functional test plan with
+							results. We promoted builds through separate Dev, QA and
+							Production environments.
 						</p>
-						<h5>So Far</h5>
-						<ul>
-							<li>npm workspaces monorepo: a pure TypeScript core, an Azure Functions API, and a React + Vite web app</li>
-							<li>Database migrations tested on PGlite, with a migrate script that refuses edited migrations and rolls back cleanly</li>
-							<li>Lint and build guards that keep the web app from importing the core past its contract</li>
-							<li>Typecheck, lint, test, and build on every pull request in GitHub Actions</li>
-							<li>Domain glossary and ADRs written before the features</li>
-						</ul>
+						<h4>Limitation</h4>
+						<p>
+							It's a team project: the pages not listed above were built by my
+							teammates. The Azure instance sleeps when idle, so the first visit
+							can take up to a minute to load.
+						</p>
+					</div>
+					<div class="card-links">
+						<a href="https://moffatbay-blueteam-ac9638.azurewebsites.net/" target="_blank" rel="noopener noreferrer" class="repo-card pages"><h5>Visit Moffat Bay Marina</h5></a>
+						<a href="https://github.com/BobbyJoeCool/csd460-blueteam" target="_blank" rel="noopener noreferrer" class="repo-card"><h5>Moffat Bay team repo</h5></a>
+					</div>
+					<div class="project-gallery" aria-label="Moffat Bay Marina screenshots">
+						<button type="button" class="gallery-thumb" data-full="Assets/projects/moffat-bay/home.webp" data-caption="Moffat Bay Marina: Home page with the Book a Slip call to action">
+							<img src="Assets/projects/moffat-bay/home-thumb.webp" alt="Home page with the Book a Slip call to action" width="520" height="325" loading="lazy" />
+						</button>
+						<button type="button" class="gallery-thumb" data-full="Assets/projects/moffat-bay/register.webp" data-caption="Moffat Bay Marina: Account registration form with live password rules">
+							<img src="Assets/projects/moffat-bay/register-thumb.webp" alt="Account registration form with live password rules" width="520" height="325" loading="lazy" />
+						</button>
+						<button type="button" class="gallery-thumb" data-full="Assets/projects/moffat-bay/reservation.webp" data-caption="Moffat Bay Marina: Reserve Your Slip page, prompting the visitor to sign in">
+							<img src="Assets/projects/moffat-bay/reservation-thumb.webp" alt="Reserve Your Slip page, prompting the visitor to sign in" width="520" height="325" loading="lazy" />
+						</button>
+						<button type="button" class="gallery-thumb" data-full="Assets/projects/moffat-bay/about.webp" data-caption="Moffat Bay Marina: About page for the marina">
+							<img src="Assets/projects/moffat-bay/about-thumb.webp" alt="About page for the marina" width="520" height="325" loading="lazy" />
+						</button>
 					</div>
 				</article>
 
 				<!-- Family Passport Map -->
-				<article class="language-card project-card">
-					<div class="tech-stack">
-						<img src="Assets/icons/Language-Icons/TypeScript.png" alt="TypeScript" title="TypeScript" />
-						<img src="Assets/icons/Language-Icons/React.png" alt="React" title="React" />
-						<img src="Assets/icons/Tech-Icons/Vite.svg" alt="Vite" title="Vite" />
-						<img src="Assets/icons/Tech-Icons/Tailwind.svg" alt="Tailwind CSS" title="Tailwind CSS" />
-						<img src="Assets/icons/Language-Icons/NodeJS.png" alt="Node.js" title="Node.js / Express" />
-						<img src="Assets/icons/Tech-Icons/Prisma.png" alt="Prisma" title="Prisma" />
-						<img src="Assets/icons/Tech-Icons/SQLite.png" alt="SQLite" title="SQLite" />
-						<img src="Assets/icons/Tech-Icons/Azure.png" alt="Azure" title="Azure App Service" />
+				<article class="language-card project-card" id="family-passport-map">
+					<div class="tech-stack" aria-hidden="true">
+						<img src="Assets/icons/Language-Icons/TypeScript.png" alt="" title="TypeScript" width="52" height="52" loading="lazy" />
+						<img src="Assets/icons/Language-Icons/React.png" alt="" title="React" width="52" height="52" loading="lazy" />
+						<img src="Assets/icons/Tech-Icons/Tailwind.svg" alt="" title="Tailwind CSS" width="52" height="52" loading="lazy" />
+						<img src="Assets/icons/Language-Icons/NodeJS.png" alt="" title="Node.js / Express" width="52" height="52" loading="lazy" />
+						<img src="Assets/icons/Tech-Icons/Prisma.png" alt="" title="Prisma" width="52" height="52" loading="lazy" />
+						<img src="Assets/icons/Tech-Icons/SQLite.png" alt="" title="SQLite" width="52" height="52" loading="lazy" />
+						<img src="Assets/icons/Tech-Icons/Azure.png" alt="" title="Azure App Service" width="52" height="52" loading="lazy" />
 					</div>
-					<h2>Family Passport Map</h2>
+					<h3>Family Passport Map</h3>
 					<p class="project-status">
 						<span class="status-badge live">Live</span>
-						v2.3.0 · Microsoft sign-in and private accounts
+						v2.3.0 · Solo project
 					</p>
-					<a
-						href="https://github.com/BobbyJoeCool/FamilyPassportMap"
-						target="_blank"
-						rel="noopener noreferrer"
-						class="repo-card"
-					>
+					<div class="case-study">
+						<h4>Problem</h4>
 						<p>
-							A family-friendly web app for tracking which places you and your
-							family have visited: all 50 US states, plus 195 countries on a
-							world map you explore one continent at a time. Each family member
-							gets their own color and profile picture, and their visits are
-							tracked independently. Installable as a PWA for phone, tablet, and
-							desktop.
+							My family wanted to see who has been to which states and
+							countries, on a phone or a laptop, without anyone else seeing their
+							photos or travel.
 						</p>
-						<h5>Highlights</h5>
+						<h4>My role</h4>
+						<p>Solo: design, build, tests and deployment.</p>
+						<h4>What I built</h4>
 						<ul>
-							<li>Interactive US and world maps: click a state or country to mark it visited</li>
-							<li>Compare view for side-by-side family member maps</li>
-							<li>List view with profile-picture icons and "n/50 states" and "n/195 countries" counters</li>
-							<li>Microsoft sign-in with private, per-account People (up to 10 per account)</li>
-							<li>Next up: Link and Join, so families can share and manage People together</li>
+							<li>Interactive US and world maps (195 countries, one continent at a time); click a place to mark it visited for the selected person.</li>
+							<li>A color and profile picture per person, "n/50 states" and "n/195 countries" counters, a side-by-side Compare view, and a List view.</li>
+							<li>Microsoft sign-in with server-side sessions. Each account sees only the People it owns (up to 10), and photos are shrunk to small avatars served only to their owner.</li>
+							<li>Installable as a PWA on phone, tablet and desktop.</li>
 						</ul>
-						<span class="repo-link">View on GitHub →</span>
-					</a>
-
-					<a
-						href="https://family-passport-map.azurewebsites.net/"
-						target="_blank"
-						rel="noopener noreferrer"
-						class="repo-card pages"
-					>
-						<h4>Live Site on Azure App Service</h4>
-					</a>
-
+						<h4>Stack</h4>
+						<p>React, TypeScript, Vite, Tailwind CSS, Node.js, Express, Prisma, SQLite, Azure App Service</p>
+						<h4>How it's verified</h4>
+						<p>
+							Server tests for sign-in, ownership checks, private photos, visits
+							and account deletion.
+						</p>
+						<h4>Limitation</h4>
+						<p>
+							You need a Microsoft account to sign in, and there's no demo
+							account yet, so the screenshots are the quickest look. Sharing
+							People between accounts (Link and Join) is next.
+						</p>
+					</div>
+					<p class="demo-login">
+						Sign-in required (Microsoft account). A demo account is coming; the
+						screenshots below show the app.
+					</p>
+					<div class="card-links">
+						<a href="https://family-passport-map.azurewebsites.net/" target="_blank" rel="noopener noreferrer" class="repo-card pages"><h5>Visit Family Passport Map</h5></a>
+						<a href="https://github.com/BobbyJoeCool/FamilyPassportMap" target="_blank" rel="noopener noreferrer" class="repo-card"><h5>Family Passport Map source</h5></a>
+					</div>
 					<div class="project-gallery" aria-label="Family Passport Map screenshots">
 						<button type="button" class="gallery-thumb" data-full="Assets/projects/family-passport-map/us-map.webp" data-caption="Family Passport Map: US map with visited states colored by family member">
-							<img src="Assets/projects/family-passport-map/us-map-thumb.webp" alt="US map with visited states colored by family member" loading="lazy" />
+							<img src="Assets/projects/family-passport-map/us-map-thumb.webp" alt="US map with visited states colored by family member" width="520" height="325" loading="lazy" />
 						</button>
 						<button type="button" class="gallery-thumb" data-full="Assets/projects/family-passport-map/world-map.webp" data-caption="Family Passport Map: World map, explored one continent at a time">
-							<img src="Assets/projects/family-passport-map/world-map-thumb.webp" alt="World map, explored one continent at a time" loading="lazy" />
+							<img src="Assets/projects/family-passport-map/world-map-thumb.webp" alt="World map, explored one continent at a time" width="520" height="325" loading="lazy" />
 						</button>
 						<button type="button" class="gallery-thumb" data-full="Assets/projects/family-passport-map/us-compare.webp" data-caption="Family Passport Map: Compare view with family members' maps side by side">
-							<img src="Assets/projects/family-passport-map/us-compare-thumb.webp" alt="Compare view with family members' maps side by side" loading="lazy" />
+							<img src="Assets/projects/family-passport-map/us-compare-thumb.webp" alt="Compare view with family members' maps side by side" width="520" height="325" loading="lazy" />
 						</button>
 						<button type="button" class="gallery-thumb" data-full="Assets/projects/family-passport-map/us-list.webp" data-caption="Family Passport Map: List view with profile-picture icons and state counters">
-							<img src="Assets/projects/family-passport-map/us-list-thumb.webp" alt="US list view" loading="lazy" />
+							<img src="Assets/projects/family-passport-map/us-list-thumb.webp" alt="US list view" width="520" height="325" loading="lazy" />
 						</button>
 						<button type="button" class="gallery-thumb" data-full="Assets/projects/family-passport-map/people.webp" data-caption="Family Passport Map: People page for managing family members">
-							<img src="Assets/projects/family-passport-map/people-thumb.webp" alt="People page" loading="lazy" />
+							<img src="Assets/projects/family-passport-map/people-thumb.webp" alt="People page" width="520" height="325" loading="lazy" />
 						</button>
 						<button type="button" class="gallery-thumb" data-full="Assets/projects/family-passport-map/mobile.webp" data-caption="Family Passport Map: Installed as a PWA on a phone">
-							<img src="Assets/projects/family-passport-map/mobile-thumb.webp" alt="Installed as a PWA on a phone" loading="lazy" />
+							<img src="Assets/projects/family-passport-map/mobile-thumb.webp" alt="Installed as a PWA on a phone" width="520" height="325" loading="lazy" />
 						</button>
 					</div>
-				</article>
-
-				<!-- Home Server (no repo) -->
-				<article class="language-card project-card">
-					<div class="tech-stack">
-						<img src="Assets/icons/Tech-Icons/Ubuntu.svg" alt="Ubuntu Server" title="Ubuntu Server" class="icon-badged" />
-						<img src="Assets/icons/Tech-Icons/Tailscale.svg" alt="Tailscale" title="Tailscale" class="icon-badged" />
-						<img src="Assets/icons/Tech-Icons/Cloudflare.svg" alt="Cloudflare" title="Cloudflare" class="icon-badged" />
-						<img src="Assets/icons/Language-Icons/Bash.png" alt="Bash" title="Bash" />
-					</div>
-					<h2>MacBook Home Server</h2>
-					<p class="project-status">
-						<span class="status-badge live">Running</span>
-						Personal infrastructure · No repository
-					</p>
-					<div class="repo-card private-repo">
-						<p>
-							An old MacBook Pro given a second life as an always-on home
-							server. I wiped macOS, installed Ubuntu Server, and configured
-							the machine to run headless from the command line, so it now
-							hosts services for the house instead of sitting in a drawer.
-						</p>
-						<h5>Highlights</h5>
-						<ul>
-							<li>Clean install of Ubuntu Server on Apple laptop hardware, run headless over SSH</li>
-							<li>Tailscale mesh VPN for secure remote access from anywhere, with no open router ports</li>
-							<li>Cloudflare for DNS and putting selected services online safely</li>
-							<li>Linux administration from the shell: users, packages, services, and updates</li>
-						</ul>
-					</div>
-				</article>
-
-				<!-- TLDR Reader -->
-				<article class="language-card project-card">
-					<div class="tech-stack">
-						<img src="Assets/icons/Language-Icons/JavaScript.png" alt="JavaScript" title="JavaScript" />
-						<img src="Assets/icons/Language-Icons/React.png" alt="React" title="React" />
-						<img src="Assets/icons/Tech-Icons/Vite.svg" alt="Vite" title="Vite" />
-						<img src="Assets/icons/Language-Icons/NodeJS.png" alt="Node.js" title="Node.js" />
-						<img src="Assets/icons/Tech-Icons/Azure.png" alt="Azure" title="Azure Static Web Apps / Functions" />
-						<img src="Assets/icons/Tech-Icons/CosmosDB.png" alt="Azure Cosmos DB" title="Azure Cosmos DB" />
-						<img src="Assets/icons/Tech-Icons/GitHubActions.svg" alt="GitHub Actions" title="GitHub Actions" />
-					</div>
-					<h2>TLDR Reader</h2>
-					<p class="project-status">
-						<span class="status-badge live">Live</span>
-						v2.1.0 · New articles ingested daily
-					</p>
-					<a
-						href="https://github.com/BobbyJoeCool/TLDR-Reader"
-						target="_blank"
-						rel="noopener noreferrer"
-						class="repo-card"
-					>
-						<p>
-							A personal web app for reading, flagging, and permanently saving
-							articles from the TLDR newsletter, built for daily use on mobile
-							and desktop. Article content is scraped from all 14 TLDR editions
-							by a deterministic Node.js pipeline and published as static JSON,
-							while per-user state lives in Azure Cosmos DB behind Microsoft
-							sign-in.
-						</p>
-						<h5>Highlights</h5>
-						<ul>
-							<li>Browse This Week and Last Week by day and newsletter edition</li>
-							<li>Archive calendar: browse any past date with available articles</li>
-							<li>Flag articles to a Reading List; star to permanently save them</li>
-							<li>Microsoft (Azure AD) authentication with per-user cloud state</li>
-							<li>Planned: edition and date filters and keyword search for Saved Articles</li>
-						</ul>
-						<span class="repo-link">View on GitHub →</span>
-					</a>
-
-					<a
-						href="https://happy-bush-0f619981e.7.azurestaticapps.net"
-						target="_blank"
-						rel="noopener noreferrer"
-						class="repo-card pages"
-					>
-						<h4>Live Site on Azure Static Web Apps</h4>
-					</a>
-
-					<div class="project-gallery" aria-label="TLDR Reader screenshots">
-						<button type="button" class="gallery-thumb" data-full="Assets/projects/tldr-reader/this-week.webp" data-caption="TLDR Reader: This Week: day and edition navigation with flag and save actions on every article">
-							<img src="Assets/projects/tldr-reader/this-week-thumb.webp" alt="This Week view with day and edition navigation" loading="lazy" />
-						</button>
-						<button type="button" class="gallery-thumb" data-full="Assets/projects/tldr-reader/reading-list.webp" data-caption="TLDR Reader: Reading List: flagged articles with read/remove actions">
-							<img src="Assets/projects/tldr-reader/reading-list-thumb.webp" alt="Reading List of flagged articles" loading="lazy" />
-						</button>
-						<button type="button" class="gallery-thumb" data-full="Assets/projects/tldr-reader/archive.webp" data-caption="TLDR Reader: Archive: pick any past date from the calendar">
-							<img src="Assets/projects/tldr-reader/archive-thumb.webp" alt="Archive with a calendar date picker" loading="lazy" />
-						</button>
-						<button type="button" class="gallery-thumb" data-full="Assets/projects/tldr-reader/saved.webp" data-caption="TLDR Reader: Saved Articles, grouped by edition">
-							<img src="Assets/projects/tldr-reader/saved-thumb.webp" alt="Saved Articles grouped by edition" loading="lazy" />
-						</button>
-						<button type="button" class="gallery-thumb" data-full="Assets/projects/tldr-reader/landing.webp" data-caption="TLDR Reader: Landing hub with a quick usage guide">
-							<img src="Assets/projects/tldr-reader/landing-thumb.webp" alt="Landing page" loading="lazy" />
-						</button>
-						<button type="button" class="gallery-thumb" data-full="Assets/projects/tldr-reader/mobile-this-week.webp" data-caption="TLDR Reader: This Week on a phone">
-							<img src="Assets/projects/tldr-reader/mobile-this-week-thumb.webp" alt="This Week on a phone" loading="lazy" />
-						</button>
-						<button type="button" class="gallery-thumb" data-full="Assets/projects/tldr-reader/mobile-landing.webp" data-caption="TLDR Reader: Landing page on a phone">
-							<img src="Assets/projects/tldr-reader/mobile-landing-thumb.webp" alt="Landing page on a phone" loading="lazy" />
-						</button>
-					</div>
-				</article>
-
-				<!-- CheatSheets -->
-				<article class="language-card project-card">
-					<div class="tech-stack">
-						<img src="Assets/icons/Language-Icons/HTML5.png" alt="HTML" title="HTML" />
-						<img src="Assets/icons/Language-Icons/CSS3.png" alt="CSS" title="CSS" />
-						<img src="Assets/icons/Language-Icons/JavaScript.png" alt="JavaScript" title="JavaScript" />
-					</div>
-					<h2>CheatSheets</h2>
-					<p class="project-status">
-						<span class="status-badge active">Active</span>
-						4,036 sheets across 70 collections
-					</p>
-					<a
-						href="https://github.com/BobbyJoeCool/CheatSheets"
-						target="_blank"
-						rel="noopener noreferrer"
-						class="repo-card"
-					>
-						<p>
-							A curated library of single-page technical reference sheets for
-							programming languages, CS concepts, and developer tools. Each
-							sheet is formatted to fit on an 8.5" × 11" page with a dark mode
-							default and a print-optimized light mode. A print aggregator page
-							uses fetch() and DOMParser to inject multiple sheets and generate
-							PDFs directly in the browser.
-						</p>
-						<h5>Reference Guides</h5>
-						<ul>
-							<li><strong>Concepts &amp; Tools:</strong> Concepts (104), Agentic Coding (73), Bitwise (23), RegEx (25), Gradle (27), VS Code (29)</li>
-							<li><strong>Testing:</strong> Software Testing (40), Playwright (67), pytest (25), Jest &amp; Vitest (27), JUnit (25)</li>
-							<li><strong>Command Line Interface:</strong> Git (36), zsh (27), Bash (27), PowerShell (42), Ubuntu (49)</li>
-							<li><strong>Python:</strong> Python (93), Tkinter (62), Django (70), FastAPI &amp; Flask (60)</li>
-							<li><strong>Java:</strong> Java (136), Maven (24), IntelliJ IDEA (32), Jakarta EE (40), JSP (34), Spring (69), Swing (62), Kotlin (95)</li>
-							<li><strong>C Family:</strong> C (98), C++ (125), C# (130)</li>
-							<li><strong>Languages:</strong> Go (112), Ruby (115), Ruby on Rails (78), Swift (108), SwiftUI (59), Rust (107)</li>
-							<li><strong>Mainframe:</strong> COBOL (64), JCL &amp; z/OS (32)</li>
-							<li><strong>JavaScript / TypeScript:</strong> JavaScript &amp; TypeScript (133), React (98), React Native (72)</li>
-							<li><strong>Web Design:</strong> HTML (56), CSS (77), CSS Systems (48), PHP (133)</li>
-							<li><strong>Server &amp; Full-Stack:</strong> HTTP &amp; REST APIs (30), Node.js (70), Express (57), Vite (39), Next.js (60)</li>
-							<li><strong>Databases:</strong> SQL (82), NoSQL (61), Prisma (34)</li>
-							<li><strong>Markup &amp; Notation:</strong> Config Formats (22), Markdown (22), Mermaid (46), JSON (15), XML (16), YAML (14)</li>
-							<li><strong>Cloud Services:</strong> Cloud Foundations (26), AWS (42), Azure (42), Google Cloud (42)</li>
-							<li><strong>DevOps &amp; Containers:</strong> GitHub (93), Docker (31), Kubernetes (25)</li>
-							<li><strong>Office Tools:</strong> Microsoft 365 (39), Google Workspace (32), Apple iWork &amp; Mail (28)</li>
-						</ul>
-						<span class="repo-link">View on GitHub →</span>
-					</a>
-
-					<a
-						href="https://cheatsheets.bobbyjoecool.dev"
-						target="_blank"
-						rel="noopener noreferrer"
-						class="repo-card pages"
-					>
-						<h4>Live Site on GitHub Pages</h4>
-					</a>
-
-					<div class="project-gallery" aria-label="CheatSheets screenshots">
-						<button type="button" class="gallery-thumb" data-full="Assets/projects/cheatsheets/index.webp" data-caption="CheatSheets: Landing page: collections grouped by category, each with a sheet count">
-							<img src="Assets/projects/cheatsheets/index-thumb.webp" alt="Landing page with collections grouped by category" loading="lazy" />
-						</button>
-						<button type="button" class="gallery-thumb" data-full="Assets/projects/cheatsheets/sheet-git.webp" data-caption="CheatSheets: A sheet on screen (dark mode): Git “Committing”">
-							<img src="Assets/projects/cheatsheets/sheet-git-thumb.webp" alt="Git Committing sheet in dark mode" loading="lazy" />
-						</button>
-						<button type="button" class="gallery-thumb" data-full="Assets/projects/cheatsheets/sheet-git-print.webp" data-caption="CheatSheets: The same sheet at print time (light mode, 8.5″ × 11″)">
-							<img src="Assets/projects/cheatsheets/sheet-git-print-thumb.webp" alt="Git Committing sheet in print mode" loading="lazy" />
-						</button>
-						<button type="button" class="gallery-thumb" data-full="Assets/projects/cheatsheets/collection.webp" data-caption="CheatSheets: Per-collection table of contents with Print All">
-							<img src="Assets/projects/cheatsheets/collection-thumb.webp" alt="Python collection table of contents" loading="lazy" />
-						</button>
-						<button type="button" class="gallery-thumb" data-full="Assets/projects/cheatsheets/sheet-docker.webp" data-caption="CheatSheets: Another sheet: Docker architecture">
-							<img src="Assets/projects/cheatsheets/sheet-docker-thumb.webp" alt="Docker introduction sheet" loading="lazy" />
-						</button>
-						<button type="button" class="gallery-thumb" data-full="Assets/projects/cheatsheets/mobile.webp" data-caption="CheatSheets: Landing page on a phone">
-							<img src="Assets/projects/cheatsheets/mobile-thumb.webp" alt="Landing page on a phone" loading="lazy" />
-						</button>
-					</div>
-				</article>
-
-				<!-- Animated Spells -->
-				<article class="language-card project-card">
-					<div class="tech-stack">
-						<img src="Assets/icons/Language-Icons/JavaScript.png" alt="JavaScript" title="JavaScript" />
-					</div>
-					<h2>Animated Spells</h2>
-					<p class="project-status">
-						<span class="status-badge wip">WIP</span>
-						v0.1.0 · Foundry VTT module
-					</p>
-					<a
-						href="https://github.com/BobbyJoeCool/AnimatedSpells"
-						target="_blank"
-						rel="noopener noreferrer"
-						class="repo-card"
-					>
-						<p>
-							A Foundry VTT module that automatically plays visual animations
-							when spells from the official D&amp;D 5.5e content packs are cast.
-							It intercepts spell rolls and plays matching JB2A animations:
-							projectiles fly from caster to target, area-of-effect templates
-							fill with animated effects, and self-targeted buffs pulse on the
-							caster's token. No manual macro setup required.
-						</p>
-						<h5>Highlights</h5>
-						<ul>
-							<li>Automatic spell-to-animation mapping via compendium UUIDs</li>
-							<li>Supports projectile, template, self, and emanation delivery</li>
-							<li>Covers five official content packs, each activating only when installed</li>
-							<li>Built on the Sequencer and JB2A animation APIs</li>
-						</ul>
-						<span class="repo-link">View on GitHub →</span>
-					</a>
-				</article>
-
-				<!-- Python Projects -->
-				<article class="language-card project-card">
-					<div class="tech-stack">
-						<img src="Assets/icons/Language-Icons/Python.png" alt="Python" title="Python" />
-						<img src="Assets/icons/Language-Icons/SQL.png" alt="SQL" title="SQL" />
-						<img src="Assets/icons/Tech-Icons/MySQL.png" alt="MySQL" title="MySQL" />
-					</div>
-					<h2>Python Projects</h2>
-					<p class="project-status">
-						<span class="status-badge paused">Last Updated Mar 2026</span>
-						Work Job Tracker 2.0
-					</p>
-					<a
-						href="https://github.com/BobbyJoeCool/Python-Projects"
-						target="_blank"
-						rel="noopener noreferrer"
-						class="repo-card"
-					>
-						<p>
-							More advanced Python projects for practicing Python and SQL. The
-							repo uses pre-commit formatting tools (Ruff and Black) so code
-							meets formatting standards before it is committed, along with
-							READMEs, version logs, and refactoring outlines that map out
-							planned improvements.
-						</p>
-						<h5>Included Projects</h5>
-						<ul>
-							<li>
-								Work Job Tracker 2.0 - a Tkinter app backed by MySQL that logs
-								hours worked per job function and reports percent time per
-								function, days since a function was last worked, and shift
-								summaries
-							</li>
-						</ul>
-						<span class="repo-link">View on GitHub →</span>
-					</a>
-				</article>
-
-				<!-- HTML Projects -->
-				<article class="language-card project-card">
-					<div class="tech-stack">
-						<img src="Assets/icons/Language-Icons/HTML5.png" alt="HTML" title="HTML" />
-						<img src="Assets/icons/Language-Icons/CSS3.png" alt="CSS" title="CSS" />
-						<img src="Assets/icons/Language-Icons/JavaScript.png" alt="JavaScript" title="JavaScript" />
-					</div>
-					<h2>HTML Projects</h2>
-					<p class="project-status">
-						<span class="status-badge paused">Last Updated Mar 2026</span>
-						v1.1 on GitHub Pages
-					</p>
-					<a
-						href="https://github.com/BobbyJoeCool/HTML-Projects"
-						target="_blank"
-						rel="noopener noreferrer"
-						class="repo-card"
-					>
-						<p>
-							A place for smaller projects to practice HTML, CSS, and JavaScript,
-							published together as a GitHub Pages site.
-						</p>
-						<h5>Included Projects</h5>
-						<ul>
-							<li>Online rendering of my book</li>
-							<li>Cribbage Scoring App</li>
-							<li>Fallout Terminal Hacking Helper App</li>
-						</ul>
-						<span class="repo-link">View on GitHub →</span>
-					</a>
-
-					<a
-						href="https://bobbyjoecool.github.io/HTML-Projects"
-						target="_blank"
-						rel="noopener noreferrer"
-						class="repo-card pages"
-					>
-						<h4>Live Site on GitHub Pages</h4>
-					</a>
-				</article>
-
-				<!-- Java Projects -->
-				<article class="language-card project-card">
-					<div class="tech-stack">
-						<img src="Assets/icons/Language-Icons/Java.png" alt="Java" title="Java" />
-					</div>
-					<h2>Java Projects</h2>
-					<p class="project-status">
-						<span class="status-badge paused">Last Updated Mar 2026</span>
-						Blackjack v1.0
-					</p>
-					<a
-						href="https://github.com/BobbyJoeCool/Java-Projects"
-						target="_blank"
-						rel="noopener noreferrer"
-						class="repo-card"
-					>
-						<p>
-							Java projects worked on outside of school, including "extra
-							exercises" taken from the course textbook.
-						</p>
-						<h5>Included Projects</h5>
-						<ul>
-							<li>Blackjack v1.0 - a console Blackjack game, documented with Javadocs</li>
-							<li>Book Exercises - extra practice problems from the textbook</li>
-							<li>Minesweeper - project outline and design diagram</li>
-						</ul>
-						<span class="repo-link">View on GitHub →</span>
-					</a>
-				</article>
-
-				<!-- Legacy Python Projects -->
-				<article class="language-card project-card">
-					<div class="tech-stack">
-						<img src="Assets/icons/Language-Icons/Python.png" alt="Python" title="Python" />
-					</div>
-					<h2>Legacy Python Projects</h2>
-					<p class="project-status">
-						<span class="status-badge archived">Archived</span>
-						Early work from Python for Programmers
-					</p>
-					<a
-						href="https://github.com/BobbyJoeCool/Legacy_Python_Projects"
-						target="_blank"
-						rel="noopener noreferrer"
-						class="repo-card"
-					>
-						<p>
-							Many of these projects were done or worked on during the Python
-							for Programmers course. They tend to be very rough and in some
-							cases unfinished, as I moved on from simpler programs to try more
-							advanced or ambitious projects.
-						</p>
-						<h5>Included Projects</h5>
-						<ul>
-							<li>Tkinter and GUI tests (from the Python course book)</li>
-							<li>Database programming exercises (from the Python course book)</li>
-							<li>Inventory Management System - an attempt to mimic the IMS we use at Target</li>
-							<li>FileSorter - practice manipulating files on the hard drive</li>
-							<li>BlackJack - the game Blackjack</li>
-							<li>Monkey Math Calculator - made for my kids (monkey math is number concatenation)</li>
-						</ul>
-						<span class="repo-link">View on GitHub →</span>
-					</a>
 				</article>
 			</section>
+
+			<!-- ===================== MORE APPS ===================== -->
+			<h2 class="group-heading" id="more-apps">More apps</h2>
+			<p class="group-intro">Finished or in-use apps that didn't make the featured list.</p>
+			<div class="expand-list two-up">
+				<details class="expand-card" id="dragonledger">
+					<summary>
+						<h3>DragonLedger</h3>
+						<p class="summary-meta"><span class="status-badge active">Active development</span> DatabaseApp v2.0.0</p>
+						<p>A desktop app for storing, searching and editing D&amp;D 5e and 5.5e content, packaged with Electron.</p>
+						<div class="badge-row" aria-hidden="true">
+							<img src="Assets/icons/Language-Icons/TypeScript.png" alt="" title="TypeScript" width="32" height="32" loading="lazy" />
+							<img src="Assets/icons/Language-Icons/React.png" alt="" title="React" width="32" height="32" loading="lazy" />
+							<img src="Assets/icons/Language-Icons/NodeJS.png" alt="" title="Node.js / Express" width="32" height="32" loading="lazy" />
+							<img src="Assets/icons/Tech-Icons/Prisma.png" alt="" title="Prisma" width="32" height="32" loading="lazy" />
+							<img src="Assets/icons/Tech-Icons/SQLite.png" alt="" title="SQLite" width="32" height="32" loading="lazy" />
+							<img src="Assets/icons/Tech-Icons/Electron.svg" alt="" title="Electron" width="32" height="32" loading="lazy" />
+						</div>
+					</summary>
+					<div class="expand-body">
+						<p>
+							Stores spells, classes, races, backgrounds, conditions, items,
+							monsters and feats. Content is bulk-imported from the Open5e API or
+							a compendium XML file, uploaded as JSON, or entered by hand, with
+							each import kept under its own named source that can be refreshed
+							on its own.
+						</p>
+						<h4>Highlights</h4>
+						<ul>
+							<li>Browse and filter 8 content types by source, edition and type-specific attributes</li>
+							<li>Every entry flagged as 5e or 5.5e, with an edition toggle on Browse (v2.0.0)</li>
+							<li>Open5e import with live progress over server-sent events</li>
+							<li>Additive-only compendium import that never overwrites edited entries</li>
+							<li>Homebrew copies and in-place corrections, with shared Zod validation on client and server</li>
+						</ul>
+						<h4>Stack</h4>
+						<p>React, TypeScript, Vite, Tailwind CSS, Node.js, Express, Prisma, SQLite, Zod, Electron, Playwright</p>
+						<p class="card-links"><a href="https://github.com/BobbyJoeCool/DragonLedger_DatabaseApp" target="_blank" rel="noopener noreferrer">DragonLedger source →</a></p>
+						<div class="project-gallery" aria-label="DragonLedger screenshots">
+							<button type="button" class="gallery-thumb" data-full="Assets/projects/dragonledger/browse-monsters.webp" data-caption="DragonLedger: Browse: Monsters list with filters, edition toggle, and multi-select actions">
+								<img src="Assets/projects/dragonledger/browse-monsters-thumb.webp" alt="Monsters list with filters and edition toggle" width="520" height="325" loading="lazy" />
+							</button>
+							<button type="button" class="gallery-thumb" data-full="Assets/projects/dragonledger/monster.webp" data-caption="DragonLedger: Monster stat block (Parchment theme): Adult Red Dragon">
+								<img src="Assets/projects/dragonledger/monster-thumb.webp" alt="Adult Red Dragon stat block" width="520" height="325" loading="lazy" />
+							</button>
+							<button type="button" class="gallery-thumb" data-full="Assets/projects/dragonledger/monster-dark.webp" data-caption="DragonLedger: The same stat block in dark mode">
+								<img src="Assets/projects/dragonledger/monster-dark-thumb.webp" alt="Adult Red Dragon stat block in dark mode" width="520" height="325" loading="lazy" />
+							</button>
+							<button type="button" class="gallery-thumb" data-full="Assets/projects/dragonledger/spell.webp" data-caption="DragonLedger: Spell detail with scaling: Fireball">
+								<img src="Assets/projects/dragonledger/spell-thumb.webp" alt="Fireball spell detail" width="520" height="325" loading="lazy" />
+							</button>
+							<button type="button" class="gallery-thumb" data-full="Assets/projects/dragonledger/class.webp" data-caption="DragonLedger: Class detail with features: Wizard">
+								<img src="Assets/projects/dragonledger/class-thumb.webp" alt="Wizard class detail" width="520" height="325" loading="lazy" />
+							</button>
+							<button type="button" class="gallery-thumb" data-full="Assets/projects/dragonledger/create.webp" data-caption="DragonLedger: Create hub: hand-built forms per content type">
+								<img src="Assets/projects/dragonledger/create-thumb.webp" alt="Create a new spell form" width="520" height="325" loading="lazy" />
+							</button>
+							<button type="button" class="gallery-thumb" data-full="Assets/projects/dragonledger/edit.webp" data-caption="DragonLedger: Editing an existing entry">
+								<img src="Assets/projects/dragonledger/edit-thumb.webp" alt="Edit monster form" width="520" height="325" loading="lazy" />
+							</button>
+							<button type="button" class="gallery-thumb" data-full="Assets/projects/dragonledger/sources.webp" data-caption="DragonLedger: Source management">
+								<img src="Assets/projects/dragonledger/sources-thumb.webp" alt="Sources screen" width="520" height="325" loading="lazy" />
+							</button>
+							<button type="button" class="gallery-thumb" data-full="Assets/projects/dragonledger/import.webp" data-caption="DragonLedger: Import wizard: Open5e, Compendium XML, or JSON">
+								<img src="Assets/projects/dragonledger/import-thumb.webp" alt="Import screen" width="520" height="325" loading="lazy" />
+							</button>
+						</div>
+					</div>
+				</details>
+
+				<details class="expand-card" id="tldr-reader">
+					<summary>
+						<h3>TLDR Reader</h3>
+						<p class="summary-meta"><span class="status-badge live">Live</span> v2.1.0 · New items each weekday</p>
+						<p>A personal reader for the TLDR newsletter: browse by day and edition, flag items to a reading list, and save favorites.</p>
+						<div class="badge-row" aria-hidden="true">
+							<img src="Assets/icons/Language-Icons/JavaScript.png" alt="" title="JavaScript" width="32" height="32" loading="lazy" />
+							<img src="Assets/icons/Language-Icons/React.png" alt="" title="React" width="32" height="32" loading="lazy" />
+							<img src="Assets/icons/Language-Icons/NodeJS.png" alt="" title="Node.js" width="32" height="32" loading="lazy" />
+							<img src="Assets/icons/Tech-Icons/Azure.png" alt="" title="Azure Static Web Apps / Functions" width="32" height="32" loading="lazy" />
+							<img src="Assets/icons/Tech-Icons/CosmosDB.png" alt="" title="Azure Cosmos DB" width="32" height="32" loading="lazy" />
+							<img src="Assets/icons/Tech-Icons/GitHubActions.svg" alt="" title="GitHub Actions" width="32" height="32" loading="lazy" />
+						</div>
+					</summary>
+					<div class="expand-body">
+						<p>
+							A deterministic Node.js pipeline collects each weekday's items from all
+							14 TLDR editions and publishes them as static JSON. Reading-list
+							and saved-item state lives in Azure Cosmos DB behind Microsoft
+							sign-in.
+						</p>
+						<p class="boundary-note">
+							<strong>Content boundary:</strong> it stores each item's headline
+							and TLDR's short summary, with a link to the original article. I
+							built it for my own reading; it isn't affiliated with TLDR.
+						</p>
+						<h4>Highlights</h4>
+						<ul>
+							<li>Browse This Week and Last Week by day and newsletter edition</li>
+							<li>Archive calendar: pick any past date with items</li>
+							<li>Flag items to a Reading List; star them to save</li>
+							<li>Microsoft (Azure AD) sign-in with per-user state</li>
+							<li>Planned: edition and date filters and keyword search for saved items</li>
+						</ul>
+						<h4>Stack</h4>
+						<p>React, JavaScript, Vite, Node.js, Cheerio, Azure Static Web Apps, Azure Functions, Azure Cosmos DB, GitHub Actions</p>
+						<p class="card-links">
+							<a href="https://happy-bush-0f619981e.7.azurestaticapps.net" target="_blank" rel="noopener noreferrer">Open TLDR Reader →</a>
+							<a href="https://github.com/BobbyJoeCool/TLDR-Reader" target="_blank" rel="noopener noreferrer">TLDR Reader source →</a>
+						</p>
+						<div class="project-gallery" aria-label="TLDR Reader screenshots">
+							<button type="button" class="gallery-thumb" data-full="Assets/projects/tldr-reader/this-week.webp" data-caption="TLDR Reader: This Week: day and edition navigation with flag and save actions on every item">
+								<img src="Assets/projects/tldr-reader/this-week-thumb.webp" alt="This Week view with day and edition navigation" width="520" height="325" loading="lazy" />
+							</button>
+							<button type="button" class="gallery-thumb" data-full="Assets/projects/tldr-reader/reading-list.webp" data-caption="TLDR Reader: Reading List: flagged items with read/remove actions">
+								<img src="Assets/projects/tldr-reader/reading-list-thumb.webp" alt="Reading List of flagged items" width="520" height="325" loading="lazy" />
+							</button>
+							<button type="button" class="gallery-thumb" data-full="Assets/projects/tldr-reader/archive.webp" data-caption="TLDR Reader: Archive: pick any past date from the calendar">
+								<img src="Assets/projects/tldr-reader/archive-thumb.webp" alt="Archive with a calendar date picker" width="520" height="325" loading="lazy" />
+							</button>
+							<button type="button" class="gallery-thumb" data-full="Assets/projects/tldr-reader/saved.webp" data-caption="TLDR Reader: Saved items, grouped by edition">
+								<img src="Assets/projects/tldr-reader/saved-thumb.webp" alt="Saved items grouped by edition" width="520" height="325" loading="lazy" />
+							</button>
+							<button type="button" class="gallery-thumb" data-full="Assets/projects/tldr-reader/landing.webp" data-caption="TLDR Reader: Landing hub with a quick usage guide">
+								<img src="Assets/projects/tldr-reader/landing-thumb.webp" alt="Landing page" width="520" height="325" loading="lazy" />
+							</button>
+							<button type="button" class="gallery-thumb" data-full="Assets/projects/tldr-reader/mobile-this-week.webp" data-caption="TLDR Reader: This Week on a phone">
+								<img src="Assets/projects/tldr-reader/mobile-this-week-thumb.webp" alt="This Week on a phone" width="278" height="600" loading="lazy" />
+							</button>
+						</div>
+					</div>
+				</details>
+			</div>
+
+			<!-- ===================== EXPERIMENTS ===================== -->
+			<h2 class="group-heading" id="experiments">Experiments &amp; in progress</h2>
+			<p class="group-intro">Things I built to learn a tool or scratch an itch. Some are still moving.</p>
+			<div class="expand-list two-up">
+				<details class="expand-card" id="voicewright">
+					<summary>
+						<h3>Voicewright</h3>
+						<p class="summary-meta"><span class="status-badge active">Active development</span> v1.0.0 · Runs locally on a Mac</p>
+						<p>A local text-to-speech app: design a custom voice from a description, then render a tagged script to one audio file.</p>
+						<div class="badge-row" aria-hidden="true">
+							<img src="Assets/icons/Language-Icons/Python.png" alt="" title="Python" width="32" height="32" loading="lazy" />
+							<img src="Assets/icons/Language-Icons/FastAPI.png" alt="" title="FastAPI" width="32" height="32" loading="lazy" />
+							<img src="Assets/icons/Language-Icons/JavaScript.png" alt="" title="JavaScript" width="32" height="32" loading="lazy" />
+							<img src="Assets/icons/Language-Icons/HTML5.png" alt="" title="HTML" width="32" height="32" loading="lazy" />
+							<img src="Assets/icons/Language-Icons/CSS3.png" alt="" title="CSS" width="32" height="32" loading="lazy" />
+						</div>
+					</summary>
+					<div class="expand-body">
+						<p>
+							Designs AI voices from a text description, then turns a tagged
+							script into a finished audio file that mixes emotions and sound
+							effects, for example
+							<code>[calm] The library opens at nine. {page turn}</code>. The
+							models run on the Mac; the only network use is searching Freesound
+							to fill the local sound library. A FastAPI back end runs model jobs
+							in the background and serves a local web page.
+						</p>
+						<h4>Highlights</h4>
+						<ul>
+							<li>Voice design with Qwen3-TTS VoiceDesign: a neutral clip plus one preset per emotion</li>
+							<li>Speech and voice cloning with Chatterbox on MLX</li>
+							<li>Review voices take by take: regenerate, retune, or roll back to an earlier take</li>
+							<li>Sound library from Freesound, stored with each sound's credit and license</li>
+							<li>Script editor with tag highlighting and a check that reports every problem at once</li>
+						</ul>
+						<h4>How it's verified</h4>
+						<p>
+							The v1 QA pass checked all 61 user stories against the running app.
+							Most were checked by a script that drove the page in headless
+							Chrome with the real models; window launch, install, keyboard
+							behavior and drag and drop were checked by hand. There are also
+							380 unit tests and an offline smoke test with the real models.
+						</p>
+						<h4>Stack</h4>
+						<p>Python, FastAPI, JavaScript, HTML, CSS, Qwen3-TTS, Chatterbox (MLX), pytest</p>
+						<p class="card-links"><a href="https://github.com/BobbyJoeCool/Voicewright" target="_blank" rel="noopener noreferrer">Voicewright source →</a></p>
+						<div class="project-gallery" aria-label="Voicewright screenshots">
+							<button type="button" class="gallery-thumb" data-full="Assets/projects/voicewright/scripts-area.webp" data-caption="Voicewright: The Scripts area: a tagged Script with an emotion change and a sound, and the finished Output playing">
+								<img src="Assets/projects/voicewright/scripts-area-thumb.webp" alt="Scripts area with a tagged script and the finished output playing" width="520" height="325" loading="lazy" />
+							</button>
+						</div>
+					</div>
+				</details>
+
+				<details class="expand-card" id="animated-spells">
+					<summary>
+						<h3>Animated Spells</h3>
+						<p class="summary-meta"><span class="status-badge prototype">Prototype</span> v0.1.0 · Foundry VTT module</p>
+						<p>Plays a matching animation automatically when a spell from the official D&amp;D 5.5e content packs is cast.</p>
+						<div class="badge-row" aria-hidden="true">
+							<img src="Assets/icons/Language-Icons/JavaScript.png" alt="" title="JavaScript" width="32" height="32" loading="lazy" />
+						</div>
+					</summary>
+					<div class="expand-body">
+						<p>
+							It intercepts spell rolls and plays JB2A animations: projectiles fly
+							from caster to target, area templates fill with effects, and
+							self-targeted buffs pulse on the caster's token, with no macro
+							setup.
+						</p>
+						<h4>Highlights</h4>
+						<ul>
+							<li>Spell-to-animation mapping by compendium UUID</li>
+							<li>Projectile, template, self and emanation delivery</li>
+							<li>Covers five official content packs, each active only when installed</li>
+							<li>Built on the Sequencer and JB2A animation APIs</li>
+						</ul>
+						<h4>Stack</h4>
+						<p>JavaScript, Foundry VTT API, Sequencer, JB2A</p>
+						<p class="card-links"><a href="https://github.com/BobbyJoeCool/AnimatedSpells" target="_blank" rel="noopener noreferrer">Animated Spells source →</a></p>
+					</div>
+				</details>
+
+				<details class="expand-card" id="home-server">
+					<summary>
+						<h3>MacBook Home Server</h3>
+						<p class="summary-meta"><span class="status-badge stable">Stable</span> Personal infrastructure · No repository</p>
+						<p>An old MacBook Pro rebuilt as an always-on, headless Ubuntu server for the house.</p>
+						<div class="badge-row" aria-hidden="true">
+							<img src="Assets/icons/Tech-Icons/Ubuntu.svg" alt="" title="Ubuntu Server" width="32" height="32" loading="lazy" />
+							<img src="Assets/icons/Tech-Icons/Tailscale.svg" alt="" title="Tailscale" width="32" height="32" loading="lazy" />
+							<img src="Assets/icons/Tech-Icons/Cloudflare.svg" alt="" title="Cloudflare" width="32" height="32" loading="lazy" />
+							<img src="Assets/icons/Language-Icons/Bash.png" alt="" title="Bash" width="32" height="32" loading="lazy" />
+						</div>
+					</summary>
+					<div class="expand-body">
+						<p>
+							I wiped macOS, installed Ubuntu Server, and set the machine up to
+							run headless from the command line, so it hosts services for the
+							house instead of sitting in a drawer.
+						</p>
+						<h4>Highlights</h4>
+						<ul>
+							<li>Ubuntu Server on Apple laptop hardware, managed over SSH</li>
+							<li>Tailscale for remote access with no open router ports</li>
+							<li>Cloudflare for DNS and for putting selected services online</li>
+							<li>Shell administration: users, packages, services and updates</li>
+						</ul>
+						<h4>Stack</h4>
+						<p>Ubuntu Server, Bash, SSH, Tailscale, Cloudflare</p>
+					</div>
+				</details>
+			</div>
+
+			<!-- ===================== ACADEMIC & ARCHIVE ===================== -->
+			<h2 class="group-heading" id="academic">Academic &amp; archive</h2>
+			<p class="group-intro">
+				Practice repos from my degree years. Each course's own repository is on the
+				<a href="education.html">Education page</a>.
+			</p>
+			<div class="expand-list two-up">
+				<details class="expand-card" id="python-projects">
+					<summary>
+						<h3>Python Projects</h3>
+						<p class="summary-meta"><span class="status-badge archived">Archived</span> Last updated Mar 2026</p>
+						<p>Python and SQL practice, including a MySQL-backed job-time tracker.</p>
+						<div class="badge-row" aria-hidden="true">
+							<img src="Assets/icons/Language-Icons/Python.png" alt="" title="Python" width="32" height="32" loading="lazy" />
+							<img src="Assets/icons/Tech-Icons/MySQL.png" alt="" title="MySQL" width="32" height="32" loading="lazy" />
+						</div>
+					</summary>
+					<div class="expand-body">
+						<p>
+							Uses pre-commit formatting (Ruff and Black), READMEs, version logs
+							and refactoring outlines.
+						</p>
+						<h4>Included</h4>
+						<ul>
+							<li>Work Job Tracker 2.0: a Tkinter app backed by MySQL that logs hours per job function and reports percent time per function, days since a function was last worked, and shift summaries</li>
+						</ul>
+						<h4>Stack</h4>
+						<p>Python, Tkinter, MySQL, SQL, Ruff, Black</p>
+						<p class="card-links"><a href="https://github.com/BobbyJoeCool/Python-Projects" target="_blank" rel="noopener noreferrer">Python Projects source →</a></p>
+					</div>
+				</details>
+
+				<details class="expand-card" id="html-projects">
+					<summary>
+						<h3>HTML Projects</h3>
+						<p class="summary-meta"><span class="status-badge archived">Archived</span> Last updated Mar 2026</p>
+						<p>Small HTML, CSS and JavaScript projects published together on GitHub Pages.</p>
+						<div class="badge-row" aria-hidden="true">
+							<img src="Assets/icons/Language-Icons/HTML5.png" alt="" title="HTML" width="32" height="32" loading="lazy" />
+							<img src="Assets/icons/Language-Icons/CSS3.png" alt="" title="CSS" width="32" height="32" loading="lazy" />
+							<img src="Assets/icons/Language-Icons/JavaScript.png" alt="" title="JavaScript" width="32" height="32" loading="lazy" />
+						</div>
+					</summary>
+					<div class="expand-body">
+						<h4>Included</h4>
+						<ul>
+							<li>An online rendering of my book</li>
+							<li>Cribbage scoring app</li>
+							<li>Fallout terminal hacking helper</li>
+						</ul>
+						<h4>Stack</h4>
+						<p>HTML, CSS, JavaScript, GitHub Pages</p>
+						<p class="card-links">
+							<a href="https://bobbyjoecool.github.io/HTML-Projects" target="_blank" rel="noopener noreferrer">Open HTML Projects →</a>
+							<a href="https://github.com/BobbyJoeCool/HTML-Projects" target="_blank" rel="noopener noreferrer">HTML Projects source →</a>
+						</p>
+					</div>
+				</details>
+
+				<details class="expand-card" id="java-projects">
+					<summary>
+						<h3>Java Projects</h3>
+						<p class="summary-meta"><span class="status-badge archived">Archived</span> Last updated Mar 2026</p>
+						<p>Java practice outside class, including a console Blackjack game with Javadocs.</p>
+						<div class="badge-row" aria-hidden="true">
+							<img src="Assets/icons/Language-Icons/Java.png" alt="" title="Java" width="32" height="32" loading="lazy" />
+						</div>
+					</summary>
+					<div class="expand-body">
+						<h4>Included</h4>
+						<ul>
+							<li>Blackjack v1.0: a console game documented with Javadocs</li>
+							<li>Extra practice problems from the course textbook</li>
+							<li>Minesweeper: project outline and design diagram</li>
+						</ul>
+						<h4>Stack</h4>
+						<p>Java, Javadoc</p>
+						<p class="card-links"><a href="https://github.com/BobbyJoeCool/Java-Projects" target="_blank" rel="noopener noreferrer">Java Projects source →</a></p>
+					</div>
+				</details>
+
+				<details class="expand-card" id="legacy-python">
+					<summary>
+						<h3>Legacy Python Projects</h3>
+						<p class="summary-meta"><span class="status-badge archived">Archived</span> Early work from Python for Programmers</p>
+						<p>My first Python programs. Rough, and some unfinished, kept to show where I started.</p>
+						<div class="badge-row" aria-hidden="true">
+							<img src="Assets/icons/Language-Icons/Python.png" alt="" title="Python" width="32" height="32" loading="lazy" />
+						</div>
+					</summary>
+					<div class="expand-body">
+						<h4>Included</h4>
+						<ul>
+							<li>Tkinter, GUI and database exercises from the course book</li>
+							<li>An early inventory-tracking practice program</li>
+							<li>FileSorter: practice moving files on disk</li>
+							<li>Blackjack, and a "monkey math" number-concatenation calculator made for my kids</li>
+						</ul>
+						<h4>Stack</h4>
+						<p>Python, Tkinter</p>
+						<p class="card-links"><a href="https://github.com/BobbyJoeCool/Legacy_Python_Projects" target="_blank" rel="noopener noreferrer">Legacy Python Projects source →</a></p>
+					</div>
+				</details>
+			</div>
+
+			<!-- ===================== RESOURCES ===================== -->
+			<h2 class="group-heading" id="resources">Resources</h2>
+			<div class="expand-list">
+				<details class="expand-card" id="cheatsheets">
+					<summary>
+						<h3>CheatSheets</h3>
+						<p class="summary-meta"><span class="status-badge live">Live</span> 4,036 sheets across 70 collections</p>
+						<p>Single-page technical reference sheets that print on one 8.5″ × 11″ page, with a dark screen mode and a light print mode.</p>
+						<div class="badge-row" aria-hidden="true">
+							<img src="Assets/icons/Language-Icons/HTML5.png" alt="" title="HTML" width="32" height="32" loading="lazy" />
+							<img src="Assets/icons/Language-Icons/CSS3.png" alt="" title="CSS" width="32" height="32" loading="lazy" />
+							<img src="Assets/icons/Language-Icons/JavaScript.png" alt="" title="JavaScript" width="32" height="32" loading="lazy" />
+						</div>
+					</summary>
+					<div class="expand-body">
+						<p class="boundary-note">
+							<strong>How the content is made:</strong> most sheets are generated
+							by Claude from my outlines and templates. I review each sheet for
+							accuracy and layout before it's published, and fix or regenerate
+							what's wrong. The project is also my testbed for AI-assisted
+							workflows.
+						</p>
+						<p>
+							What I built by hand is the page system: a print-safe layout that
+							keeps every sheet to one page, per-collection CSS, and a print
+							aggregator that uses <code>fetch()</code> and
+							<code>DOMParser</code> to combine sheets into one PDF in the
+							browser.
+						</p>
+						<h4>Collections</h4>
+						<p>
+							Concepts and tools, testing, command line, Python, Java, the C
+							family, JavaScript/TypeScript, web design, server and full-stack,
+							databases, markup, cloud, DevOps and containers, office tools, and
+							more.
+						</p>
+						<h4>Stack</h4>
+						<p>HTML, CSS, JavaScript, Prism.js, GitHub Pages</p>
+						<p class="card-links">
+							<a href="https://cheatsheets.bobbyjoecool.dev" target="_blank" rel="noopener noreferrer">Open CheatSheets →</a>
+							<a href="https://github.com/BobbyJoeCool/CheatSheets" target="_blank" rel="noopener noreferrer">CheatSheets source →</a>
+						</p>
+						<div class="project-gallery" aria-label="CheatSheets screenshots">
+							<button type="button" class="gallery-thumb" data-full="Assets/projects/cheatsheets/index.webp" data-caption="CheatSheets: Landing page: collections grouped by category, each with a sheet count">
+								<img src="Assets/projects/cheatsheets/index-thumb.webp" alt="Landing page with collections grouped by category" width="520" height="325" loading="lazy" />
+							</button>
+							<button type="button" class="gallery-thumb" data-full="Assets/projects/cheatsheets/sheet-git.webp" data-caption="CheatSheets: A sheet on screen (dark mode): Git “Committing”">
+								<img src="Assets/projects/cheatsheets/sheet-git-thumb.webp" alt="Git Committing sheet in dark mode" width="520" height="325" loading="lazy" />
+							</button>
+							<button type="button" class="gallery-thumb" data-full="Assets/projects/cheatsheets/sheet-git-print.webp" data-caption="CheatSheets: The same sheet at print time (light mode, 8.5″ × 11″)">
+								<img src="Assets/projects/cheatsheets/sheet-git-print-thumb.webp" alt="Git Committing sheet in print mode" width="520" height="325" loading="lazy" />
+							</button>
+							<button type="button" class="gallery-thumb" data-full="Assets/projects/cheatsheets/collection.webp" data-caption="CheatSheets: Per-collection table of contents with Print All">
+								<img src="Assets/projects/cheatsheets/collection-thumb.webp" alt="Python collection table of contents" width="520" height="325" loading="lazy" />
+							</button>
+							<button type="button" class="gallery-thumb" data-full="Assets/projects/cheatsheets/sheet-docker.webp" data-caption="CheatSheets: Another sheet: Docker architecture">
+								<img src="Assets/projects/cheatsheets/sheet-docker-thumb.webp" alt="Docker introduction sheet" width="520" height="325" loading="lazy" />
+							</button>
+							<button type="button" class="gallery-thumb" data-full="Assets/projects/cheatsheets/mobile.webp" data-caption="CheatSheets: Landing page on a phone">
+								<img src="Assets/projects/cheatsheets/mobile-thumb.webp" alt="Landing page on a phone" width="278" height="600" loading="lazy" />
+							</button>
+						</div>
+					</div>
+				</details>
+			</div>
 		</main>
 
-		<div id="site-footer"></div>
+		<footer>
+			<p>© 2026 Robert Breutzmann</p>
+			<p>
+				<a href="mailto:bob@bobbyjoecool.dev"><img src="Assets/icons/Email.png" alt="Email" width="28" height="28" loading="lazy" /></a>
+				<a href="https://github.com/BobbyJoeCool" target="_blank" rel="noopener noreferrer"><img src="Assets/icons/GitHub.png" alt="GitHub" width="28" height="28" loading="lazy" /></a>
+				<a href="https://bobbyjoecool.dev/linkedin/" target="_blank" rel="noopener noreferrer"><img src="Assets/icons/LinkedIn.png" alt="LinkedIn" width="28" height="28" loading="lazy" /></a>
+				<a href="https://www.facebook.com/bobslenscraft" target="_blank" rel="noopener noreferrer"><img src="Assets/icons/Facebook.png" alt="Facebook" width="28" height="28" loading="lazy" /></a>
+				<a href="https://www.instagram.com/robertbreutzmann/" target="_blank" rel="noopener noreferrer"><img src="Assets/icons/Instagram.png" alt="Instagram" width="28" height="28" loading="lazy" /></a>
+				<a href="https://www.threads.com/@robertbreutzmann" target="_blank" rel="noopener noreferrer"><img src="Assets/icons/Threads.png" alt="Threads" width="28" height="28" loading="lazy" /></a>
+				<a href="https://bsky.app/profile/bobbyjoecool.bsky.social" target="_blank" rel="noopener noreferrer"><img src="Assets/icons/BlueSky.png" alt="Bluesky" width="28" height="28" loading="lazy" /></a>
+				<a href="https://discord.com/users/BobyJoeCool" target="_blank" rel="noopener noreferrer"><img src="Assets/icons/Discord.png" alt="Discord" width="28" height="28" loading="lazy" /></a>
+			</p>
+		</footer>
 
-		<!-- Screenshot viewer, opened from the featured project thumbnails -->
+		<!-- Screenshot viewer, opened from the project thumbnails -->
 		<dialog id="lightbox" class="lightbox" aria-label="Screenshot viewer">
 			<button type="button" class="lightbox-close" aria-label="Close">&times;</button>
 			<button type="button" class="lightbox-nav prev" aria-label="Previous screenshot">&#8249;</button>
@@ -894,7 +906,6 @@
 			</figure>
 			<button type="button" class="lightbox-nav next" aria-label="Next screenshot">&#8250;</button>
 		</dialog>
-		<script src="JS/common.js"></script>
 		<script src="JS/masonry.js"></script>
 		<script src="JS/gallery.js"></script>
 	</body>

@@ -4,181 +4,149 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Robert Breutzmann - Resume</title>
+		<meta name="description" content="Resume of Robert Breutzmann, software developer (React, TypeScript, SQL)." />
+		<link rel="canonical" href="https://bobbyjoecool.dev/resume-professional.html" />
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link
-			href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,400&amp;display=swap"
+			href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&amp;display=swap"
 			rel="stylesheet"
 		/>
 		<link rel="stylesheet" href="CSS/resume-professional.css" />
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
 	</head>
 	<body>
 		<div class="toolbar">
-			<a href="resume.html" class="switch-link">Coding version</a>
-			<button type="button" onclick="window.print()">Print / Save PDF</button>
+			<a href="index.html" class="switch-link">Portfolio</a>
+			<a href="resume.html" class="switch-link">Terminal version</a>
+			<a href="Assets/Robert-Breutzmann-Resume.pdf" class="switch-link" download>Download PDF</a>
+			<button type="button" onclick="window.print()">Print</button>
 		</div>
 
-		<div class="page">
-			<!-- Header -->
-			<header class="resume-header">
+		<main class="page">
+			<header>
 				<h1>Robert Breutzmann</h1>
-				<p class="tagline">
-					Warehouse Professional <span class="star">✦</span> Software Development Graduate
-				</p>
+				<p class="headline">Software Developer · React · TypeScript · SQL</p>
+				<p class="contact">Location: Tripoli, IA · Mobile: (319) 939-3687</p>
 				<p class="contact">
-					<span>Tripoli, IA</span>
-					<span class="sep">|</span>
-					<span>(319) 939-3687</span>
-					<span class="sep">|</span>
-					<a href="mailto:robert.breutzmann@gmail.com">robert.breutzmann@gmail.com</a>
-					<span class="sep">|</span>
-					<a href="https://github.com/BobbyJoeCool" target="_blank" rel="noopener noreferrer">github.com/BobbyJoeCool</a>
-					<span class="sep">|</span>
-					<a href="https://bobbyjoecool.dev/" target="_blank" rel="noopener noreferrer">bobbyjoecool.dev</a>
+					<a href="mailto:bob@bobbyjoecool.dev">bob@bobbyjoecool.dev</a> ·
+					<a href="https://bobbyjoecool.dev/">bobbyjoecool.dev</a> ·
+					<a href="https://github.com/BobbyJoeCool">github.com/BobbyJoeCool</a> ·
+					<a href="https://bobbyjoecool.dev/linkedin/">LinkedIn: bobbyjoecool.dev/linkedin</a>
 				</p>
 			</header>
 
-			<div class="resume-body">
-				<!-- Sidebar -->
-				<aside class="sidebar">
-					<div class="qr-block">
-						<div id="portfolio-qr"></div>
-						<a href="https://bobbyjoecool.dev/" class="qr-label">Scan for Portfolio</a>
-					</div>
+			<section>
+				<h2>Summary</h2>
+				<p>
+					Software developer (B.S. in Software Development, Summa Cum Laude, 4.0) who builds and tests full-stack apps
+					in React, TypeScript and SQL. ~20 years across retail and warehouse operations, including SQL and Excel/VBA
+					tools used hundreds of times a day by an inventory control team.
+				</p>
+			</section>
 
-					<h2>Technical Skills</h2>
-					<h3>Languages</h3>
-					<p>Python, Java, JavaScript, TypeScript, React, HTML, CSS, JSP, SQL, PHP</p>
-					<h3>Tools &amp; Platforms</h3>
-					<p>Git, GitHub, VS Code, Excel, Tkinter, Node.js, Azure, Docker, Playwright, FastAPI, Ubuntu Server, Tailscale, Cloudflare, Aikido Security</p>
-					<h3>Databases</h3>
-					<p>MySQL, SQLite, Prisma, Cosmos DB, Azure SQL</p>
-					<h3>Currently Learning</h3>
-					<p>C++, C#, AWS, Go, Ruby, Swift</p>
+			<section>
+				<h2>Skills</h2>
+				<ul class="skills">
+					<li><strong>Languages:</strong> TypeScript, JavaScript, Python, Java, SQL, HTML/CSS, VBA, Bash</li>
+					<li><strong>Frontend:</strong> React, Vite, Tailwind CSS, Electron</li>
+					<li><strong>Backend:</strong> Node.js, Express, FastAPI, Jakarta EE (JSP/JSTL), REST APIs, WebSockets</li>
+					<li><strong>Data:</strong> MySQL, PostgreSQL, Supabase, SQLite, Prisma, Excel</li>
+					<li><strong>Testing &amp; DevOps:</strong> Playwright, Vitest, GitHub Actions (CI), Git/GitHub, Docker, Azure, Ubuntu Server, Cloudflare</li>
+				</ul>
+			</section>
 
-					<h2>Education</h2>
-					<p class="degree">B.S. Software Development</p>
-					<p class="small italic">Bellevue University (Online)</p>
-					<p class="small">Jun 2022 – Oct 2026 · Completed</p>
-					<p class="small"><strong>GPA: 4.0 · Summa Cum Laude</strong></p>
-					<p class="small">Dean's List: Jun 2024 – Oct 2026</p>
-					<h3>Relevant Coursework</h3>
-					<ul class="coursework">
-						<li>Fundamentals of Software Development</li>
-						<li>Python &amp; Advanced Python</li>
-						<li>Java &amp; Advanced Java</li>
-						<li>Database Development &amp; Management</li>
-						<li>Secure Software Development</li>
-						<li>Server Scripting &amp; Development</li>
-						<li>Web Design</li>
-						<li>DevOps</li>
-						<li>Capstone</li>
+			<section>
+				<h2>Projects</h2>
+
+				<div class="entry">
+					<p class="entry-head">
+						<span><strong>FitIQ</strong> · Live</span>
+						<a href="https://fitiq.bobbyjoecool.dev">fitiq.bobbyjoecool.dev</a>
+					</p>
+					<p class="stack">React, TypeScript, Vite, Supabase (Auth + PostgreSQL), Playwright, GitHub Actions</p>
+					<ul>
+						<li>Built a household workout tracker with no custom backend: the React app talks straight to Supabase, so privacy is enforced in Postgres with Row Level Security on every table plus ownership triggers.</li>
+						<li>Verified by a two-account RLS isolation suite (188 checks) and Playwright E2E tests in GitHub Actions.</li>
 					</ul>
-				</aside>
+				</div>
 
-				<!-- Main -->
-				<main class="main">
-					<section>
-						<h2>Professional Summary</h2>
-						<p>
-							Warehouse professional and software development graduate with a track record of
-							building practical tools that improve accuracy and save time for teams. Continuously
-							expanding skills across multiple languages and paradigms, with a strong focus on
-							writing secure, maintainable software. Seeking an opportunity to bring operational
-							experience and growing technical ability to a development role.
-						</p>
-					</section>
+				<div class="entry">
+					<p class="entry-head">
+						<span><strong>PalletIQ</strong> · Active development</span>
+						<a href="https://github.com/BobbyJoeCool/PalletIQ">github.com/BobbyJoeCool/PalletIQ</a>
+					</p>
+					<p class="stack">React, TypeScript, Electron, Node.js, Express, Prisma, MySQL, Playwright</p>
+					<ul>
+						<li>Independent warehouse inventory system on synthetic data, informed by ~9 years in inventory control at a Target distribution center: React tablet floor app, Electron manager app (Audit Tool, Location Setup, Job/Function Assignment, Prod Goal / Daily Plan, Team Prod Summary), shared Express + Prisma/MySQL API.</li>
+						<li>Shared TypeScript types make a data-shape change a compile error everywhere; Playwright suites cover both apps.</li>
+					</ul>
+				</div>
 
-					<section>
-						<h2>Experience</h2>
+				<div class="entry">
+					<p class="entry-head">
+						<span><strong>ScribeIQ</strong> · Stable</span>
+						<a href="https://github.com/BobbyJoeCool/ScribeIQ">github.com/BobbyJoeCool/ScribeIQ</a>
+					</p>
+					<p class="stack">Python, FastAPI, WebSockets, React, TypeScript, MLX Whisper, pyannote.audio; integrates a Swift recorder helper</p>
+					<ul>
+						<li>Designed an on-device macOS call transcriber that records the mic and the call as two synced tracks, so speakers are labeled by source; the FastAPI server owns the recording state and supervises the recorder.</li>
+						<li>Transcribes locally on Apple Silicon after recording; Python tests cover track merging, the state machine, the recorder protocol and every endpoint, with Vitest for the UI.</li>
+					</ul>
+				</div>
 
-						<div class="job">
-							<div class="job-head">
-								<p><span class="role">Inventory Control &amp; QA</span> — Target Distribution, Cedar Falls, IA</p>
-								<p class="dates">May 2017 – Present</p>
-							</div>
-							<ul>
-								<li>Track and analyze product defects using the IMS, identifying root causes like over/under-receiving and incorrect pulls to reduce recurring errors.</li>
-								<li>Move inventory systematically and physically through the warehouse, maintaining accuracy at each stage of the supply chain.</li>
-								<li>Developed custom Excel tools using macros and VBA to reformat raw IMS data into management-ready reports, and built pallet location trackers adopted across the team.</li>
-								<li>Serve as an Emergency Response Team member, evaluating medical situations and keeping injured or sick team members calm and safe while Emergency Services responds.</li>
-							</ul>
-						</div>
+				<div class="entry">
+					<p class="entry-head">
+						<span><strong>Moffat Bay Marina</strong> · Team capstone, Team Lead</span>
+						<a href="https://github.com/BobbyJoeCool/csd460-blueteam">github.com/BobbyJoeCool/csd460-blueteam</a>
+					</p>
+					<p class="stack">Java, Jakarta EE (JSP/JSTL), MySQL, Maven, Apache Tomcat, Azure App Service</p>
+					<ul>
+						<li>Led a team of four: set up page contracts and role rotation; built Registration, Book a Slip, My Fleet, Login and Edit User Info.</li>
+						<li>Deployed to Azure App Service with Azure Database for MySQL; owned database management and the ERD after the initial design.</li>
+					</ul>
+				</div>
 
-						<div class="job">
-							<div class="job-head">
-								<p><span class="role">Software Development Student</span> — Bellevue University (Online)</p>
-								<p class="dates">Jun 2022 – Oct 2026</p>
-							</div>
-							<ul>
-								<li>Took a team capstone from requirements to a live Azure deployment using Agile/Scrum.</li>
-								<li>Built course projects in Python, Java (Jakarta EE/JSP), SQL, PHP, HTML, CSS, and JavaScript.</li>
-								<li>Applied secure software development and DevOps practices; graduated Summa Cum Laude with a 4.0 GPA.</li>
-							</ul>
-						</div>
+				<p class="more">
+					More at <a href="https://bobbyjoecool.dev/">bobbyjoecool.dev</a>: Family Passport Map, TLDR Reader, DragonLedger, Voicewright.
+				</p>
+			</section>
 
-						<div class="job">
-							<div class="job-head">
-								<p><span class="role">Store Manager</span> — Kwik Star, Iowa</p>
-								<p class="dates">Jul 2006 – Apr 2017</p>
-							</div>
-							<ul>
-								<li>Managed all daily store operations for 5 years, including scheduling, daily paperwork, training meetings, performance management, and customer service.</li>
-								<li>Maintained a high-quality staff through performance management, leadership development, hiring, firing, and resolving personality conflicts.</li>
-								<li>Built an Excel lottery ticket inventory counter and authored a bookwork SOP document now used as a standard document company-wide.</li>
-								<li>Authored a troubleshooting guide adopted as a standard training resource for new bookkeepers across all locations.</li>
-							</ul>
-						</div>
-					</section>
+			<section>
+				<h2>Experience</h2>
 
-					<section>
-						<h2>Selected Projects (School and Personal)</h2>
+				<div class="entry">
+					<p class="entry-head">
+						<span><strong>Target Distribution Center</strong>, Cedar Falls, IA</span>
+						<span class="dates">May 2017 – Present</span>
+					</p>
+					<p class="roles">Inventory Control &amp; Quality Assurance (2019 – Present) · Warehouse Worker (2017 – 2024)</p>
+					<ul>
+						<li>Wrote the SQL and most of the VBA for an Excel tool that runs parameterized queries against the inventory management system's database to trace inventory events; management-approved, used hundreds of times a day by the 10–20 person ICQA team, saving ~10–15 minutes per lookup.</li>
+						<li>Trace inventory errors across receiving, picking and moves to root causes (over/under-receiving, incorrect pulls).</li>
+						<li>Built Excel pallet trackers and other team tools used by 50+ people.</li>
+					</ul>
+				</div>
 
-						<div class="project">
-							<p class="project-name">Moffat Bay Marina <span class="status">· Capstone Project – Complete</span></p>
-							<p class="stack">Java, Jakarta EE, JSP, JSTL, MySQL, Maven, Apache Tomcat, Azure App Service</p>
-							<p>Customer-facing marina booking website where visitors browse the marina, register, sign in, and reserve one of 72 slips across three docks. Deployed live on Azure App Service with Azure Database for MySQL.</p>
-							<p class="links">
-								Live Demo: <a href="https://moffatbay-blueteam-ac9638.azurewebsites.net/" target="_blank" rel="noopener noreferrer">moffatbay-blueteam-ac9638.azurewebsites.net</a>
-								<span class="note">(may take a minute to load)</span><br />
-								GitHub: <a href="https://github.com/BobbyJoeCool/csd460-blueteam" target="_blank" rel="noopener noreferrer">github.com/BobbyJoeCool/csd460-blueteam</a>
-							</p>
-						</div>
+				<div class="entry">
+					<p class="entry-head">
+						<span><strong>Kwik Star (Kwik Trip Inc.)</strong>, Waverly and Waterloo, IA</span>
+						<span class="dates">Jul 2006 – Apr 2017</span>
+					</p>
+					<p class="roles">Co-Worker → Shift Leader → Assistant Store Leader → Store Leader (2012 – 2017)</p>
+					<ul>
+						<li>Hired, trained and led store teams, including the full staff and leadership team for a new store.</li>
+						<li>Wrote a bookkeeping SOP and troubleshooting guide adopted company-wide, later reused as a template.</li>
+					</ul>
+				</div>
+			</section>
 
-						<div class="project">
-							<p class="project-name">ScribeIQ <span class="status">· Complete</span></p>
-							<p class="stack">Python, FastAPI, React, TypeScript, Vite, Swift, ScreenCaptureKit, MLX Whisper, pyannote.audio</p>
-							<p>Private, on-device call recorder and transcriber for macOS. A native Swift helper records the microphone and the call as two synced tracks; Whisper transcribes each on Apple Silicon and pyannote labels speakers on group calls, producing a speaker-labeled transcript with no audio leaving the machine. React UI backed by a local FastAPI server over REST and WebSockets.</p>
-							<p class="links">
-								GitHub: <a href="https://github.com/BobbyJoeCool/ScribeIQ" target="_blank" rel="noopener noreferrer">github.com/BobbyJoeCool/ScribeIQ</a>
-							</p>
-						</div>
-
-						<div class="project">
-							<p class="project-name">Pallet IQ <span class="status">· In Progress</span></p>
-							<p class="stack">React, TypeScript, Node.js, Azure, Azure SQL, Prisma, Docker</p>
-							<p>Full-stack warehouse operations app built from 9 years of warehouse experience. Built as a potential replacement for the Warehouse Management System for Target, practicing my designing skills in making an application for a system I already know very well, and then improving how it works.</p>
-							<p class="links">
-								GitHub: <a href="https://github.com/BobbyJoeCool/PalletIQ" target="_blank" rel="noopener noreferrer">github.com/BobbyJoeCool/PalletIQ</a>
-							</p>
-						</div>
-					</section>
-				</main>
-			</div>
-
-			<footer class="resume-footer">✦ References available upon request ✦</footer>
-		</div>
-
-		<script>
-			new QRCode(document.getElementById("portfolio-qr"), {
-				text: "https://bobbyjoecool.dev/",
-				width: 96,
-				height: 96,
-				colorDark: "#1b2a4a",
-				colorLight: "#ffffff",
-				correctLevel: QRCode.CorrectLevel.M,
-			});
-		</script>
+			<section>
+				<h2>Education</h2>
+				<p class="entry-head">
+					<span><strong>B.S. in Software Development</strong>, Bellevue University · GPA 4.0 · Summa Cum Laude</span>
+					<span class="dates">Oct 2026</span>
+				</p>
+			</section>
+		</main>
 	</body>
 </html>

@@ -1,4 +1,4 @@
-/* Job card: gradient border, soft glows, accent strip on top (matches the home page cards) */
+/* Experience page. Job card: gradient border, soft glows, accent strip on top (matches the home page cards) */
 .job {
 	position: relative;
 	overflow: hidden;
@@ -304,4 +304,92 @@
 	#kt-img {
 		max-width: 200px;
 	}
+}
+
+.page-intro {
+	margin: 0 auto 2.5rem;
+	text-align: center;
+	color: var(--text-muted);
+}
+
+/* One employer, several titles: each title with its own dates */
+.role-list {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 4px;
+}
+
+.role-title {
+	font-size: 1.35rem;
+	font-weight: 600;
+	color: var(--text-primary);
+}
+
+.role-dates,
+.career-path li span {
+	margin-left: 6px;
+	font-size: 0.85rem;
+	font-weight: 500;
+	color: var(--text-muted);
+}
+
+.job-highlights {
+	width: 100%;
+	max-width: 820px;
+	margin: 0 auto 1.5rem;
+	padding-left: 1.25rem;
+	color: var(--text-secondary);
+}
+
+.job-highlights li {
+	margin-bottom: 0.6rem;
+}
+
+.job-highlights li::marker {
+	color: var(--accent-soft);
+}
+
+/* "More about this role" expands in place */
+.job-more {
+	width: 100%;
+}
+
+.job-more > summary {
+	width: fit-content;
+	margin: 0 auto;
+	padding: 8px 18px;
+	border-radius: 999px;
+	border: 1px solid rgba(34, 211, 238, 0.5);
+	color: var(--accent-cyan-soft);
+	font-weight: 600;
+	cursor: pointer;
+	list-style: none;
+}
+
+.job-more > summary::-webkit-details-marker {
+	display: none;
+}
+
+.job-more > summary::after {
+	content: " +";
+}
+
+.job-more[open] > summary {
+	margin-bottom: 1.5rem;
+}
+
+.job-more[open] > summary::after {
+	content: " \2212";
+}
+
+.job-story h3 + p {
+	margin-top: 0;
+}
+
+.job-story h3:not(:first-child) {
+	margin-top: 1.25rem;
 }
