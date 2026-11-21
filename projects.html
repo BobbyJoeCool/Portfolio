@@ -23,7 +23,7 @@
 		<link rel="stylesheet" href="CSS/gallery.css" />
 	</head>
 
-	<body class="bg-code">
+	<body class="bg-code projects-page">
 		<a class="skip-link" href="#main">Skip to content</a>
 		<header>
 			<nav aria-label="Main">
@@ -176,14 +176,19 @@
 						<p>React, TypeScript, React Router, Vite, Tailwind CSS, Electron, Node.js, Express, Prisma, MySQL, Playwright</p>
 						<h4>How it's verified</h4>
 						<p>
-							Playwright end-to-end suites for both apps; the desktop tests
-							drive the built Electron app.
+							A written test plan backed by unit, database and handler suites
+							for the API, Vitest + Testing Library tests for both apps, and
+							Playwright end-to-end suites (the desktop tests drive the built
+							Electron app), all run against an isolated Docker MySQL test
+							database.
 						</p>
 						<h4>Limitation</h4>
 						<p>
-							It runs locally on my Mac and isn't hosted, so there's no live
-							demo. Two manager screens, DPCI Setup and Hung Pallet Resolution,
-							aren't built yet. It started on Azure SQL; I moved it to MySQL.
+							It runs locally on my Mac and isn't hosted yet, so there's no
+							live demo; moving it to my home server (<a href="#voyager">Voyager</a>)
+							is planned. Two manager screens, DPCI Setup and Hung Pallet
+							Resolution, aren't built yet. It started on Azure SQL; I moved it
+							to MySQL.
 						</p>
 					</div>
 					<div class="card-links">
@@ -261,7 +266,7 @@
 					<h3>ScribeIQ</h3>
 					<p class="project-status">
 						<span class="status-badge stable">Stable</span>
-						v1.0.1 · macOS on Apple Silicon · Solo project
+						v1.0.2 · macOS on Apple Silicon · Solo project
 					</p>
 					<figure class="demo-video" data-src="Assets/projects/scribeiq/demo.mp4" hidden>
 						<figcaption>Demo: recording a call and opening the speaker-labeled transcript (silent).</figcaption>
@@ -288,7 +293,7 @@
 							Python tests cover track merging, the recording state machine, the
 							recorder protocol and every API endpoint, using a fake recorder
 							and stubbed transcription. The UI has Vitest + Testing Library
-							tests.
+							tests, and a Playwright suite runs the app end to end.
 						</p>
 						<h4>Limitation</h4>
 						<p>
@@ -363,7 +368,8 @@
 						<p>
 							It's a team project: the pages not listed above were built by my
 							teammates. The Azure instance sleeps when idle, so the first visit
-							can take up to a minute to load.
+							can take up to a minute to load; moving it to
+							<a href="#voyager">Voyager</a> is planned, which will fix that.
 						</p>
 					</div>
 					<div class="card-links">
@@ -395,12 +401,12 @@
 						<img src="Assets/icons/Language-Icons/NodeJS.png" alt="" title="Node.js / Express" width="52" height="52" loading="lazy" />
 						<img src="Assets/icons/Tech-Icons/Prisma.png" alt="" title="Prisma" width="52" height="52" loading="lazy" />
 						<img src="Assets/icons/Tech-Icons/SQLite.png" alt="" title="SQLite" width="52" height="52" loading="lazy" />
-						<img src="Assets/icons/Tech-Icons/Azure.png" alt="" title="Azure App Service" width="52" height="52" loading="lazy" />
+						<img src="Assets/icons/Tech-Icons/Docker.png" alt="" title="Docker (on Voyager)" width="52" height="52" loading="lazy" />
 					</div>
 					<h3>Family Passport Map</h3>
 					<p class="project-status">
 						<span class="status-badge live">Live</span>
-						v2.3.0 · Solo project
+						v2.5.0 · Solo project
 					</p>
 					<div class="case-study">
 						<h4>Problem</h4>
@@ -415,29 +421,36 @@
 						<ul>
 							<li>Interactive US and world maps (195 countries, one continent at a time); click a place to mark it visited for the selected person.</li>
 							<li>A color and profile picture per person, "n/50 states" and "n/195 countries" counters, a side-by-side Compare view, and a List view.</li>
-							<li>Microsoft sign-in with server-side sessions. Each account sees only the People it owns (up to 10), and photos are shrunk to small avatars served only to their owner.</li>
+							<li>Sign in with Microsoft, Google, GitHub or a passkey, and add or remove methods on a Sign-in methods page. Each account sees only the People it owns (up to 10), and photos are shrunk to small avatars served only to their owner.</li>
+							<li>A guest demo on GitHub Pages: the same app running in the browser against an in-browser fake API, with a made-up family.</li>
 							<li>Installable as a PWA on phone, tablet and desktop.</li>
+							<li>Hosted in Docker on my home server, <a href="#voyager">Voyager</a>, since v2.5.0 (moved from Azure App Service).</li>
 						</ul>
 						<h4>Stack</h4>
-						<p>React, TypeScript, Vite, Tailwind CSS, Node.js, Express, Prisma, SQLite, Azure App Service</p>
+						<p>React, TypeScript, Vite, Tailwind CSS, Node.js, Express, Prisma, SQLite, WebAuthn (passkeys), Playwright, Docker, Cloudflare Tunnel, GitHub Pages</p>
 						<h4>How it's verified</h4>
 						<p>
-							Server tests for sign-in, ownership checks, private photos, visits
-							and account deletion.
+							Server tests for every sign-in method (passkeys checked with a
+							software authenticator), ownership checks, private photos, visits
+							and account deletion. Playwright covers every user flow at desktop
+							and phone sizes, and API contract tests run the same scenarios
+							against the real server and the demo's fake API so the two can't
+							drift apart.
 						</p>
 						<h4>Limitation</h4>
 						<p>
-							You need a Microsoft account to sign in, and there's no demo
-							account yet, so the screenshots are the quickest look. Sharing
-							People between accounts (Link and Join) is next.
+							It runs on a home server, so it goes down if the power or home
+							internet does. Sharing People between accounts (Link and Join) is
+							next.
 						</p>
 					</div>
 					<p class="demo-login">
-						Sign-in required (Microsoft account). A demo account is coming; the
-						screenshots below show the app.
+						No account needed for the guest demo: it runs in your browser with a
+						made-up family, and reloading starts over.
 					</p>
 					<div class="card-links">
-						<a href="https://family-passport-map.azurewebsites.net/" target="_blank" rel="noopener noreferrer" class="repo-card pages"><h5>Visit Family Passport Map</h5></a>
+						<a href="https://bobbyjoecool.github.io/FamilyPassportMap/" target="_blank" rel="noopener noreferrer" class="repo-card pages"><h5>Try the guest demo</h5></a>
+						<a href="https://passport.bobbyjoecool.dev" target="_blank" rel="noopener noreferrer" class="repo-card pages"><h5>Visit Family Passport Map</h5></a>
 						<a href="https://github.com/BobbyJoeCool/FamilyPassportMap" target="_blank" rel="noopener noreferrer" class="repo-card"><h5>Family Passport Map source</h5></a>
 					</div>
 					<div class="project-gallery" aria-label="Family Passport Map screenshots">
@@ -467,6 +480,75 @@
 			<h2 class="group-heading" id="more-apps">More apps</h2>
 			<p class="group-intro">Finished or in-use apps that didn't make the featured list.</p>
 			<div class="expand-list two-up">
+				<details class="expand-card" id="lensiq">
+					<summary>
+						<h3>LensIQ</h3>
+						<p class="summary-meta"><span class="status-badge live">Live</span> v1.1.0 · Self-hosted on Voyager</p>
+						<p>Self-hosted dashboards for Notion: tables, boards, charts and calendars over Notion databases, edited in place and written straight back to Notion.</p>
+						<div class="badge-row" aria-hidden="true">
+							<img src="Assets/icons/Language-Icons/TypeScript.png" alt="" title="TypeScript" width="32" height="32" loading="lazy" />
+							<img src="Assets/icons/Language-Icons/React.png" alt="" title="React" width="32" height="32" loading="lazy" />
+							<img src="Assets/icons/Language-Icons/NodeJS.png" alt="" title="Node.js / Fastify" width="32" height="32" loading="lazy" />
+							<img src="Assets/icons/Tech-Icons/SQLite.png" alt="" title="SQLite" width="32" height="32" loading="lazy" />
+							<img src="Assets/icons/Tech-Icons/Docker.png" alt="" title="Docker" width="32" height="32" loading="lazy" />
+							<img src="Assets/icons/Tech-Icons/Cloudflare.svg" alt="" title="Cloudflare Access + Tunnel" width="32" height="32" loading="lazy" />
+							<img src="Assets/icons/Tech-Icons/Playwright.svg" alt="" title="Playwright" width="32" height="32" loading="lazy" />
+						</div>
+					</summary>
+					<div class="expand-body">
+						<p>
+							Notion's free plan allows one chart. LensIQ keeps Notion as the
+							data store and adds the views a paid plan would. It reads each
+							database's schema and builds every view from it, so connecting a
+							new database means pasting its link, not writing code. It runs as
+							one Docker container on <a href="#voyager">Voyager</a> behind
+							Cloudflare Access, and the Notion token never leaves the server.
+						</p>
+						<h4>Highlights</h4>
+						<ul>
+							<li>Table, board, chart and calendar views per database, each with its own filters and sorts</li>
+							<li>Dashboards mixing views from any databases, in a grid that stacks to one column on a phone</li>
+							<li>Edits go straight to Notion; the API re-reads the page first, so a cell changed in Notion meanwhile is never silently overwritten</li>
+							<li>Rows cached in SQLite and refreshed every 60 seconds, with every Notion request going through one rate limiter</li>
+							<li>A public demo: the same React app answering its API calls in the browser from fictional data</li>
+						</ul>
+						<h4>How it's verified</h4>
+						<p>
+							Vitest + Testing Library unit tests, and Playwright end-to-end
+							tests at desktop and phone sizes against a fixture Notion server.
+						</p>
+						<h4>Stack</h4>
+						<p>React, TypeScript, Vite, Tailwind CSS, TanStack Query, Recharts, Node.js, Fastify, SQLite, Notion API, Docker, Cloudflare Access + Tunnel, Vitest, Playwright</p>
+						<p class="card-links">
+							<a href="https://bobbyjoecool.github.io/LensIQ/" target="_blank" rel="noopener noreferrer">Try the LensIQ demo →</a>
+							<a href="https://github.com/BobbyJoeCool/LensIQ" target="_blank" rel="noopener noreferrer">LensIQ source →</a>
+						</p>
+						<div class="project-gallery" aria-label="LensIQ screenshots">
+							<button type="button" class="gallery-thumb" data-full="Assets/projects/lensiq/dashboard.webp" data-caption="LensIQ: Job Search dashboard: a pipeline board, applications per week, average salary and more">
+								<img src="Assets/projects/lensiq/dashboard-thumb.webp" alt="Job Search dashboard with a pipeline board and charts" width="520" height="325" loading="lazy" />
+							</button>
+							<button type="button" class="gallery-thumb" data-full="Assets/projects/lensiq/table.webp" data-caption="LensIQ: Typed table with filters, sorts and inline editing">
+								<img src="Assets/projects/lensiq/table-thumb.webp" alt="Table view with typed cells" width="520" height="325" loading="lazy" />
+							</button>
+							<button type="button" class="gallery-thumb" data-full="Assets/projects/lensiq/board.webp" data-caption="LensIQ: Board of job applications grouped by status">
+								<img src="Assets/projects/lensiq/board-thumb.webp" alt="Board view grouped by status" width="520" height="325" loading="lazy" />
+							</button>
+							<button type="button" class="gallery-thumb" data-full="Assets/projects/lensiq/chart.webp" data-caption="LensIQ: Applications per week, stacked by remote vs not remote">
+								<img src="Assets/projects/lensiq/chart-thumb.webp" alt="Stacked bar chart of applications per week" width="520" height="325" loading="lazy" />
+							</button>
+							<button type="button" class="gallery-thumb" data-full="Assets/projects/lensiq/chart-settings.webp" data-caption="LensIQ: Building a chart in the app: type, axes, grouping and split">
+								<img src="Assets/projects/lensiq/chart-settings-thumb.webp" alt="Chart settings menu" width="520" height="325" loading="lazy" />
+							</button>
+							<button type="button" class="gallery-thumb" data-full="Assets/projects/lensiq/calendar.webp" data-caption="LensIQ: Calendar of bills by due date">
+								<img src="Assets/projects/lensiq/calendar-thumb.webp" alt="Calendar view of bills by due date" width="520" height="325" loading="lazy" />
+							</button>
+							<button type="button" class="gallery-thumb" data-full="Assets/projects/lensiq/phone-dashboard.webp" data-caption="LensIQ: Dashboard on a phone, stacked to one column">
+								<img src="Assets/projects/lensiq/phone-dashboard-thumb.webp" alt="Dashboard on a phone" width="278" height="600" loading="lazy" />
+							</button>
+						</div>
+					</div>
+				</details>
+
 				<details class="expand-card" id="dragonledger">
 					<summary>
 						<h3>DragonLedger</h3>
@@ -548,8 +630,9 @@
 					</summary>
 					<div class="expand-body">
 						<p>
-							A deterministic Node.js pipeline collects each weekday's items from all
-							14 TLDR editions and publishes them as static JSON. Reading-list
+							A deterministic Node.js pipeline, run each weekday morning by
+							GitHub Actions, collects the day's items from all 14 TLDR editions
+							and publishes them as static JSON. Reading-list
 							and saved-item state lives in Azure Cosmos DB behind Microsoft
 							sign-in.
 						</p>
@@ -603,7 +686,7 @@
 				<details class="expand-card" id="voicewright">
 					<summary>
 						<h3>Voicewright</h3>
-						<p class="summary-meta"><span class="status-badge active">Active development</span> v1.0.0 · Runs locally on a Mac</p>
+						<p class="summary-meta"><span class="status-badge stable">Stable</span> v1.0.0 · Runs locally on a Mac</p>
 						<p>A local text-to-speech app: design a custom voice from a description, then render a tagged script to one audio file.</p>
 						<div class="badge-row" aria-hidden="true">
 							<img src="Assets/icons/Language-Icons/Python.png" alt="" title="Python" width="32" height="32" loading="lazy" />
@@ -637,7 +720,9 @@
 							Most were checked by a script that drove the page in headless
 							Chrome with the real models; window launch, install, keyboard
 							behavior and drag and drop were checked by hand. There are also
-							380 unit tests and an offline smoke test with the real models.
+							400 unit tests, 66 Playwright browser tests that drive every area
+							of the page on fake models, and an offline smoke test with the
+							real models.
 						</p>
 						<h4>Stack</h4>
 						<p>Python, FastAPI, JavaScript, HTML, CSS, Qwen3-TTS, Chatterbox (MLX), pytest</p>
@@ -679,33 +764,51 @@
 					</div>
 				</details>
 
-				<details class="expand-card" id="home-server">
+				<details class="expand-card" id="voyager">
 					<summary>
-						<h3>MacBook Home Server</h3>
-						<p class="summary-meta"><span class="status-badge stable">Stable</span> Personal infrastructure · No repository</p>
-						<p>An old MacBook Pro rebuilt as an always-on, headless Ubuntu server for the house.</p>
+						<h3>Voyager</h3>
+						<p class="summary-meta"><span class="status-badge live">Live</span> Home server · Hosting 2 apps, more moving in</p>
+						<p>A 2011 MacBook Pro rebuilt as an always-on, headless Ubuntu server that hosts my apps in Docker behind a Cloudflare Tunnel.</p>
 						<div class="badge-row" aria-hidden="true">
 							<img src="Assets/icons/Tech-Icons/Ubuntu.svg" alt="" title="Ubuntu Server" width="32" height="32" loading="lazy" />
+							<img src="Assets/icons/Tech-Icons/Docker.png" alt="" title="Docker + Compose" width="32" height="32" loading="lazy" />
+							<img src="Assets/icons/Tech-Icons/Cloudflare.svg" alt="" title="Cloudflare Tunnel, Access and DNS" width="32" height="32" loading="lazy" />
 							<img src="Assets/icons/Tech-Icons/Tailscale.svg" alt="" title="Tailscale" width="32" height="32" loading="lazy" />
-							<img src="Assets/icons/Tech-Icons/Cloudflare.svg" alt="" title="Cloudflare" width="32" height="32" loading="lazy" />
 							<img src="Assets/icons/Language-Icons/Bash.png" alt="" title="Bash" width="32" height="32" loading="lazy" />
 						</div>
 					</summary>
 					<div class="expand-body">
 						<p>
-							I wiped macOS, installed Ubuntu Server, and set the machine up to
-							run headless from the command line, so it hosts services for the
-							house instead of sitting in a drawer.
+							I wiped macOS, installed Ubuntu Server 26.04 LTS, and run the
+							machine headless with the lid closed. Every app is
+							one folder with one Compose file and its own secrets, so projects
+							stay easy to move when the server is replaced. It's a stopgap
+							until I buy better hardware: 2 cores, 16 GB of RAM and a spinning
+							hard drive are plenty for portfolio traffic, not for heavy work.
 						</p>
-						<h4>Highlights</h4>
+						<h4>Running on it now</h4>
 						<ul>
-							<li>Ubuntu Server on Apple laptop hardware, managed over SSH</li>
-							<li>Tailscale for remote access with no open router ports</li>
-							<li>Cloudflare for DNS and for putting selected services online</li>
-							<li>Shell administration: users, packages, services and updates</li>
+							<li><a href="#family-passport-map">Family Passport Map</a>: moved from Azure App Service in v2.5.0, live at passport.bobbyjoecool.dev</li>
+							<li><a href="#lensiq">LensIQ</a>: my Notion dashboards, behind Cloudflare Access so only listed accounts get in</li>
+							<li>A Cloudflare Tunnel (cloudflared) that publishes both sites with no open router ports</li>
+							<li>A Samba file share for the house</li>
+							<li>A nightly backup job (cron) that archives app data and keeps 14 days of copies</li>
+						</ul>
+						<h4>Planned moves</h4>
+						<ul>
+							<li><a href="#palletiq">PalletIQ</a>: the floor app, API and MySQL database, giving it its first live site</li>
+							<li><a href="#moffat-bay">Moffat Bay Marina</a>: off Azure App Service and Azure Database for MySQL, so it no longer sleeps between visits</li>
+							<li>The <a href="#python-projects">Work Job Tracker</a> database, if I start using it from more than one computer</li>
+						</ul>
+						<h4>How it's set up</h4>
+						<ul>
+							<li>Images built for amd64 on my ARM laptop with Docker buildx, then loaded over SSH</li>
+							<li>Only web-facing containers join the tunnel's network; databases stay private and bind to localhost only</li>
+							<li>Tailscale for SSH from anywhere; UFW, unattended security upgrades and automatic reboots</li>
+							<li>A written runbook so each new project follows the same folder, naming, secrets and backup conventions</li>
 						</ul>
 						<h4>Stack</h4>
-						<p>Ubuntu Server, Bash, SSH, Tailscale, Cloudflare</p>
+						<p>Ubuntu Server, Docker, Docker Compose, Cloudflare Tunnel, Cloudflare Access, Tailscale, Samba, Bash, cron, SSH</p>
 					</div>
 				</details>
 			</div>
@@ -821,7 +924,7 @@
 				<details class="expand-card" id="cheatsheets">
 					<summary>
 						<h3>CheatSheets</h3>
-						<p class="summary-meta"><span class="status-badge live">Live</span> 4,036 sheets across 70 collections</p>
+						<p class="summary-meta"><span class="status-badge live">Live</span> 4,066 sheets across 72 collections</p>
 						<p>Single-page technical reference sheets that print on one 8.5″ × 11″ page, with a dark screen mode and a light print mode.</p>
 						<div class="badge-row" aria-hidden="true">
 							<img src="Assets/icons/Language-Icons/HTML5.png" alt="" title="HTML" width="32" height="32" loading="lazy" />

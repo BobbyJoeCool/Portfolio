@@ -258,3 +258,117 @@
 .project-card .project-gallery {
 	width: 100%;
 }
+
+/* ===== Projects page: compact cards with more breathing room =====
+   Smaller type lets the featured cards run three across on wide screens,
+   and a wider gutter and gap keep them off each other and the page edge. */
+.projects-page {
+	--card-gap: 2.75rem;
+	--card-min: 340px;
+	--page-gutter: 3rem;
+}
+
+.projects-page main {
+	padding: 0 var(--page-gutter);
+}
+
+.projects-page .card-grid {
+	--grid-w: min(var(--cards-wide-max), calc(100vw - 2 * var(--page-gutter)));
+}
+
+.projects-page .card-grid.masonry {
+	grid-template-columns: repeat(
+		auto-fill,
+		minmax(max(var(--card-min), calc((100% - 2 * var(--card-gap)) / 3)), 1fr)
+	);
+}
+
+.projects-page .project-card {
+	font-size: 0.875rem;
+	padding: 1.9rem 1.5rem 1.5rem;
+	border-radius: 22px;
+}
+
+.projects-page .card-grid .project-card > h3 {
+	font-size: 1.9em;
+}
+
+.projects-page .project-card .tech-stack {
+	gap: 10px;
+}
+
+.projects-page .project-card .tech-stack img {
+	width: 40px;
+	height: 40px;
+}
+
+.projects-page .project-card .tech-stack img[src$=".svg"]:not(.icon-badged) {
+	padding: 7px;
+}
+
+.projects-page .project-status {
+	margin-bottom: 1rem;
+}
+
+.projects-page .case-study h4 {
+	font-size: 0.7rem;
+}
+
+.projects-page .project-card .card-links .repo-card {
+	flex-basis: 150px;
+	padding: 0.7rem 1rem;
+}
+
+.projects-page .project-card .card-links h5 {
+	font-size: 0.9rem;
+}
+
+.projects-page .demo-video figcaption {
+	font-size: 0.8rem;
+}
+
+/* Expandable cards (More apps, Experiments, Academic, Resources) */
+.projects-page .expand-list {
+	gap: var(--card-gap);
+	margin-bottom: 2rem;
+}
+
+.projects-page .expand-card {
+	font-size: 0.875rem;
+}
+
+.projects-page .expand-card > summary {
+	padding: 1.25rem 3.25rem 1.1rem 1.25rem;
+}
+
+.projects-page .expand-card > summary h3 {
+	font-size: 1.2rem;
+}
+
+.projects-page .expand-card .summary-meta {
+	font-size: 0.8rem;
+}
+
+.projects-page .expand-card .badge-row img {
+	width: 28px;
+	height: 28px;
+}
+
+.projects-page .expand-body {
+	padding: 0 1.25rem 1.25rem;
+}
+
+.projects-page .expand-body h4 {
+	font-size: 0.7rem;
+}
+
+@media (max-width: 700px) {
+	.projects-page {
+		--card-gap: 1.75rem;
+		--page-gutter: 1.25rem;
+	}
+
+	.projects-page .card-grid.masonry {
+		grid-template-columns: minmax(0, 1fr);
+	}
+}

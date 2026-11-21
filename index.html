@@ -147,7 +147,7 @@
 						</button>
 					</div>
 					<div class="project-links">
-						<a href="https://fitiq.bobbyjoecool.dev" target="_blank" rel="noopener noreferrer" class="btn">Try the FitIQ demo</a>
+						<a href="https://fitiq.bobbyjoecool.dev" target="_blank" rel="noopener noreferrer" class="btn live">Try the FitIQ demo</a>
 						<a href="https://github.com/BobbyJoeCool/FitIQ" target="_blank" rel="noopener noreferrer" class="btn">FitIQ source</a>
 					</div>
 				</article>
@@ -168,8 +168,10 @@
 							everywhere it's used.
 						</p>
 						<p class="verified">
-							<strong>How it's verified:</strong> Playwright end-to-end suites
-							for both apps; the desktop tests drive the built Electron app.
+							<strong>How it's verified:</strong> a written test plan with API,
+							database and Vitest unit suites, plus Playwright end-to-end suites
+							for both apps (the desktop tests drive the built Electron app),
+							all against an isolated Docker MySQL test database.
 						</p>
 						<p class="card-note">
 							It runs locally on my Mac, so there's no live demo. The
@@ -209,7 +211,7 @@
 					<div class="project-text">
 						<h3>ScribeIQ</h3>
 						<p class="project-meta">
-							<span class="status-badge stable">Stable</span> v1.0.1 · macOS on
+							<span class="status-badge stable">Stable</span> v1.0.2 · macOS on
 							Apple Silicon
 						</p>
 						<p>
@@ -223,7 +225,8 @@
 						<p class="verified">
 							<strong>How it's verified:</strong> Python tests for track
 							merging, the state machine, the recorder protocol and every API
-							endpoint, plus Vitest tests for the UI.
+							endpoint, Vitest tests for the UI, and a Playwright end-to-end
+							suite.
 						</p>
 						<div class="tech-stack" aria-label="Stack">
 							<img src="Assets/icons/Language-Icons/Python.png" alt="Python" title="Python" width="44" height="44" loading="lazy" />
@@ -294,7 +297,7 @@
 						</button>
 					</div>
 					<div class="project-links">
-						<a href="https://moffatbay-blueteam-ac9638.azurewebsites.net/" target="_blank" rel="noopener noreferrer" class="btn">Visit Moffat Bay Marina</a>
+						<a href="https://moffatbay-blueteam-ac9638.azurewebsites.net/" target="_blank" rel="noopener noreferrer" class="btn live">Visit Moffat Bay Marina</a>
 						<a href="https://github.com/BobbyJoeCool/csd460-blueteam" target="_blank" rel="noopener noreferrer" class="btn">Moffat Bay team repo</a>
 					</div>
 				</article>
@@ -303,18 +306,18 @@
 					<div class="project-text">
 						<h3>Family Passport Map</h3>
 						<p class="project-meta">
-							<span class="status-badge live">Live</span> v2.3.0 · Side project
+							<span class="status-badge live">Live</span> v2.5.0 · Side project
 						</p>
 						<p>
 							Tracks which US states and countries each family member has
 							visited, with a color per person, a side-by-side Compare view, and
-							PWA install. React and Express with Prisma and SQLite on Azure App
-							Service; Microsoft sign-in keeps each account's people and photos
-							private.
+							PWA install. React and Express with Prisma and SQLite, in Docker on
+							my home server; sign in with Microsoft, Google, GitHub or a passkey,
+							and each account's people and photos stay private.
 						</p>
 						<p class="demo-login">
-							Sign-in required (Microsoft account). A demo account is coming;
-							the screenshots show the app.
+							No account needed for the guest demo: it runs in your browser with
+							a made-up family, and nothing is saved.
 						</p>
 						<div class="tech-stack" aria-label="Stack">
 							<img src="Assets/icons/Language-Icons/TypeScript.png" alt="TypeScript" title="TypeScript" width="44" height="44" loading="lazy" />
@@ -322,7 +325,7 @@
 							<img src="Assets/icons/Language-Icons/NodeJS.png" alt="Node.js and Express" title="Node.js / Express" width="44" height="44" loading="lazy" />
 							<img src="Assets/icons/Tech-Icons/Prisma.png" alt="Prisma" title="Prisma" width="44" height="44" loading="lazy" />
 							<img src="Assets/icons/Tech-Icons/SQLite.png" alt="SQLite" title="SQLite" width="44" height="44" loading="lazy" />
-							<img src="Assets/icons/Tech-Icons/Azure.png" alt="Azure App Service" title="Azure App Service" width="44" height="44" loading="lazy" />
+							<img src="Assets/icons/Tech-Icons/Docker.png" alt="Docker" title="Docker (on my home server)" width="44" height="44" loading="lazy" />
 						</div>
 					</div>
 					<div class="project-gallery" aria-label="Family Passport Map screenshots">
@@ -340,7 +343,8 @@
 						</button>
 					</div>
 					<div class="project-links">
-						<a href="https://family-passport-map.azurewebsites.net/" target="_blank" rel="noopener noreferrer" class="btn">Visit Family Passport Map</a>
+						<a href="https://bobbyjoecool.github.io/FamilyPassportMap/" target="_blank" rel="noopener noreferrer" class="btn live">Try the guest demo</a>
+						<a href="https://passport.bobbyjoecool.dev" target="_blank" rel="noopener noreferrer" class="btn live">Visit Family Passport Map</a>
 						<a href="https://github.com/BobbyJoeCool/FamilyPassportMap" target="_blank" rel="noopener noreferrer" class="btn">Family Passport Map source</a>
 					</div>
 				</article>
